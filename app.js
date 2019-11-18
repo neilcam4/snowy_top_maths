@@ -25,6 +25,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressSanitizer());
 app.use(bodyParser.json())
 app.use(methodOverride("_method"));
+
+var routes = require('/routes.js');
+
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
 app.use(require('express-session')({
@@ -215,7 +218,7 @@ app.get('/users/:id/edit', function(req,res){
 });
 
 
-app.get('/freevideos', function(req,res){
+router.get('/freevideos', function(req,res){
         res.render('freevideos')
     }
 );
