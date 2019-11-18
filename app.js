@@ -27,8 +27,10 @@ app.use(bodyParser.json())
 app.use(methodOverride("_method"));
 
 let examPapers = require("./routes/exam_papers")
-// app.use('/routes', router);
 app.use(examPapers);
+
+let routes = require("./routes/index")
+app.use(routes)
 
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
@@ -155,9 +157,7 @@ app.post('/login', function(req,res){
 //app.post('/login', functio 
 //})
 //new
-app.get('/users/new', function(req,res){
-            res.render('register');
-});
+
 //create
 app.post('/users', function(req,res){
     User.create(req.body.users, function(err, users){
