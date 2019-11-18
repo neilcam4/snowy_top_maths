@@ -1,57 +1,56 @@
-    <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
-        <div class="container container-full">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
-              <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
-              <span class="ms-logo ms-logo-sm">S</span>
-              <span class="ms-title">SnowyTop
-                <strong>Maths</strong>
-              </span>
-            </a>
-          </div>
+<nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+  <div class="container container-full">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+        <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
+        <span class="ms-logo ms-logo-sm">S</span>
+        <span class="ms-title">SnowyTop
+          <strong>Maths</strong>
+        </span>
+      </a>
+    </div>
 
-            <div id="navbar" class="navbar-collapse collapse">
-                
-                
-                
-            <ul class="nav navbar-nav navbar-right">
-              <li class="nav-item animated fadeIn animation-delay-4">
-                <a data-scroll class="nav-link" href="/profile">Home</a>
-              </li>
-              <li class="nav-item animated fadeIn animation-delay-5">
-                <a data-scroll class="nav-link" href="/home-cv3">Tutorial Videos</a>
-              </li>
-              <li class="nav-item animated fadeIn animation-delay-6">
-                <a data-scroll class="nav-link" href="/topics">Topics</a>
-              </li>  
-              <li class="nav-item animated fadeIn animation-delay-7">
-                <a data-scroll class="nav-link" href="#skills">Past Papers</a>
-              </li>
-              
-                
-                
-              <li class="nav-item animated fadeIn animation-delay-9">
-                <a data-scroll class="nav-link" href="/test2">Test 2</a>
-              </li>
-              <li class="nav-item ">
-                <% if(!currentUser){ %>
-              <a  href='/register'>Log in</a>
-              <a  href='/login'>Sign Up</a>
-                <% } else { %>
-                <a class="item" href='#'>
-        Signed in as <%=currentUser.username%>
-      </a>
-              <a href='/logout'>
-        Logout
-      </a>
-             <% } %>
-            </li>
-            </ul>
-          </div>
-            <a href="javascript:void(0)" class="ms-toggle-left btn-navbar-menu">
-            <i class="zmdi zmdi-menu"></i>
+    <div id="navbar" class="navbar-collapse collapse">
+
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item animated fadeIn animation-delay-4">
+          <a data-scroll class="nav-link" href="/profile">Home</a>
+        </li>
+        <li class="nav-item animated fadeIn animation-delay-5">
+          <a data-scroll class="nav-link" href="/home-cv3">Tutorial Videos</a>
+        </li>
+        <li class="nav-item animated fadeIn animation-delay-6">
+          <a data-scroll class="nav-link" href="/topics">Topics</a>
+        </li>
+        <li class="nav-item animated fadeIn animation-delay-7">
+          <a data-scroll class="nav-link" href="#skills">Past Papers</a>
+        </li>
+
+
+
+        <li class="nav-item animated fadeIn animation-delay-9">
+          <a data-scroll class="nav-link" href="/test2">Test 2</a>
+        </li>
+        <li class="nav-item ">
+          <% if(!currentUser){ %>
+          <a href='/register'>Log in</a>
+          <a href='/login'>Sign Up</a>
+          <% } else { %>
+          <a class="item" href='#'>
+            Signed in as <%=currentUser.username%>
           </a>
-        </div>
-        <!-- container -->
-      </nav>
-    
+          <a href='/logout'>
+            Logout
+          </a>
+          <% } %>
+        </li>
+      </ul>
+    </div>
+    <a href="javascript:void(0)" class="ms-toggle-left btn-navbar-menu">
+      <i class="zmdi zmdi-menu"></i>
+    </a>
+  </div>
+  <!-- container -->
+</nav>

@@ -1,384 +1,394 @@
 <% include ./partials/header %>
 <div class="container" id="video">
-
-<div class="col-md-8">
-        <h3 class="text-center">Favourite Sports</h3>
-    
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Favourite Sports</h3>
-            </div>
-            <div class="js-player" data-plyr-provider="youtube" data-plyr-embed-id="https://youtu.be/hbust6Qi06w"></div>
-            <div class="card-body overflow-hidden text-center">
-              </div>  
-            </div>
-        </div>
+  <div class="col-md-8">
+    <h3 class="text-center">Favourite Sports</h3>
+    <div class="card card-info-inverse">
+      <div class="card-header">
+        <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Favourite Sports</h3>
+      </div>
+      <div class="js-player" data-plyr-provider="youtube" data-plyr-embed-id="https://youtu.be/hbust6Qi06w"></div>
+      <div class="card-body overflow-hidden text-center">
+      </div>
     </div>
-   
-
-<div class="container">
-            <p id="userId"><%=currentUser.id %> </p>  
   </div>
-
+</div>
+<div class="container">
+  <p id="userId"><%=currentUser.id %> </p>
+</div>
 <div class="col-lg-3">
-                      <div class="card">
-                        <div class="list-group">                    
-                          <a href="javascript:void(0)" class="list-group-item list-group-item-action active">Points
-                            <span class="ml-auto badge-pill badge-pill-info"><%=currentUser.score %></span>
-                          </a>                  
-                        </div>
-                      </div>
-                    </div>
-
-
+  <div class="card">
+    <div class="list-group">
+      <a href="javascript:void(0)" class="list-group-item list-group-item-action active">Points
+        <span class="ml-auto badge-pill badge-pill-info"><%=currentUser.score %></span>
+      </a>
+    </div>
+  </div>
+</div>
 <div class="col-lg-11 ms-paper-content-container">
-              <div class="ms-paper-content">
-                <h1>Practice Questions</h1>
-                <div class="alert alert-light alert-info">
-                  <p>
-                    <strong>
-                      
-                    </strong>Each question is worth 30 points. Good Luck!</p>
-                </div>
-                <section class="ms-component-section">
-                  <div class="row masonry-container">
-                    
-                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
-                      <div class="card card-royal">
-                        <div class="card-header">
-                          <h3 class="card-title">1.</h3>
-                        </div>
-                        <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem iure officiis magnam fugit. 
-                            <form  name="quiz1">
-  <div class="form-group">
-        <div id="questions" ><p>31 + 45 =  </p>
-      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Answer Here"></div>
-        </div>                             
-        </form>
-                            <div class="row">
-                            <div id="tick">
-                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
-                        <i class="fa fa-check"></i>
-                                </span></div>
-                            <div id="wrong">
-                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
-                        <i class="fa fa-remove"></i>
-                      </span>
-                                </div>
-                                </div>
-      </div>                    
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
-                     <div class="card card-royal">
-                        <div class="card-header">
-                          <h3 class="card-title">2.</h3>
-                        </div>
-                        <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem iure officiis magnam fugit. 
-                            <form name="quiz2">
-  <div class="form-group">
-        <div id="questions" ><p>1 + 2 =  </p>
-      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Answer Here"></div>
-        </div>                             
-        </form>
-                <div class="row">
-                            <div id="tick2">
-                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
-                        <i class="fa fa-check"></i>
-                                </span></div>
-                            <div id="wrong2">
-                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
-                        <i class="fa fa-remove"></i>
-                      </span>
-                                </div>
-                </div>
-      </div>                    
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
-                     <div class="card card-royal">
-                        <div class="card-header">
-                          <h3 class="card-title">3.</h3>
-                        </div>
-                        <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem iure officiis magnam fugit. 
-                            <form name="quiz3">
-  <div class="form-group">
-        <div id="questions" ><p>3 + 4 =  </p>
-      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Answer Here"></div>
-        </div>                             
-        </form>
-           <div class="row">
-                            <div id="tick3">
-                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
-                        <i class="fa fa-check"></i>
-                                </span></div>
-                            <div id="wrong3">
-                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
-                        <i class="fa fa-remove"></i>
-                      </span>
-                                </div>
-                                </div>
-      </div>                    
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
-                     <div class="card card-royal">
-                        <div class="card-header">
-                          <h3 class="card-title">4.</h3>
-                        </div>
-                        <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem iure officiis magnam fugit. 
-                            <form name="quiz4">
-  <div class="form-group">
-        <div id="questions" ><p>1 + 5 =  </p>
-      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Answer Here"></div>
-        </div>                             
-        </form>
-                            <div class="row">
-                            <div id="tick4">
-                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
-                        <i class="fa fa-check"></i>
-                                </span></div>
-                            <div id="wrong4">
-                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
-                        <i class="fa fa-remove"></i>
-                      </span>
-                                </div>
-                                </div>
-      </div>                    
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
-                    <div class="card card-royal">
-                        <div class="card-header">
-                          <h3 class="card-title">5.</h3>
-                        </div>
-                        <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem iure officiis magnam fugit. 
-                            <form name="quiz5">
-  <div class="form-group">
-        <div id="questions" ><p>2 + 6 =  </p>
-      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Answer Here"></div>
-        </div>                             
-        </form>
-                            <div class="row">
-                            <div id="tick5">
-                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
-                        <i class="fa fa-check"></i>
-                                </span></div>
-                            <div id="wrong5">
-                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
-                        <i class="fa fa-remove"></i>
-                      </span>
-                                </div>
-                                </div>
-      </div>                    
-                      </div>
-                    </div>
-                    
-                  
-                    
+  <div class="ms-paper-content">
+    <h1>Practice Questions</h1>
+    <div class="alert alert-light alert-info">
+      <p>
+        <strong>
+        </strong>Each question is worth 30 points. Good Luck!</p>
+    </div>
+    <section class="ms-component-section">
+      <div class="row masonry-container">
         <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
-                    <div class="card card-royal">
-                        <div class="card-header">
-                          <h3 class="card-title">6.</h3>
-                        </div>
-                        <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem iure officiis magnam fugit. 
-                            <form name="quiz6">
-  <div class="form-group">
-        <div id="questions" ><p>2 + 7 =  </p>
-      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Answer Here"></div>
-        </div>                             
-        </form>
-        <div class="row">
-                            <div id="tick6">
-                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
-                        <i class="fa fa-check"></i>
-                                </span></div>
-                            <div id="wrong6">
-                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
-                        <i class="fa fa-remove"></i>
-                      </span>
-                                </div>
-                                </div>
-      </div>                    
-                      </div>
-                      </div>                                      
-                  </div>            
-                                 
-<!--
+          <div class="card card-royal">
+            <div class="card-header">
+              <h3 class="card-title">1.</h3>
+            </div>
+            <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem
+              iure officiis magnam fugit.
+              <form name="quiz1">
+                <div class="form-group">
+                  <div id="questions">
+                    <p>31 + 45 = </p>
+                    <input id="usr" type="text" name="question1" class="form-control" placeholder="Answer Here">
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div id="tick">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                  </span></div>
+                <div id="wrong">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+          <div class="card card-royal">
+            <div class="card-header">
+              <h3 class="card-title">2.</h3>
+            </div>
+            <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem
+              iure officiis magnam fugit.
+              <form name="quiz2">
+                <div class="form-group">
+                  <div id="questions">
+                    <p>1 + 2 = </p>
+                    <input id="usr" type="text" name="question1" class="form-control" placeholder="Answer Here">
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div id="tick2">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                  </span></div>
+                <div id="wrong2">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+          <div class="card card-royal">
+            <div class="card-header">
+              <h3 class="card-title">3.</h3>
+            </div>
+            <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem
+              iure officiis magnam fugit.
+              <form name="quiz3">
+                <div class="form-group">
+                  <div id="questions">
+                    <p>3 + 4 = </p>
+                    <input id="usr" type="text" name="question1" class="form-control" placeholder="Answer Here">
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div id="tick3">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                  </span></div>
+                <div id="wrong3">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+          <div class="card card-royal">
+            <div class="card-header">
+              <h3 class="card-title">4.</h3>
+            </div>
+            <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem
+              iure officiis magnam fugit.
+              <form name="quiz4">
+                <div class="form-group">
+                  <div id="questions">
+                    <p>1 + 5 = </p>
+                    <input id="usr" type="text" name="question1" class="form-control" placeholder="Answer Here">
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div id="tick4">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                  </span></div>
+                <div id="wrong4">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+          <div class="card card-royal">
+            <div class="card-header">
+              <h3 class="card-title">5.</h3>
+            </div>
+            <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem
+              iure officiis magnam fugit.
+              <form name="quiz5">
+                <div class="form-group">
+                  <div id="questions">
+                    <p>2 + 6 = </p>
+                    <input id="usr" type="text" name="question1" class="form-control" placeholder="Answer Here">
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div id="tick5">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                  </span></div>
+                <div id="wrong5">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+          <div class="card card-royal">
+            <div class="card-header">
+              <h3 class="card-title">6.</h3>
+            </div>
+            <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero atque voluptatem
+              iure officiis magnam fugit.
+              <form name="quiz6">
+                <div class="form-group">
+                  <div id="questions">
+                    <p>2 + 7 = </p>
+                    <input id="usr" type="text" name="question1" class="form-control" placeholder="Answer Here">
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div id="tick6">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                  </span></div>
+                <div id="wrong6">
+                  <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
 <div class="row">
 <button type="button" id="button" class="btn btn-primary btn-raised" > Check Answers </button> 
     </div>
 -->
-                    <button type="button" id="button" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check Answers </button> 
-                  <!-- Modal -->
-                  <div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
-                    <div class="modal-dialog animated zoomIn animated-3x" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3>
-                            
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">
-                              <i class="zmdi zmdi-close"></i>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="alert alert-success alert-light " role="alert"><p id="badge"></p>
-</div>
-                          <div class="alert alert-danger alert-light " role="alert"><p id="points"></p>
-</div>
-                            
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>    
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    <div id="example"></div>                                    
-<script>
-  
+      <button type="button" id="button" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4">
+        Check Answers </button>
+      <!-- Modal -->
+      <div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3>
 
-    $("#example").load("./config");
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="zmdi zmdi-close"></i>
+                </span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-success alert-light " role="alert">
+                <p id="badge"></p>
+              </div>
+              <div class="alert alert-danger alert-light " role="alert">
+                <p id="points"></p>
+              </div>
 
-    
-    
-    var correct = 0;
-    $("#button").click(function(){  
-        
-        var question1 = document.quiz1.question1.value;  
-        var question2 = document.quiz2.question1.value;
-        var question3 = document.quiz3.question1.value;
-        var question4 = document.quiz4.question1.value;
-        var question5 = document.quiz5.question1.value;
-        var question6 = document.quiz6.question1.value;
-        
-    if(question1 == 76){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="example"></div>
+      <script>
+        $("#example").load("./config");
+
+
+
+        var correct = 0;
+        $("#button").click(function () {
+
+          var question1 = document.quiz1.question1.value;
+          var question2 = document.quiz2.question1.value;
+          var question3 = document.quiz3.question1.value;
+          var question4 = document.quiz4.question1.value;
+          var question5 = document.quiz5.question1.value;
+          var question6 = document.quiz6.question1.value;
+
+          if (question1 == 76) {
+            checkAnswer();
+            document.getElementById("tick").style.visibility = "visible";
             correct++;
-  } else {
-      document.getElementById("wrong").style.visibility = "visible";
-  }
-        if(question2 == 3){
-        checkAnswer();     
-        document.getElementById("tick2").style.visibility = "visible"; 
-        correct++;
-  }  else {
-      document.getElementById("wrong2").style.visibility = "visible";
-  }
-      if(question3 == 7){
-        checkAnswer();     
-        document.getElementById("tick3").style.visibility = "visible";
-      correct++;
-  }     
-      else {
-      document.getElementById("wrong3").style.visibility = "visible";        
-  } 
-        if(question4 == 6){
-        checkAnswer();     
-        document.getElementById("tick4").style.visibility = "visible";
-      correct++;
-  }     
-      else {
-      document.getElementById("wrong4").style.visibility = "visible";        
-  } 
-        if(question5 == 8){
-        checkAnswer();     
-        document.getElementById("tick5").style.visibility = "visible";
-      correct++;
-  }     
-      else {
-      document.getElementById("wrong5").style.visibility = "visible";        
-  } 
-        if(question6 == 9){
-        checkAnswer();     
-        document.getElementById("tick6").style.visibility = "visible";
-      correct++;
-  }     
-      else {
-      document.getElementById("wrong6").style.visibility = "visible";        
-  } 
-        if(correct==6){
-            document.getElementById("badge").textContent= " 6 out of 6. Wow!";
-            document.getElementById("points").textContent="Points earned: 180";
-        }
-        if(correct==5){
-            document.getElementById("badge").textContent= " 5 out of 6";
-            document.getElementById("points").textContent="Points earned: 150";
-        }
-        if(correct==4){
-            document.getElementById("badge").textContent= " 4 out of 6";
-            document.getElementById("points").textContent="Points earned 120";
-        }
-        
-        if(correct==3){
-            document.getElementById("badge").textContent= " 3 out of 6";
-           document.getElementById("points").textContent="Points earned:  90";
-        }
-        if(correct==2){
-            document.getElementById("badge").textContent= " 2 out of 6";
-           document.getElementById("points").textContent="Points earned 60";
-        }
-        if(correct==1){
-            document.getElementById("badge").textContent= " 1 out of 6";
-           document.getElementById("points").textContent="Points earned:  30";
-        }
-        if(correct==0){
-            document.getElementById("badge").textContent= "0 out of 6. Watch the video and try the questions again. You will get it right.";
-            document.getElementById("points").textContent="Points earned : 0";
-            
-        }
-       });
-    
-    function checkAnswer(){
-        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + api;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-        
-        $.ajax({           
-            url: finalApi,
-            type:"put",
-                data: JSON.stringify( { "$inc" : { "score" : 30 } } ),
-            contentType:"application/json",
-            success:function(data){
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
+          } else {
+            document.getElementById("wrong").style.visibility = "visible";
+          }
+          if (question2 == 3) {
+            checkAnswer();
+            document.getElementById("tick2").style.visibility = "visible";
+            correct++;
+          } else {
+            document.getElementById("wrong2").style.visibility = "visible";
+          }
+          if (question3 == 7) {
+            checkAnswer();
+            document.getElementById("tick3").style.visibility = "visible";
+            correct++;
+          } else {
+            document.getElementById("wrong3").style.visibility = "visible";
+          }
+          if (question4 == 6) {
+            checkAnswer();
+            document.getElementById("tick4").style.visibility = "visible";
+            correct++;
+          } else {
+            document.getElementById("wrong4").style.visibility = "visible";
+          }
+          if (question5 == 8) {
+            checkAnswer();
+            document.getElementById("tick5").style.visibility = "visible";
+            correct++;
+          } else {
+            document.getElementById("wrong5").style.visibility = "visible";
+          }
+          if (question6 == 9) {
+            checkAnswer();
+            document.getElementById("tick6").style.visibility = "visible";
+            correct++;
+          } else {
+            document.getElementById("wrong6").style.visibility = "visible";
+          }
+          if (correct == 6) {
+            document.getElementById("badge").textContent = " 6 out of 6. Wow!";
+            document.getElementById("points").textContent = "Points earned: 180";
+          }
+          if (correct == 5) {
+            document.getElementById("badge").textContent = " 5 out of 6";
+            document.getElementById("points").textContent = "Points earned: 150";
+          }
+          if (correct == 4) {
+            document.getElementById("badge").textContent = " 4 out of 6";
+            document.getElementById("points").textContent = "Points earned 120";
+          }
+
+          if (correct == 3) {
+            document.getElementById("badge").textContent = " 3 out of 6";
+            document.getElementById("points").textContent = "Points earned:  90";
+          }
+          if (correct == 2) {
+            document.getElementById("badge").textContent = " 2 out of 6";
+            document.getElementById("points").textContent = "Points earned 60";
+          }
+          if (correct == 1) {
+            document.getElementById("badge").textContent = " 1 out of 6";
+            document.getElementById("points").textContent = "Points earned:  30";
+          }
+          if (correct == 0) {
+            document.getElementById("badge").textContent =
+              "0 out of 6. Watch the video and try the questions again. You will get it right.";
+            document.getElementById("points").textContent = "Points earned : 0";
+
+          }
         });
-        
-    function getScore(){        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + config;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-    $.ajax({          
-        url:finalApi,
-            type:"get",
-            data: JSON.stringify(),
-            contentType:"application/json",
-            success:function(data){
-                $("#jquery").text(data.score);
+
+        function checkAnswer() {
+
+          var id = $("#userId").text();
+          var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+          var api = $("#example").text();
+          var idAndApi = id + api;
+
+          var sliced = id.slice(0, -1);
+          var finalApi = url + sliced + api;
+
+          $.ajax({
+            url: finalApi,
+            type: "put",
+            data: JSON.stringify({
+              "$inc": {
+                "score": 30
+              }
+            }),
+            contentType: "application/json",
+            success: function (data) {
+              getScore();
+              $("#jquery").text(data.score);
             },
-            error:function(xhr, status, error){
-                console.log(error);
+            error: function (xhr, status, error) {
+              console.log(error);
             }
-        });   
-    }
-       };
-   $("input").attr("maxlength", 5)
-</script>
-                    
+          });
+
+          function getScore() {
+            var id = $("#userId").text();
+            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+            var api = $("#example").text();
+            var idAndApi = id + config;
+
+            var sliced = id.slice(0, -1);
+            var finalApi = url + sliced + api;
+            $.ajax({
+              url: finalApi,
+              type: "get",
+              data: JSON.stringify(),
+              contentType: "application/json",
+              success: function (data) {
+                $("#jquery").text(data.score);
+              },
+              error: function (xhr, status, error) {
+                console.log(error);
+              }
+            });
+          }
+        };
+        $("input").attr("maxlength", 5)
+      </script>
 <% include ./partials/footer %>
