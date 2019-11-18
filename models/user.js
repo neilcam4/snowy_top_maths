@@ -2,7 +2,7 @@ var mongoose=require('mongoose');
 var Schema = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
 
-var scoreSchema = mongoose.model('Score').schema;
+// var scoreSchema = mongoose.model('Score').schema;
 
 var UserSchema = mongoose.Schema({
     username:String,

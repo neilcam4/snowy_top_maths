@@ -9,7 +9,7 @@ var LocalStrategy = require('passport-local');
 var passport = require('passport');
 var passportLocalMongoose =require('passport-local-mongoose');
 var Schema = mongoose.Schema;
-var Score = require('./models/score');
+// var Score = require('./models/score');
 var $ = require('jquery');
 var User = require('./models/user');
 var mongodb = require('mongodb');
@@ -26,7 +26,8 @@ app.use(expressSanitizer());
 app.use(bodyParser.json())
 app.use(methodOverride("_method"));
 
-var routes = require('/routes.js');
+// var router = require('./routes.js');
+// app.use('/routes', router);
 
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
@@ -218,7 +219,7 @@ app.get('/users/:id/edit', function(req,res){
 });
 
 
-router.get('/freevideos', function(req,res){
+app.get('/freevideos', function(req,res){
         res.render('freevideos')
     }
 );
