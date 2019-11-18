@@ -9,7 +9,6 @@ var LocalStrategy = require('passport-local');
 var passport = require('passport');
 var passportLocalMongoose =require('passport-local-mongoose');
 var Schema = mongoose.Schema;
-// var Score = require('./models/score');
 var $ = require('jquery');
 var User = require('./models/user');
 var mongodb = require('mongodb');
@@ -31,7 +30,7 @@ app.use(examPapers);
 
 let routes = require("./routes/index")
 app.use(routes)
-
+let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
 app.use(require('express-session')({
@@ -155,8 +154,7 @@ app.post('/login', function(req,res){
     res.redirect('/');
 })
 //app.post('/login', functio 
-//})
-//new
+
 
 //create
 app.post('/users', function(req,res){
@@ -218,26 +216,16 @@ app.get('/users/:id/edit', function(req,res){
         }
     })
 });
-
-
-app.get('/freevideos', function(req,res){
-        res.render('freevideos')
-    }
-);
-
-
 app.get('/pricing', isPriceLoggedIn, function(req,res){
             res.render('pricing')      
     }
 );
-
 app.post("/yearlyCHarge", isLoggedIn, (req, res) => {
   stripe.customers.create({
      email: req.body.stripeEmail,
      plan: STRIPE_YEARLY_PLAN,
     source: req.body.stripeToken
   })
-
 .then(User.update(
      {username: req.user.username}, 
      {subscription_type : 'Yearly' },
@@ -269,10 +257,6 @@ app.get('/log', function(req,res){
         res.render('register');
     }
 );
-app.get('/newuser', isLoggedIn, function(req,res){
-    
-})
-
 
 app.get('/test5', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
@@ -1000,7 +984,7 @@ app.get('/shapes5', isLoggedIn,function(req,res){
 })
 
 app.get('/config', isLoggedIn, function(req,res){
-    res.send('/?apiKey=CUh_8XmeKybytcjyLHezRfveLaEDA6V6')
+    res.send(API_KEY_MLAB)
 })
 
 app.get('/newuser', isLoggedIn,function(req,res){
