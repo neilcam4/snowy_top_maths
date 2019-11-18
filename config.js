@@ -1,3 +1,5 @@
+let API_KEY = process.env.API_KEY
+
 var config = {
-    api : 
+    api : API_KEY
 }
