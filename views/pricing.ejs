@@ -1,12 +1,12 @@
 <% include ./partials/headerfront2 %>
-    
 
-                    <!-- Load Stripe.js on your website. -->
+
+<!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 
-      <div class="material-background"></div>
-      <div class="container">
-<!--
+<div class="material-background"></div>
+<div class="container">
+  <!--
         <div class="text-center mb-4">
           <h2 class="uppercase color-white animated fadeInUp animation-delay-7">Pricing Options</h2>
           <p class="lead uppercase color-medium animated fadeInUp animation-delay-7">Choose from these three options</p>
@@ -38,40 +38,41 @@
             </div>
           </div>
 -->
-          <div class="col-lg-12">
-            <div class="price-table price-table-primary ">
-              <header class="price-table-header">
-                <span class="price-table-category">1 Year VIP membership</span>
-                <h3>
-                  <sup>£</sup>100
-                  <sub>One Off Payment</sub>
-                </h3>
-              </header>
-              <div class="price-table-body">
-                <ul class="price-table-list">
-                  <li>
-                    <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials on the questions that will make the difference</li>
-                 
-                  <li>
-                    <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
-                  <li>
-                    <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
-                  <li>
-                    <i class="mr-2 fa fa-file-pdf-o"></i> One off Payment. No automatic renewal </li>
-                     <li>
-                    <i class="mr-2 fa fa-money"></i> 1 month money back guarantee</li>
-                    
-                </ul>
-                <div class="text-center">
-<!--
+  <div class="col-lg-12">
+    <div class="price-table price-table-primary ">
+      <header class="price-table-header">
+        <span class="price-table-category">1 Year VIP membership</span>
+        <h3>
+          <sup>£</sup>100
+          <sub>One Off Payment</sub>
+        </h3>
+      </header>
+      <div class="price-table-body">
+        <ul class="price-table-list">
+          <li>
+            <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials on the questions that will make the
+            difference</li>
+
+          <li>
+            <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
+          <li>
+            <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
+          <li>
+            <i class="mr-2 fa fa-file-pdf-o"></i> One off Payment. No automatic renewal </li>
+          <li>
+            <i class="mr-2 fa fa-money"></i> 1 month money back guarantee</li>
+
+        </ul>
+        <div class="text-center">
+          <!--
                   <a href="/register" class="btn btn-info btn-raised">
                     <i class="zmdi zmdi-cloud-download"></i> Sign Up</a>
 -->
 
-<script src="https://js.stripe.com/v3"></script>
+          <script src="https://js.stripe.com/v3"></script>
 
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<!--<button
+          <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+          <!--<button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
   id="checkout-button-sku_EUYlO0SBXzmZCh"
   role="link"
@@ -79,41 +80,39 @@
   Checkout
 </button>-->
 
-<style>
-.stripe-button{
-  background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;
-}
-</style>
+          <style>
+            .stripe-button {
+              background-color: #6772E5;
+              color: #FFF;
+              padding: 8px 12px;
+              border: 0;
+              border-radius: 4px;
+              font-size: 1em;
+            }
+          </style>
 
 
-<form action="/yearlyCHarge" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_live_g2XVR9JGDqDf3gq9VOOe2YFH"
-    data-image="https://stripe-camo.global.ssl.fastly.net/6d1064a3fc47912c40669e604c6f030ba0fe8a3c/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f666c5f746573745f4453666b59325a6d68386c684b453944616f797151767869"
-    data-name="SnowyTopMaths.co.uk"
-    data-description="SnowyTop Maths 1 Year Subscription"
-    data-amount="10000"
-    data-locale="auto"
-    data-currency="gbp"
-    data-email="<%=currentUser.email%>"
+          <form action="/yearlyCHarge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_live_g2XVR9JGDqDf3gq9VOOe2YFH"
+              data-image="https://stripe-camo.global.ssl.fastly.net/6d1064a3fc47912c40669e604c6f030ba0fe8a3c/68747470733a2f2f66696c65732e7374726970652e636f6d2f6c696e6b732f666c5f746573745f4453666b59325a6d68386c684b453944616f797151767869"
+              data-name="SnowyTopMaths.co.uk" data-description="SnowyTop Maths 1 Year Subscription" data-amount="10000"
+              data-locale="auto" data-currency="gbp" data-email="<%=currentUser.email%>" data-label="Checkout">
+            </script>
 
-    data-label="Checkout">
-  </script>
-
-</form>
-
-
-
-<div id="error-message"></div>
+          </form>
 
 
 
-                </div>
-              </div>
-            </div>
-          </div>
-<!--
+          <div id="error-message"></div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
           <div class="col-lg-4">
             <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
               <header class="price-table-header">
@@ -163,225 +162,226 @@
             </div>
           </div>
 -->
+</div>
+</div>
+<!-- container -->
+<aside class="ms-footbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 ms-footer-col">
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title">Sitemap</h3>
+          <ul class="list-unstyled ms-icon-list three_cols">
+            <li>
+              <a href="/">
+                <i class="zmdi zmdi-home"></i> Home</a>
+            </li>
+
+            <li>
+              <a href="/pricing">
+                <i class="zmdi zmdi-money"></i> Pricing</a>
+            </li>
+            <li>
+              <a href="#examplevids">
+                <i class="zmdi zmdi-favorite-outline"></i> Tutorials</a>
+            </li>
+            <li>
+              <a href="#example">
+                <i class="zmdi zmdi-accounts"></i> Questions</a>
+            </li>
+
+            <li>
+              <a href="page-faq2.html">
+                <i class="zmdi zmdi-help"></i> FAQ</a>
+            </li>
+            <li>
+              <a href="page-login2.html">
+                <i class="zmdi zmdi-lock"></i> Login</a>
+            </li>
+            <li>
+              <a href="/register">
+                <i class="zmdi zmdi-email"></i> Register</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title">Subscribe</h3>
+          <p class="">Sign Up for my newsletter, exam advice and special offers</p>
+          <button class="ms-subscribre-btn" type="button" href="/register">Subscribe</button>
+
         </div>
       </div>
-      <!-- container -->
-      <aside class="ms-footbar">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 ms-footer-col">
-              <div class="ms-footbar-block">
-                <h3 class="ms-footbar-title">Sitemap</h3>
-                <ul class="list-unstyled ms-icon-list three_cols">
-                  <li>
-                    <a href="/">
-                      <i class="zmdi zmdi-home"></i> Home</a>
-                  </li>
-               
-                  <li>
-                    <a href="/pricing">
-                      <i class="zmdi zmdi-money"></i> Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#examplevids">
-                      <i class="zmdi zmdi-favorite-outline"></i> Tutorials</a>
-                  </li>
-                  <li>
-                    <a href="#example">
-                      <i class="zmdi zmdi-accounts"></i> Questions</a>
-                  </li>
-                 
-                  <li>
-                    <a href="page-faq2.html">
-                      <i class="zmdi zmdi-help"></i> FAQ</a>
-                  </li>
-                  <li>
-                    <a href="page-login2.html">
-                      <i class="zmdi zmdi-lock"></i> Login</a>
-                  </li>
-                  <li>
-                    <a href="/register">
-                      <i class="zmdi zmdi-email"></i> Register</a>
-                  </li>
-                </ul>
+      <div class="col-lg-5 col-md-7 ms-footer-col ms-footer-alt-color">
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title text-center mb-2">Social Media</h3>
+          <div class="ms-footer-media">
+            <div class="media">
+              <div class="media-left media-middle">
+                <a href="https://www.facebook.com/snowytopmaths/" class="btn-circle btn-facebook">
+                  <i class="zmdi zmdi-facebook"></i>
+                </a>
               </div>
-              <div class="ms-footbar-block">
-                <h3 class="ms-footbar-title">Subscribe</h3>
-                <p class="">Sign Up for my newsletter, exam advice and special offers</p>   
-                  <button class="ms-subscribre-btn" type="button" href="/register">Subscribe</button>
-                
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-7 ms-footer-col ms-footer-alt-color"> 
-              <div class="ms-footbar-block">
-                <h3 class="ms-footbar-title text-center mb-2">Social Media</h3>
-                <div class="ms-footer-media">
-                  <div class="media">
-                    <div class="media-left media-middle">
-                      <a href="https://www.facebook.com/snowytopmaths/" class="btn-circle btn-facebook">
-                    <i class="zmdi zmdi-facebook"></i>
-                  </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="https://www.facebook.com/snowytopmaths/">The Official SnowyTop Maths Facebook  Page</a>
-                      </h4>
-                      <div class="media-footer">
-                        <span>
-                          <i class="zmdi zmdi-time color-info-light"></i> June 11, 2019</span>
-                        <span>
-                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
-                          <a href="javascript:void(0)">Community</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <div class="media-left media-middle">
-                      <a href="https://www.youtube.com/channel/UC7MHNX9DoagZPIN9Ho9QWHg" class="btn-circle btn-youtube">
-                    <i class="zmdi zmdi-youtube-play"></i>
-                  </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="https://www.youtube.com/channel/UC7MHNX9DoagZPIN9Ho9QWHg">The Offical YouTube Channel of SnowyTop Maths</a>
-                      </h4>
-                      <div class="media-footer">
-                        <span>
-                          <i class="zmdi zmdi-time color-info-light"></i> June 11, 2019</span>
-                        <span>
-                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
-                          <a href="javascript:void(0)">Free Tutorial Videos and Examples</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media">
-                    <div class="media-left media-middle">
-                       <a href="javascript:void(0)" class="btn-circle btn-twitter">
-                    <i class="zmdi zmdi-twitter"></i>
-                  </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="javascript:void(0)">The Official Twitter Account of SnowyTop Maths</a>
-                      </h4>
-                      <div class="media-footer">
-                        <span>
-                          <i class="zmdi zmdi-time color-info-light"></i> June 11, 2019</span>
-                        <span>
-                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
-                          <a href="javascript:void(0)">News and Updates</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="https://www.facebook.com/snowytopmaths/">The Official SnowyTop Maths Facebook Page</a>
+                </h4>
+                <div class="media-footer">
+                  <span>
+                    <i class="zmdi zmdi-time color-info-light"></i> June 11, 2019</span>
+                  <span>
+                    <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                    <a href="javascript:void(0)">Community</a>
+                  </span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-5 ms-footer-col ms-footer-text-right">
-              <div class="ms-footbar-block">
-                <div class="ms-footbar-title">
-                  
-                  <h3 class="no-m ms-site-title">SnowyTop
+            <div class="media">
+              <div class="media-left media-middle">
+                <a href="https://www.youtube.com/channel/UC7MHNX9DoagZPIN9Ho9QWHg" class="btn-circle btn-youtube">
+                  <i class="zmdi zmdi-youtube-play"></i>
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="https://www.youtube.com/channel/UC7MHNX9DoagZPIN9Ho9QWHg">The Offical YouTube Channel of
+                    SnowyTop Maths</a>
+                </h4>
+                <div class="media-footer">
+                  <span>
+                    <i class="zmdi zmdi-time color-info-light"></i> June 11, 2019</span>
+                  <span>
+                    <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                    <a href="javascript:void(0)">Free Tutorial Videos and Examples</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left media-middle">
+                <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                  <i class="zmdi zmdi-twitter"></i>
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="javascript:void(0)">The Official Twitter Account of SnowyTop Maths</a>
+                </h4>
+                <div class="media-footer">
+                  <span>
+                    <i class="zmdi zmdi-time color-info-light"></i> June 11, 2019</span>
+                  <span>
+                    <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                    <a href="javascript:void(0)">News and Updates</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-5 ms-footer-col ms-footer-text-right">
+        <div class="ms-footbar-block">
+          <div class="ms-footbar-title">
+
+            <h3 class="no-m ms-site-title">SnowyTop
+              <span>Maths</span>
+            </h3>
+          </div>
+          <address class="no-mb">
+            <p>
+              <i class="color-danger-light zmdi zmdi-pin mr-1"></i> London, UK</p>
+            <p>
+              <i class="color-info-light zmdi zmdi-email mr-1"></i>
+              <a href="mailto:neil@snowytopmaths.co.uk">neil@snowytopmaths.co.uk</a>
+            </p>
+
+          </address>
+        </div>
+        <div class="ms-footbar-block">
+          <h3 class="ms-footbar-title">Social Media</h3>
+          <div class="ms-footbar-social">
+            <a href="https://www.facebook.com/snowytopmaths/" class="btn-circle btn-facebook">
+              <i class="zmdi zmdi-facebook"></i>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-twitter">
+              <i class="zmdi zmdi-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <!--Floating Header Bar-->
+        <!-- ms-site-container -->
+        <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+          <div class="sb-slidebar-container">
+            <header class="ms-slidebar-header">
+              <div class="ms-slidebar-login">
+                <a href="/log" class="withripple">
+                  <i class="zmdi zmdi-account"></i> Login</a>
+                <a href="/log" class="withripple">
+                  <i class="zmdi zmdi-account-add"></i> Register</a>
+              </div>
+              <div class="ms-slidebar-title">
+                <div class="ms-slidebar-t">
+                  <h3>SnowyTop
                     <span>Maths</span>
                   </h3>
                 </div>
-                <address class="no-mb">
-                  <p>
-                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> London, UK</p>
-                  <p>
-                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                    <a href="mailto:neil@snowytopmaths.co.uk">neil@snowytopmaths.co.uk</a>
-                  </p>
-
-                </address>
               </div>
-              <div class="ms-footbar-block">
-                <h3 class="ms-footbar-title">Social Media</h3>
-                <div class="ms-footbar-social">
-                  <a href="https://www.facebook.com/snowytopmaths/" class="btn-circle btn-facebook">
-                    <i class="zmdi zmdi-facebook"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
-                    <i class="zmdi zmdi-twitter"></i>
-                  </a>
-                  </div>
-                </div>
-                <!--Floating Header Bar-->
-<!-- ms-site-container -->
-    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
-      <div class="sb-slidebar-container">
-        <header class="ms-slidebar-header">
-          <div class="ms-slidebar-login">
-            <a href="/log" class="withripple">
-              <i class="zmdi zmdi-account"></i> Login</a>
-            <a href="/log" class="withripple">
-              <i class="zmdi zmdi-account-add"></i> Register</a>
-          </div>
-          <div class="ms-slidebar-title">
-            <div class="ms-slidebar-t">
-<!--              <span class="ms-logo ms-logo-sm">M</span>-->
-              <h3>SnowyTop
-                <span>Maths</span>
-              </h3>
+            </header>
+            <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+              <li class="card" role="tab" id="sch1">
+                <a data-scroll class="nav-link" href="/"><i class="zmdi zmdi-home"></i>Home</a>
+
+              </li>
+              <li class="card" role="tab" id="sch1">
+                <a data-scroll class="nav-link" href="/freevideos"><i class="zmdi zmdi-youtube-play"></i>Free Tutorial
+                  Videos</a>
+
+              </li>
+              <li class="card" role="tab" id="sch1">
+                <a data-scroll class="nav-link" href="/aboutus"><i class="zmdi zmdi-local-grocery-store"></i>About
+                  Us</a>
+
+              </li>
+              <li class="card" role="tab" id="sch1">
+                <a data-scroll class="nav-link" href="/pricing"><i class="zmdi zmdi-local-grocery-store"></i>Pricing</a>
+
+              </li>
+              <li class="card" role="tab" id="sch1">
+                <a href="/register"><i class="zmdi zmdi-account-add"></i>Sign Up</a>
+
+              </li>
+              <li class="card" role="tab" id="sch1">
+                <a href="/login"><i class="zmdi zmdi-account"></i>Login</a>
+              </li>
+
+            </ul>
+            <div class="ms-slidebar-social ms-slidebar-block">
+              <h4 class="ms-slidebar-block-title">Social Links</h4>
+              <div class="ms-slidebar-social">
+                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
+                  <i class="zmdi zmdi-facebook"></i>
+                  <!--              <span class="badge-pill badge-pill-pink">12</span>-->
+                  <div class="ripple-container"></div>
+                </a>
+                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
+                  <i class="zmdi zmdi-twitter"></i>
+                  <!--              <span class="badge-pill badge-pill-pink">4</span>-->
+                  <div class="ripple-container"></div>
+                </a>
+                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
+                  <i class="zmdi zmdi-google"></i>
+                  <div class="ripple-container"></div>
+                </a>
+                <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
+                  <i class="zmdi zmdi-instagram"></i>
+                  <div class="ripple-container"></div>
+                </a>
+              </div>
             </div>
           </div>
-        </header>
-        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
-          <li class="card" role="tab" id="sch1">
-<a data-scroll class="nav-link" href="/"><i class="zmdi zmdi-home"></i>Home</a>
-
-          </li>
-            <li class="card" role="tab" id="sch1">
-<a data-scroll class="nav-link" href="/freevideos"><i class="zmdi zmdi-youtube-play"></i>Free Tutorial Videos</a>
-
-          </li>
-             <li class="card" role="tab" id="sch1">
-<a data-scroll class="nav-link" href="/aboutus"><i class="zmdi zmdi-local-grocery-store"></i>About Us</a>
-
-          </li>
-            <li class="card" role="tab" id="sch1">
-<a data-scroll class="nav-link" href="/pricing"><i class="zmdi zmdi-local-grocery-store"></i>Pricing</a>
-
-          </li>
-            <li class="card" role="tab" id="sch1">
-<a href="/register"><i class="zmdi zmdi-account-add"></i>Sign Up</a>
-
-          </li>
-            <li class="card" role="tab" id="sch1">
-<a href="/login"><i class="zmdi zmdi-account"></i>Login</a>
-          </li>
-         
-        </ul>
-        <div class="ms-slidebar-social ms-slidebar-block">
-          <h4 class="ms-slidebar-block-title">Social Links</h4>
-          <div class="ms-slidebar-social">
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
-              <i class="zmdi zmdi-facebook"></i>
-<!--              <span class="badge-pill badge-pill-pink">12</span>-->
-              <div class="ripple-container"></div>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
-              <i class="zmdi zmdi-twitter"></i>
-<!--              <span class="badge-pill badge-pill-pink">4</span>-->
-              <div class="ripple-container"></div>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
-              <i class="zmdi zmdi-google"></i>
-              <div class="ripple-container"></div>
-            </a>
-            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
-              <i class="zmdi zmdi-instagram"></i>
-              <div class="ripple-container"></div>
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
-<!--End of Floating Header Bar-->
-    <script src="js/plugins.min.js"></script>
-    <script src="js/app.min.js"></script>
-                    
-  </body>
-</html>
+        <!--End of Floating Header Bar-->
+        <script src="js/plugins.min.js"></script>
+        <script src="js/app.min.js"></script>
+        </body>
+        </html>

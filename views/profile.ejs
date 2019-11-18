@@ -1,314 +1,346 @@
 <% include ./partials/header %>
-          
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="row">
-              <div class="col-lg-12 col-md-6 order-md-1">
-                <div class="card animated fadeInUp animation-delay-7">
-                  <div class="ms-hero-bg-primary ms-hero-img-mountain">
-                    <h3 class="color-white index-1 text-center no-m pt-4"><%=currentUser.username%></h3>               
-                    <img src="img/demo/m1.png" alt="..." class="img-avatar-circle"> </div>
-                  <div class="card-body pt-4 text-center">
-                    <h3 class="color-primary" id="avatar"></h3>
-                    <p></p>
-                    <div class="card card-primary animated fadeInUp animation-delay-12">
-              <table class="table table-no-border table-striped">
-                <tr>
-                  <th>
-                    <i class="zmdi zmdi-account mr-1 color-success"></i> Name</th>
-                  <td><%=currentUser.username%></td>
-                </tr>
-                  <tr>
-                  <th>
-                    <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Level</th>
-                  <td>
-                    <%=Math.ceil(currentUser.score/1100)%>
-                     
-                  </td>
-                </tr>
-                  <tr>
-                  <th>
-                    <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Progress</th>
-                  <td>
-                    <%=Math.ceil(currentUser.score/12000 *100)%>
-                  </td>
-                </tr>         
-              </table>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="col-lg-12 col-md-6 order-md-1">
+          <div class="card animated fadeInUp animation-delay-7">
+            <div class="ms-hero-bg-primary ms-hero-img-mountain">
+              <h3 class="color-white index-1 text-center no-m pt-4"><%=currentUser.username%></h3>
+              <img src="img/demo/m1.png" alt="..." class="img-avatar-circle">
             </div>
-                  </div>
-                </div>
+            <div class="card-body pt-4 text-center">
+              <h3 class="color-primary" id="avatar"></h3>
+              <p></p>
+              <div class="card card-primary animated fadeInUp animation-delay-12">
+                <table class="table table-no-border table-striped">
+                  <tr>
+                    <th>
+                      <i class="zmdi zmdi-account mr-1 color-success"></i> Name</th>
+                    <td><%=currentUser.username%></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Level</th>
+                    <td>
+                      <%=Math.ceil(currentUser.score/1100)%>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Progress</th>
+                    <td>
+                      <%=Math.ceil(currentUser.score/12000 *100)%>
+                    </td>
+                  </tr>
+                </table>
               </div>
-                
-<!--
+            </div>
+          </div>
+        </div>
+
+        <!--
               <div class="col-lg-12 col-md-12 order-md-3 order-lg-2">
                 <a href="javascript:void(0)" class="btn btn-warning btn-raised btn-block animated fadeInUp animation-delay-12">
                   <i class="zmdi zmdi-edit"></i> Edit Profile</a>
                 
               </div>
 -->
-              <div class="col-lg-12 col-md-6 order-md-2 order-lg-3">
-                <div class="card animated fadeInUp animation-delay-12">
-                  
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-            
-          <div class="col-lg-8">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="card card-info card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-                  <h2 class="counter color-info"><%= currentUser.score%></h2>
-                  <i class="fa fa-4x fa-star color-info"></i>
-                  <p class="mt-2 no-mb lead small-caps color-info">Points</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-                  <h2 class="counter color-success"><%=Math.ceil(currentUser.score/12000 *100)%></h2>
-                  <i class="fa fa-4x fa-percent color-success"></i>
-                  <p class="mt-2 no-mb lead small-caps color-success">Progress</p>
-                </div>
-              </div>
-              
-              <div class="col-sm-4">
-                <div class="card card-royal card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-                  <h2 class="counter color-royal"><%=Math.ceil(currentUser.score/1100) %></h2>
-                  <i class="fa fa-4x fa-trophy color-warning"></i>
-                  <p class="mt-2 no-mb lead small-caps color-royal"> Level</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-12 col-md-6 order-md-2 order-lg-3">
+          <div class="card animated fadeInUp animation-delay-12">
 
-            <div class="card card-success animated fadeInUp animation-delay-12">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="zmdi zmdi-library"></i> Course Pathway</h3>
-              </div>
-            </div>
-              
-              <!--
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card card-info card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-info"><%= currentUser.score%></h2>
+            <i class="fa fa-4x fa-star color-info"></i>
+            <p class="mt-2 no-mb lead small-caps color-info">Points</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-success"><%=Math.ceil(currentUser.score/12000 *100)%></h2>
+            <i class="fa fa-4x fa-percent color-success"></i>
+            <p class="mt-2 no-mb lead small-caps color-success">Progress</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card card-royal card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-royal"><%=Math.ceil(currentUser.score/1100) %></h2>
+            <i class="fa fa-4x fa-trophy color-warning"></i>
+            <p class="mt-2 no-mb lead small-caps color-royal"> Level</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-success animated fadeInUp animation-delay-12">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="zmdi zmdi-library"></i> Course Pathway</h3>
+        </div>
+      </div>
+
+      <!--
 topic list
 -->
-<div class="col-md-12">
-                      
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">&#x278A;
-                             Working with Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i> Difficulty Level</span></a>
-                            <a href="/multdiv5" class="list-group-item list-group-item-action withripple">
-                            &#9312; What Number Did I Start With? <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span></a>
-                          <a href="/multdiv1" class="list-group-item list-group-item-action withripple">
-                            &#9313; Multiplication of Whole Numbers
-                          <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span></a>
-                            <a href="/addsubtract1" class="list-group-item list-group-item-action withripple">
-                            &#9314; Add and Subtract Integers
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/multdiv2" class="list-group-item list-group-item-action withripple">
-                            &#9315; Multiply and Divide Whole Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                          <a href="/multdiv3" class="list-group-item list-group-item-action withripple">
-                            &#9316; Multiply and Divide multi-Digit Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                          <a href="/multdiv4" class="list-group-item list-group-item-action withripple">
-                            &#9316; Missing Digit Multiplication<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span> </a>
-                            
-                          
-                        </div>
-                      </div>
-                    </div>
-              <div class="col-md-12">
-                      
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a  class="list-group-item list-group-item-action withripple active">
-                            &#x278B; Fractions, Percentages and Decimals</a>
-                            <a href="/fractions1" class="list-group-item list-group-item-action withripple">
-                            &#9312; What is the missing fraction?
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/fractions2" class="list-group-item list-group-item-action withripple">
-                            &#9313; Fractions of Amounts 1
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                            <a href="/fractions3" class="list-group-item list-group-item-action withripple">
-                            &#9314; Fractions of Amounts 2
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/percentages1" class="list-group-item list-group-item-action withripple">
-                            &#9315; Comparing Percentages, Fractions and Decimals
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-              <div class="col-md-12">
-                      
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">
-                            &#x278C; Sequences</a>
-                            <a href="/sequences1" class="list-group-item list-group-item-action withripple">
-                            &#9312; Find consecutive numbers that add up to 90
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/sequences3" class="list-group-item list-group-item-action withripple">
-                            &#9313; Fun Rules
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/sequences2" class="list-group-item list-group-item-action withripple">
-                            &#9314; Which page of a newspaper?<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                            <a href="/sequences4" class="list-group-item list-group-item-action withripple">
-                            &#9315; Adding Consecutive Numbers
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                        </div>
-                      </div>
-                    </div>
-              <div class="col-md-12">                
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">
-                            &#x278D;Primes, Multiples, Squares and Factors</a>
-                              <a href="/prime2" class="list-group-item list-group-item-action withripple">
-                            &#9312; Add together primes to make a square
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                            <a href="/squares1" class="list-group-item list-group-item-action withripple">
-                            &#9313; Square Number Problems
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                        
-                          <a href="/prime1" class="list-group-item list-group-item-action withripple">
-                            &#9314; Common Multiples <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                        </div>
-                      </div>
-                    </div>
-              
-<!--
+      <div class="col-md-12">
+
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">&#x278A;
+              Working with Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i> Difficulty
+                Level</span></a>
+            <a href="/multdiv5" class="list-group-item list-group-item-action withripple">
+              &#9312; What Number Did I Start With? <span class="ml-auto "><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/multdiv1" class="list-group-item list-group-item-action withripple">
+              &#9313; Multiplication of Whole Numbers
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span></a>
+            <a href="/addsubtract1" class="list-group-item list-group-item-action withripple">
+              &#9314; Add and Subtract Integers
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/multdiv2" class="list-group-item list-group-item-action withripple">
+              &#9315; Multiply and Divide Whole Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/multdiv3" class="list-group-item list-group-item-action withripple">
+              &#9316; Multiply and Divide multi-Digit Numbers <span class="ml-auto "><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/multdiv4" class="list-group-item list-group-item-action withripple">
+              &#9316; Missing Digit Multiplication<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span> </a>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x278B; Fractions, Percentages and Decimals</a>
+            <a href="/fractions1" class="list-group-item list-group-item-action withripple">
+              &#9312; What is the missing fraction?
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/fractions2" class="list-group-item list-group-item-action withripple">
+              &#9313; Fractions of Amounts 1
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/fractions3" class="list-group-item list-group-item-action withripple">
+              &#9314; Fractions of Amounts 2
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/percentages1" class="list-group-item list-group-item-action withripple">
+              &#9315; Comparing Percentages, Fractions and Decimals
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x278C; Sequences</a>
+            <a href="/sequences1" class="list-group-item list-group-item-action withripple">
+              &#9312; Find consecutive numbers that add up to 90
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/sequences3" class="list-group-item list-group-item-action withripple">
+              &#9313; Fun Rules
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/sequences2" class="list-group-item list-group-item-action withripple">
+              &#9314; Which page of a newspaper?<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+            <a href="/sequences4" class="list-group-item list-group-item-action withripple">
+              &#9315; Adding Consecutive Numbers
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x278D;Primes, Multiples, Squares and Factors</a>
+            <a href="/prime2" class="list-group-item list-group-item-action withripple">
+              &#9312; Add together primes to make a square
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/squares1" class="list-group-item list-group-item-action withripple">
+              &#9313; Square Number Problems
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+            </a>
+
+            <a href="/prime1" class="list-group-item list-group-item-action withripple">
+              &#9314; Common Multiples <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+          </div>
+        </div>
+      </div>
+
+      <!--
             Insert new table here
 -->
-              <div class="col-md-12">                
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">
-                            &#x278E; Time</a>
-                            
-                          <a href="/time1" class="list-group-item list-group-item-action withripple">
-                            &#9312; Taking a holiday<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                          <a href="/time4" class="list-group-item list-group-item-action withripple">
-                            &#9313; Catching the train<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                            <a href="/time5" class="list-group-item list-group-item-action withripple">
-                            &#9314; Catching the train 2<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                            <a href="/time3" class="list-group-item list-group-item-action withripple">
-                            &#9315; Angles around a clock
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/time2" class="list-group-item list-group-item-action withripple">
-                            &#9316; My watch is slow
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-              
-              <div class="col-md-12">                
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a href="" class="list-group-item list-group-item-action withripple active">
-                           &#x278F; Ratio and Proportion</a>
-                            <a href="/ratio1" class="list-group-item list-group-item-action withripple">
-                           &#9312; Sharing Sweets
-                            <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/ratio3" class="list-group-item list-group-item-action withripple">
-                            &#9313; Painting the Fence Proportion
-                          <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>                  
-                        </div>
-                      </div>
-                    </div>
-              
-              <div class="col-md-12">                
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">
-                            &#x2790; Problems Solved with Algebra</a>
-                            <a href="/wordedalgebra1" class="list-group-item list-group-item-action withripple">
-                            &#9312; How many goals were scored?              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span> 
-                          </a>
-                          <a href="/wordedalgebra2" class="list-group-item list-group-item-action withripple">
-                            &#9313; How old is Alan? <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/wordedalgebra3" class="list-group-item list-group-item-action withripple">
-                            &#9314;Algebra Grids<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                          <a href="/wordedalgebra4" class="list-group-item list-group-item-action withripple">
-                            &#9315; Abstract Worded Problems <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                            <a href="/wordedalgebra5" class="list-group-item list-group-item-action withripple">
-                            &#9316; Algebra and Time <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                        </div>
-                      </div>
-                    </div>
-              
-              <div class="col-md-12">                
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">
-                            &#x2791; Shape, Space and Geometry</a>
-                            <a href="/shapes1" class="list-group-item list-group-item-action withripple">
-                            &#9312; Angles in Shapes 
-                                <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                            </a>
-                            <a href="/shapes5" class="list-group-item list-group-item-action withripple">
-                            &#9313; Area and Perimeter with Squares and Rectangles 1
-                          <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                          
-                            <a href="/shapes3" class="list-group-item list-group-item-action withripple">
-                            &#9314; Areas inside other Areas <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          <a href="/shapes4" class="list-group-item list-group-item-action withripple">
-                            &#9315; Areas of Rectangles and Triangles<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                        
-                            <a href="/volume" class="list-group-item list-group-item-action withripple">
-                            &#9316; Volume <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                            <a href="/shapes2" class="list-group-item list-group-item-action withripple">
-                            &#9317; Area and Perimeter with Squares and Rectangles 2<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-              <div class="col-md-12">                
-                      <div class="card card-success animated fadeInUp animation-delay-12">                         
-                        <div class="list-group">
-                          <a class="list-group-item list-group-item-action withripple active">
-                            &#x2792; Data
-                            
-                          <a href="/data2" class="list-group-item list-group-item-action withripple">
-                            &#9312; Bar Charts and Averages<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
-                          </a>
-                          
-                              <a href="/averages" class="list-group-item list-group-item-action withripple">
-                            &#9313; Averages (Mean)<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                              <a href="/averages2" class="list-group-item list-group-item-action withripple">
-                            &#9314; Averages (Mode, Mean and Median)<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                              <a href="/piecharts" class="list-group-item list-group-item-action withripple">
-                            &#9315; Pie Charts <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
-                        </div>
-                      </div>
-                    </div>
-              
-                  </div>        
-      <footer class="ms-footer">
-        <div class="container">
-          <p>Copyright SnowyTop Maths 2018</p>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x278E; Time</a>
+
+            <a href="/time1" class="list-group-item list-group-item-action withripple">
+              &#9312; Taking a holiday<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/time4" class="list-group-item list-group-item-action withripple">
+              &#9313; Catching the train<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/time5" class="list-group-item list-group-item-action withripple">
+              &#9314; Catching the train 2<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/time3" class="list-group-item list-group-item-action withripple">
+              &#9315; Angles around a clock
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/time2" class="list-group-item list-group-item-action withripple">
+              &#9316; My watch is slow
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+          </div>
         </div>
-      </footer>
-      <div class="btn-back-top">
-        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
-          <i class="zmdi zmdi-long-arrow-up"></i>
-        </a>
       </div>
-    
+
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a href="" class="list-group-item list-group-item-action withripple active">
+              &#x278F; Ratio and Proportion</a>
+            <a href="/ratio1" class="list-group-item list-group-item-action withripple">
+              &#9312; Sharing Sweets
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/ratio3" class="list-group-item list-group-item-action withripple">
+              &#9313; Painting the Fence Proportion
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x2790; Problems Solved with Algebra</a>
+            <a href="/wordedalgebra1" class="list-group-item list-group-item-action withripple">
+              &#9312; How many goals were scored? <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/wordedalgebra2" class="list-group-item list-group-item-action withripple">
+              &#9313; How old is Alan? <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/wordedalgebra3" class="list-group-item list-group-item-action withripple">
+              &#9314;Algebra Grids<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+            <a href="/wordedalgebra4" class="list-group-item list-group-item-action withripple">
+              &#9315; Abstract Worded Problems <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+            <a href="/wordedalgebra5" class="list-group-item list-group-item-action withripple">
+              &#9316; Algebra and Time <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x2791; Shape, Space and Geometry</a>
+            <a href="/shapes1" class="list-group-item list-group-item-action withripple">
+              &#9312; Angles in Shapes
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/shapes5" class="list-group-item list-group-item-action withripple">
+              &#9313; Area and Perimeter with Squares and Rectangles 1
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+
+            <a href="/shapes3" class="list-group-item list-group-item-action withripple">
+              &#9314; Areas inside other Areas <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+            <a href="/shapes4" class="list-group-item list-group-item-action withripple">
+              &#9315; Areas of Rectangles and Triangles<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+
+            <a href="/volume" class="list-group-item list-group-item-action withripple">
+              &#9316; Volume <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span></a>
+            <a href="/shapes2" class="list-group-item list-group-item-action withripple">
+              &#9317; Area and Perimeter with Squares and Rectangles 2<span class="ml-auto "><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action withripple active">
+              &#x2792; Data
+
+              <a href="/data2" class="list-group-item list-group-item-action withripple">
+                &#9312; Bar Charts and Averages<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                    class=" fa fa-mortar-board"></i></span>
+              </a>
+
+              <a href="/averages" class="list-group-item list-group-item-action withripple">
+                &#9313; Averages (Mean)<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                    class=" fa fa-mortar-board"></i></span></a>
+              <a href="/averages2" class="list-group-item list-group-item-action withripple">
+                &#9314; Averages (Mode, Mean and Median)<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                    class=" fa fa-mortar-board"></i></span></a>
+              <a href="/piecharts" class="list-group-item list-group-item-action withripple">
+                &#9315; Pie Charts <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+                    class=" fa fa-mortar-board"></i></span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer class="ms-footer">
+      <div class="container">
+        <p>Copyright SnowyTop Maths 2018</p>
+      </div>
+    </footer>
+    <div class="btn-back-top">
+      <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+        <i class="zmdi zmdi-long-arrow-up"></i>
+      </a>
+    </div>
+
     <!-- ms-site-container -->
     <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
       <div class="sb-slidebar-container">
@@ -317,7 +349,7 @@ topic list
           <div class="ms-slidebar-title">
 
             <div class="ms-slidebar-t">
-              
+
               <h3>SnowyTop
                 <span>Maths</span>
               </h3>
@@ -326,10 +358,12 @@ topic list
         </header>
         <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
           <li class="card" role="tab" id="sch1">
-            <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false" aria-controls="sc1">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false"
+              aria-controls="sc1">
               <i class="zmdi zmdi-home"></i> Number </a>
-            <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1" data-parent="#slidebar-menu">
-<!--
+            <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1"
+              data-parent="#slidebar-menu">
+              <!--
               <li>
                 <a href="/addsubtract">Addition and Subtraction</a>
               </li>
@@ -346,18 +380,20 @@ topic list
               <li>
                 <a href="/time">Time</a>
               </li>
-                <li>
+              <li>
                 <a href="/prime">Primes &amp; Factors</a>
               </li>
-                <li>
+              <li>
                 <a href="/ratio">Ratio</a>
               </li>
             </ul>
           </li>
           <li class="card" role="tab" id="sch2">
-            <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false" aria-controls="sc2">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false"
+              aria-controls="sc2">
               <i class="zmdi zmdi-desktop-mac"></i> Algebra </a>
-            <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2" data-parent="#slidebar-menu">
+            <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2"
+              data-parent="#slidebar-menu">
               <li>
                 <a href="page-about.html">Sequences</a>
               </li>
@@ -370,10 +406,12 @@ topic list
             </ul>
           </li>
           <li class="card" role="tab" id="sch4">
-            <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false" aria-controls="sc4">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false"
+              aria-controls="sc4">
               <i class="zmdi zmdi-edit"></i> Shape </a>
-            <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4" data-parent="#slidebar-menu">
-<!--
+            <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4"
+              data-parent="#slidebar-menu">
+              <!--
               <li>
                 <a href="/perimeter">Perimeter</a>
               </li>
@@ -384,41 +422,25 @@ topic list
                 <a href="/volume">Volume</a>
               </li>
 -->
-              
+
             </ul>
           </li>
           <li class="card" role="tab" id="sch5">
-            <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false" aria-controls="sc5">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false"
+              aria-controls="sc5">
               <i class="zmdi zmdi-shopping-basket"></i> Data </a>
-            <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5" data-parent="#slidebar-menu">
-<!--
-              <li>
-                <a href="ecommerce-filters.html">Pie Charts</a>
-              </li>
-              <li>
-                <a href="ecommerce-filters-full.html">Averages</a>
-              </li>
-          
-              <li>
-                <a href="ecommerce-cart.html">E-Commerce Cart</a>
-              </li>
--->
+            <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5"
+              data-parent="#slidebar-menu">
             </ul>
           </li>
 
         </ul>
-      <li>
-                <a href="/logout">Logout <%=currentUser.username %></a>
-              </li>
+        <li>
+          <a href="/logout">Logout <%=currentUser.username %></a>
+        </li>
       </div>
     </div>
 
-<!--
-    <script src="js/plugins.min.js"></script>
-    <script src="js/app.min.js"></script>
--->
+    <!--
 
-
-
-              
- <% include ./partials/footer %>
+<% include ./partials/footer %>

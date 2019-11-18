@@ -1,119 +1,120 @@
 <% include ./partials/header %>
-    
-                    <!-- Load Stripe.js on your website. -->
+<!-- Load Stripe.js on the website. -->
 <script src="https://js.stripe.com/v3"></script>
+<div class="material-background"></div>
+<div class="container">
+  <div class="text-center mb-4">
+    <h2 class="uppercase color-white animated fadeInUp animation-delay-7">Thank You for registering your email with
+      SnowyTopMaths! We are excited to help your child go from good to great in Maths.</h2>
+    <p class="lead uppercase color-medium animated fadeInUp animation-delay-7">Choose from our three options</p>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-lg-4">
+      <div class="price-table price-table-info wow zoomInUp animation-delay-2">
+        <header class="price-table-header">
+          <span class="price-table-category">Personal</span>
+          <h3>
+            <sup>£</sup>Free
+            <sub></sub>
+          </h3>
+        </header>
+        <div class="price-table-body">
+          <ul class="price-table-list">
+            <li>
+              <i class="zmdi zmdi-play-circle"></i> Access to 15 Free tutorials to master the fundamentals</li>
+            <li>
+              <i class="mr-2 fa fa-bell"></i> Subsciption to a weekly newsletter covering tips and common questions</li>
+            <li>
+              <i class="mr-2 fa fa-envelope-open"></i> Subscription to my latest blog posts regarding preparation for
+              the 11+ Maths exam</li>
+            <li>
+              <i class="mr-2 fa fa-facebook-official"></i> Join the members community for support, questions answered
+              and advice</li>
+            <li>
+              <i class="zmdi zmdi-star"></i> Be notified of any special deals and promotions</li>
 
-      <div class="material-background"></div>
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="uppercase color-white animated fadeInUp animation-delay-7">Thank You for registering your email with SnowyTopMaths! We are excited to help your child go from good to great in Maths.</h2>
-          <p class="lead uppercase color-medium animated fadeInUp animation-delay-7">Choose from our three options</p>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-4">
-            <div class="price-table price-table-info wow zoomInUp animation-delay-2">
-              <header class="price-table-header">
-                <span class="price-table-category">Personal</span>
-                <h3>
-                  <sup>£</sup>Free
-                  <sub></sub>
-                </h3>
-              </header>
-              <div class="price-table-body">
-                <ul class="price-table-list">
-                  <li>
-                    <i class="zmdi zmdi-play-circle"></i> Access to 15 Free tutorials to master the fundamentals</li>
-                  <li>
-                    <i class="mr-2 fa fa-bell"></i> Subsciption to a weekly newsletter covering tips and common questions</li>
-                  <li>
-                    <i class="mr-2 fa fa-envelope-open"></i> Subscription to my latest blog posts regarding preparation for the 11+ Maths exam</li>
-                    <li>
-                    <i class="mr-2 fa fa-facebook-official"></i> Join the members community for support, questions answered and advice</li>
-                  <li>
-                    <i class="zmdi zmdi-star"></i> Be notified of any special deals and promotions</li>
-                  
-                </ul>
-<!--
+          </ul>
+          <!--
                 <div class="text-center">
                   <a href="javascript:void(0)" class="btn btn-info btn-raised">
                     <i class="zmdi zmdi-cloud-download"></i> Join Now</a>
                 </div>
 -->
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="price-table price-table-success prominent wow zoomInDown animation-delay-2">
-              <header class="price-table-header">
-                <span class="price-table-category">Annual VIP membership</span>
-                <h3>
-                  <sup>£</sup>100
-                  <sub>/ year</sub>
-                </h3>
-              </header>
-              <div class="price-table-body">
-                <ul class="price-table-list">
-                  <li>
-                    <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials</li>
-                  <li>
-                    <i class="mr-2 fa fa-money"></i> 1 month money back gaurantee</li>
-                  <li>
-                    <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
-                  <li>
-                    <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
-                    <li>
-                    <i class="mr-2 fa fa-file-pdf-o"></i> Practise interactive past papers and receive immediate feedback </li>
-                  <li>
-                    <i class="mr-2 fa fa-file-pdf-o"></i> Download all past papers on pdf </li>
-                    <li>
-                </ul>
-                <div class="text-center">
-              
-
-<!-- Create a button that your customers click to complete their purchase. -->
-<button id="checkout-button" role="link">Pay</button>
-<div id="error-message"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="price-table price-table-success prominent wow zoomInDown animation-delay-2">
+        <header class="price-table-header">
+          <span class="price-table-category">Annual VIP membership</span>
+          <h3>
+            <sup>£</sup>100
+            <sub>/ year</sub>
+          </h3>
+        </header>
+        <div class="price-table-body">
+          <ul class="price-table-list">
+            <li>
+              <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials</li>
+            <li>
+              <i class="mr-2 fa fa-money"></i> 1 month money back gaurantee</li>
+            <li>
+              <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
+            <li>
+              <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
+            <li>
+              <i class="mr-2 fa fa-file-pdf-o"></i> Practise interactive past papers and receive immediate feedback
+            </li>
+            <li>
+              <i class="mr-2 fa fa-file-pdf-o"></i> Download all past papers on pdf </li>
+            <li>
+          </ul>
+          <div class="text-center">
 
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
-              <header class="price-table-header">
-                <span class="price-table-category">Monthly VIP membership</span>
-                <h3>
-                  <sup>£</sup>15
-                  <sub>/ month</sub>
-                </h3>
-              </header>
-              <div class="price-table-body">
-                <ul class="price-table-list">
-                  <li>
-                    <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials</li>
-                
-                  <li>
-                    <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
-                  <li>
-                    <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
-                    <li>
-                    <i class="mr-2 fa fa-file-pdf-o"></i> Practise interactive past papers and receive immediate feedback </li>
-                  <li>
-                    <i class="mr-2 fa fa-file-pdf-o"></i> Download all past papers on pdf </li>
-                </ul>
-                <div class="text-center">
-                  <a href="javascript:void(0)" class="btn btn-warning btn-raised">
-                    <i class="zmdi zmdi-cloud-download"></i> Join Now</a>
-                </div>
-              </div>
-            </div>
+            <!-- Create a button that your customers click to complete their purchase. -->
+            <button id="checkout-button" role="link">Pay</button>
+            <div id="error-message"></div>
+
+
           </div>
         </div>
       </div>
-      <!-- container -->
-      
-    <script src="js/plugins.min.js"></script>
-    <script src="js/app.min.js"></script>
-  </body>
+    </div>
+    <div class="col-lg-4">
+      <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
+        <header class="price-table-header">
+          <span class="price-table-category">Monthly VIP membership</span>
+          <h3>
+            <sup>£</sup>15
+            <sub>/ month</sub>
+          </h3>
+        </header>
+        <div class="price-table-body">
+          <ul class="price-table-list">
+            <li>
+              <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials</li>
+
+            <li>
+              <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
+            <li>
+              <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
+            <li>
+              <i class="mr-2 fa fa-file-pdf-o"></i> Practise interactive past papers and receive immediate feedback
+            </li>
+            <li>
+              <i class="mr-2 fa fa-file-pdf-o"></i> Download all past papers on pdf </li>
+          </ul>
+          <div class="text-center">
+            <a href="javascript:void(0)" class="btn btn-warning btn-raised">
+              <i class="zmdi zmdi-cloud-download"></i> Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/plugins.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
 </html>
