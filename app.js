@@ -1035,6 +1035,78 @@ app.get('/profilefree',isLoggedIn,function(req,res){
     res.render('profilefree');
 });
 
+//EXAM PAPER ROUTES
+app.get('/pastpapersfree',function(req,res){    
+    res.render('pastpapersfree');
+});
+
+app.get('/pastpapers',isLoggedIn, function(req,res){    
+    res.render('pastpapers');
+});
+
+
+app.get('/stpaulsA',function(req,res){    
+    res.render('stpaulA');
+});
+
+app.get('/habs2008', isLoggedIn, function(req,res){    
+    res.render('habs2008');
+});
+
+app.get('/aboutus',function(req,res){    
+    res.render('about');
+});
+
+app.get('/KingsWimbledon',isLoggedIn, function(req,res){    
+    res.render('kingsWimA');
+});
+app.get('/magdalen',isLoggedIn, function(req,res){    
+    res.render('mag');
+});
+app.get('/terms',function(req,res){    
+    res.render('terms');
+});
+app.get('/stpaulgirlsA',function(req,res){    
+    res.render('stpaulgirlsA');
+});
+app.get('/stpaulgirlsC', isLoggedIn, function(req,res){    
+    res.render('stpaulC');
+});
+app.get('/mgs18B', isLoggedIn, function(req,res){    
+    res.render('mgs18B');
+});
+app.get('/mgs18A', isLoggedIn, function(req,res){    
+    res.render('mgs18A');
+});
+app.get('/perseA', isLoggedIn, function(req,res){    
+    res.render('perseA');
+});
+app.get('/nlc15', isLoggedIn, function(req,res){    
+    res.render('nlc15');
+});
+app.get('/whitgift', isLoggedIn, function(req,res){    
+    res.render('whitgift');
+});
+
+app.get('/ascot', isLoggedIn, function(req,res){
+res.render('ascot');
+});
+app.get('/weybridge', isLoggedIn, function(req,res){
+res.render('weybridge');
+});
+app.get('/jags', isLoggedIn, function(req,res){
+res.render('jags');
+});
+app.get('/city10', isLoggedIn, function(req,res){
+res.render('city10');
+});
+app.get('/olave', isLoggedIn, function(req,res){
+res.render('olave');
+});
+app.get('/albans', isLoggedIn, function(req,res){
+res.render('albans');
+});
+
 app.listen(port, function(err){
         if(err){
             console.log("Error");

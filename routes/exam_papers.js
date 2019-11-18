@@ -1,11 +1,20 @@
-let express = require("express");
-let router = express.Router()
+var express = require("express");
+var router = express.Router()
+var User = require('../models/user');
+
+function isLoggedIn (req,res,next) {
+    if(req.isAuthenticated()){
+        return next();
+    } 
+    res.redirect('/login');
+    console.log("error loggedIn")
+}
 
 router.get('/pastpapersfree',function(req,res){    
     res.render('pastpapersfree');
 });
 
-router.get('/pastpapers',isLoggedIn,function(req,res){    
+router.get('/pastpapers',function(req,res){    
     res.render('pastpapers');
 });
 
