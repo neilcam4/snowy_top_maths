@@ -1,0 +1,164 @@
+<% include ./partials/headerfront %>
+    
+                    <!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+      <div class="material-background"></div>
+      <div class="container">
+<!--
+        <div class="text-center mb-4">
+          <h2 class="uppercase color-white animated fadeInUp animation-delay-7">Pricing Options</h2>
+          <p class="lead uppercase color-medium animated fadeInUp animation-delay-7">Choose from these three options</p>
+        </div>
+</div>
+-->
+        <div class="row no-gutters">
+          <div class="col-lg-4">
+            <div class="price-table price-table-info wow zoomInUp animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">Personal</span>
+                <h3>
+                  <sup>£</sup>Free
+                  <sub></sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i class="zmdi zmdi-play-circle"></i> Access to 15 Free tutorials to master the fundamentals</li>
+                  <li>
+                    <i class="mr-2 fa fa-envelope-open"></i> Subscription to my latest blog posts regarding preparation for the 11+ Maths exam</li>
+                    <li>
+                    <i class="mr-2 fa fa-facebook-official"></i> Join the members community for support, questions answered and advice</li>
+                  <li>
+                    <i class="zmdi zmdi-star"></i> Be notified of any special deals and promotions via email</li>
+                  
+                </ul>
+                <div class="text-center">
+                  <a href="/register" class="btn btn-info btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Join Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-table price-table-success prominent wow zoomInDown animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">1 Year VIP membership</span>
+                <h3>
+                  <sup>£</sup>100
+                  <sub>One-Off Payment</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials</li>
+                  <li>
+                    <i class="mr-2 fa fa-money"></i> 1 month money back guarantee</li>
+                  <li>
+                    <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
+                  <li>
+                    <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
+<!--
+                    <li>
+                    <i class="mr-2 fa fa-file-pdf-o"></i> Practise interactive past papers and receive immediate feedback </li>
+                  <li>
+                    <i class="mr-2 fa fa-file-pdf-o"></i> Download all past papers on pdf </li>
+-->
+                    
+                </ul>
+                <div class="text-center">
+
+                  <a href="/register" class="btn btn-info btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Sign Up</a>
+
+
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<!--<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_EUYlO0SBXzmZCh"
+  role="link"
+>
+  Checkout
+</button>-->
+
+
+
+
+
+
+<div id="error-message"></div>
+
+<script>
+  var stripe = Stripe('pk_test_SzrlU27CcvbZyyaMpw8lW0Zz');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_EUYlO0SBXzmZCh');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_EUYlO0SBXzmZCh', quantity: 1}],
+
+      // Note that it is not guaranteed your customers will be redirected to this
+      // URL *100%* of the time, it's possible that they could e.g. close the
+      // tab between form submission and the redirect.
+      successUrl: 'https://www.snowytopmaths.co.uk/register',
+      cancelUrl: 'https://www.snowytopmaths.co.uk/cancelled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+</script>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">Monthly VIP membership</span>
+                <h3>
+                  <sup>£</sup>15
+                  <sub>/ month</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i class="mr-2 fa fa-film"></i> Access to over 40 fun video tutorials</li>
+                
+                  <li>
+                    <i class="fa fa-check-square-o"></i> Interactive practice questions on the tutorials watched</li>
+                  <li>
+                    <i class="mr-2 fa fa-trophy"></i> Track your progress with points and medals</li>
+<!--
+                    <li>
+                    <i class="mr-2 fa fa-file-pdf-o"></i> Practise interactive past papers and receive immediate feedback </li>
+                  <li>
+                    <i class="mr-2 fa fa-file-pdf-o"></i> Download all past papers on pdf </li>
+-->
+                </ul>
+               <div class="text-center">
+                  <a href="/register" class="btn btn-info btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+      
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

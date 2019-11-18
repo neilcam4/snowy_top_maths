@@ -1,0 +1,39 @@
+<% include ./partials/header %>
+
+<div class="container">
+<div class="card card-success">
+                    <div class="card-header">
+                      <h3 class="card-title">
+                        <i class="zmdi zmdi-graduation-cap"></i> Users Admin Page</h3>
+                    </div>
+                    <table class="table table-no-border table-striped">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Email</th>
+                          <th>Score</th>
+                          <th>Date Joined</th>
+                        </tr>
+                      </thead>
+                      
+<% users.forEach(function(users){ %>
+<tbody>
+                        <tr>
+                          <td>1</td>
+                          <td><%=users.username%></td>
+                          <td><%=users.username%></td>
+                          <td><%=users.email%></td>
+                            <td><%=users.score%></td>
+                            <td><a href="/users/<%=users._id %>">Read More</a></td>
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+
+ </div>
+
+   
+<% include ./partials/footer %>

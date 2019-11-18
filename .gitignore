@@ -1,0 +1,14 @@
+/gd_bundle_g1.crt
+/gd_bundle_g2.crt
+/gd_bundle_g3.crt
+/gd_bundle-g2-g1.crt
+
+/ecosystem.config.js
+/snowytopmaths.co.uk.csr
+/snowytopmaths.co.uk.key
+
+/certificates
+/keys
+
+.env
+

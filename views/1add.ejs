@@ -1,0 +1,549 @@
+<% include ./partials/header %>
+<div class="container" id="video">
+
+<div class="col-md-8">
+        <h3 class="text-center">Missing Number Addition and Subtraction</h3>
+    
+        <div class="card card-info-inverse">
+            <div class="card-header">
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i>Find those missing numbers</h3>
+            </div>
+            <div class="js-player">
+            <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay" class="video-player-container vooplayer" data-playerId="MTQ3MDMz" allowtransparency="true" style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params="" frameborder="0" scrolling="no"> </iframe>
+            </div>
+            <div class="card-body overflow-hidden text-center">
+              </div>  
+            </div>
+        </div>
+    </div>
+   
+
+<div class="container">
+            <p id="userId"><%=currentUser.id %> </p>  
+  </div>
+
+<div class="col-lg-3">
+                      <div class="card">
+                        <div class="list-group">                    
+                          <a href="javascript:void(0)" class="list-group-item list-group-item-action active">Points
+                            <span class="ml-auto badge-pill badge-pill-info"><%=currentUser.score %></span>
+                          </a>                  
+                        </div>
+                      </div>
+                    </div>
+
+<div class="col-lg-11 ms-paper-content-container">
+              <div class="ms-paper-content">
+                <h1>Practice Questions</h1>
+                <div class="alert alert-light alert-info">
+                  <p>
+                    <strong>           
+                    </strong>Each question is worth 30 points. Remember to read the signs! Good Luck!</p>
+                </div>
+                <section class="ms-component-section">
+                  <div class="row masonry-container">
+                    
+                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+                      <div class="card card-royal">
+                        <div class="card-header">
+                          <h3 class="card-title">1.</h3>
+                        </div>
+                        <div class="card-body"> 
+                            <form  name="quiz1">
+                                <p>Find the missing numbers below<img src="img/add1.png" alt="" class="img-fluid"></p>
+  <div class="form-group">
+        <div id="questions" >
+      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Pink Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question2" class="form-control" placeholder="Purple Number"></div>
+    
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question3" class="form-control" placeholder="Green Number"></div>
+      <div class="row">                    
+          <button type="button" id="button1" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check </button>
+          <div id="tick">
+                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                        <i class="fa fa-check"></i>
+                                </span></div>
+                            <div id="wrong">
+                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                        <i class="fa fa-remove"></i>
+                      </span>
+                                </div>
+                                </div>
+        </div>                             
+        </form>
+                            
+      </div>                    
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+                      <div class="card card-royal">
+                        <div class="card-header">
+                          <h3 class="card-title">2.</h3>
+                        </div>
+                        <div class="card-body"> 
+                            <form  name="quiz2">
+                                <p>Find the missing numbers below<img src="img/add2.png" alt="" class="img-fluid"></p>
+  <div class="form-group">
+        <div id="questions" >
+      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Purple Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question2" class="form-control" placeholder="Red Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question3" class="form-control" placeholder="Green Number"></div>
+      <div class="row">                 
+          <button type="button" id="button2" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check </button>
+          <div id="tick2">
+                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                        <i class="fa fa-check"></i>
+                                </span></div>
+                            <div id="wrong2">
+                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                        <i class="fa fa-remove"></i>
+                      </span>
+                                </div>
+                                </div>
+        </div>                             
+        </form>
+                            
+      </div>                    
+                      </div>
+                    </div>
+     <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+                      <div class="card card-royal">
+                        <div class="card-header">
+                          <h3 class="card-title">3.</h3>
+                        </div>
+                        <div class="card-body"> 
+                            <form  name="quiz3">
+                                <p>Find the missing numbers below<img src="img/add3.png" alt="" class="img-fluid"></p>
+  <div class="form-group">
+        <div id="questions" >
+      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Green Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question2" class="form-control" placeholder="Red Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question3" class="form-control" placeholder="Purple Number"></div>
+      <div class="row">                     
+          <button type="button" id="button3" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check </button>
+          <div id="tick3">
+                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                        <i class="fa fa-check"></i>
+                                </span></div>
+                            <div id="wrong3">
+                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                        <i class="fa fa-remove"></i>
+                      </span>
+                                </div>
+                                </div>
+      
+        </div>                             
+        </form>
+                            
+      </div>                    
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+                      <div class="card card-royal">
+                        <div class="card-header">
+                          <h3 class="card-title">4.</h3>
+                        </div>
+                        <div class="card-body"> 
+                            <form  name="quiz4">
+                                <p>Find the missing numbers below<img src="img/add4.png" alt="" class="img-fluid"></p>
+  <div class="form-group">
+        <div id="questions" >
+      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Red Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question2" class="form-control" placeholder="Purple Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question3" class="form-control" placeholder="Green Number"></div>
+      <div class="row">                     
+          <button type="button" id="button4" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check </button>
+          <div id="tick4">
+                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                        <i class="fa fa-check"></i>
+                                </span></div>
+                            <div id="wrong4">
+                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                        <i class="fa fa-remove"></i>
+                      </span>
+                                </div>
+                                </div>
+        </div>                             
+        </form>                       
+      </div>                    
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+                      <div class="card card-royal">
+                        <div class="card-header">
+                          <h3 class="card-title">5.</h3>
+                        </div>
+                        <div class="card-body"> 
+                            <form name="quiz5">
+                                <p>Find the missing numbers below<img src="img/add5.png" alt="" class="img-fluid"></p>
+  <div class="form-group">
+        <div id="questions" >
+      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Purple Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question2" class="form-control" placeholder="Red Number"></div>
+    
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question3" class="form-control" placeholder="Green Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question4" class="form-control" placeholder="Blue Number"></div>
+      <div class="row">
+                            
+          <button type="button" id="button5" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check </button>
+                        <div id="tick5">
+                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                        <i class="fa fa-check"></i>
+                                </span></div>
+                            <div id="wrong5">
+                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                        <i class="fa fa-remove"></i>
+                      </span>
+                                </div>
+                                </div>
+        </div>                             
+        </form>                       
+      </div>                    
+                      </div>
+                    </div>
+                    
+        <div class="col-lg-4 col-md-6 masonry-item wow fadeInUp animation-delay-2">
+                      <div class="card card-royal">
+                        <div class="card-header">
+                          <h3 class="card-title">6.</h3>
+                        </div>
+                        <div class="card-body"> 
+                            <form name="quiz6">
+                                <p>Find the missing numbers below<img src="img/add6.png" alt="" class="img-fluid"></p>
+  <div class="form-group">
+        <div id="questions" >
+      <input id="usr" type= "text" name = "question1" class="form-control" placeholder="Green Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question2" class="form-control" placeholder="Blue Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question3" class="form-control" placeholder="Purple Number"></div>
+      
+      <div id="questions" >
+      <input id="usr" type= "text" name = "question4" class="form-control" placeholder="Red Number"></div>
+      <div class="row">                     
+          <button type="button" id="button6" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check </button>
+                    <div id="tick6">
+                            <span class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                        <i class="fa fa-check"></i>
+                                </span></div>
+                            <div id="wrong6">
+                      <span class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                        <i class="fa fa-remove"></i>
+                      </span>
+                                </div>
+                                </div>
+        </div>                             
+        </form>
+      </div>                    
+                      </div>
+                    </div>                                     
+                  </div>            
+                                 
+                <button type="button" id="button" class="btn btn-primary btn-raised" data-toggle="modal" data-target="#myModal4"> Check All Answers </button> 
+                  <!-- Modal -->
+                  <div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+                    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3>
+                            
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                              <i class="zmdi zmdi-close"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="alert alert-success alert-light " role="alert"><p id="badge"></p>
+</div>
+                          <div class="alert alert-danger alert-light " role="alert"><p id="points"></p>
+</div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    <div id="example"></div>                                    
+<script>
+  
+
+    $("#example").load("./config");
+
+    
+    
+    var correct = 0;
+    $("#button").click(function(){  
+        var question1 = document.quiz1.question1.value;  
+        var question2 = document.quiz1.question2.value;
+        var question3 = document.quiz1.question3.value;
+        var question4 = document.quiz2.question1.value;
+        var question5 = document.quiz2.question2.value;
+        var question6 = document.quiz2.question3.value;
+        var question7 = document.quiz3.question1.value;
+        var question8 = document.quiz3.question2.value;
+        var question9 = document.quiz3.question3.value;
+        var question10 = document.quiz4.question1.value;
+        var question11 = document.quiz4.question2.value;
+        var question12 = document.quiz4.question3.value;
+        var question13 = document.quiz5.question1.value;
+        var question14 = document.quiz5.question2.value;
+        var question15 = document.quiz5.question3.value;
+        var question16 = document.quiz6.question1.value;
+        var question17 = document.quiz6.question2.value;
+        var question18 = document.quiz6.question3.value;
+        var question19 = document.quiz5.question4.value;
+        var question20 = document.quiz6.question4.value;
+   //question 1     
+    if(question1 == 3 && question2 ==5 &&question3==4){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+            correct++;
+  } else {
+      document.getElementById("wrong").style.visibility = "visible";
+  }
+        //question2
+        if(question4 == 6 &&question5 == 7 &&question6 == 8){
+        checkAnswer();     
+        document.getElementById("tick2").style.visibility = "visible";
+      correct++;
+  }     
+      else {
+      document.getElementById("wrong2").style.visibility = "visible";        
+  }       
+        //question 3
+        if(question7 == 5&&question8 == 6&&question9 == 9){
+        checkAnswer();     
+        document.getElementById("tick3").style.visibility = "visible";
+        
+      correct++;
+  }     
+      else {
+      document.getElementById("wrong3").style.visibility = "visible";        
+  } 
+        //question4
+        if(question10 == 3&&question11 == 8&&question12 == 1){
+        checkAnswer();     
+        document.getElementById("tick4").style.visibility = "visible";
+      correct++;
+  }     
+      else {
+      document.getElementById("wrong14").style.visibility = "visible";        
+  } 
+        //question 5
+        if(question13 == 8&&question14 == 6&&question15 == 6&&question19 == 1){
+        checkAnswer();     
+        document.getElementById("tick5").style.visibility = "visible";
+      correct++;
+  }     
+      else {
+      document.getElementById("wrong5").style.visibility = "visible";  
+  }             
+        //question6
+        if(question16 == 9&&question17 == 8&&question18 == 3&&question20 == 5){
+        checkAnswer();     
+        document.getElementById("tick6").style.visibility = "visible";   
+      correct++;
+  }     
+      else {
+      document.getElementById("wrong6").style.visibility = "visible";        
+  } 
+        if(correct==6){
+            document.getElementById("badge").textContent= " 6 out of 6. WOW! That's Amazing!";
+            document.getElementById("points").textContent="Points earned: 180";
+        }
+        if(correct==5){
+            document.getElementById("badge").textContent= " 5 out of 6. Pretty good!";
+            document.getElementById("points").textContent="Points earned: 150";
+        }
+        if(correct==4){
+            document.getElementById("badge").textContent= " 4 out of 6. Good try!";
+            document.getElementById("points").textContent="Points earned 120";
+        }
+        
+        if(correct==3){
+            document.getElementById("badge").textContent= " 3 out of 6. Keep going!";
+           document.getElementById("points").textContent="Points earned:  90";
+        }
+        if(correct==2){
+            document.getElementById("badge").textContent= " 2 out of 6. I see you're potential. Try again!";
+           document.getElementById("points").textContent="Points earned 60";
+        }
+        if(correct==1){
+            document.getElementById("badge").textContent= " 1 out of 6. Try that one again!";
+           document.getElementById("points").textContent="Points earned:  30";
+        }
+        if(correct==0){
+            document.getElementById("badge").textContent= "0 out of 6. Refresh the page and watch the video again. You will get it right.";
+            document.getElementById("points").textContent="Points earned : 0";   
+        }     
+       });
+    
+    function checkAnswer(){
+        
+        var id =  $("#userId").text(); 
+        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+        var api= $("#example").text();
+        var idAndApi = id + api;
+        
+        var sliced = id.slice(0,-1);
+        var finalApi = url + sliced +api;
+        
+        $.ajax({           
+            url: finalApi,
+            type:"put",
+                data: JSON.stringify( { "$inc" : { "score" : 30 } } ),
+            contentType:"application/json",
+            success:function(data){
+                getScore();
+                $("#jquery").text(data.score);
+            },
+            error:function(xhr, status, error){
+                console.log(error);
+            }
+        });
+        
+    function getScore(){        
+        var id =  $("#userId").text(); 
+        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+        var api= $("#example").text();
+        var idAndApi = id + config;
+        
+        var sliced = id.slice(0,-1);
+        var finalApi = url + sliced +api;
+    $.ajax({          
+        url:finalApi,
+            type:"get",
+            data: JSON.stringify(),
+            contentType:"application/json",
+            success:function(data){
+                $("#jquery").text(data.score);
+            },
+            error:function(xhr, status, error){
+                console.log(error);
+            }
+        });   
+    }
+       };
+   //button 1
+    $('#button1').click(function(){
+        var question1 = document.quiz1.question1.value;  
+        var question2 = document.quiz1.question2.value;
+        var question3 = document.quiz1.question3.value;
+         if(question1 == 3 && question2 ==5 &&question3==4){
+            checkAnswer();     
+            
+            document.getElementById("tick").style.visibility = "visible";
+                correct++;
+             document.getElementById("badge").textContent= " Correct";
+             document.getElementById("points").textContent="Points earned:  30";
+      } else {
+          
+          document.getElementById("wrong").style.visibility = "visible";
+          document.getElementById("badge").textContent= " Incorrect. Please try again";
+      }
+     })
+    $('#button2').click(function(){
+        var question4 = document.quiz2.question1.value;
+        var question5 = document.quiz2.question2.value;
+        var question6 = document.quiz2.question3.value;
+         if(question4 == 6 &&question5 == 7 &&question6 == 8){
+            checkAnswer();     
+            document.getElementById("tick2").style.visibility = "visible";
+                correct++;
+             document.getElementById("badge").textContent= " Correct";
+             document.getElementById("points").textContent="Points earned:  30";
+      } else {
+          document.getElementById("wrong2").style.visibility = "visible";
+          document.getElementById("badge").textContent= " Incorrect. Please try again";
+      }
+     })
+    $('#button3').click(function(){
+        var question7 = document.quiz3.question1.value;
+        var question8 = document.quiz3.question2.value;
+        var question9 = document.quiz3.question3.value;
+         if(question7 == 5&&question8 == 6&&question9 == 9){
+            checkAnswer();     
+            document.getElementById("tick3").style.visibility = "visible";
+                correct++;
+             document.getElementById("badge").textContent= " Correct";
+             document.getElementById("points").textContent="Points earned:  30";
+      } else {
+          document.getElementById("wrong3").style.visibility = "visible";
+          document.getElementById("badge").textContent= " Incorrect. Please try again";
+      }
+     })
+        $('#button4').click(function(){
+        var question10 = document.quiz4.question1.value;
+        var question11 = document.quiz4.question2.value;
+        var question12 = document.quiz4.question3.value;
+         if(question10 == 3&&question11 == 8&&question12 == 1){
+            checkAnswer();     
+            document.getElementById("tick4").style.visibility = "visible";
+                correct++;
+             document.getElementById("badge").textContent= " Correct";
+             document.getElementById("points").textContent="Points earned:  30";
+      } else {
+          document.getElementById("wrong4").style.visibility = "visible";
+          document.getElementById("badge").textContent= " Incorrect. Please try again";
+      }
+     })
+    $('#button5').click(function(){
+        var question13 = document.quiz5.question1.value;
+        var question14 = document.quiz5.question2.value;
+        var question15 = document.quiz5.question3.value;
+        var question19 = document.quiz5.question4.value;
+         if(question13 == 8&&question14 == 6&&question15 == 6&&question19 == 1){
+            checkAnswer();     
+            document.getElementById("tick5").style.visibility = "visible";
+                correct++;
+             document.getElementById("badge").textContent= " Correct";
+             document.getElementById("points").textContent="Points earned:  30";
+      } else {
+          document.getElementById("wrong5").style.visibility = "visible";
+          document.getElementById("badge").textContent= " Incorrect. Please try again";
+      }
+     })
+       $('#button6').click(function(){
+        var question16 = document.quiz6.question1.value;
+        var question17 = document.quiz6.question2.value;
+        var question18 = document.quiz6.question3.value;
+        var question20 = document.quiz6.question4.value;
+         if(question16 == 9&&question17 == 8&&question18 == 3&&question20 == 5){
+            checkAnswer();     
+            document.getElementById("tick6").style.visibility = "visible";
+                correct++;
+             document.getElementById("badge").textContent= " Correct";
+             document.getElementById("points").textContent="Points earned:  30";
+      } else {
+          document.getElementById("wrong6").style.visibility = "visible";
+          document.getElementById("badge").textContent= " Incorrect. Please try again";
+      }
+     })
+</script>
+                    
+<% include ./partials/footer %>

@@ -1,0 +1,304 @@
+<% include ./partials/header %>
+
+<style>
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: lightblue;
+    max-width:700px;
+    min-width:500px;
+}
+
+.aside-1 {
+  background: gold;
+  max-width:300px;
+}
+
+.aside-2 {
+  background: hotpink;
+   
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+    #trophy{
+        visibility:hidden;
+        
+    } 
+body {
+  padding: 2em; 
+}
+
+</style>
+<div class="container">
+            <p id="userId"><%=currentUser.id %> </p>          
+  </div>  
+
+<div class="wrapper">
+  <header class="header">Addition</header>
+  <article class="main">
+    <div class="slideshow-container">
+
+<div class="mySlides">  
+    <div class="ui two column centered grid">
+        <form id="quiz1" name="quiz1">
+  <div class="column">
+        <div id="questions" ><p>31 + 45 =  </p>
+      <input id="textbox" type= "text" name = "question1"></div>
+        </div>   
+        </form>
+</div>
+        </div>
+    
+
+<div class="mySlides"> 
+    <div class="ui two column centered grid">
+        <form id="quiz1" name="quiz2">
+  <div class="column">
+        <div id="questions"><p>1 + 2 =  </p>
+      <input id="textbox" type= "text" name = "question1"></div>
+        </div>   
+        </form>
+</div>
+</div>
+
+<div class="mySlides">
+  <div class="ui two column centered grid">
+        <form id="quiz1" name="quiz3">
+  <div class="column">
+        <div id="questions"><p>3 + 4 =  </p>
+      <input id="textbox" type= "text" name = "question1"></div>
+        </div>   
+        </form>
+</div>
+</div>
+
+
+
+
+    
+    
+</div> 
+      
+  </article>
+  <aside class="aside aside-1"><div class="ui labeled button" tabindex="0">
+  
+  <div>
+      
+      </div>
+      
+</div>  
+      <div class="ui compact segments">
+  <div class="ui red segment">
+    <p><i class="star icon"></i>Points</p>
+  </div>
+  <div class="ui red segment">
+    <p id= "jquery"><%=currentUser.score %> </p>
+  </div>
+</div>
+      <div id="trophy" >
+  <div class="image">
+    <img  src="Fractions2.jpg">
+  </div>
+</div>
+    </aside>
+    
+    
+  <aside class="aside aside-2">
+    <div class="column">
+      <div>
+               <p><input id="button" type="button" value="Check Answer"></p>
+        </div></div>
+    <div class="column">
+      <div>
+            <p><input id="reset" type="button" value="Try Again" onClick="window.location.reload()" ></p>
+        </div>
+        <div id="tick">
+            <p><i class="check circle outline icon"></i></p>
+        </div>
+        <p id="msg"></p>
+        <div>
+            <p id="wrong"><i class="close icon"></i></p>
+        </div>
+      </div>
+      <div id="badge"></div>
+
+    
+    </aside>
+  <footer class="footer">
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>    
+    </footer>
+</div>
+ 
+<script>
+    
+     
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);    
+    document.getElementById("tick").style.visibility = "hidden";
+    document.getElementById("wrong").style.visibility = "hidden";
+    document.getElementById("msg").style.visibility = "hidden";
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}    
+    var correct = 0;
+    $("#button").click(function(){  
+        
+           var question1 = document.quiz1.question1.value;  
+           var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        
+    
+        if(question2 == 3){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").innerHTML ="Correct, well done! 30 points";
+            
+            
+            correct++;
+  } else if(question3 == 7){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+      document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").innerHTML ="Correct, well done! 30 points!";
+      correct++;
+  }
+        else if(question1 == 76){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").innerHTML ="Correct, well done! 30 points!";
+            
+            correct++;
+  } 
+        else {
+      document.getElementById("wrong").style.visibility = "visible";
+            
+  } 
+        if(correct==3){
+            document.getElementById("badge").innerHTML= "You scored 3 out of 3";
+            document.getElementById("trophy").style.visibility="visible";
+        }
+       });
+        
+   
+    function checkAnswer(){
+       
+        var id =  $("#userId").text(); 
+        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+        var api= "?apiKey=CUh_8XmeKybytcjyLHezRfveLaEDA6V6";
+        var idAndApi = id + api;
+        
+        var sliced = id.slice(0,-1);
+        var finalApi = url + sliced +api;
+        
+        $.ajax({           
+            url: finalApi,
+            type:"put",
+                data: JSON.stringify( { "$inc" : { "score" : 30 } } ),
+            contentType:"application/json",
+            success:function(data){
+                console.log("The score is" + data);
+                console.log(finalApi);
+                getScore();
+                
+            },
+            error:function(xhr, status, error){
+                console.log(error);
+            }
+        });
+        
+    function getScore(){        
+        var id =  $("#userId").text(); 
+        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+        var api= "?apiKey=CUh_8XmeKybytcjyLHezRfveLaEDA6V6";
+        var idAndApi = id + api;
+        
+        var sliced = id.slice(0,-1);
+        var finalApi = url + sliced +api;
+    $.ajax({          
+        url:finalApi,
+            type:"get",
+            data: JSON.stringify(),
+            contentType:"application/json",
+            success:function(data){
+                console.log("The id length is " + id.length);
+                console.log("The new length is " + sliced.length);
+                console.log("Sliced id is" + sliced);
+                console.log("The score is " + data.score);
+                console.log(finalApi);
+                console.log("The id and api is" +  idAndApi);
+                $("#jquery").text(data.score);
+            },
+            error:function(xhr, status, error){
+                console.log(error);
+            }
+        });   
+    }
+       };
+   
+</script>
+
+
+<% include ./partials/footer %>
+            
+      
+    

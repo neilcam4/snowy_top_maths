@@ -1,0 +1,136 @@
+<% include ./partials/headerfront %>
+ 
+
+      <div class="mw-500 absolute-center">
+        <div class="card color-dark shadow-6dp animated fadeIn animation-delay-7">
+          <div class="ms-hero-bg-primary ms-hero-img-mountain">
+            <h2 class="text-center no-m pt-4 pb-4 color-white index-1" >Register</h2>
+          </div>
+          <ul class="nav nav-tabs nav-tabs-full nav-tabs-1 nav-tabs-transparent indicator-primary" role="tablist">
+
+            <li class="nav-item" role="presentation">
+              <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                <i class="zmdi zmdi-account-add"></i> New User Register</a>
+            </li>
+
+          </ul>
+          <div class="card-body">
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+                <form action ='/register' method = "post" onsubmit="return checkForm(this);">
+                  <fieldset>
+                      <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-user"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-username">Name</label>
+                        <input type="text" name="username" id="ms-form-username" class="form-control"> </div>
+                        
+                    </div>
+                      <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-email">Email</label>
+                        <input type="email" name="email" id="ms-form-email" class="form-control"> </div>
+                        
+                    </div>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-lock"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-pass">Password</label>
+                        <input type="password" minlength="8" name="password" id="ms-form-pass" class="form-control"> </div>
+                    </div>
+                      <div class="row mt-4">
+                     <p><input type="checkbox" name="terms"> I accept the <a href="/terms" target="_blank"><u>Terms and Conditions</u></a></p>                          
+                      </div>    
+
+                      <div class="col-11">
+                        <button class="btn btn-raised btn-primary pull-right" type="submit">Register</button>
+                      </div></fieldset></form>
+                  
+                      </div> 
+                
+
+<!-- Beggining of Header Bar --!>
+     <div class="ms-slidebar-title">
+            <div class="ms-slidebar-t">
+              <span class="ms-logo ms-logo-sm">S</span>
+              <h3>SnowyTop
+                <span>Maths</span>
+              </h3>
+            </div>
+          </div>
+        
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+          <li class="card" role="tab" id="sch1">
+<a data-scroll class="nav-link" href="/"><i class="zmdi zmdi-home"></i>Home</a>
+
+          </li>
+            <li class="card" role="tab" id="sch1">
+<a data-scroll class="nav-link" href="/freevideos"><i class="zmdi zmdi-youtube-play"></i>Free Tutorial Videos</a>
+
+          </li>
+             <li class="card" role="tab" id="sch1">
+<a data-scroll class="nav-link" href="/aboutus"><i class="zmdi zmdi-local-grocery-store"></i>About Us</a>
+
+          </li>
+            <li class="card" role="tab" id="sch1">
+<a data-scroll class="nav-link" href="/pricing"><i class="zmdi zmdi-local-grocery-store"></i>Pricing</a>
+
+          </li>
+            <li class="card" role="tab" id="sch1">
+<a href="/register"><i class="zmdi zmdi-account-add"></i>Sign Up</a>
+
+          </li>
+            <li class="card" role="tab" id="sch1">
+<a href="/log"><i class="zmdi zmdi-account"></i>Login</a>
+          </li>
+         
+        </ul>
+        <div class="ms-slidebar-social ms-slidebar-block">
+          <h4 class="ms-slidebar-block-title">Social Links</h4>
+          <div class="ms-slidebar-social">
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-facebook">
+              <i class="zmdi zmdi-facebook"></i>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-twitter">
+              <i class="zmdi zmdi-twitter"></i>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-google">
+              <i class="zmdi zmdi-google"></i>
+              <div class="ripple-container"></div>
+            </a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-raised btn-instagram">
+              <i class="zmdi zmdi-instagram"></i>
+              <div class="ripple-container"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>            
+-->
+    
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.min.js"></script>
+        <script>
+        function checkForm(form)
+  {
+    
+    if(!form.terms.checked) {
+      alert("Please indicate that you accept the Terms and Conditions");
+      form.terms.focus();
+      return false;
+    }
+    return true;
+  }
+          
+                  </script>
+  </body>
+</html>

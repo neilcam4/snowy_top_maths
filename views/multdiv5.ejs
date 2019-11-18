@@ -1,0 +1,381 @@
+<% include ./partials/header %>
+<style>
+.dot{
+       cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; 
+    }
+   .active, .dot:hover {
+  background-color: #9C27B0;
+}
+
+#button{
+background-color: #009caf;
+    }
+#button1{
+background-color: #9C27B0;
+}
+</style>
+
+
+
+<div class="col-lg-11 ms-paper-content-container"style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">  
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span>    Each question is worth 10 points. 
+            <strong>Good Luck! </strong> </p>                  
+        </div>
+    </div>
+</div>
+                  
+                  
+<!--   Video        -->
+<div id="video" style="text-align: center">
+  <div class="col-md-6" style="display:inline-block">
+        <h3 class="text-center">What number did I start with?</h3>
+        <div class="card card-info-inverse">
+            <div class="card-header">
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
+            </div>
+            <div class="js-player">
+                <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay" class="video-player-container vooplayer" data-playerId="MTQ3NjQ3" allowtransparency="true" style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params="" frameborder="0" scrolling="no"> </iframe>
+            </div>
+            <div class="card-body overflow-hidden text-center">
+              </div>  
+        </div>
+    </div>
+</div>
+   
+<div class="container">
+            <p id="userId"><%=currentUser.id %> </p>  
+    
+  </div>  
+
+<div style="text-align: center">
+    <div class="card card-royal col-md-6" style="display:inline-block" >
+        
+<!--        First question-->
+<div class="mySlides">
+    <div class="card-header">
+        <h3 id="header" class="card-title">1.</h3>
+    </div>
+  <div class="card-body"> 
+   <form name="quiz1">
+   <p class="q"> 
+    If I start with a number, multiply it by 3, add on 2, and the answer is 26. What number did I start with? </p>
+        <div class="ui input focus">
+         <input type="text" placeholder=""  name = "question1">          
+        </div>
+    </form>
+  </div>  
+</div>
+<!--     2nd question                -->
+<div class="mySlides">
+    <div class="card-header">
+        <h3 class="card-title">2.</h3>
+    </div>
+    <div class="card-body"> 
+      <form  name="quiz2">
+       <p class="q">If I start with a number, multiply it by 5, add on 8, and the answer is 53. What number did I start with?</p>
+        <div class="ui input focus">
+         <input type="text" placeholder=""  name = "question1">
+            </div>
+      </form>
+    </div>
+</div>
+<!--   3rd question       -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">3.</h3></div>      <div class="card-body"> 
+    <form  name="quiz3">
+        <p class="q"> If I start with a number, multiply it by 7, then subtract 12, and the answer is 30. What number did I start with?</p>
+        <div class="ui input focus">
+          <input type="text" placeholder=" "  name = "question1">
+        </div>
+    </form>
+    </div>
+</div>
+<!--4th question        -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">4.</h3></div>      <div class="card-body"> 
+    <form  name="quiz4">
+        <p class="q">If I start with a number, divide it by 4, add on 9, and the answer is 17. What number did I start with?</p>
+        <div class="ui input focus">
+         <input type="text" placeholder=" "  name = "question1">
+        </div>
+    </form>
+    </div>
+</div>
+<!--    5th question    -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">5.</h3></div>      <div class="card-body"> 
+    <form  name="quiz5">
+        <p class="q">If I start with a number, divide it by 9, subtract 8, and the answer is -1. What number did I start with? </p>
+        <div class="ui input focus">
+         <input type="text" placeholder=""  name = "question1">
+        </div>
+    </form>
+    </div>
+</div>
+<!--   6th question     -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">6.</h3></div>      <div class="card-body"> 
+    <form  name="quiz6">
+        <p class="q">If I start with a number, multiply it by 4, add on 8, and then multiply the result by 2, the answer is 64. What number did I start with?</p>
+        <div class="ui input focus">
+         <input type="text" placeholder=""  name = "question1">
+        </div>
+    </form>
+    </div>
+</div>
+<!--        buttons-->
+<div class="container" >
+    <div class="row" style="margin: 0 auto">
+        <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
+        <button type="button" id="next1" class="btn btn-primary btn-raised"onclick="plusSlides(1)"> Next </button>
+        <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal" data-target="#myModal4"> Total Score </button>     
+    </div>
+</div>
+        
+<div class="container" >
+    <div class="row" style="margin: 0 auto">
+        <span id="tick" class="ms-icon ms-icon-lg ms-icon-circle color-success">
+            <i class="fa fa-check"></i>
+        </span>
+        <span id="wrong" class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+            <i class="fa fa-remove"></i>
+        </span>    
+    </div>
+</div>
+        
+        
+<div id="msg"></div>
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>    
+<!-- last 2 divs from top of card-->
+     </div>
+        </div>
+ <div id="example"></div> 
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3>            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                    </button>
+            </div>
+        <div class="modal-body">
+            <div class="alert alert-success alert-light " role="alert"><p id="badge"></p>
+            </div>
+                <div class="alert alert-danger alert-light " role="alert"><p id="points"></p>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>    
+        </div>
+      </div>
+    </div>
+</div>
+<script>
+    $("#example").load("./config");
+     
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);    
+    document.getElementById("tick").style.visibility = "hidden";
+    document.getElementById("wrong").style.visibility = "hidden";
+    document.getElementById("msg").style.visibility = "hidden";
+//    if(n=6){
+//        document.getElementById("next1").style.visibility = "hidden";
+//    }
+    
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+    document.getElementById("tick").style.visibility = "hidden";
+    document.getElementById("wrong").style.visibility = "hidden";
+    document.getElementById("msg").style.visibility = "hidden";
+  
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+    if(slideIndex==6){
+        document.getElementById("next1").style.visibility = "hidden";
+    }
+}    
+    var correct = 0;
+   
+    $("#button1").click(function(){       
+        var question1 = document.quiz1.question1.value;  
+        var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        var question4 = document.quiz4.question1.value;
+        var question5 = document.quiz5.question1.value;
+        var question6 = document.quiz6.question1.value;
+       
+        //2nd question
+       if(slideIndex==2&&question2 == 9){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+           document.getElementById("msg").style.visibility = "visible";
+           document.getElementById("msg").textContent= " Well done! 10 points";
+            correct++;
+           //third question
+  } else if(slideIndex==3&&question3 == 6){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+      document.getElementById("msg").style.visibility = "visible";
+      document.getElementById("msg").textContent= " Well done! 10 points";
+      correct++;
+  }
+        //first question
+         else if(slideIndex==1&&question1 == 8){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Well done! 10 points"; 
+            correct++;
+  } 
+        //4th question 
+        else if(slideIndex==4&&question4 == 32){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Well done! 10 points"; 
+            correct++;
+  } 
+        //5th question 
+        else if(slideIndex==5&&question5 == 63){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Well done! 10 points"; 
+            correct++;
+  } 
+        //6th question
+        else if(slideIndex==6&&question6 == 6){
+        checkAnswer();     
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Well done! 10 points"; 
+            correct++;
+  } 
+        else {
+      document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+    document.getElementById("msg").textContent= " Not Yet"; 
+  } 
+        if(correct==6){
+            document.getElementById("badge").textContent= " 6 out of 6. Wow!";
+            document.getElementById("points").textContent="Points earned: 60";
+        }
+        if(correct==5){
+            document.getElementById("badge").textContent= " 5 out of 6";
+            document.getElementById("points").textContent="Points earned: 50";
+        }
+        if(correct==4){
+            document.getElementById("badge").textContent= " 4 out of 6";
+            document.getElementById("points").textContent="Points earned 40";
+        }
+        
+        if(correct==3){
+            document.getElementById("badge").textContent= " 3 out of 6";
+           document.getElementById("points").textContent="Points earned:  30";
+        }
+        if(correct==2){
+            document.getElementById("badge").textContent= " 2 out of 6";
+           document.getElementById("points").textContent="Points earned 20";
+        }
+        if(correct==1){
+            document.getElementById("badge").textContent= " 1 out of 6";
+           document.getElementById("points").textContent="Points earned:  10";
+        }
+        if(correct==0){
+            document.getElementById("badge").textContent= "0 out of 6. Watch the video and try the questions again. You will get it right.";
+            document.getElementById("points").textContent="Points earned : 0";
+            
+        }
+       });
+        
+   
+    function checkAnswer(){
+        
+        var id =  $("#userId").text(); 
+        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+        var api= $("#example").text();
+        var idAndApi = id + api;
+        
+        var sliced = id.slice(0,-1);
+        var finalApi = url + sliced +api;
+        
+        $.ajax({           
+            url: finalApi,
+            type:"put",
+                data: JSON.stringify( { "$inc" : { "score" : 10 } } ),
+            contentType:"application/json",
+            success:function(data){
+                getScore();
+                $("#jquery").text(data.score);
+            },
+            error:function(xhr, status, error){
+                console.log(error);
+            }
+        });
+        
+    function getScore(){        
+        var id =  $("#userId").text(); 
+        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+        var api= $("#example").text();
+        var idAndApi = id + config;
+        
+        var sliced = id.slice(0,-1);
+        var finalApi = url + sliced +api;
+    $.ajax({          
+        url:finalApi,
+            type:"get",
+            data: JSON.stringify(),
+            contentType:"application/json",
+            success:function(data){
+                $("#jquery").text(data.score);
+            },
+            error:function(xhr, status, error){
+                console.log(error);
+            }
+        });   
+    }
+       };
+   $("input").attr("maxlength", 5)
+</script>
+
+
+<% include ./partials/footer %>
+            
+      
+    

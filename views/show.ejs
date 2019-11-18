@@ -1,0 +1,59 @@
+<% include ./partials/header %>
+
+
+<h1><%=users.username%>'s Profile Page</h1>
+
+<div >
+
+<button class="ui blue button" href='/user/:id'>My Profile Page</button>
+
+</div>
+<div class="ui main text container segment">
+<table class="ui celled striped table">
+  <thead>
+    <tr><th colspan="3">
+      My Profile
+    </th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="collapsing">
+        <i class="user circle icon"></i> <%=users.username%>
+      </td>
+      <td>Year: <%= users.year%></td>
+      <td class="right aligned collapsing"></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="star icon"></i> Points:<%=users.score %>
+      </td>
+      <td>
+        </td>
+      <td class="right aligned"></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="shield alternate icon"></i> Total Score:
+      </td>
+      <td>Year Ranking</td>
+      <td class="right aligned"></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="child icon"></i> Year Ranking
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned"></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="comment outline icon"></i> Feedback
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<% include ./partials/footer %>

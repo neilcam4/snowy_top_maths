@@ -1,0 +1,1312 @@
+<% include ./partials/header %>
+<!--      -->
+    
+<style>
+.dot{
+       cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; 
+    }
+   .active, .dot:hover {
+  background-color: #9C27B0;
+}
+
+#button{
+background-color: #009caf;
+    }
+#button1{
+background-color: #9C27B0;
+}
+    
+</style>
+ 
+<div class="col-lg-11 ms-paper-content-container"style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">  
+             <p class="q"> Whitgift School 11+ Maths Paper
+</p><p>Total Marks 53. Time 1 hour</p>
+            <p> </p>
+        </div>
+    </div>
+</div>
+<div style="text-align: center">
+    <div class="card card-royal col-md-6" style="display:inline-block" > 
+<!--        First question-->
+<div class="mySlides">
+    <div class="card-header">
+        <h3 id="header" class="card-title">1.</h3>
+    </div>
+  <div class="card-body"> 
+   <form name="quiz1">
+       
+       <p class="q">Calculate </p>
+       <p class="q">192 + 888 =  </p>
+       <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+  </div>  
+</div>
+<!--     2nd question                -->
+<div class="mySlides">
+    <div class="card-header">
+        <h3 class="card-title">2.</h3>
+    </div>
+    <div class="card-body"> 
+      <form  name="quiz2">
+          <p class="q">Calculate</p>
+          <p class="q">888 - 192 = </p>
+         <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+      </form>
+    </div>
+</div>
+<!--   3rd question       -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">3.</h3></div>      <div class="card-body"> 
+    <form  name="quiz3">
+        <p class="q">14 x 7 x 2 =  </p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--4th question        -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">4.</h3></div>      <div class="card-body"> 
+    <form  name="quiz4">
+       <p class="q">18 - 17 + 16 - 15 + 14 - 13 = </p>
+
+    <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--    5th question    -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">5.</h3></div>      <div class="card-body"> 
+    <form  name="quiz5">
+        <p class="q">531 × 135 = </p>
+        
+ <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+<!--   6a question     -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">6.</h3></div>      <div class="card-body"> 
+    <form  name="quiz6">
+          
+        <p class="q"> 12321 ÷ 9 = </p>
+        <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+<!--6b question        -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">7.</h3></div>      <div class="card-body"> 
+    <form  name="quiz7">
+        <p class="q">£1.28 + 57p = </p>
+<div class="ui labeled input">
+  <div class="ui label">
+   £
+  </div>
+  <input type="text" name="question1">
+</div>
+       
+    </form>
+    </div>
+</div>
+<!--    6c question    -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">8.</h3></div>      <div class="card-body"> 
+    <form  name="quiz8">
+     
+       <p class="q">£1.28 – 57p</p>
+         <div class="ui labeled input">
+  <div class="ui label">
+   £
+  </div>
+  <input type="text" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+<!--   7 question     -->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">9.</h3></div>      <div class="card-body"> 
+    <form  name="quiz9">
+      <p class="q">How much is forty-two thousand and eight less than one million?</p>
+        
+  <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+<!--        question 8-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">10.</h3></div>      <div class="card-body"> 
+    <form  name="quiz10">
+       
+         <p class="q">A plane leaves London Airport at 16:30 and takes 5 3⁄4 hours on its journey. At what time does it arrive?</p>
+
+       <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--        question 9-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">11a.</h3></div>      <div class="card-body"> 
+    <form  name="quiz11">
+         
+         <p class="q"> Express 51km in metres</p>
+<div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+      metres
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+<!--        question 10-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">11b.</h3></div>      <div class="card-body"> 
+    <form  name="quiz12">
+       <p class="q">Express 510cm in metres</p>
+  <div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+      metres
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+        <div class="mySlides">
+    <div class="card-header"><h3 class="card-title"> 12.</h3></div>      <div class="card-body"> 
+    <form  name="quiz13"> 
+        <p class="q">Calculate  (31 × 9) ÷ 52. Give your answer to the nearest integer.</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>       
+    </form>
+    </div>
+</div>
+<!--        question 11a-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title"> 13.</h3></div>      <div class="card-body"> 
+    <form  name="quiz14">
+        <p class="q">What percentage is 15p out of £3.00?</p>
+    
+  <div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+ %
+  </div>
+</div>    
+    </form>
+    </div>
+</div>
+<!--        question 12-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">14.</h3></div>      <div class="card-body"> 
+    <form  name="quiz15">
+     
+        <p class="q">David jogs at 3 metres per second. How far does he jog in 15 minutes?</p>
+     
+   <div class="ui right labeled input">
+  <input type="text" placeholder="" name="question1">
+  <div class="ui basic label">
+    metres
+  </div>
+</div>
+        
+    </form>
+    </div>
+</div> 
+        <!--        question 13-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">15a.</h3></div>      <div class="card-body"> 
+    <form  name="quiz16">
+       
+        <p class="q">Write this amount to the nearest hundred pounds:</p><p class="q">£675</p>
+<div class="ui labeled input">
+  <div class="ui label">
+   £
+  </div>
+  <input type="text" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+<!--        question 14-->
+        <div class="mySlides">
+    <div class="card-header"><h3 class="card-title">15b.</h3></div>      <div class="card-body"> 
+    <form  name="quiz17">
+        <p class="q">Write this amount to the nearest hundred pounds:</p><p class="q">£2,945</p>
+<div class="ui labeled input">
+  <div class="ui label">
+   £
+  </div>
+  <input type="text" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">15c.</h3></div>      <div class="card-body"> 
+    <form  name="quiz18">
+               <p class="q">Write this amount to the nearest hundred pounds:</p><p class="q">£90,095</p>
+       <div class="ui labeled input">
+  <div class="ui label">
+   £
+  </div>
+  <input type="text" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--        question 15-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">16.</h3></div>      <div class="card-body"> 
+    <form  name="quiz19">
+    
+        <p class="q">Ravi has 32 sweets. He eats 24 of them. What fraction of the sweets has he eaten? Write your answer in its simplest form.
+</p>
+         
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+         <!--        question 16-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">17a.</h3></div>      <div class="card-body"> 
+    <form  name="quiz20">
+         
+         <p class="q">To cook a joint of meat, you leave it in the oven for 30 minutes for every kilogram it weighs plus 20 minutes extra. Find how long you would cook a joint weighing: </p>
+        <p class="q">2kg</p>
+     <div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+ hours
+  </div>
+</div>
+        <div class="ui right labeled input">
+  <input type="text" name="question2">
+  <div class="ui basic label">
+ minutes
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+          <!--        question 17-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">17b.</h3></div>      <div class="card-body"> 
+    <form  name="quiz21"> 
+        <p class="q">To cook a joint of meat, you leave it in the oven for 30 minutes for every kilogram it weighs plus 20 minutes extra. Find how long you would cook a joint weighing: </p>
+        <p class="q">3 1/2kg</p>
+ <div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+ hours
+  </div>
+</div>
+        <div class="ui right labeled input">
+  <input type="text" name="question2">
+  <div class="ui basic label">
+ minutes
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+                  <!--        question 18-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">18a.</h3></div>      <div class="card-body"> 
+    <form  name="quiz22">
+        
+        <p class="q">To go and watch a film at the cinema, the seats cost £3 each for a child and £7 each for an adult. I was charged £51 for all of the seats I bought.</p>
+        <p class="q">Did I buy more than 7 adult tickets? Yes or No ?</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--        question 19-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">18b.</h3></div>      <div class="card-body"> 
+    <form  name="quiz23"> 
+  <p class="q">To go and watch a film at the cinema, the seats cost £3 each for a child and £7 each for an adult. I was charged £51 for all of the seats I bought.</p>
+        <p class="q">If there were more adult tickets than child tickets, how many of each did I buy?</p>
+<div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+ adults tickets
+  </div>
+</div>
+        <div class="ui right labeled input">
+  <input type="text" name="question2">
+  <div class="ui basic label">
+ child tickets
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+<!--        question 20-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">18c.</h3></div>      <div class="card-body"> 
+    <form  name="quiz24"> 
+        <p class="q">To go and watch a film at the cinema, the seats cost £3 each for a child and £7 each for an adult. I was charged £51 for all of the seats I bought.</p><p class="q">
+      If there were more child tickets than adult tickets, how many of each did I buy?</p>
+        
+<div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+ adult tickets
+  </div>
+</div>
+        <div class="ui right labeled input">
+  <input type="text" name="question2">
+  <div class="ui basic label">
+ child tickets
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+<!--       Section B question 1-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">19.</h3></div>      <div class="card-body"> 
+    <form  name="quiz25">
+        <img src="img/whitgift/whitgift19.png" alt="" class="img-fluid">
+           <p class="q">What fraction of the whole square below is the shaded area?</p><p class="q">O is the centre of the square and M is the midpoint of AB.</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--        Section B question 2-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">20.</h3></div>      <div class="card-body"> 
+    <form  name="quiz26">
+        <p class="q">How many 3-digit numbers can be formed by using the digits 7,8 and 9 once each. The first is 789.</p>    
+        
+  <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--  Section B question 3--->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">21a.</h3></div>      <div class="card-body"> 
+    <form  name="quiz27">
+     <p class="q">Fill in the missing number</p>   
+        <p class="q">___ x 20 = 1000</p>
+      
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--       Section B question 4a--->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">21b.</h3></div>      <div class="card-body"> 
+    <form  name="quiz28">
+          <p class="q">What 2 numbers add together to make 18 and multiply to make 45?</p>   
+       <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+          <div class="ui  input focus">
+  <input type="text" placeholder="" name="question2">
+</div>
+    </form>
+    </div>
+</div>
+<!--        Section B question 4b--->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">21c.</h3></div>      <div class="card-body"> 
+    <form  name="quiz29">
+        <p class="q">Which 2 numbers add together to make 18 and multiply to make 96?</p>   
+         
+<div class="ui  input focus">
+  <input type="text" name="question1">
+</div>
+        <div class="ui  input focus">
+  <input type="text" name="question2">
+</div>
+    </form>
+    </div>
+</div>
+<!--        SECTION B 5-->
+
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">Section B 1.</h3></div>      <div class="card-body"> 
+    <form  name="quiz30">
+        <p class="q">1177 + 6823 = </p>   
+      
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--        Section B 6a-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">2.</h3></div>      <div class="card-body"> 
+    <form  name="quiz31">
+        <p class="q">5.031 - 0.287 = </p>
+  <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--        Section B 6b-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">3.</h3></div>      <div class="card-body"> 
+    <form  name="quiz32">
+        <p class="q">6 x ___ = 9.60</p>
+       <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--   Section B 7-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">4.</h3></div>      <div class="card-body"> 
+    <form  name="quiz33">
+        <p class="q">___ ÷ 8 = 1.05cm</p>
+  <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+<!--        Section B 8-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">5.</h3></div>      <div class="card-body"> 
+    <form  name="quiz34">
+             <p class="q"> 12321 ÷ 37 = </p><br>
+
+ <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>    
+    </form>
+
+    </div>
+</div>
+
+<!--    Section C 4a(ii)-->
+        <!--   Section B 9b-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">6.</h3></div>      <div class="card-body"> 
+    <form  name="quiz35">
+          <p class="q">A rectangle measures 4.0cm by 7.1cm. What is its area?</p>
+<div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+ cm&#178;
+  </div>
+</div>
+    </form>
+    </div>
+</div>
+        <!--     Section B 9c-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">7(a).</h3></div>      <div class="card-body"> 
+    <form  name="quiz36">
+          <p class="q">There are 40 coloured counters in a box. Half of them are red, one-fifth are yellow and the
+              rest are green.</p><p class="q">How many are green?</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+         
+    </form>
+    </div>
+</div>
+               <!--   Section B 10-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">7b.</h3></div>      <div class="card-body"> 
+    <form  name="quiz37"><p class="q">There are 40 coloured counters in a box. Half of them are red, one-fifth are yellow and the
+              rest are green.</p>
+          <p class="q">If I shake the box and then pick out one counter, what is the probability that it is
+green? Write as a decimal. </p>
+ <div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+        
+    </form>
+    </div>
+</div>
+        <!--        Section C 1a-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">8.</h3></div>      <div class="card-body"> 
+    <form  name="quiz38">
+         <img src="img/whitgift/whitgift8.png" alt="" class="img-fluid">
+        <p class="q">Three gear wheels turn one another. X has 8 teeth, Y has 12 teeth and Z has 16 teeth. In one minute, X turns 30 times. In this time, how many turns do Y and Z make? </p>
+  <div class="ui right labeled input">
+  <label for="amount" class="ui label">Y = </label>
+  <input type="text" name="question1">
+  <div class="ui basic label">turns</div>
+</div>      
+          <div class="ui right labeled input">
+  <label for="amount" class="ui label">Z = </label>
+  <input type="text" name="question2">
+  <div class="ui basic label">turns</div>
+</div> 
+    </form>
+    </div>
+</div>
+        
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">9.</h3></div>      <div class="card-body"> 
+    <form  name="quiz39">
+         
+        <p class="q">A box of kiddimix contains 20 chocolates of which 8 are plain chocolates and 12 are milk chocolates. If 16 of the 20 have soft-centres, how many plain chocolates are there with soft-centres?</p>
+ <div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+    chocolates
+  </div>
+</div>       
+    </form>
+    </div>
+</div>
+        <!--    Section C 1b-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">10.</h3></div>      <div class="card-body"> 
+    <form  name="quiz40">
+        
+        <p class="q">Could the following statement be possible? Write 'true' or 'false': </p> 
+        <p class="q">A lorry weighs 2000 grams</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--   Section C 1c-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">10ii.</h3></div>      <div class="card-body"> 
+    <form  name="quiz41">
+         <p class="q">Could the following statement be possible? Write 'true' or 'false': </p> 
+        <p class="q">A ten year old boy weighs 35 kilograms</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--       Section C 1d-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">10iii.</h3></div>      <div class="card-body"> 
+    <form  name="quiz42">
+        <p class="q">Could the following statement be possible? Write 'true' or 'false': </p> 
+        <p class="q">Big Ben’s tower is 200 centimetres high</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--   Section C 1e-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">10iv.</h3></div>      <div class="card-body"> 
+    <form  name="quiz43">
+      <p class="q">Could the following statement be possible? Write 'true' or 'false': </p> 
+        <p class="q">A horse is 15 metres high</p>
+<div class="ui  input focus">
+  <input type="text" placeholder="" name="question1">
+</div>
+    </form>
+    </div>
+</div>
+        <!--  Section C 1f-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">11.</h3></div>      <div class="card-body"> 
+    <form  name="quiz44">
+        
+       <p class="q">The favourite sports of a group of 100 boys are shown in below. If we represented the data in a pie chart, what angle would be required to represent soccer? </p>
+        <p class="q">Cricket  = 15 boys</p>
+        <p class="q">Rugby  = 25 boys</p>
+        <p class="q">Soccer  = ? boys</p>
+        <p class="q">Other  = 10 boys</p>
+       <div class="ui right labeled input">
+  <input type="text" name="question1">
+  <div class="ui basic label">
+    &#176;
+  </div>
+</div> 
+  
+    </form>
+    </div>
+</div>
+        <!--   Section C 2a(i)-->
+<div class="mySlides">
+    <div class="card-header"><h3 class="card-title">12a.</h3></div>      <div class="card-body"> 
+    <form  name="quiz45">
+         <p class="q">Each of the symbols ∆,⌂,◊,○ and ● stand for a different whole number. The numbers are connected by the following rules. Write down what number each of the five symbols stands for:</p>
+        <p class="q">∆ - ● + ◊ - ⌂ + ○ = 0</p>
+        <p class = "q"> ⌂ ÷ 4 = ◊</p>
+        <p class = "q"> ∆ - 5 = ●</p>
+        <p class = "q">14 × ● = 0</p>
+        <p class = "q">⌂ + ◊ = 15</p>
+        
+        
+        <div class="ui labeled input">
+  <div class="ui label">
+    ∆ = 
+  </div>
+  <input type="text" name="question1">
+</div>
+        <div class="ui labeled input">
+  <div class="ui label">
+    ⌂ =
+  </div>
+  <input type="text" name="question2">
+</div>
+        <div class="ui labeled input">
+  <div class="ui label">
+    ◊ = 
+  </div>
+  <input type="text" name="question3">
+</div>
+        <div class="ui labeled input">
+  <div class="ui label">
+    ○ =
+  </div>
+  <input type="text" name="question4">
+</div>
+        <div class="ui labeled input">
+  <div class="ui label">
+    ● =
+  </div>
+  <input type="text" name="question5">
+</div>
+
+    </form>
+    <p>END OF EXAM : TOTAL 53 MARKS</p>
+    </div>
+</div>
+
+                <!-- Section C 2d-->
+
+<!--        buttons-->
+<div class="container" >
+    <div class="row" style="margin: 0 auto">
+        <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
+        <button type="button" id="next1" class="btn btn-primary btn-raised"onclick="plusSlides(1)"> Next </button>
+        <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal" data-target="#myModal4"> Total Score </button>     
+    </div>
+</div>
+        
+<div class="container" >
+    <div class="row" style="margin: 0 auto">
+        <span id="tick" class="ms-icon ms-icon-lg ms-icon-circle color-success">
+            <i class="fa fa-check"></i>
+        </span>
+        <span id="wrong" class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+            <i class="fa fa-remove"></i>
+        </span>    
+    </div>
+</div>
+        
+        
+<div id="msg"></div>
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span> 
+     <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span> 
+  <span class="dot" onclick="currentSlide(13)"></span>
+  <span class="dot" onclick="currentSlide(14)"></span> 
+  <span class="dot" onclick="currentSlide(15)"></span> 
+  <span class="dot" onclick="currentSlide(16)"></span>
+  <span class="dot" onclick="currentSlide(17)"></span> 
+  <span class="dot" onclick="currentSlide(18)"></span> 
+  <span class="dot" onclick="currentSlide(19)"></span>
+    <span class="dot" onclick="currentSlide(20)"></span>
+    <span class="dot" onclick="currentSlide(21)"></span> 
+  <span class="dot" onclick="currentSlide(22)"></span> 
+  <span class="dot" onclick="currentSlide(23)"></span>
+  <span class="dot" onclick="currentSlide(24)"></span> 
+  <span class="dot" onclick="currentSlide(25)"></span> 
+  <span class="dot" onclick="currentSlide(26)"></span>
+  <span class="dot" onclick="currentSlide(27)"></span> 
+  <span class="dot" onclick="currentSlide(28)"></span> 
+  <span class="dot" onclick="currentSlide(29)"></span>
+    <span class="dot" onclick="currentSlide(30)"></span>
+    <span class="dot" onclick="currentSlide(31)"></span> 
+     <span class="dot" onclick="currentSlide(32)"></span>
+  <span class="dot" onclick="currentSlide(33)"></span>
+  <span class="dot" onclick="currentSlide(34)"></span>
+      <span class="dot" onclick="currentSlide(35)"></span> 
+  <span class="dot" onclick="currentSlide(36)"></span> 
+  <span class="dot" onclick="currentSlide(37)"></span>
+  <span class="dot" onclick="currentSlide(38)"></span> 
+  <span class="dot" onclick="currentSlide(39)"></span> 
+  <span class="dot" onclick="currentSlide(40)"></span>
+  <span class="dot" onclick="currentSlide(41)"></span> 
+  <span class="dot" onclick="currentSlide(42)"></span> 
+  <span class="dot" onclick="currentSlide(43)"></span>
+  <span class="dot" onclick="currentSlide(44)"></span> 
+  <span class="dot" onclick="currentSlide(45)"></span>    
+    
+</div>    
+<!-- last 2 divs from top of card-->
+     </div>
+        </div>
+ <div id="example"></div> 
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> Your results: </h3> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="badge"></p>
+                </div>
+
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="points"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $("#example").load("./config");
+     
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);    
+    document.getElementById("tick").style.visibility = "hidden";
+    document.getElementById("wrong").style.visibility = "hidden";
+    document.getElementById("msg").style.visibility = "hidden";
+
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+    document.getElementById("tick").style.visibility = "hidden";
+    document.getElementById("wrong").style.visibility = "hidden";
+    document.getElementById("msg").style.visibility = "hidden";
+  
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+    if(slideIndex==45){
+        document.getElementById("next1").style.visibility = "hidden";
+    }
+}    
+    var correct = 0;
+   
+    $("#button1").click(function(){       
+        var question1 = document.quiz1.question1.value;  
+        var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        var question4 = document.quiz4.question1.value;
+        var question5 = document.quiz5.question1.value;
+        var question6 = document.quiz6.question1.value;
+        var question7 = document.quiz7.question1.value;
+        var question8 = document.quiz8.question1.value;
+        var question9 = document.quiz9.question1.value;
+        var question10 = document.quiz10.question1.value;
+        var question11 = document.quiz11.question1.value;
+        var question12 = document.quiz12.question1.value;
+        var question13 = document.quiz13.question1.value;
+        var question14 = document.quiz14.question1.value;
+        var question15 = document.quiz15.question1.value;
+        var question16 = document.quiz16.question1.value;
+        var question17 = document.quiz17.question1.value;
+        var question18 = document.quiz18.question1.value;
+        var question19 = document.quiz19.question1.value;
+        var question20 = document.quiz20.question1.value;
+        var question21 = document.quiz21.question1.value;
+        var question22 = document.quiz22.question1.value;
+        var question23 = document.quiz23.question1.value;
+        var question24 = document.quiz24.question1.value;
+        var question25 = document.quiz25.question1.value;
+        var question26 = document.quiz26.question1.value;
+        var question27 = document.quiz27.question1.value;
+        var question28 = document.quiz28.question1.value;
+        var question29 = document.quiz29.question1.value;
+        var question30 = document.quiz30.question1.value;
+        var question31 = document.quiz31.question1.value;
+        var question32 = document.quiz32.question1.value;
+        var question33 = document.quiz33.question1.value;
+        var question34 = document.quiz34.question1.value;
+        var question35 = document.quiz35.question1.value;
+        var question36 = document.quiz36.question1.value;
+        var question37 = document.quiz37.question1.value;
+        var question38 = document.quiz38.question1.value;
+        var question35 = document.quiz35.question1.value;
+        var question36 = document.quiz36.question1.value;
+        var question37 = document.quiz37.question1.value;
+        var question38 = document.quiz38.question1.value;
+        var question39 = document.quiz39.question1.value;
+        var question40 = document.quiz40.question1.value;
+        var question41 = document.quiz41.question1.value;
+        var question42 = document.quiz42.question1.value;
+        var question43 = document.quiz43.question1.value;
+        var question44 = document.quiz44.question1.value;
+        var question45 = document.quiz45.question1.value;
+        var question46 = document.quiz20.question2.value;
+        var question47 = document.quiz21.question2.value;
+        var question48 = document.quiz23.question2.value;
+        var question49 = document.quiz24.question2.value;
+        var question50 = document.quiz28.question2.value;
+        var question51 = document.quiz29.question2.value;
+        var question52 = document.quiz38.question2.value;
+        var question53 = document.quiz45.question2.value;
+        var question54 = document.quiz45.question3.value;
+        var question55 = document.quiz45.question4.value;
+        var question56 = document.quiz45.question5.value;
+              
+        //2 question
+       if(slideIndex==2&&question2 == 696){
+             
+        document.getElementById("tick").style.visibility = "visible";
+           document.getElementById("msg").style.visibility = "visible";
+           document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+           //3 question
+  } else if(slideIndex==3&&question3 == 196){
+             
+        document.getElementById("tick").style.visibility = "visible";
+      document.getElementById("msg").style.visibility = "visible";
+      document.getElementById("msg").textContent= " Correct! 1 mark";
+      correct+=1;
+  }
+        //1 question
+         else if(slideIndex==1&&question1 == 1080){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+        //4 question 
+        else if(slideIndex==4&&question4 == 3){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct+=1;
+  } 
+//        //5 question 
+        else if(slideIndex==5&&question5 == 71685){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//        //6a question
+        else if(slideIndex==6&&question6 == 1369){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+        //6b question
+        else if(slideIndex==7&&question7 == 1.85){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 marks"; 
+            correct++;
+  } 
+//    //6c question
+        else if(slideIndex==8&&question8 ==0.71){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }     
+//        //7 question
+        else if(slideIndex==9&&question9 == 957992||slideIndex==9&&question9 == '957,992'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//        //8 question 
+        else if(slideIndex==10&&question10 == '22:15'||slideIndex==10&&question10 =='10.15pm'||slideIndex==10&&question10 == '22.15'||slideIndex==10&&question10 =='10:15pm' ){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 marks"; 
+            correct++;
+  } 
+        //9 question 
+        else if(slideIndex==11&&question11 ==51000||slideIndex==11&&question11 =='51,000'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 marks"; 
+            correct++;
+  } 
+//        //10 question
+        else if(slideIndex==12&&question12 ==5.1){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+  //       question 11a
+        else if(slideIndex==13&&question13 ==5){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//    //12 question
+        else if(slideIndex==14&&question14 == 5){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }     
+        //13 question
+        else if(slideIndex==15&&question15 == 2700||slideIndex==15&&question15 == '2,700'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  }  
+//             //14 question 
+        else if(slideIndex==16&&question16 == 700){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  } 
+        //15 question
+        else if(slideIndex==17&&question17 == 2900){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//        //16 question
+        else if(slideIndex==18&&question18 == 90100||slideIndex==18&&question18 == '90,100'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  } 
+//    //17 question
+        else if(slideIndex==19&&question19 == '3/4'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  }     
+//        //18 question
+        else if(slideIndex==20&&question20 == 1&&question46==20){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  } 
+//        //19 question 22
+        else if(slideIndex==21&&question21==2&&question47 == 5){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//        //20 question 
+        else if(slideIndex==22&&question22 =='yes'||slideIndex==22&&question22 =='Yes'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+        //***********
+        //29
+        //***********
+ 
+        else if(slideIndex==23&&question23 == 6&&question48==3){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 2 marks"; 
+            correct+=2;
+  } 
+//        //16b question
+        else if(slideIndex==24&&question24 == 3&&question49==10){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 2 marks"; 
+            correct+=2;
+  } 
+    //3 question
+        else if(slideIndex==25&&question25 == '1/4'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }     
+//4a 27 marks to here
+        else if(slideIndex==26&&question26 == 6){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }  
+//4b question 
+        else if(slideIndex==27&&question27 == 50){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  } 
+ //5 question
+        else if(slideIndex==28&&question28 ==3&&question50==15||slideIndex==28&&question28 ==15&&question50==3){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 2 marks";
+            correct+=2;
+  } 
+//6a question
+        else if(slideIndex==29&&question29 ==6 &&question51==12||slideIndex==29&&question29 ==12 &&question51==6){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//6b question
+        else if(slideIndex==30&&question30 ==8000){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }     
+////7 question
+        else if(slideIndex==31&&question31==4.744){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 marks"; 
+            correct++;
+  } 
+ //8 question 
+        else if(slideIndex==32&&question32 == 1.6||slideIndex==32&&question32 == 1.60){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 marks"; 
+            correct++;
+  } 
+//9a question 
+        else if(slideIndex==33&&question33 == 8.4){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//9b question
+        else if(slideIndex==34&&question34 == 333){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 marks"; 
+            correct++;
+  } 
+//9c question
+        else if(slideIndex==35&&question35 == 28.4){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark";
+            correct++;
+  } 
+//10 question
+        else if(slideIndex==36&&question36 == 12){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }     
+        //**********
+        //Section C
+        //***********
+//1a question
+        else if(slideIndex==37&&question37 == 0.3){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }  
+//question 8 axels cogs
+        else if(slideIndex==38&&question38 == 20&&question52==15){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 2 marks"; 
+            correct+=2;
+  } 
+        //1c question
+        else if(slideIndex==39&&question39 == 11){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+        //1d question
+        else if(slideIndex==40&&question40 == 'false'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+    //1e question
+        else if(slideIndex==41&&question41 == 'true'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  }     
+//1f question
+        else if(slideIndex==42&&question42 == 'false'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//2a(i) question 
+        else if(slideIndex==43&&question43 == 'false'){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//2a(ii) question 
+        else if(slideIndex==44&&question44 == 180){
+             
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 1 mark"; 
+            correct++;
+  } 
+//2a(iii) question
+        else if(slideIndex==45&&question45 == 5&&question53==12&&question54==3&&question55==4&&question56==0){       
+        document.getElementById("tick").style.visibility = "visible";
+             document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent= " Correct! 5 mark"; 
+            correct+=5;
+  }       
+        else {
+      document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+    document.getElementById("msg").textContent= " Not Yet"; 
+  } 
+    
+        if(correct>0){
+            document.getElementById("badge").textContent= "Total questions correct: " + correct + " / 53";  
+            document.getElementById("points").textContent= "Percentage = " + Math.round(correct/53*100) + "%";
+           
+        }
+       });
+       
+    $("input").attr("maxlength", 20)
+</script>
+
+
+<% include ./partials/footer %>
+            
+      
+    
