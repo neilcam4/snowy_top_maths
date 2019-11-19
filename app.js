@@ -23,7 +23,6 @@ let examPapers = require("./routes/exam_papers")
 app.use(examPapers);
 let chapters = require('./routes/chapters')
 app.use(chapters);
-
 let routes = require("./routes/index")
 app.use(routes)
 
@@ -60,7 +59,6 @@ mongoose.connect(MONGODB_KEY, {
     });
 //AUTH ROUTES
 
-
 app.get('/login', function (req, res) {
     res.render('login');
 });
@@ -95,11 +93,6 @@ app.get('/profile', isLoggedIn, function (req, res) {
 
 //ROUTES
 
-//app.post('/login', functio 
-
-
-//create
-
 //signup middle page
 app.get('/signup', isLoggedIn, function (req, res) {
     User.findById(req.params.id, req.body.users, function (err, showUser) {
@@ -126,7 +119,6 @@ function isPriceLoggedIn(req, res, next) {
     }
     res.render('pricing2');
 }
-
 
 app.get('/pricing', isPriceLoggedIn, function (req, res) {
     res.render('pricing')
@@ -168,9 +160,6 @@ app.post("/monthlyCharge", isLoggedIn, (req, res) => {
 
 
 //pages
-
-
-
 
 app.get('/sequences', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
@@ -235,18 +224,6 @@ app.get('/data4', isLoggedIn, function (req, res) {
         }
     });
 })
-app.get('/time', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('time', {
-                user: user
-            })
-
-        }
-    });
-})
 
 app.get('/time1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
@@ -256,7 +233,6 @@ app.get('/time1', isLoggedIn, function (req, res) {
             res.render('time1', {
                 user: user
             })
-
         }
     });
 })
@@ -335,7 +311,6 @@ app.get('/addsubtract1', isLoggedIn, function (req, res) {
             res.render('addsubtract1', {
                 user: user
             })
-
         }
     });
 })
@@ -348,7 +323,6 @@ app.get('/multdiv', isLoggedIn, function (req, res) {
             res.render('multdiv', {
                 user: user
             })
-
         }
     });
 })
@@ -387,7 +361,6 @@ app.get('/percentages1', isLoggedIn, function (req, res) {
             res.render('percentages1', {
                 user: user
             })
-
         }
     });
 })

@@ -3,6 +3,12 @@ let router = express.Router();
 let User = require('../models/user');
 let passport = require('passport');
 
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login');
+}
 
 router.get('/users/new', function(req,res){
     res.render('register');
@@ -60,18 +66,14 @@ router.post('/registerfree', function (req, res) {
         })
     })
 })
-
 router.get('/', function (req, res) {
     res.render('home');
 
 });
-
-
 router.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
 })
-
 router.post('/users', function (req, res) {
     User.create(req.body.users, function (err, users) {
         if (err) {
@@ -96,4 +98,6 @@ router.put('/users/:id', function (req, res) {
 router.get('/log', function (req, res) {
     res.render('register');
 });
+
+
 module.exports = router
