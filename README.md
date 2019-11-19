@@ -29,6 +29,7 @@ CSS/Bootstrap
 Deployed online here:  https://www.snowytopmaths.co.uk/
 
 `Instructions`
+install node on the command line
 
 run npm install
 
