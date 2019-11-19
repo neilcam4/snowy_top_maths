@@ -1,20 +1,12 @@
 var express = require('express');
-var fs = require('fs');
 var app = express();
 var mongoose = require('mongoose');
-var cors = require('cors');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
-var passportLocalMongoose = require('passport-local-mongoose');
-var Schema = mongoose.Schema;
-var $ = require('jquery');
 var User = require('./models/user');
-var mongodb = require('mongodb');
-var MongoClient = mongodb.MongoClient;
 var config = require('./config.js');
-var pm2 = require('pm2');
 var expressSanitizer = require("express-sanitizer");
 require('dotenv').config();
 app.use(express.json())
@@ -29,9 +21,12 @@ app.use(methodOverride("_method"));
 
 let examPapers = require("./routes/exam_papers")
 app.use(examPapers);
+let chapters = require('./routes/chapters')
+app.use(chapters);
 
 let routes = require("./routes/index")
 app.use(routes)
+
 let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
@@ -50,8 +45,6 @@ app.use(function (req, res, next) {
 });
 
 passport.use(new LocalStrategy(User.authenticate()));
-
-
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(express.static('public'));
@@ -67,33 +60,20 @@ mongoose.connect(MONGODB_KEY, {
     });
 //AUTH ROUTES
 
-app.get('/register', function (req, res) {
-    res.render('register');
+
+app.get('/login', function (req, res) {
+    res.render('login');
 });
 
-//handling user sign up
-///****sending user details through to register page
-app.post('/register', function (req, res) {
-    User.register(new User({
-        username: req.body.username,
-        surname: req.body.surname,
-        year: req.body.year,
-        school: req.body.school,
-        medals: req.body.medals,
-        score: req.body.score,
-        id: req.params.id,
-        email: req.body.email
-    }), req.body.password, function (err, users) {
-        if (err) {
-            console.log(err);
-            res.render("register");
-        }
 
-        req.body.username = req.body.email;
-        passport.authenticate("local")(req, res, function () {
-            res.redirect('/profile')
-        })
+app.post('/login', function (req, res) {
+
+    //have changed this redirect away from /profile to signup page
+    req.body.username = req.body.email;
+    passport.authenticate("local")(req, res, function () {
+    res.redirect('/profile')
     })
+
 })
 
 app.get('/profile', isLoggedIn, function (req, res) {
@@ -112,65 +92,14 @@ app.get('/profile', isLoggedIn, function (req, res) {
     });
 });
 
-//registerfree
-app.post('/registerfree', function (req, res) {
-    User.register(new User({
-        username: req.body.username,
-        surname: req.body.surname,
-        score: req.body.score,
-        id: req.params.id,
-        subscription_type: 'Yearly',
-        email: req.body.email
-    }), req.body.password, function (err, users) {
-        if (err) {
-            console.log(err);
-            res.render("register");
-        }
-        req.body.username = req.body.email;
-        passport.authenticate("local")(req, res, function () {
-            res.redirect('/profilefree')
-        })
-    })
-})
 
 //ROUTES
-app.get('/', function (req, res) {
-    res.render('home');
 
-});
-
-app.get('/login', function (req, res) {
-    res.render('login');
-});
-
-
-app.post('/login', function (req, res) {
-
-    //have changed this redirect away from /profile to signup page
-    req.body.username = req.body.email;
-    passport.authenticate("local")(req, res, function () {
-        res.redirect('/profile')
-    })
-
-})
-
-app.get('/logout', function (req, res) {
-    req.logout();
-    res.redirect('/');
-})
 //app.post('/login', functio 
 
 
 //create
-app.post('/users', function (req, res) {
-    User.create(req.body.users, function (err, users) {
-        if (err) {
-            console.log(err);;
-        } else {
-            res.redirect('/users');
-        }
-    })
-});
+
 //signup middle page
 app.get('/signup', isLoggedIn, function (req, res) {
     User.findById(req.params.id, req.body.users, function (err, showUser) {
@@ -183,17 +112,6 @@ app.get('/signup', isLoggedIn, function (req, res) {
         }
     });
 });
-
-//update
-app.put('/users/:id', function (req, res) {
-    User.findByIdAndUpdate(req.params.id, req.body.users, function (err, updatedUser) {
-        if (err) {
-            res.redirect('/users');
-        } else {
-            res.redirect('/users/' + req.params.id);
-        }
-    })
-})
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -210,21 +128,6 @@ function isPriceLoggedIn(req, res, next) {
 }
 
 
-app.get('/users/:id', isLoggedIn, function (req, res) {
-    res.render('play');
-})
-//edit
-app.get('/users/:id/edit', function (req, res) {
-    User.findById(req.params.id, function (err, foundUser) {
-        if (err) {
-            res.redirect('/users');
-        } else {
-            res.render('edit', {
-                user: foundUser
-            })
-        }
-    })
-});
 app.get('/pricing', isPriceLoggedIn, function (req, res) {
     res.render('pricing')
 });
@@ -265,22 +168,9 @@ app.post("/monthlyCharge", isLoggedIn, (req, res) => {
 
 
 //pages
-app.get('/log', function (req, res) {
-    res.render('register');
-});
 
-app.get('/test5', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('test5', {
-                user: user
-            })
 
-        }
-    });
-})
+
 
 app.get('/sequences', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
@@ -616,12 +506,14 @@ app.get('/wordedalgebra4', isLoggedIn, function (req, res) {
     });
 })
 app.get('/wordedalgebra5', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
+    User.findById(req.params.id, function (err, user, testFunction) {
         if (err) {
             console.log(err);
         } else {
-            res.render('wordedalgebra5', {
-                user: user
+            res.render('wordedalgebra5', 
+            {
+                user: user,
+                testFunction: testFunction
             })
 
         }

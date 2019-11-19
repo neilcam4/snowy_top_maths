@@ -1,4 +1,6 @@
 <% include ./partials/header %>
+
+
 <style>
     .dot {
         cursor: pointer;
@@ -49,6 +51,7 @@
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
+    <p> <%= testFunction %> </p>
 </div>
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
@@ -215,6 +218,7 @@
 </div>
 <script>
     $("#example").load("./config");
+   
 
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -260,6 +264,7 @@
     var correct = 0;
 
     $("#button1").click(function () {
+        
         var question1 = document.quiz1.question1.value;
         var question2 = document.quiz2.question1.value;
         var question3 = document.quiz3.question1.value;
@@ -355,15 +360,12 @@
 
 
     function checkAnswer() {
-
         var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
         var api = $("#example").text();
         var idAndApi = id + api;
-
+        var url  = "https://api.mlab.com/api/1/databases/maths_app/collections/users/"
         var sliced = id.slice(0, -1);
         var finalApi = url + sliced + api;
-
         $.ajax({
             url: finalApi,
             type: "put",
@@ -381,12 +383,12 @@
                 console.log(error);
             }
         });
-
+  
         function getScore() {
             var id = $("#userId").text();
             var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
             var api = $("#example").text();
-            var idAndApi = id + config;
+            var idAndApi = id + api;
             var sliced = id.slice(0, -1);
             var finalApi = url + sliced + api;
             $.ajax({
@@ -401,7 +403,7 @@
                     console.log(error);
                 }
             });
-        }
+        }  
     };
     $("input").attr("maxlength", 5)
 </script>
