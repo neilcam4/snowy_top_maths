@@ -1,6 +1,6 @@
 ## SnowyTop Maths
 
-A full stack web application, independently buiilt by me whlist learning to code by myself. It was designed to be an educational resource for children sitting school entrance exams. It consists of a range of tutorial videos and questions. 
+A full stack web application, independently built by me whlist learning to code by myself. It was designed to be an educational resource for children sitting school entrance exams. It consists of a range of tutorial videos and questions. 
 
 Users can sign up and login where they are redirected to the profile page. Then they can choose from a range of chapters to enter, watch the video and answer the questions below. 
 
