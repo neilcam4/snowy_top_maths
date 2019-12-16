@@ -25,6 +25,7 @@
     }
 </style>
 
+<p id = "input"></p>
 
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
@@ -60,7 +61,7 @@
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
-
+  
 </div>
 
 <div style="text-align: center">
@@ -80,7 +81,7 @@
                         <input type="text" placeholder="1st number" name="question1">
                     </div>
                     <div class="ui input focus">
-                        <input type="text" placeholder="Second number" name="question2">
+                        <input type="text" placeholder="2nd number" name="question2">
                     </div>
                 </form>
             </div>
@@ -236,6 +237,7 @@
     var slideIndex = 1;
     showSlides(slideIndex);
 
+
     function plusSlides(n) {
         showSlides(slideIndex += n);
         document.getElementById("tick").style.visibility = "hidden";
@@ -386,7 +388,6 @@
 
 
     function checkAnswer() {
-
         var id = $("#userId").text();
         var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
         var api = $("#example").text();
@@ -436,5 +437,22 @@
         }
     };
     $("input").attr("maxlength", 5)
+    
+
+    function getJSON (){
+        fetch('./multdiv1.json')
+        .then(function(res){
+            console.log(res)
+            res.json()
+           
+        })
+        .then(function(data){
+            console.log(data)
+        })
+        .catch(function(error){
+            console.log("error loading JSON")
+        })
+    }
+    getJSON()
 </script>
 <% include ./partials/footer %>

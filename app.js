@@ -315,8 +315,9 @@ app.get('/addsubtract1', isLoggedIn, function (req, res) {
     });
 })
 
+
 app.get('/multdiv', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
+    User.findById(req.params.id, function (err, user,page) {
         if (err) {
             console.log(err);
         } else {
@@ -1012,6 +1013,9 @@ app.get('/profilefree', isLoggedIn, function (req, res) {
     res.render('profilefree');
 });
 
+app.get('/help', function(req,res){
+    res.send('/multdiv1.json')
+})
 app.listen(port, function (err) {
     if (err) {
         console.log("Error");
