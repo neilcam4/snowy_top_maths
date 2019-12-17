@@ -1,4 +1,26 @@
-
+[
     {
-       "title": "Post One"
-    }
+       "question_number": "1",
+       "question_text": "Boom! Write down 2 numbers that have a difference of 2 and multiply to make 99."
+    },
+    {
+      "question_number": "2",
+      "question_text": "Boom! Write down 2 numbers that have a difference of 2 and multiply to make 195."
+   },
+   {
+      "question_number": "3",
+      "question_text": "Boom! Write down 2 numbers that have a difference of 2 and multiply to make 288."
+   },
+   {
+      "question_number": "4",
+      "question_text": "Boom! Write down 2 numbers that have a difference of 3 and multiply to make 323."
+   },
+   {
+      "question_number": "5",
+      "question_text": "Boom! Write down 2 numbers that have a difference of 3 and multiply to make 180."
+   },
+   {
+      "question_number": "6",
+      "question_text": "Boom! Write down 2 numbers that have a difference of 2 and multiply to make 99."
+   }
+   ]

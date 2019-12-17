@@ -75,8 +75,8 @@
             </div>
             <div class="card-body">
                 <form name="quiz1">
-                    <p class="q">
-                        Write down 2 numbers that have a difference of 2 and multiply to make 99.</p>
+                    <p class="q" id="q1">
+                        </p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st number" name="question1">
                     </div>
@@ -443,11 +443,15 @@
         fetch('./multdiv1.json')
         .then(function(res){
             console.log(res)
-            res.json()
+            return res.json()
            
         })
         .then(function(data){
             console.log(data)
+        let output = data[0].question_text
+
+        document.getElementById("q1").innerHTML = output
+            
         })
         .catch(function(error){
             console.log("error loading JSON")
