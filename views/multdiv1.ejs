@@ -251,8 +251,6 @@
         document.getElementById("tick").style.visibility = "hidden";
         document.getElementById("wrong").style.visibility = "hidden";
         document.getElementById("msg").style.visibility = "hidden";
-
-
     }
 
     function currentSlide(n) {
@@ -308,54 +306,36 @@
         if (slideIndex == 2 && question2 == 13 && question8 == 15 || slideIndex == 2 && question2 == 15 &&
             question8 == 13) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 10 points";
-            correct++;
+            showTicks()
             //third question
         } else if (slideIndex == 3 && question3 == 16 && question9 == 18 || slideIndex == 3 && question3 ==
             18 && question9 == 16) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 10 points";
-            correct++;
+            showTicks();
         }
         //first question
         else if (slideIndex == 1 && question1 == 9 && question7 == 11 || slideIndex == 1 && question1 == 11 &&
             question7 == 9) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 10 points";
-            correct++;
+            showTicks();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 17 && question10 == 19 || slideIndex == 4 && question4 == 19 &&
             question10 == 17) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 10 points";
-            correct++;
+            showTicks();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 9 && question11 == 12 || slideIndex == 5 && question5 == 12 &&
             question11 == 9) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 10 points";
-            correct++;
+            showTicks();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 12 && question12 == 15 || slideIndex == 6 && question6 == 15 &&
             question12 == 12) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 10 points";
-            correct++;
+            showTicks();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
@@ -365,6 +345,12 @@
         document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`
     });
 
+    function showTicks (){
+        document.getElementById("tick").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Well done! 10 points";
+        correct ++;
+        }
 
     function checkAnswer() {
         var id = $("#userId").text();
@@ -444,19 +430,6 @@
         })
     }
     getJSON()
-    document.getElementById("changeSquare").addEventListener('click', changeYellow)
-
-    function changeYellow(){
-        fetch('./questions/multdiv1.json')
-        .then(function(res){
-            return res.json()
-        }).then(function(data){
-            let output =''
-            data.forEach(function(data){
-               output += data.question_number
-                document.getElementById("square").innerHTML = output
-            })
-        })
-    }
+    
 </script>
 <% include ./partials/footer %>
