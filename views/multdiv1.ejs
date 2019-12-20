@@ -25,6 +25,7 @@
     }
 </style>
 
+<p id = "input"></p>
 
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
@@ -60,7 +61,7 @@
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
-
+  
 </div>
 
 <div style="text-align: center">
@@ -74,13 +75,12 @@
             </div>
             <div class="card-body">
                 <form name="quiz1">
-                    <p class="q">
-                        Write down 2 numbers that have a difference of 2 and multiply to make 99.</p>
+                    <p class="q" id="q1"></p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st number" name="question1">
                     </div>
                     <div class="ui input focus">
-                        <input type="text" placeholder="Second number" name="question2">
+                        <input type="text" placeholder="2nd number" name="question2">
                     </div>
                 </form>
             </div>
@@ -92,7 +92,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz2">
-                    <p class="q">Write down 2 numbers that have a difference of 2 and multiply to make 195.</p>
+                <p class="q" id="q2"></p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st Number" name="question1">
                     </div>
@@ -109,7 +109,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz3">
-                    <p class="q">Write down 2 numbers that have a difference of 2 and have a product of 288. </p>
+                <p class="q" id="q3"></p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st Number" name="question1">
                     </div>
@@ -126,7 +126,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz4">
-                    <p class="q">Write down 2 numbers that have a difference of 2 and have a product of 323. </p>
+                <p class="q" id="q4"></p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st Number" name="question1">
                     </div>
@@ -143,7 +143,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz5">
-                    <p class="q"> Write down 2 numbers that have a difference of 3 and have a product of 108. </p>
+                <p class="q" id="q5"></p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st Number" name="question1">
                     </div>
@@ -160,7 +160,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz6">
-                    <p class="q">Write down 2 numbers that have a difference of 3 and have a product of 180.</p>
+                <p class="q" id="q6"></p>
                     <div class="ui input focus">
                         <input type="text" placeholder="1st Number" name="question1">
                     </div>
@@ -235,6 +235,7 @@
 
     var slideIndex = 1;
     showSlides(slideIndex);
+
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
@@ -386,7 +387,6 @@
 
 
     function checkAnswer() {
-
         var id = $("#userId").text();
         var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
         var api = $("#example").text();
@@ -436,5 +436,34 @@
         }
     };
     $("input").attr("maxlength", 5)
+    
+
+    function getJSON (){
+        fetch('./multdiv1.json')
+        .then(function(res){
+            console.log(res)
+            return res.json()
+           
+        })
+        .then(function(data){
+            console.log(data)
+            let output1 = data[0].question_text
+            let output2 = data[1].question_text
+            let output3 = data[2].question_text
+            let output4 = data[3].question_text
+            let output5 = data[4].question_text
+            let output6 = data[5].question_text
+            document.getElementById("q1").innerHTML = output1
+            document.getElementById("q2").innerHTML = output2
+            document.getElementById("q3").innerHTML = output3
+            document.getElementById("q4").innerHTML = output4
+            document.getElementById("q5").innerHTML = output5
+            document.getElementById("q6").innerHTML = output6
+        })
+        .catch(function(error){
+            console.log("error loading JSON")
+        })
+    }
+    getJSON()
 </script>
 <% include ./partials/footer %>
