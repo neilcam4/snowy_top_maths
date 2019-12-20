@@ -23,6 +23,10 @@
     #button1 {
         background-color: #9C27B0;
     }
+    #square {
+        background-color:yellow;
+        width:50%
+    }
 </style>
 
 <p id = "input"></p>
@@ -69,7 +73,6 @@
 
         <!--        First question-->
         <div class="mySlides">
-
             <div class="card-header">
                 <h3 class="card-title">1.</h3>
             </div>
@@ -229,6 +232,12 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class = "container">
+<div id="square"></div>
+<button id="changeSquare">Change Number</button>
+
 </div>
 <script>
     $("#example").load("./config");
@@ -437,9 +446,8 @@
     };
     $("input").attr("maxlength", 5)
     
-
     function getJSON (){
-        fetch('./multdiv1.json')
+        fetch('./questions/multdiv1.json')
         .then(function(res){
             console.log(res)
             return res.json()
@@ -465,5 +473,19 @@
         })
     }
     getJSON()
+    document.getElementById("changeSquare").addEventListener('click', changeYellow)
+
+    function changeYellow(){
+        fetch('./questions/multdiv1.json')
+        .then(function(res){
+            return res.json()
+        }).then(function(data){
+            let output =''
+            data.forEach(function(data){
+               output += data.question_number
+                document.getElementById("square").innerHTML = output
+            })
+        })
+    }
 </script>
 <% include ./partials/footer %>
