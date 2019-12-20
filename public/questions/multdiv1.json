@@ -23,13 +23,14 @@
       "answer_1":"9",
        "answer_2":"11"
    },
-   {
+   {  "question_number": "5",
+      "question_text": "Write down 2 numbers that have a difference of 3 and have a product of 108.",
       "answer_1":"9",
        "answer_2":"11"
    },
    {
       "question_number": "6",
-      "question_text": "Boom! Write down 2 numbers that have a difference of 2 and multiply to make 99.",
+      "question_text": "Write down 2 numbers that have a difference of 3 and have a product of 180.",
       "answer_1":"9",
        "answer_2":"11"
    }
