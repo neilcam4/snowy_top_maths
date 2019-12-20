@@ -361,37 +361,8 @@
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " One or more may be incorrect. Please try again.";
         }
-        if (correct == 6) {
-            document.getElementById("badge").textContent = " 6 out of 6. Wow!";
-            document.getElementById("points").textContent = "Points earned: 60";
-        }
-        if (correct == 5) {
-            document.getElementById("badge").textContent = " 5 out of 6";
-            document.getElementById("points").textContent = "Points earned: 50";
-        }
-        if (correct == 4) {
-            document.getElementById("badge").textContent = " 4 out of 6";
-            document.getElementById("points").textContent = "Points earned 40";
-        }
-
-        if (correct == 3) {
-            document.getElementById("badge").textContent = " 3 out of 6";
-            document.getElementById("points").textContent = "Points earned:  30";
-        }
-        if (correct == 2) {
-            document.getElementById("badge").textContent = " 2 out of 6";
-            document.getElementById("points").textContent = "Points earned 20";
-        }
-        if (correct == 1) {
-            document.getElementById("badge").textContent = " 1 out of 6";
-            document.getElementById("points").textContent = "Points earned:  10";
-        }
-        if (correct == 0) {
-            document.getElementById("badge").textContent =
-                "0 out of 6. Watch the video and try the questions again. You will get it right.";
-            document.getElementById("points").textContent = "Points earned : 0";
-
-        }
+        document.getElementById("badge").textContent = `${correct} out of 6`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`
     });
 
 
