@@ -3,6 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var flash = require('connect-flash');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
 var User = require('./models/user');
@@ -15,10 +16,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(flash());
 app.use(expressSanitizer());
 app.use(bodyParser.json())
 app.use(methodOverride("_method"));
-
 let examPapers = require("./routes/exam_papers")
 app.use(examPapers);
 let chapters = require('./routes/chapters')
@@ -40,6 +41,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(function (req, res, next) {
     res.locals.currentUser = req.user;
+    res.locals.message = req.flash("error");
     next();
 });
 
@@ -110,6 +112,7 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
+    req.flash("error", "You have not logged in" )
     res.redirect('/login');
 }
 
