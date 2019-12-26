@@ -272,95 +272,53 @@
         if (question2 == '00:42' || question2 == '0:42am' || question2 == '00:42am' || question2 == '0.42am' ||
             question2 == '0.42' || question2 == '0:42') {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
             //third question
         } else if (question3 == '08:54' || question3 == '8:54am' || question3 == '08:54am' || question3 ==
             '8.54am' || question3 == '8.54' || question3 == '8:54') {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //first question
         else if (question1 == '09:42' || question1 == '9:42' || question1 == '09:42am' || question1 ==
             '9.42am') {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //4th question 
         else if (question4 == '13:29' || question4 == '13:29pm' || question4 == '13.29pm' || question4 ==
             '13.29pm' || question4 == '13.29') {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //5th question 
         else if (question5 == '19:01' || question5 == '7:01pm' || question5 == '19:01pm' || question5 ==
             '7.01pm') {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //6th question
         else if (question6 == '09:54' || question6 == '9:54am' || question6 == '09:54am' || question6 ==
             '9.54am') {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
         }
-        if (correct == 6) {
-            document.getElementById("badge").textContent = " 6 out of 6. Wow!";
-            document.getElementById("points").textContent = "Points earned: 120";
-        }
-        if (correct == 5) {
-            document.getElementById("badge").textContent = " 5 out of 6";
-            document.getElementById("points").textContent = "Points earned: 100";
-        }
-        if (correct == 4) {
-            document.getElementById("badge").textContent = " 4 out of 6";
-            document.getElementById("points").textContent = "Points earned 80";
-        }
-
-        if (correct == 3) {
-            document.getElementById("badge").textContent = " 3 out of 6";
-            document.getElementById("points").textContent = "Points earned:  60";
-        }
-        if (correct == 2) {
-            document.getElementById("badge").textContent = " 2 out of 6";
-            document.getElementById("points").textContent = "Points earned 40";
-        }
-        if (correct == 1) {
-            document.getElementById("badge").textContent = " 1 out of 6";
-            document.getElementById("points").textContent = "Points earned:  20";
-        }
-        if (correct == 0) {
-            document.getElementById("badge").textContent =
-                "0 out of 6. Watch the video and try the questions again. You will get it right.";
-            document.getElementById("points").textContent = "Points earned : 0";
-
-        }
+        document.getElementById("badge").textContent = `${correct} out of 6`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
     });
 
+    function showTicks (){
+        document.getElementById("tick").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Well done! 20 points";
+        correct ++;
+        }
 
     function checkAnswer() {
-
         var id = $("#userId").text();
         var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
         var api = $("#example").text();

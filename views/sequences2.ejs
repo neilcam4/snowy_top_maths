@@ -305,7 +305,7 @@
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
     });
-    function showTicks (){
+    showTicks = () => {
         document.getElementById("tick").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Well done! 30 points";
