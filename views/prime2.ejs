@@ -304,10 +304,7 @@
                 question5 % 3 !== 0) && (slideIndex == 2 && question4 % 9 !== 0 && question5 % 9 !== 0) && (
                 slideIndex == 2 && question4 % 11 !== 0 && question5 % 11 !== 0)) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
             //third question
         } else if ((slideIndex == 3 && parseInt(question7) + parseInt(question8) == 25) && (slideIndex == 3 &&
                 question7 % 4 !== 0 && question8 % 4 !== 0) && (slideIndex == 3 && question7 % 3 !== 0 &&
@@ -315,20 +312,14 @@
                 slideIndex == 3 && question7 % 5 !== 0 && question8 % 5 !== 0) && (slideIndex == 3 &&
                 question7 % 7 !== 0 && question8 % 7 !== 0)) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //first question
         else if ((slideIndex == 1 && parseInt(question1) + parseInt(question2) == 16) && (slideIndex == 1 &&
                 question1 % 2 !== 0 && question2 % 2 !== 0) && (slideIndex == 1 && question1 % 9 !== 0 &&
                 question2 % 9 !== 0)) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //4th question 
         else if ((slideIndex == 4 && parseInt(question10) + parseInt(question11) == 64) && (slideIndex == 4 &&
@@ -337,10 +328,7 @@
                 slideIndex == 4 && question10 % 15 !== 0 && question11 % 15 !== 0) && (slideIndex == 4 &&
                 question10 % 7 !== 0 && question11 % 7 !== 0)) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //5th question 
         else if ((slideIndex == 5 && parseInt(question13) + parseInt(question14) + parseInt(question15) ==
@@ -349,10 +337,7 @@
                 slideIndex == 5 && question13 % 9 !== 0 && question14 % 9 !== 0 && question15 % 9 !== 0) && (
                 slideIndex == 5 && question14 % 15 !== 0 && question15 % 15 !== 0)) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         }
         //6th question
         else if ((slideIndex == 6 && question16 == 2 && question17 == 3 && question18 == 11) || (slideIndex ==
@@ -362,51 +347,23 @@
                 question17 == 11 && question18 == 2) || (slideIndex == 6 && question16 == 11 && question17 ==
                 3 && question18 == 2)) {
             checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct++;
+            showTicks();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
         }
-        if (correct == 6) {
-            document.getElementById("badge").textContent = " 6 out of 6. Wow!";
-            document.getElementById("points").textContent = "Points earned: 120";
-        }
-        if (correct == 5) {
-            document.getElementById("badge").textContent = " 5 out of 6";
-            document.getElementById("points").textContent = "Points earned: 100";
-        }
-        if (correct == 4) {
-            document.getElementById("badge").textContent = " 4 out of 6";
-            document.getElementById("points").textContent = "Points earned 80";
-        }
-
-        if (correct == 3) {
-            document.getElementById("badge").textContent = " 3 out of 6";
-            document.getElementById("points").textContent = "Points earned:  60";
-        }
-        if (correct == 2) {
-            document.getElementById("badge").textContent = " 2 out of 6";
-            document.getElementById("points").textContent = "Points earned 40";
-        }
-        if (correct == 1) {
-            document.getElementById("badge").textContent = " 1 out of 6";
-            document.getElementById("points").textContent = "Points earned:  20";
-        }
-        if (correct == 0) {
-            document.getElementById("badge").textContent =
-                "0 out of 6. Watch the video and try the questions again. You will get it right.";
-            document.getElementById("points").textContent = "Points earned : 0";
-
-        }
+        document.getElementById("badge").textContent = `${correct} out of 6`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
     });
-
+    function showTicks (){
+        document.getElementById("tick").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Well done! 10 points";
+        correct ++;
+        }
 
     function checkAnswer() {
-
         var id = $("#userId").text();
         var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
         var api = $("#example").text();
