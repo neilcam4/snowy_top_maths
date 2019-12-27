@@ -426,7 +426,6 @@
             document.getElementById("msg").textContent = " Not Yet";
         }
 
-
         if (correct == 9) {
             document.getElementById("badge").textContent = " 9 out of 9";
             document.getElementById("points").textContent = "Points earned:  180";
@@ -451,7 +450,6 @@
             document.getElementById("badge").textContent = " 4 out of 9";
             document.getElementById("points").textContent = "Points earned 120";
         }
-
         if (correct == 3) {
             document.getElementById("badge").textContent = " 3 out of 9";
             document.getElementById("points").textContent = "Points earned:  90";
@@ -466,15 +464,21 @@
         }
         if (correct == 0) {
             document.getElementById("badge").textContent =
-                "0 out of 9. Watch the video and try the questions again. You will get it right.";
+            "0 out of 9. Watch the video and try the questions again. You will get it right.";
             document.getElementById("points").textContent = "Points earned : 0";
 
         }
+        document.getElementById("badge").textContent = `${correct} out of 9`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
     });
-
+    showTicks = () => {
+        document.getElementById("tick").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Well done! 30 points";
+        correct ++;
+        }
 
     function checkAnswer() {
-
         var id = $("#userId").text();
         var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
         var api = $("#example").text();

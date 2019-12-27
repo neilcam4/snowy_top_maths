@@ -397,54 +397,17 @@
                 document.getElementById("msg").style.visibility = "visible";
                 document.getElementById("msg").textContent = " Not Yet";
             }
-            if (correct == 9) {
-                document.getElementById("badge").textContent = " 9 out of 9. Wow!";
-                document.getElementById("points").textContent = "Points earned: 120";
-            }
-            if (correct == 8) {
-                document.getElementById("badge").textContent = " 8 out of 9";
-                document.getElementById("points").textContent = "Points earned: 100";
-            }
-            if (correct == 7) {
-                document.getElementById("badge").textContent = " 7 out of 9";
-                document.getElementById("points").textContent = "Points earned 80";
-            }
-            if (correct == 6) {
-                document.getElementById("badge").textContent = " 6 out of 9. ";
-                document.getElementById("points").textContent = "Points earned: 120";
-            }
-            if (correct == 5) {
-                document.getElementById("badge").textContent = " 5 out of 9";
-                document.getElementById("points").textContent = "Points earned: 100";
-            }
-            if (correct == 4) {
-                document.getElementById("badge").textContent = " 4 out of 9";
-                document.getElementById("points").textContent = "Points earned 80";
-            }
-
-            if (correct == 3) {
-                document.getElementById("badge").textContent = " 3 out of 9";
-                document.getElementById("points").textContent = "Points earned:  60";
-            }
-            if (correct == 2) {
-                document.getElementById("badge").textContent = " 2 out of 9";
-                document.getElementById("points").textContent = "Points earned 40";
-            }
-            if (correct == 1) {
-                document.getElementById("badge").textContent = " 1 out of 9";
-                document.getElementById("points").textContent = "Points earned:  20";
-            }
-            if (correct == 0) {
-                document.getElementById("badge").textContent =
-                    "0 out of 6. Watch the video and try the questions again. You will get it right.";
-                document.getElementById("points").textContent = "Points earned : 0";
-
-            }
+            document.getElementById("badge").textContent = `${correct} out of 9`; 
+            document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
         });
-
+        showTicks = () => {
+            document.getElementById("tick").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent = " Well done! 30 points";
+            correct ++;
+            }
 
         function checkAnswer() {
-
             var id = $("#userId").text();
             var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
             var api = $("#example").text();
