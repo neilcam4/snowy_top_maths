@@ -1,3 +1,5 @@
+console.log("get score is connected")
+
 function getScore() {
     var id = $("#userId").text();
     var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
