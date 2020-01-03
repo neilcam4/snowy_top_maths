@@ -384,12 +384,7 @@
             document.getElementById("badge").textContent = `${correct} out of 9`; 
             document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
         });
-        showTicks = () => {
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 20 points";
-            correct ++;
-            }
+       
 
         function checkAnswer() {
             var id = $("#userId").text();

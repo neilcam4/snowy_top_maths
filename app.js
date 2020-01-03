@@ -549,10 +549,9 @@ app.get('/piecharts', isLoggedIn, function (req, res) {
         if (err) {
             console.log(err);
         } else {
-            res.render('piecharts2', {
+            res.render('piecharts', {
                 user: user
             })
-
         }
     });
 })
@@ -561,10 +560,9 @@ app.get('/barcharts', isLoggedIn, function (req, res) {
         if (err) {
             console.log(err);
         } else {
-            res.render('barcharts', {
+            res.render('piecharts2', {
                 user: user
             })
-
         }
     });
 })
