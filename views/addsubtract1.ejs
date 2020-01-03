@@ -351,89 +351,14 @@ function showSlides(n) {
             correct++;
   } 
         else {
-      document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
-    document.getElementById("msg").textContent= " One or more may be incorrect. Please try again."; 
-  } 
-        if(correct==6){
-            document.getElementById("badge").innerHTML= " 6 out of 6. Wow!";
-            document.getElementById("points").innerHTML="Points earned: 180";
-        }
-        if(correct==5){
-            document.getElementById("badge").innerHTML= " 5 out of 6";
-            document.getElementById("points").innerHTML="Points earned: 150";
-        }
-        if(correct==4){
-            document.getElementById("badge").innerHTML= " 4 out of 6";
-            document.getElementById("points").innerHTML="Points earned 120";
-        }
-        
-        if(correct==3){
-            document.getElementById("badge").innerHTML= " 3 out of 6";
-           document.getElementById("points").innerHTML="Points earned:  90";
-        }
-        if(correct==2){
-            document.getElementById("badge").innerHTML= " 2 out of 6";
-           document.getElementById("points").innerHTML="Points earned 60";
-        }
-        if(correct==1){
-            document.getElementById("badge").innerHTML= " 1 out of 6";
-           document.getElementById("points").innerHTML="Points earned:  30";
-        }
-        if(correct==0){
-            document.getElementById("badge").innerHTML= "0 out of 20. Refresh the page and watch the video again. You will get it right.";
-            document.getElementById("points").innerHTML="Points earned : 0";
-            
-        }
+            document.getElementById("msg").textContent= " One or more may be incorrect. Please try again."; 
+        }  
+        document.getElementById("badge").textContent = `${correct} out of 6`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!!`;
        });
         
-   
-    function checkAnswer(){
-        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + api;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-        
-        $.ajax({           
-            url: finalApi,
-            type:"put",
-                data: JSON.stringify( { "$inc" : { "score" : 30 } } ),
-            contentType:"application/json",
-            success:function(data){
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
-        });
-        
-    function getScore(){        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + api;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-    $.ajax({          
-        url:finalApi,
-            type:"get",
-            data: JSON.stringify(),
-            contentType:"application/json",
-            success:function(data){
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
-        });   
-    }
-       };
    
     $("input").attr("maxlength", 5)
 </script>
