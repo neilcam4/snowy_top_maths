@@ -305,50 +305,32 @@ function showSlides(n) {
         var question20 = document.quiz6.question4.value;
         //2nd question
        if(slideIndex==2&&question4 == 6 &&question5 == 7 &&question6 == 8){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
-           document.getElementById("msg").style.visibility = "visible";
-           document.getElementById("msg").textContent= " Well done! 30 points";
-            correct++;
+        checkAnswer30();     
+        showTicks30();
            //third question
   } else if(slideIndex==3&&question7 == 5&&question8 == 6&&question9 == 9){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
-      document.getElementById("msg").style.visibility = "visible";
-      document.getElementById("msg").textContent= " Well done! 30 points";
-      correct++;
+      checkAnswer30();     
+      showTicks30();
   }
         //first question
-         else if(slideIndex==1&&question1 == 3 && question2 ==5 &&question3==4){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
-             document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent= " Well done! 30 points"; 
-            correct++;
+    else if(slideIndex==1&&question1 == 3 && question2 ==5 &&question3==4){
+      checkAnswer30();     
+      showTicks30();
   } 
         //4th question 
         else if(slideIndex==4&&question10 == 3 && question11 == 8 && question12 == 1){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
-             document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent= " Well done! 30 points"; 
-            correct++;
+          checkAnswer30();       
+          showTicks30();
   } 
         //5th question 
         else if(slideIndex==5&&question13 == 8&&question14 == 6&&question15 == 6&&question19 == 1){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
-             document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent= " Well done! 30 points"; 
-            correct++;
+          checkAnswer30();     
+          showTicks30();
   } 
         //6th question
         else if(slideIndex==6&&question16 == 9&&question17 == 8&&question18 == 3&&question20 == 5){
-        checkAnswer();     
-        document.getElementById("tick").style.visibility = "visible";
-             document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent= " Well done! 30 points"; 
-            correct++;
+          checkAnswer30();     
+          showTicks30();
   } 
         else {
             document.getElementById("wrong").style.visibility = "visible";
@@ -363,8 +345,4 @@ function showSlides(n) {
     $("input").attr("maxlength", 5)
 </script>
 
-
 <% include ./partials/footer %>
-            
-      
-    
