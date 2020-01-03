@@ -310,62 +310,7 @@
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
     });
-    function showTicks (){
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 10 points";
-        correct ++;
-        }
-
-    function checkAnswer() {
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 10
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
+    
     $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
