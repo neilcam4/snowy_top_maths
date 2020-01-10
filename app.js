@@ -9,6 +9,7 @@ var passport = require('passport');
 var User = require('./models/user');
 var config = require('./config.js');
 var expressSanitizer = require("express-sanitizer");
+var tools = require('./tools');
 require('dotenv').config();
 app.use(express.json())
 app.use(express.static('public'))
@@ -26,7 +27,7 @@ let chapters = require('./routes/chapters')
 app.use(chapters);
 let routes = require("./routes/index")
 app.use(routes)
-
+    
 let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
