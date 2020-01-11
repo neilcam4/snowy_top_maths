@@ -286,8 +286,6 @@
         </span>
       </div>
     </div>
-
-
     <div id="msg"></div>
     <div class="dot-container">
       <span class="dot" onclick="currentSlide(1)"></span>
@@ -337,9 +335,7 @@
     document.getElementById("tick").style.visibility = "hidden";
     document.getElementById("wrong").style.visibility = "hidden";
     document.getElementById("msg").style.visibility = "hidden";
-
   }
-
   function currentSlide(n) {
     showSlides(slideIndex = n);
     document.getElementById("tick").style.visibility = "hidden";
@@ -347,7 +343,6 @@
     document.getElementById("msg").style.visibility = "hidden";
 
   }
-
   function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -371,7 +366,6 @@
     }
   }
   var correct = 0;
-
   $("#button1").click(function () {
     var question1 = document.quiz1.question1.value;
     var question2 = document.quiz1.question2.value;
@@ -397,102 +391,43 @@
     var question22 = document.quiz2.question4.value;
     var question23 = document.quiz3.question4.value;
     var question24 = document.quiz4.question4.value;
-
-
     //2nd question
     if (slideIndex == 2 && question4 == 12 && question5 == 5 && question6 == 8 && question22 == 15) {
-      checkAnswer();
-      showTicks();
+      checkAnswer30();
+      showTicks30();
       //third question
     } else if (slideIndex == 3 && question7 == 15 && question8 == 13 && question9 == 17 && question23 == 5) {
-      checkAnswer();
-      showTicks();
+      checkAnswer30();
+      showTicks30();
     }
     //first question
     else if (slideIndex == 1 && question1 == 9 && question2 == 11 && question3 == 13 && question21 == 7) {
-      checkAnswer();
-      showTicks();
+      checkAnswer30();
+      showTicks30();
     }
     //4th question 
     else if (slideIndex == 4 && question10 == 3 && question11 == 4 && question12 == 6 && question24 == 9) {
-      checkAnswer();
-      showTicks();
+      checkAnswer30();
+      showTicks30();
     }
     //5th question 
     else if (slideIndex == 5 && question13 == 5 && question14 == 9 && question15 == 15 && question19 == 7) {
-      checkAnswer();
-      showTicks();
+      checkAnswer30();
+      showTicks30();
     }
     //6th question
     else if (slideIndex == 6 && question16 == 8 && question17 == 12 && question18 == 14 && question20 == 16) {
-      checkAnswer();
-      showTicks();
+      checkAnswer30();
+      showTicks30();
     } 
     else {
       document.getElementById("wrong").style.visibility = "visible";
       document.getElementById("msg").style.visibility = "visible";
       document.getElementById("msg").textContent = " Not Yet";
     }
-
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
-  });
-
-  showTicks = () => {
-    document.getElementById("tick").style.visibility = "visible";
-    document.getElementById("msg").style.visibility = "visible";
-    document.getElementById("msg").textContent = " Well done! 30 points";
-    correct ++;
-    }
-
-  function checkAnswer() {
-    var id = $("#userId").text();
-    var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-    var api = $("#example").text();
-    var idAndApi = id + api;
-    var sliced = id.slice(0, -1);
-    var finalApi = url + sliced + api;
-
-    $.ajax({
-      url: finalApi,
-      type: "put",
-      data: JSON.stringify({
-        "$inc": {
-          "score": 30
-        }
-      }),
-      contentType: "application/json",
-      success: function (data) {
-        getScore();
-        $("#jquery").text(data.score);
-      },
-      error: function (xhr, status, error) {
-        console.log(error);
-      }
-    });
-
-    function getScore() {
-      var id = $("#userId").text();
-      var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-      var api = $("#example").text();
-      var idAndApi = id + config;
-
-      var sliced = id.slice(0, -1);
-      var finalApi = url + sliced + api;
-      $.ajax({
-        url: finalApi,
-        type: "get",
-        data: JSON.stringify(),
-        contentType: "application/json",
-        success: function (data) {
-          $("#jquery").text(data.score);
-        },
-        error: function (xhr, status, error) {
-          console.log(error);
-        }
-      });
-    }
-  };
-  $("input").attr("maxlength", 5)
+});
+$("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
