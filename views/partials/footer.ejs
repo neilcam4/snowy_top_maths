@@ -1,28 +1,7 @@
 <script src="js/plugins.min.js"></script>
-    <script src="js/app.min.js"></script>
-
+<script type = "text/javascript" src="js/showTicks10.js"></script>
 <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 <script>
-showTicks20 = () => {
-  document.getElementById("tick").style.visibility = "visible";
-  document.getElementById("msg").style.visibility = "visible";
-  document.getElementById("msg").textContent = " Well done! 20 points";
-  correct ++;
-}
-
-showTicks10 = () => {
-    document.getElementById("tick").style.visibility = "visible";
-    document.getElementById("msg").style.visibility = "visible";
-    document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-  }
-
-showTicks30 = () => {
-  document.getElementById("tick").style.visibility = "visible";
-  document.getElementById("msg").style.visibility = "visible";
-  document.getElementById("msg").textContent = " Well done! 30 points";
-  correct ++;
-}
 
 function checkAnswer20() {
   var id = $("#userId").text();
