@@ -263,36 +263,36 @@
         //2nd question
         if (slideIndex == 2 && question2 == 132 || slideIndex == 2 && question2 == '132cm' || slideIndex == 2 &&
             question2 == '1.32m') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
             //third question
         } else if (slideIndex == 3 && question3 == 120 || slideIndex == 3 && question3 == '120cm' ||
             slideIndex == 3 && question3 == '1.2m' || slideIndex == 3 && question3 == '1.20m') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //first question
         else if (slideIndex == 1 && question1 == 168 || slideIndex == 1 && question1 == '168cm' || slideIndex ==
             1 && question1 == '1.68m') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 96 || slideIndex == 4 && question4 == '96cm') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 144 || slideIndex == 5 && question5 == '144cm' || slideIndex ==
             5 && question5 == '1.44m') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 104 || slideIndex == 6 && question6 == '104cm' || question6 ==
             '1.04m') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
@@ -300,62 +300,8 @@
         }
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
-    });
-    function showTicks (){
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 30 points";
-        correct ++;
-        }
-
-    function checkAnswer() {
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 20
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
-    $("input").attr("maxlength", 5)
+});
+    
+$("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
