@@ -268,33 +268,32 @@
         var question13 = document.quiz5.question1.value;
         var question14 = document.quiz5.question2.value;
         var question15 = document.quiz5.question3.value;
-
         var question16 = document.quiz6.question1.value;
         var question17 = document.quiz6.question2.value;
         var question18 = document.quiz6.question3.value;
 
         //2nd question
         if ((slideIndex == 2 && parseInt(question4) + parseInt(question5) == 36) && (slideIndex == 2 &&
-                question4 % 2 !== 0 && question5 % 2 !== 0) && (slideIndex == 2 && question4 % 3 !== 0 &&
-                question5 % 3 !== 0) && (slideIndex == 2 && question4 % 9 !== 0 && question5 % 9 !== 0) && (
-                slideIndex == 2 && question4 % 11 !== 0 && question5 % 11 !== 0)) {
-            checkAnswer();
-            showTicks();
+            question4 % 2 !== 0 && question5 % 2 !== 0) && (slideIndex == 2 && question4 % 3 !== 0 &&
+            question5 % 3 !== 0) && (slideIndex == 2 && question4 % 9 !== 0 && question5 % 9 !== 0) && (
+            slideIndex == 2 && question4 % 11 !== 0 && question5 % 11 !== 0)) {
+            checkAnswer20();
+            showTicks20();
             //third question
         } else if ((slideIndex == 3 && parseInt(question7) + parseInt(question8) == 25) && (slideIndex == 3 &&
                 question7 % 4 !== 0 && question8 % 4 !== 0) && (slideIndex == 3 && question7 % 3 !== 0 &&
                 question8 % 3 !== 0) && (slideIndex == 3 && question7 % 9 !== 0 && question8 % 9 !== 0) && (
                 slideIndex == 3 && question7 % 5 !== 0 && question8 % 5 !== 0) && (slideIndex == 3 &&
                 question7 % 7 !== 0 && question8 % 7 !== 0)) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //first question
         else if ((slideIndex == 1 && parseInt(question1) + parseInt(question2) == 16) && (slideIndex == 1 &&
                 question1 % 2 !== 0 && question2 % 2 !== 0) && (slideIndex == 1 && question1 % 9 !== 0 &&
                 question2 % 9 !== 0)) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //4th question 
         else if ((slideIndex == 4 && parseInt(question10) + parseInt(question11) == 64) && (slideIndex == 4 &&
@@ -302,17 +301,17 @@
                 question11 % 19 !== 0) && (slideIndex == 4 && question10 % 9 !== 0 && question11 % 9 !== 0) && (
                 slideIndex == 4 && question10 % 15 !== 0 && question11 % 15 !== 0) && (slideIndex == 4 &&
                 question10 % 7 !== 0 && question11 % 7 !== 0)) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //5th question 
         else if ((slideIndex == 5 && parseInt(question13) + parseInt(question14) + parseInt(question15) ==
             49) && (slideIndex == 5 && question13 % 2 !== 0 && question14 % 2 !== 0 && question15 % 2 !== 0) &&
             (slideIndex == 5 && question13 % 19 !== 0 && question14 % 19 !== 0 && question15 % 19 !== 0) && (
-                slideIndex == 5 && question13 % 9 !== 0 && question14 % 9 !== 0 && question15 % 9 !== 0) && (
-                slideIndex == 5 && question14 % 15 !== 0 && question15 % 15 !== 0)) {
-            checkAnswer();
-            showTicks();
+            slideIndex == 5 && question13 % 9 !== 0 && question14 % 9 !== 0 && question15 % 9 !== 0) && (
+            slideIndex == 5 && question14 % 15 !== 0 && question15 % 15 !== 0)) {
+            checkAnswer20();
+            showTicks20();
         }
         //6th question
         else if ((slideIndex == 6 && question16 == 2 && question17 == 3 && question18 == 11) || (slideIndex ==
@@ -321,8 +320,8 @@
                 2 && question17 == 11 && question18 == 3) || (slideIndex == 6 && question16 == 3 &&
                 question17 == 11 && question18 == 2) || (slideIndex == 6 && question16 == 11 && question17 ==
                 3 && question18 == 2)) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
@@ -330,63 +329,7 @@
         }
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
-    });
-    function showTicks (){
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 10 points";
-        correct ++;
-        }
-
-    function checkAnswer() {
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 20
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
-    $("input").attr("maxlength", 5)
+});
+$("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
