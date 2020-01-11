@@ -25,7 +25,7 @@
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">
             <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span>
-                <p>Each question is worth 20 points. Good Luck!</p>
+                <p>Each question is worth 30 points. Good Luck!</p>
         </div>
     </div>
 </div>
@@ -240,32 +240,32 @@
         var question6 = document.quiz6.question1.value;
         //2nd question
         if (slideIndex == 2 && question2 == 15) {
-            checkAnswer20();
-            showTicks20();
+            checkAnswer30();
+            showTicks30();
             //third question
         } else if (slideIndex == 3 && question3 == 20) {
-            checkAnswer20();
-            showTicks20();
+            checkAnswer30();
+            showTicks30();
         }
         //first question
         else if (slideIndex == 1 && question1 == 5) {
-            checkAnswer20();
-            showTicks20();
+            checkAnswer30();
+            showTicks30();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 48 || slideIndex == 4 && question4 == ' 48 hours') {
-            checkAnswer20();
-            showTicks20();
+            checkAnswer30();
+            showTicks30();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 8 || slideIndex == 5 && question5 == '8 hours') {
-            checkAnswer20();
-            showTicks20();
+            checkAnswer30();
+            showTicks30();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 12 || slideIndex == 6 && question6 == '12 people') {
-            checkAnswer20();
-            showTicks20();
+            checkAnswer30();
+            showTicks30();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
