@@ -2,8 +2,7 @@
 <div class="col-lg-11 ms-paper-content-container"style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">  
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> <p>Each question is worth 20 points.
-                   
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> <p>Each question is worth 20 points.       
              </p>                  
         </div>
     </div>
@@ -217,99 +216,43 @@ function showSlides(n) {
        
         //2nd question
        if(slideIndex==2&&question2 == 'B'||slideIndex==2&&question2 == 'b'){
-        checkAnswer();     
-        showTicks();
-           //third question
+        checkAnswer20();     
+        showTicks20();
+        //third question
   } else if(slideIndex==3&&question3 == 'C'||slideIndex==3&&question3 == 'c'){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   }
         //first question
          else if(slideIndex==1&&question1 == 'A'||slideIndex==1&&question1 == 'a'){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //4th question 
         else if(slideIndex==4&&question4 == '10'){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //5th question 
         else if(slideIndex==5&&question5 == 6){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //6th question
         else if(slideIndex==6&&question6 == 0.4){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Not Yet"; 
         } 
-        
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-       });
-
-       function showTicks (){
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 20 points";
-        correct ++;
-        }
-   
-        function checkAnswer(){ 
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + api;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-        
-        $.ajax({           
-            url: finalApi,
-            type:"put",
-                data: JSON.stringify( { "$inc" : { "score" : 20 } } ),
-            contentType:"application/json",
-            success:function(data){
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
-        });
-        
-    function getScore(){        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + config;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-    $.ajax({          
-        url:finalApi,
-            type:"get",
-            data: JSON.stringify(),
-            contentType:"application/json",
-            success:function(data){
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
-        });   
-    }
-       };
-   $("input").attr("maxlength", 5)
+});
+$("input").attr("maxlength", 5)
 </script>
-
-
 <% include ./partials/footer %>
             
       
