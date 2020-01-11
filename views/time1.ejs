@@ -188,7 +188,6 @@
 </div>
 <script>
     $("#example").load("./config");
-
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -205,7 +204,6 @@
         document.getElementById("tick").style.visibility = "hidden";
         document.getElementById("wrong").style.visibility = "hidden";
         document.getElementById("msg").style.visibility = "hidden";
-
     }
 
     function showSlides(n) {
@@ -231,7 +229,6 @@
         }
     }
     var correct = 0;
-
     $("#button1").click(function () {
         var question1 = document.quiz1.question1.value;
         var question2 = document.quiz2.question1.value;
@@ -243,37 +240,37 @@
         //2nd question
         if (question2 == '00:42' || question2 == '0:42am' || question2 == '00:42am' || question2 == '0.42am' ||
             question2 == '0.42' || question2 == '0:42') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
             //third question
         } else if (question3 == '08:54' || question3 == '8:54am' || question3 == '08:54am' || question3 ==
             '8.54am' || question3 == '8.54' || question3 == '8:54') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //first question
         else if (question1 == '09:42' || question1 == '9:42' || question1 == '09:42am' || question1 ==
             '9.42am') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //4th question 
         else if (question4 == '13:29' || question4 == '13:29pm' || question4 == '13.29pm' || question4 ==
             '13.29pm' || question4 == '13.29') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //5th question 
         else if (question5 == '19:01' || question5 == '7:01pm' || question5 == '19:01pm' || question5 ==
             '7.01pm') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //6th question
         else if (question6 == '09:54' || question6 == '9:54am' || question6 == '09:54am' || question6 ==
             '9.54am') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
@@ -281,64 +278,7 @@
         }
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-    });
-
-    function showTicks (){
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 20 points";
-        correct ++;
-        }
-
-    function checkAnswer() {
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 20
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
-    $("input").attr("maxlength", 5)
+});
+$("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>

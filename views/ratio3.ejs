@@ -238,102 +238,42 @@
         var question4 = document.quiz4.question1.value;
         var question5 = document.quiz5.question1.value;
         var question6 = document.quiz6.question1.value;
-
-
         //2nd question
         if (slideIndex == 2 && question2 == 15) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
             //third question
         } else if (slideIndex == 3 && question3 == 20) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //first question
         else if (slideIndex == 1 && question1 == 5) {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 48 || slideIndex == 4 && question4 == ' 48 hours') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 8 || slideIndex == 5 && question5 == '8 hours') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 12 || slideIndex == 6 && question6 == '12 people') {
-            checkAnswer();
-            showTicks();
+            checkAnswer20();
+            showTicks20();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
         }
-
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
-    });
-    showTicks = () => {
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 30 points";
-        correct ++;
-        }
-
-    function checkAnswer() {
-
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 20
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
-    $("input").attr("maxlength", 5)
+});  
+$("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
