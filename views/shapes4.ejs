@@ -446,92 +446,92 @@ function showSlides(n) {
        
         //2nd question
        if(slideIndex==2&&question2 == 4){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
            //third question
   } else if(slideIndex==3&&question3 == 16){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   }
         //first question
          else if(slideIndex==1&&question1 == 64){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //4th question 
         else if(slideIndex==4&&question4 == 384){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //5th question 
         else if(slideIndex==5&&question5 == 24){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //6th question
         else if(slideIndex==6&&question6 == 16){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //7th question
         else if(slideIndex==7&&question7 == 270){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
     //8th question
         else if(slideIndex==8&&question8 == 10){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   }     
         //9th question
         else if(slideIndex==9&&question9 == 27){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //10th question
         else if(slideIndex==10&&question10 == 48){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //11th question
         else if(slideIndex==11&&question11 == 6){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //12th question
         else if(slideIndex==12&&question12 == 8){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //13th question
         else if(slideIndex==13&&question13 == 64){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
             //14th question
         else if(slideIndex==14&&question14 == 32){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //15th question
         else if(slideIndex==15&&question15 == 8){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //16th question
         else if(slideIndex==16&&question16 == 4){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //17th question
         else if(slideIndex==17&&question17 == 5){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         //18th question
         else if(slideIndex==18&&question18 == 12){
-        checkAnswer();     
-        showTicks();
+        checkAnswer20();     
+        showTicks20();
   } 
         else {
             document.getElementById("wrong").style.visibility = "visible";
@@ -541,61 +541,8 @@ function showSlides(n) {
     
         document.getElementById("badge").textContent = `${correct} out of 18`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-       });
-       showTicks = () => {
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 20 points";
-        correct ++;
-        }     
-   
-    function checkAnswer(){
-        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + api;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-        
-        $.ajax({           
-            url: finalApi,
-            type:"put",
-                data: JSON.stringify( { "$inc" : { "score" : 20 } } ),
-            contentType:"application/json",
-            success:function(data){
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
-        });
-        
-    function getScore(){        
-        var id =  $("#userId").text(); 
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api= $("#example").text();
-        var idAndApi = id + config;
-        
-        var sliced = id.slice(0,-1);
-        var finalApi = url + sliced +api;
-    $.ajax({          
-        url:finalApi,
-            type:"get",
-            data: JSON.stringify(),
-            contentType:"application/json",
-            success:function(data){
-                $("#jquery").text(data.score);
-            },
-            error:function(xhr, status, error){
-                console.log(error);
-            }
-        });   
-    }
-       };
-   $("input").attr("maxlength", 5)
+});   
+$("input").attr("maxlength", 5)
 </script>
 
 
