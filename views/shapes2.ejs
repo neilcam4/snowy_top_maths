@@ -520,95 +520,94 @@
         var question17 = document.quiz17.question1.value;
         var question18 = document.quiz18.question1.value;
 
-
         //2nd question
         if (slideIndex == 2 && question2 == 10) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
             //third question
         } else if (slideIndex == 3 && question3 == 100) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //first question
         else if (slideIndex == 1 && question1 == 5) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 6) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 15) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 144) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //7th question
         else if (slideIndex == 7 && question7 == 10) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //8th question
         else if (slideIndex == 8 && question8 == 15) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //9th question
         else if (slideIndex == 9 && question9 == 160) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //10th question
         else if (slideIndex == 10 && question10 == 9) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //11th question
         else if (slideIndex == 11 && question11 == 18) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //12th question
         else if (slideIndex == 12 && question12 == 180) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //13th question
         else if (slideIndex == 13 && question13 == 11) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //14th question
         else if (slideIndex == 14 && question14 == 33) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //15th question
         else if (slideIndex == 15 && question15 == 108) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //16th question
         else if (slideIndex == 16 && question16 == 12) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //17th question
         else if (slideIndex == 17 && question17 == 15) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         }
         //18th question
         else if (slideIndex == 18 && question18 == 168) {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
@@ -616,63 +615,8 @@
         }
         document.getElementById("badge").textContent = `${correct} out of 18`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-    });
-        showTicks = () => {
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 20 points";
-        correct ++;
-        }
-
-        function checkAnswer() {
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 20
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
-    $("input").attr("maxlength", 5)
+});
+     
+$("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
