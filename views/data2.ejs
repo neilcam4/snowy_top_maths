@@ -286,7 +286,6 @@
             }
         }
         var correct = 0;
-
         $("#button1").click(function () {
             var question1 = document.quiz1.question1.value;
             var question2 = document.quiz2.question1.value;
@@ -300,74 +299,47 @@
 
             //2nd question
             if (slideIndex == 2 && question2 == 2) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
                 //third question
             } else if (slideIndex == 3 && question3 == 7) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //first question
             else if (slideIndex == 1 && question1 == 5) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //4th question 
             else if (slideIndex == 4 && question4 == 24) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //5th question 
             else if (slideIndex == 5 && question5 == 13) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //6th question
             else if (slideIndex == 6 && question6 == 12) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //7th question
             else if (slideIndex == 7 && question7 == 6) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //8th question
             else if (slideIndex == 8 && question8 == 62) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             }
             //9th question
             else if (slideIndex == 9 && question9 == 17) {
-                checkAnswer();
-                document.getElementById("tick").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Well done! 20 points";
-                correct++;
+                checkAnswer20();
+                showTicks20()
             } else {
                 document.getElementById("wrong").style.visibility = "visible";
                 document.getElementById("msg").style.visibility = "visible";
@@ -375,63 +347,7 @@
             }
             document.getElementById("badge").textContent = `${correct} out of 9`; 
             document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-        });
-        showTicks = () => {
-            document.getElementById("tick").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Well done! 30 points";
-            correct ++;
-            }
-
-        function checkAnswer() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + api;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-
-            $.ajax({
-                url: finalApi,
-                type: "put",
-                data: JSON.stringify({
-                    "$inc": {
-                        "score": 20
-                    }
-                }),
-                contentType: "application/json",
-                success: function (data) {
-                    getScore();
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-
-            function getScore() {
-                var id = $("#userId").text();
-                var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-                var api = $("#example").text();
-                var idAndApi = id + config;
-
-                var sliced = id.slice(0, -1);
-                var finalApi = url + sliced + api;
-                $.ajax({
-                    url: finalApi,
-                    type: "get",
-                    data: JSON.stringify(),
-                    contentType: "application/json",
-                    success: function (data) {
-                        $("#jquery").text(data.score);
-                    },
-                    error: function (xhr, status, error) {
-                        console.log(error);
-                    }
-                });
-            }
-        };
-        $("input").attr("maxlength", 5)
-    </script>
+});
+$("input").attr("maxlength", 5)
+</script>
 <% include ./partials/footer %>
