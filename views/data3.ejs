@@ -275,130 +275,45 @@
           var question6 = document.quiz6.question1.value;
 
           if (question1 == 76) {
-            checkAnswer();
-            document.getElementById("tick").style.visibility = "visible";
-            correct++;
+            checkAnswer30();
+            showTicks30()
           } else {
             document.getElementById("wrong").style.visibility = "visible";
           }
           if (question2 == 3) {
-            checkAnswer();
-            document.getElementById("tick2").style.visibility = "visible";
-            correct++;
+            checkAnswer30();
+            showTicks30()
           } else {
             document.getElementById("wrong2").style.visibility = "visible";
           }
           if (question3 == 7) {
-            checkAnswer();
-            document.getElementById("tick3").style.visibility = "visible";
-            correct++;
+            checkAnswer30();
+            showTicks30();
           } else {
             document.getElementById("wrong3").style.visibility = "visible";
           }
           if (question4 == 6) {
-            checkAnswer();
-            document.getElementById("tick4").style.visibility = "visible";
-            correct++;
+            checkAnswer30();
+            showTicks30()
           } else {
             document.getElementById("wrong4").style.visibility = "visible";
           }
           if (question5 == 8) {
-            checkAnswer();
-            document.getElementById("tick5").style.visibility = "visible";
-            correct++;
+            checkAnswer30();
+            showTicks30()
           } else {
             document.getElementById("wrong5").style.visibility = "visible";
           }
           if (question6 == 9) {
-            checkAnswer();
-            document.getElementById("tick6").style.visibility = "visible";
-            correct++;
+            checkAnswer30();
+            showTicks30()
           } else {
             document.getElementById("wrong6").style.visibility = "visible";
           }
-          if (correct == 6) {
-            document.getElementById("badge").textContent = " 6 out of 6. Wow!";
-            document.getElementById("points").textContent = "Points earned: 180";
-          }
-          if (correct == 5) {
-            document.getElementById("badge").textContent = " 5 out of 6";
-            document.getElementById("points").textContent = "Points earned: 150";
-          }
-          if (correct == 4) {
-            document.getElementById("badge").textContent = " 4 out of 6";
-            document.getElementById("points").textContent = "Points earned 120";
-          }
-
-          if (correct == 3) {
-            document.getElementById("badge").textContent = " 3 out of 6";
-            document.getElementById("points").textContent = "Points earned:  90";
-          }
-          if (correct == 2) {
-            document.getElementById("badge").textContent = " 2 out of 6";
-            document.getElementById("points").textContent = "Points earned 60";
-          }
-          if (correct == 1) {
-            document.getElementById("badge").textContent = " 1 out of 6";
-            document.getElementById("points").textContent = "Points earned:  30";
-          }
-          if (correct == 0) {
-            document.getElementById("badge").textContent =
-              "0 out of 6. Watch the video and try the questions again. You will get it right.";
-            document.getElementById("points").textContent = "Points earned : 0";
-
-          }
+          document.getElementById("badge").textContent = `${correct} out of 6`; 
+          document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
         });
 
-        function checkAnswer() {
-
-          var id = $("#userId").text();
-          var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-          var api = $("#example").text();
-          var idAndApi = id + api;
-
-          var sliced = id.slice(0, -1);
-          var finalApi = url + sliced + api;
-
-          $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-              "$inc": {
-                "score": 30
-              }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-              getScore();
-              $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-              console.log(error);
-            }
-          });
-
-          function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-              url: finalApi,
-              type: "get",
-              data: JSON.stringify(),
-              contentType: "application/json",
-              success: function (data) {
-                $("#jquery").text(data.score);
-              },
-              error: function (xhr, status, error) {
-                console.log(error);
-              }
-            });
-          }
-        };
-        $("input").attr("maxlength", 5)
+$("input").attr("maxlength", 5)
       </script>
  <% include ./partials/footer %>
