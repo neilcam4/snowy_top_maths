@@ -403,151 +403,109 @@
             </div>
         </div>
     </div>
-    <script>
-        $("#example").load("./config");
+<script>
+    $("#example").load("./config");
+    var correct = 0;
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+    $("#button1").click(function () {
+        var question1 = document.quiz1.question1.value;
+        var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        var question4 = document.quiz4.question1.value;
+        var question5 = document.quiz5.question1.value;
+        var question6 = document.quiz6.question1.value;
+        var question7 = document.quiz7.question1.value;
+        var question8 = document.quiz8.question1.value;
+        var question9 = document.quiz9.question1.value;
+        var question10 = document.quiz10.question1.value;
+        var question11 = document.quiz11.question1.value;
+        var question12 = document.quiz12.question1.value;
+        var question13 = document.quiz13.question1.value;
+        var question14 = document.quiz14.question1.value;
+        var question15 = document.quiz15.question1.value;
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-            document.getElementById("tick").style.visibility = "hidden";
-            document.getElementById("wrong").style.visibility = "hidden";
-            document.getElementById("msg").style.visibility = "hidden";
-
+        //2nd question
+        if (slideIndex == 2 && question2 == 'Frozen' || slideIndex == 2 && question2 == 'frozen' ) {
+            checkAnswer20();
+            showTicks20();
+            //third question
+        } else if (slideIndex == 3 && question3 == '22') {
+            checkAnswer20();
+            showTicks20();
         }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-            document.getElementById("tick").style.visibility = "hidden";
-            document.getElementById("wrong").style.visibility = "hidden";
-            document.getElementById("msg").style.visibility = "hidden";
-
+        //first question
+        else if (slideIndex == 1 && question1 == '12') {
+            checkAnswer20();
+            showTicks20();
         }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            if (slideIndex == 15) {
-                document.getElementById("next1").style.visibility = "hidden";
-            }
+        //4th question 
+        else if (slideIndex == 4 && question4 == '51') {
+            checkAnswer20();
+            showTicks20();
         }
-        var correct = 0;
-
-        $("#button1").click(function () {
-            var question1 = document.quiz1.question1.value;
-            var question2 = document.quiz2.question1.value;
-            var question3 = document.quiz3.question1.value;
-            var question4 = document.quiz4.question1.value;
-            var question5 = document.quiz5.question1.value;
-            var question6 = document.quiz6.question1.value;
-            var question7 = document.quiz7.question1.value;
-            var question8 = document.quiz8.question1.value;
-            var question9 = document.quiz9.question1.value;
-            var question10 = document.quiz10.question1.value;
-            var question11 = document.quiz11.question1.value;
-            var question12 = document.quiz12.question1.value;
-            var question13 = document.quiz13.question1.value;
-            var question14 = document.quiz14.question1.value;
-            var question15 = document.quiz15.question1.value;
-
-            //2nd question
-            if (slideIndex == 2 && question2 == 'Frozen' || slideIndex == 2 && question2 == 'frozen' ) {
-                checkAnswer20();
-                showTicks20();
-                //third question
-            } else if (slideIndex == 3 && question3 == '22') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //first question
-            else if (slideIndex == 1 && question1 == '12') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //4th question 
-            else if (slideIndex == 4 && question4 == '51') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //5th question 
-            else if (slideIndex == 5 && question5 == 'Rihanna' || slideIndex == 5 && question5 == 'rihanna') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //6th question
-            else if (slideIndex == 6 && question6 == '20') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //7th question
-            else if (slideIndex == 7 && question7 == '10') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //8th question
-            else if (slideIndex == 8 && question8 == 'Cricket'|| slideIndex == 8 && question8 == 'cricket') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //9th question
-            else if (slideIndex == 9 && question9 == '10') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            //10th question
-            else if (slideIndex == 10 && question10 == '120') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            //11th question
-            else if (slideIndex == 11 && question11 == 'Art' || slideIndex == 11 && question11 == 'art') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            //12th question
-            else if (slideIndex == 12 && question12 == '23') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            //13th question
-            else if (slideIndex == 13 && question13 == '46') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            //14th question
-            else if (slideIndex == 14 && question14 == 'Chicken Nuggets' || slideIndex == 14 && question14 == 'chicken nuggets') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            //15th question
-            else if (slideIndex == 15 && question15 == '16') {
-                checkAnswer20();
-                showTicks20();
-            } 
-            else {
-                document.getElementById("wrong").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Not Yet";
-            }
-            document.getElementById("badge").textContent = `${correct} out of 15`; 
-            document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-        });
+        //5th question 
+        else if (slideIndex == 5 && question5 == 'Rihanna' || slideIndex == 5 && question5 == 'rihanna') {
+            checkAnswer20();
+            showTicks20();
+        }
+        //6th question
+        else if (slideIndex == 6 && question6 == '20') {
+            checkAnswer20();
+            showTicks20();
+        }
+        //7th question
+        else if (slideIndex == 7 && question7 == '10') {
+            checkAnswer20();
+            showTicks20();
+        }
+        //8th question
+        else if (slideIndex == 8 && question8 == 'Cricket'|| slideIndex == 8 && question8 == 'cricket') {
+            checkAnswer20();
+            showTicks20();
+        }
+        //9th question
+        else if (slideIndex == 9 && question9 == '10') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        //10th question
+        else if (slideIndex == 10 && question10 == '120') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        //11th question
+        else if (slideIndex == 11 && question11 == 'Art' || slideIndex == 11 && question11 == 'art') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        //12th question
+        else if (slideIndex == 12 && question12 == '23') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        //13th question
+        else if (slideIndex == 13 && question13 == '46') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        //14th question
+        else if (slideIndex == 14 && question14 == 'Chicken Nuggets' || slideIndex == 14 && question14 == 'chicken nuggets') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        //15th question
+        else if (slideIndex == 15 && question15 == '16') {
+            checkAnswer20();
+            showTicks20();
+        } 
+        else {
+            document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent = " Not Yet";
+        }
+        document.getElementById("badge").textContent = `${correct} out of 15`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
+    });
         $("input").attr("maxlength", 15)
     </script>
 <% include ./partials/footer %></div>
