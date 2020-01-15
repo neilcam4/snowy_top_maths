@@ -191,48 +191,6 @@
 </div>
 <script>
     $("#example").load("./config");
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        if (slideIndex == 6) {
-            document.getElementById("next1").style.visibility = "hidden";
-        }
-    }
     var correct = 0;
 
     $("#button1").click(function () {
@@ -242,37 +200,35 @@
         var question4 = document.quiz4.question1.value;
         var question5 = document.quiz5.question1.value;
         var question6 = document.quiz6.question1.value;
-
-
         //2nd question
         if (slideIndex == 2 && question2 == 32 || slideIndex == 2 && question2 == '32 goals') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30()
             //third question
         } else if (slideIndex == 3 && question3 == 22.50 || slideIndex == 3 && question3 == '£22.50' ||
             slideIndex == 3 && question3 == '£22.5') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30()
         }
         //first question
         else if (slideIndex == 1 && question1 == 20 || slideIndex == 1 && question1 == '20 goals') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30()
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 57 || slideIndex == 4 && question4 == '57 bananas') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30()
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 40 || slideIndex == 5 && question5 == '40 points') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30()
         }
         //6th question
         else if (slideIndex == 6 && question6 == '65' || slideIndex == 6 && question6 == '65 years') {
-            checkAnswer();
-            showTicks();
+            checkAnswer30();
+            showTicks30()
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
@@ -282,61 +238,6 @@
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
     });
-    showTicks = () => {
-        document.getElementById("tick").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " Well done! 30 points";
-        correct ++;
-        }
-
-    function checkAnswer() {
-        var id = $("#userId").text();
-        var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-        var api = $("#example").text();
-        var idAndApi = id + api;
-        var sliced = id.slice(0, -1);
-        var finalApi = url + sliced + api;
-
-        $.ajax({
-            url: finalApi,
-            type: "put",
-            data: JSON.stringify({
-                "$inc": {
-                    "score": 30
-                }
-            }),
-            contentType: "application/json",
-            success: function (data) {
-                getScore();
-                $("#jquery").text(data.score);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        function getScore() {
-            var id = $("#userId").text();
-            var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
-            var api = $("#example").text();
-            var idAndApi = id + config;
-
-            var sliced = id.slice(0, -1);
-            var finalApi = url + sliced + api;
-            $.ajax({
-                url: finalApi,
-                type: "get",
-                data: JSON.stringify(),
-                contentType: "application/json",
-                success: function (data) {
-                    $("#jquery").text(data.score);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
-            });
-        }
-    };
     $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
