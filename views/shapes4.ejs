@@ -382,67 +382,29 @@
     </div>
 </div>
 <script>
-    $("#example").load("./config");
-     
-var slideIndex = 1;
-showSlides(slideIndex);
+$("#example").load("./config"); 
+var correct = 0;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);    
-    document.getElementById("tick").style.visibility = "hidden";
-    document.getElementById("wrong").style.visibility = "hidden";
-    document.getElementById("msg").style.visibility = "hidden";
-
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-    document.getElementById("tick").style.visibility = "hidden";
-    document.getElementById("wrong").style.visibility = "hidden";
-    document.getElementById("msg").style.visibility = "hidden";
-  
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-    if(slideIndex==18){
-        document.getElementById("next1").style.visibility = "hidden";
-    }
-}    
-    var correct = 0;
-   
-    $("#button1").click(function(){       
-        var question1 = document.quiz1.question1.value;  
-        var question2 = document.quiz2.question1.value;
-        var question3 = document.quiz3.question1.value;
-        var question4 = document.quiz4.question1.value;
-        var question5 = document.quiz5.question1.value;
-        var question6 = document.quiz6.question1.value;
-        var question7 = document.quiz7.question1.value;
-        var question8 = document.quiz8.question1.value;
-        var question9 = document.quiz9.question1.value;
-        var question10 = document.quiz10.question1.value;
-        var question11 = document.quiz11.question1.value;
-        var question12 = document.quiz12.question1.value;
-        var question13 = document.quiz13.question1.value;
-        var question14 = document.quiz14.question1.value;
-        var question15 = document.quiz15.question1.value;
-        var question16 = document.quiz16.question1.value;
-        var question17 = document.quiz17.question1.value;
-        var question18 = document.quiz18.question1.value;
-        
+$("#button1").click(function(){       
+    var question1 = document.quiz1.question1.value;  
+    var question2 = document.quiz2.question1.value;
+    var question3 = document.quiz3.question1.value;
+    var question4 = document.quiz4.question1.value;
+    var question5 = document.quiz5.question1.value;
+    var question6 = document.quiz6.question1.value;
+    var question7 = document.quiz7.question1.value;
+    var question8 = document.quiz8.question1.value;
+    var question9 = document.quiz9.question1.value;
+    var question10 = document.quiz10.question1.value;
+    var question11 = document.quiz11.question1.value;
+    var question12 = document.quiz12.question1.value;
+    var question13 = document.quiz13.question1.value;
+    var question14 = document.quiz14.question1.value;
+    var question15 = document.quiz15.question1.value;
+    var question16 = document.quiz16.question1.value;
+    var question17 = document.quiz17.question1.value;
+    var question18 = document.quiz18.question1.value;
+    
        
         //2nd question
        if(slideIndex==2&&question2 == 4){
