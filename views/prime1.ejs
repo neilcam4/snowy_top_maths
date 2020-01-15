@@ -185,48 +185,6 @@
 </div>
 <script>
     $("#example").load("./config");
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        if (slideIndex == 6) {
-            document.getElementById("next1").style.visibility = "hidden";
-        }
-    }
     var correct = 0;
 
     $("#button1").click(function () {
@@ -238,42 +196,42 @@
         var question6 = document.quiz6.question1.value;
 
         //2nd question
-        if (slideIndex == 2 && question2 == 15) {
-            checkAnswer30();
-            showTicks30();
-            //third question
-        } else if (slideIndex == 3 && question3 == 5) {
-            checkAnswer30();
-            showTicks30();
-        }
-        //first question
-        else if (slideIndex == 1 && question1 == 8) {
-            checkAnswer30();
-            showTicks30();
-        }
-        //4th question 
-        else if (slideIndex == 4 && question4 == 6) {
-            checkAnswer30();
-            showTicks30();
-        }
-        //5th question 
-        else if (slideIndex == 5 && question5 == 10) {
-            checkAnswer30();
-            showTicks30();
-        }
-        //6th question
-        else if (slideIndex == 6 && question6 == 2) {
-            checkAnswer30();
-            showTicks30();
-            
-        } else {
-            document.getElementById("wrong").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Not Yet";
-        }
-        document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
-    });
+    if (slideIndex == 2 && question2 == 15) {
+        checkAnswer30();
+        showTicks30();
+        //third question
+    } else if (slideIndex == 3 && question3 == 5) {
+        checkAnswer30();
+        showTicks30();
+    }
+    //first question
+    else if (slideIndex == 1 && question1 == 8) {
+        checkAnswer30();
+        showTicks30();
+    }
+    //4th question 
+    else if (slideIndex == 4 && question4 == 6) {
+        checkAnswer30();
+        showTicks30();
+    }
+    //5th question 
+    else if (slideIndex == 5 && question5 == 10) {
+        checkAnswer30();
+        showTicks30();
+    }
+    //6th question
+    else if (slideIndex == 6 && question6 == 2) {
+        checkAnswer30();
+        showTicks30();
+        
+    } else {
+        document.getElementById("wrong").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Not Yet";
+    }
+    document.getElementById("badge").textContent = `${correct} out of 6`; 
+    document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
+});
 $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
