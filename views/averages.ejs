@@ -211,98 +211,59 @@
             </div>
         </div>
     </div>
-    <script>
-        $("#example").load("./config");
+<script>
+$("#example").load("./config");
+var correct = 0;
 
-        var slideIndex = 1;
-        showSlides(slideIndex);
+$("#button1").click(function () {
+    var question1 = document.quiz1.question1.value;
+    var question2 = document.quiz2.question1.value;
+    var question3 = document.quiz3.question1.value;
+    var question4 = document.quiz4.question1.value;
+    var question5 = document.quiz5.question1.value;
+    var question6 = document.quiz6.question1.value;
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-            document.getElementById("tick").style.visibility = "hidden";
-            document.getElementById("wrong").style.visibility = "hidden";
-            document.getElementById("msg").style.visibility = "hidden";
-        }
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-            document.getElementById("tick").style.visibility = "hidden";
-            document.getElementById("wrong").style.visibility = "hidden";
-            document.getElementById("msg").style.visibility = "hidden";
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            if (slideIndex == 6) {
-                document.getElementById("next1").style.visibility = "hidden";
-            }
-        }
-        var correct = 0;
-
-        $("#button1").click(function () {
-            var question1 = document.quiz1.question1.value;
-            var question2 = document.quiz2.question1.value;
-            var question3 = document.quiz3.question1.value;
-            var question4 = document.quiz4.question1.value;
-            var question5 = document.quiz5.question1.value;
-            var question6 = document.quiz6.question1.value;
-
-            //2nd question
-            if (slideIndex == 2 && question2 == '1.35m' || slideIndex == 2 && question2 == '1.35' ||
-                slideIndex == 2 && question2 == '1.35 m') {
-                checkAnswer20();
-                showTicks20();
-                //third question
-            } else if (slideIndex == 3 && question3 == '1.50m' || slideIndex == 3 && question3 == '1.50' ||
-                slideIndex == 3 && question3 == '1.5m') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //first question
-            else if (slideIndex == 1 && question1 == '1.30m' || slideIndex == 1 && question1 == '1.30' ||
-                slideIndex == 1 && question1 == '1.3m') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //4th question 
-            else if (slideIndex == 4 && question4 == '1.60m' || slideIndex == 4 && question4 == '1.6m' ||
-                slideIndex == 4 && question4 == '1.60' || slideIndex == 4 && question4 == '1.6') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //5th question 
-            else if (slideIndex == 5 && question5 == '1.50m' || slideIndex == 5 && question5 == '150cm' ||
-                slideIndex == 5 && question5 == '1.50' || slideIndex == 5 && question5 == '1.5') {
-                checkAnswer20();
-                showTicks20();
-            }
-            //6th question
-            else if (slideIndex == 6 && question6 == '2.25m' || slideIndex == 6 && question6 == '2.25' ||
-                slideIndex == 6 && question6 == '225cm') {
-                checkAnswer20();
-                showTicks20();
-            } else {
-                document.getElementById("wrong").style.visibility = "visible";
-                document.getElementById("msg").style.visibility = "visible";
-                document.getElementById("msg").textContent = " Not Yet";
-            }
-            document.getElementById("badge").textContent = `${correct} out of 6`; 
-            document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
+    //2nd question
+    if (slideIndex == 2 && question2 == '1.35m' || slideIndex == 2 && question2 == '1.35' ||
+        slideIndex == 2 && question2 == '1.35 m') {
+        checkAnswer20();
+        showTicks20();
+        //third question
+    } else if (slideIndex == 3 && question3 == '1.50m' || slideIndex == 3 && question3 == '1.50' ||
+        slideIndex == 3 && question3 == '1.5m') {
+        checkAnswer20();
+        showTicks20();
+    }
+    //first question
+    else if (slideIndex == 1 && question1 == '1.30m' || slideIndex == 1 && question1 == '1.30' ||
+        slideIndex == 1 && question1 == '1.3m') {
+        checkAnswer20();
+        showTicks20();
+    }
+    //4th question 
+    else if (slideIndex == 4 && question4 == '1.60m' || slideIndex == 4 && question4 == '1.6m' ||
+        slideIndex == 4 && question4 == '1.60' || slideIndex == 4 && question4 == '1.6') {
+        checkAnswer20();
+        showTicks20();
+    }
+    //5th question 
+    else if (slideIndex == 5 && question5 == '1.50m' || slideIndex == 5 && question5 == '150cm' ||
+        slideIndex == 5 && question5 == '1.50' || slideIndex == 5 && question5 == '1.5') {
+        checkAnswer20();
+        showTicks20();
+    }
+    //6th question
+    else if (slideIndex == 6 && question6 == '2.25m' || slideIndex == 6 && question6 == '2.25' ||
+        slideIndex == 6 && question6 == '225cm') {
+        checkAnswer20();
+        showTicks20();
+    } else {
+        document.getElementById("wrong").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Not Yet";
+    }
+    document.getElementById("badge").textContent = `${correct} out of 6`; 
+    document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
 });
         $("input").attr("maxlength", 5)
     </script>
