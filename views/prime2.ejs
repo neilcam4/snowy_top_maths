@@ -208,127 +208,81 @@
 </div>
 <script>
     $("#example").load("./config");
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        if (slideIndex == 6) {
-            document.getElementById("next1").style.visibility = "hidden";
-        }
-    }
     var correct = 0;
 
-    $("#button1").click(function () {
-        var question1 = document.quiz1.question1.value;
-        var question2 = document.quiz1.question2.value;
-
-        var question4 = document.quiz2.question1.value;
-        var question5 = document.quiz2.question2.value;
-
-        var question7 = document.quiz3.question1.value;
-        var question8 = document.quiz3.question2.value;
-
-        var question10 = document.quiz4.question1.value;
-        var question11 = document.quiz4.question2.value;
-
-        var question13 = document.quiz5.question1.value;
-        var question14 = document.quiz5.question2.value;
-        var question15 = document.quiz5.question3.value;
-        var question16 = document.quiz6.question1.value;
-        var question17 = document.quiz6.question2.value;
-        var question18 = document.quiz6.question3.value;
+$("#button1").click(function () {
+    var question1 = document.quiz1.question1.value;
+    var question2 = document.quiz1.question2.value;
+    var question4 = document.quiz2.question1.value;
+    var question5 = document.quiz2.question2.value;
+    var question7 = document.quiz3.question1.value;
+    var question8 = document.quiz3.question2.value;
+    var question10 = document.quiz4.question1.value;
+    var question11 = document.quiz4.question2.value;
+    var question13 = document.quiz5.question1.value;
+    var question14 = document.quiz5.question2.value;
+    var question15 = document.quiz5.question3.value;
+    var question16 = document.quiz6.question1.value;
+    var question17 = document.quiz6.question2.value;
+    var question18 = document.quiz6.question3.value;
 
         //2nd question
-        if ((slideIndex == 2 && parseInt(question4) + parseInt(question5) == 36) && (slideIndex == 2 &&
-            question4 % 2 !== 0 && question5 % 2 !== 0) && (slideIndex == 2 && question4 % 3 !== 0 &&
-            question5 % 3 !== 0) && (slideIndex == 2 && question4 % 9 !== 0 && question5 % 9 !== 0) && (
-            slideIndex == 2 && question4 % 11 !== 0 && question5 % 11 !== 0)) {
-            checkAnswer20();
-            showTicks20();
-            //third question
-        } else if ((slideIndex == 3 && parseInt(question7) + parseInt(question8) == 25) && (slideIndex == 3 &&
-                question7 % 4 !== 0 && question8 % 4 !== 0) && (slideIndex == 3 && question7 % 3 !== 0 &&
-                question8 % 3 !== 0) && (slideIndex == 3 && question7 % 9 !== 0 && question8 % 9 !== 0) && (
-                slideIndex == 3 && question7 % 5 !== 0 && question8 % 5 !== 0) && (slideIndex == 3 &&
-                question7 % 7 !== 0 && question8 % 7 !== 0)) {
-            checkAnswer20();
-            showTicks20();
-        }
-        //first question
-        else if ((slideIndex == 1 && parseInt(question1) + parseInt(question2) == 16) && (slideIndex == 1 &&
-                question1 % 2 !== 0 && question2 % 2 !== 0) && (slideIndex == 1 && question1 % 9 !== 0 &&
-                question2 % 9 !== 0)) {
-            checkAnswer20();
-            showTicks20();
-        }
-        //4th question 
-        else if ((slideIndex == 4 && parseInt(question10) + parseInt(question11) == 64) && (slideIndex == 4 &&
-                question10 % 2 !== 0 && question11 % 2 !== 0) && (slideIndex == 4 && question10 % 19 !== 0 &&
-                question11 % 19 !== 0) && (slideIndex == 4 && question10 % 9 !== 0 && question11 % 9 !== 0) && (
-                slideIndex == 4 && question10 % 15 !== 0 && question11 % 15 !== 0) && (slideIndex == 4 &&
-                question10 % 7 !== 0 && question11 % 7 !== 0)) {
-            checkAnswer20();
-            showTicks20();
-        }
-        //5th question 
-        else if ((slideIndex == 5 && parseInt(question13) + parseInt(question14) + parseInt(question15) ==
-            49) && (slideIndex == 5 && question13 % 2 !== 0 && question14 % 2 !== 0 && question15 % 2 !== 0) &&
-            (slideIndex == 5 && question13 % 19 !== 0 && question14 % 19 !== 0 && question15 % 19 !== 0) && (
-            slideIndex == 5 && question13 % 9 !== 0 && question14 % 9 !== 0 && question15 % 9 !== 0) && (
-            slideIndex == 5 && question14 % 15 !== 0 && question15 % 15 !== 0)) {
-            checkAnswer20();
-            showTicks20();
-        }
-        //6th question
-        else if ((slideIndex == 6 && question16 == 2 && question17 == 3 && question18 == 11) || (slideIndex ==
-                6 && question16 == 3 && question17 == 2 && question18 == 11) || (slideIndex == 6 &&
-                question16 == 11 && question17 == 2 && question18 == 3) || (slideIndex == 6 && question16 ==
-                2 && question17 == 11 && question18 == 3) || (slideIndex == 6 && question16 == 3 &&
-                question17 == 11 && question18 == 2) || (slideIndex == 6 && question16 == 11 && question17 ==
-                3 && question18 == 2)) {
-            checkAnswer20();
-            showTicks20();
-        } else {
-            document.getElementById("wrong").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Not Yet";
-        }
-        document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
+    if ((slideIndex == 2 && parseInt(question4) + parseInt(question5) == 36) && (slideIndex == 2 &&
+        question4 % 2 !== 0 && question5 % 2 !== 0) && (slideIndex == 2 && question4 % 3 !== 0 &&
+        question5 % 3 !== 0) && (slideIndex == 2 && question4 % 9 !== 0 && question5 % 9 !== 0) && (
+        slideIndex == 2 && question4 % 11 !== 0 && question5 % 11 !== 0)) {
+        checkAnswer20();
+        showTicks20();
+        //third question
+    } else if ((slideIndex == 3 && parseInt(question7) + parseInt(question8) == 25) && (slideIndex == 3 &&
+            question7 % 4 !== 0 && question8 % 4 !== 0) && (slideIndex == 3 && question7 % 3 !== 0 &&
+            question8 % 3 !== 0) && (slideIndex == 3 && question7 % 9 !== 0 && question8 % 9 !== 0) && (
+            slideIndex == 3 && question7 % 5 !== 0 && question8 % 5 !== 0) && (slideIndex == 3 &&
+            question7 % 7 !== 0 && question8 % 7 !== 0)) {
+        checkAnswer20();
+        showTicks20();
+    }
+    //first question
+    else if ((slideIndex == 1 && parseInt(question1) + parseInt(question2) == 16) && (slideIndex == 1 &&
+            question1 % 2 !== 0 && question2 % 2 !== 0) && (slideIndex == 1 && question1 % 9 !== 0 &&
+            question2 % 9 !== 0)) {
+        checkAnswer20();
+        showTicks20();
+    }
+    //4th question 
+    else if ((slideIndex == 4 && parseInt(question10) + parseInt(question11) == 64) && (slideIndex == 4 &&
+            question10 % 2 !== 0 && question11 % 2 !== 0) && (slideIndex == 4 && question10 % 19 !== 0 &&
+            question11 % 19 !== 0) && (slideIndex == 4 && question10 % 9 !== 0 && question11 % 9 !== 0) && (
+            slideIndex == 4 && question10 % 15 !== 0 && question11 % 15 !== 0) && (slideIndex == 4 &&
+            question10 % 7 !== 0 && question11 % 7 !== 0)) {
+        checkAnswer20();
+        showTicks20();
+    }
+    //5th question 
+    else if ((slideIndex == 5 && parseInt(question13) + parseInt(question14) + parseInt(question15) ==
+        49) && (slideIndex == 5 && question13 % 2 !== 0 && question14 % 2 !== 0 && question15 % 2 !== 0) &&
+        (slideIndex == 5 && question13 % 19 !== 0 && question14 % 19 !== 0 && question15 % 19 !== 0) && (
+        slideIndex == 5 && question13 % 9 !== 0 && question14 % 9 !== 0 && question15 % 9 !== 0) && (
+        slideIndex == 5 && question14 % 15 !== 0 && question15 % 15 !== 0)) {
+        checkAnswer20();
+        showTicks20();
+    }
+    //6th question
+    else if ((slideIndex == 6 && question16 == 2 && question17 == 3 && question18 == 11) || (slideIndex ==
+            6 && question16 == 3 && question17 == 2 && question18 == 11) || (slideIndex == 6 &&
+            question16 == 11 && question17 == 2 && question18 == 3) || (slideIndex == 6 && question16 ==
+            2 && question17 == 11 && question18 == 3) || (slideIndex == 6 && question16 == 3 &&
+            question17 == 11 && question18 == 2) || (slideIndex == 6 && question16 == 11 && question17 ==
+            3 && question18 == 2)) {
+        checkAnswer20();
+        showTicks20();
+    } else {
+        document.getElementById("wrong").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Not Yet";
+    }
+    document.getElementById("badge").textContent = `${correct} out of 6`; 
+    document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
 });
 $("input").attr("maxlength", 5)
 </script>

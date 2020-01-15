@@ -165,45 +165,7 @@
     </div>
 </div>
 <script>
-    $("#example").load("./config");
-     
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);    
-    document.getElementById("tick").style.visibility = "hidden";
-    document.getElementById("wrong").style.visibility = "hidden";
-    document.getElementById("msg").style.visibility = "hidden";
-
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-    document.getElementById("tick").style.visibility = "hidden";
-    document.getElementById("wrong").style.visibility = "hidden";
-    document.getElementById("msg").style.visibility = "hidden";
-  
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-    if(slideIndex==6){
-        document.getElementById("next1").style.visibility = "hidden";
-    }
-}    
+    $("#example").load("./config");   
     var correct = 0;
    
     $("#button1").click(function(){       
@@ -219,30 +181,30 @@ function showSlides(n) {
         checkAnswer20();     
         showTicks20();
         //third question
-  } else if(slideIndex==3&&question3 == 'C'||slideIndex==3&&question3 == 'c'){
+        } else if(slideIndex==3&&question3 == 'C'||slideIndex==3&&question3 == 'c'){
         checkAnswer20();     
         showTicks20();
-  }
+        }
         //first question
          else if(slideIndex==1&&question1 == 'A'||slideIndex==1&&question1 == 'a'){
         checkAnswer20();     
         showTicks20();
-  } 
+        } 
         //4th question 
         else if(slideIndex==4&&question4 == '10'){
         checkAnswer20();     
         showTicks20();
-  } 
+        } 
         //5th question 
         else if(slideIndex==5&&question5 == 6){
         checkAnswer20();     
         showTicks20();
-  } 
+        } 
         //6th question
         else if(slideIndex==6&&question6 == 0.4){
         checkAnswer20();     
         showTicks20();
-  } 
+        } 
         else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
