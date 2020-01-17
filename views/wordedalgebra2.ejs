@@ -2,7 +2,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center">Worded Algebra Problems: How old is Alan? </h3>
+        <h3 class="text-center" id="heading">Worded Algebra Problems: How old is Alan? </h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
@@ -184,53 +184,55 @@
     </div>
 </div>
 <script>
-    $("#example").load("./config");
-    var correct = 0;
+$("#example").load("./config");
+var correct = 0;
 
-    $("#button1").click(function () {
-        var question1 = document.quiz1.question1.value;
-        var question2 = document.quiz2.question1.value;
-        var question3 = document.quiz3.question1.value;
-        var question4 = document.quiz4.question1.value;
-        var question5 = document.quiz5.question1.value;
-        var question6 = document.quiz6.question1.value;
+$("#button1").click(function () {
+    var question1 = document.quiz1.question1.value;
+    var question2 = document.quiz2.question1.value;
+    var question3 = document.quiz3.question1.value;
+    var question4 = document.quiz4.question1.value;
+    var question5 = document.quiz5.question1.value;
+    var question6 = document.quiz6.question1.value;
         //2nd question
-        if (slideIndex == 2 && question2 == 24 || slideIndex == 2 && question2 == '24 years old') {
-            checkAnswer30();
-            showTicks30();
-            //third question
-        } else if (slideIndex == 3 && question3 == 31 || slideIndex == 3 && question3 == '31 years old') {
-            checkAnswer30();
-            showTicks30();
-        }
-        //first question
-        else if (slideIndex == 1 && question1 == 21 || slideIndex == 1 && question1 == '21 years old') {
-            checkAnswer30();
-            showTicks30();
-        }
-        //4th question 
-        else if (slideIndex == 4 && question4 == 32 || question4 == '32 years old') {
-            checkAnswer30();
-            showTicks30();
-        }
-        //5th question 
-        else if (slideIndex == 5 && question5 == 59 || slideIndex == 5 && question5 == '59 years old') {
-            checkAnswer30();
-            showTicks30();
-        }
-        //6th question
-        else if (slideIndex == 6 && question6 == 35 || slideIndex == 6 && question6 == '35 years old') {
-            checkAnswer30();
-            showTicks30();
-        } else {
-            document.getElementById("wrong").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Not Yet";
-        }
-
-        document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
-    });
+    if (slideIndex == 2 && question2 == 24 || slideIndex == 2 && question2 == '24 years old') {
+        checkAnswer30();
+        showTicks30();
+        //third question
+    } else if (slideIndex == 3 && question3 == 31 || slideIndex == 3 && question3 == '31 years old') {
+        checkAnswer30();
+        showTicks30();
+    }
+    //first question
+    else if (slideIndex == 1 && question1 == 21 || slideIndex == 1 && question1 == '21 years old') {
+        checkAnswer30();
+        showTicks30();
+    }
+    //4th question 
+    else if (slideIndex == 4 && question4 == 32 || question4 == '32 years old') {
+        checkAnswer30();
+        showTicks30();
+    }
+    //5th question 
+    else if (slideIndex == 5 && question5 == 59 || slideIndex == 5 && question5 == '59 years old') {
+        checkAnswer30();
+        showTicks30();
+    }
+    //6th question
+    else if (slideIndex == 6 && question6 == 35 || slideIndex == 6 && question6 == '35 years old') {
+        checkAnswer30();
+        showTicks30();
+    } else {
+        document.getElementById("wrong").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = " Not Yet";
+    }
+    document.getElementById("badge").textContent = `${correct} out of 6`; 
+    document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
+});
+    $("#button").click(function () {
+        trackProgress6()
+    })
     $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>

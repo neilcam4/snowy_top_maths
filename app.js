@@ -161,10 +161,7 @@ app.post("/monthlyCharge", isLoggedIn, (req, res) => {
             function (err, numberAffected) {}))
         .then(monthlyCharge => res.redirect("profile"));
 });
-
-
 //pages
-
 app.get('/sequences', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -173,7 +170,6 @@ app.get('/sequences', isLoggedIn, function (req, res) {
             res.render('sequences', {
                 user: user
             })
-
         }
     });
 })
@@ -185,7 +181,6 @@ app.get('/data1', isLoggedIn, function (req, res) {
             res.render('data1', {
                 user: user
             })
-
         }
     });
 })
@@ -198,7 +193,6 @@ app.get('/data2', isLoggedIn, function (req, res) {
             res.render('data2', {
                 user: user
             })
-
         }
     });
 })
@@ -211,7 +205,6 @@ app.get('/data3', isLoggedIn, function (req, res) {
             res.render('data3', {
                 user: user
             })
-
         }
     });
 })
@@ -224,7 +217,6 @@ app.get('/data4', isLoggedIn, function (req, res) {
             res.render('data4', {
                 user: user
             })
-
         }
     });
 })
@@ -249,7 +241,6 @@ app.get('/time2', isLoggedIn, function (req, res) {
             res.render('time2', {
                 user: user
             })
-
         }
     });
 })
@@ -262,7 +253,6 @@ app.get('/time3', isLoggedIn, function (req, res) {
             res.render('time3', {
                 user: user
             })
-
         }
     });
 })
@@ -275,7 +265,6 @@ app.get('/time4', isLoggedIn, function (req, res) {
             res.render('time4', {
                 user: user
             })
-
         }
     });
 })
@@ -288,7 +277,6 @@ app.get('/time5', isLoggedIn, function (req, res) {
             res.render('time5', {
                 user: user
             })
-
         }
     });
 })
@@ -303,7 +291,6 @@ app.get('/addsubtract', isLoggedIn, function (req, res) {
             res.render('addsubtract', {
                 user: user
             })
-
         }
     });
 })
@@ -331,8 +318,6 @@ app.get('/multdiv', isLoggedIn, function (req, res) {
         }
     });
 })
-
-
 
 app.get('/fractions', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
@@ -691,7 +676,6 @@ app.get('/multdiv2', isLoggedIn, function (req, res) {
             res.render('multdiv2', {
                 user: user
             })
-
         }
     });
 })
@@ -704,7 +688,6 @@ app.get('/multdiv3', isLoggedIn, function (req, res) {
             res.render('multdiv3', {
                 user: user
             })
-
         }
     });
 })

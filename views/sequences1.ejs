@@ -13,7 +13,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center">Sequences 1</h3>
+        <h3 class="text-center" id="heading">Sequences 1</h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
@@ -234,6 +234,9 @@ $("#button1").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
 });
+$("#button").click(function () {
+    trackProgress6()
+})
 
         $("input").attr("maxlength", 10)
     </script>
