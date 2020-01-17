@@ -11,7 +11,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center">What number did I start with?</h3>
+        <h3 id = "heading" class="text-center">What number did I start with?</h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
@@ -187,7 +187,6 @@
 $("#example").load("./config");
 var correct = 0;
 
-
 $("#button1").click(function () {
     var question1 = document.quiz1.question1.value;
     var question2 = document.quiz2.question1.value;
@@ -209,7 +208,6 @@ $("#button1").click(function () {
     else if (slideIndex == 1 && question1 == 8) {
         checkAnswer10();
         showTicks10();
-        addProgress();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == 32) {
@@ -235,5 +233,8 @@ $("#button1").click(function () {
 });
     
 $("input").attr("maxlength", 5)
+$("#button").click(function () {
+    addProgress()
+})
 </script>
 <% include ./partials/footer %>
