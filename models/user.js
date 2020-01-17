@@ -13,6 +13,7 @@ var UserSchema = mongoose.Schema({
     medals:Number,
     password:String,
     score:Number,
+    quiz: String,
     subscription_type:String
 });
 UserSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
