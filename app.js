@@ -7,9 +7,9 @@ var flash = require('connect-flash');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
 var User = require('./models/user');
+var Quiz = require('./models/quiz');
 var config = require('./config.js');
 var expressSanitizer = require("express-sanitizer");
-var tools = require('./tools');
 require('dotenv').config();
 app.use(express.json())
 app.use(express.static('public'))
