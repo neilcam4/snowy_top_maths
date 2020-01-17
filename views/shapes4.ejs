@@ -2,7 +2,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
   <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center">The area of rectangles and triangles</h3>
+        <h3 class="text-center" id="heading">The area of rectangles and triangles</h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
@@ -404,8 +404,7 @@ $("#button1").click(function(){
     var question16 = document.quiz16.question1.value;
     var question17 = document.quiz17.question1.value;
     var question18 = document.quiz18.question1.value;
-    
-       
+     
         //2nd question
        if(slideIndex==2&&question2 == 4){
         checkAnswer20();     
@@ -503,11 +502,12 @@ $("#button1").click(function(){
     
         document.getElementById("badge").textContent = `${correct} out of 18`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-});   
+}); 
+$("#button").click(function () {
+  trackProgress18()
+})  
 $("input").attr("maxlength", 5)
 </script>
-
-
 <% include ./partials/footer %>
             
       
