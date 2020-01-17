@@ -27,7 +27,6 @@ function checkAnswer30() {
     var id = $("#userId").text();
     var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
     var api = $("#example").text();
-    var idAndApi = id + api;
     var sliced = id.slice(0, -1);
     var finalApi = url + sliced + api;
   
@@ -78,6 +77,7 @@ function getScore() {
     var id = $("#userId").text();
     var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
     var api = $("#example").text();
+<<<<<<< HEAD
     var idAndApi = id + config;
     var sliced = id.slice(0, -1);
     var finalApi = url + sliced + api;
@@ -94,3 +94,20 @@ function getScore() {
         }
     });
 }
+=======
+    var sliced = id.slice(0, -1);
+    var finalApi = url + sliced + api;
+          $.ajax({
+              url: finalApi,
+              type: "get",
+              data: JSON.stringify(),
+              contentType: "application/json",
+              success: function (data) {
+                  $("#jquery").text(data.score);
+              },
+              error: function (xhr, status, error) {
+                  console.log(error);
+              }
+          });
+  }
+>>>>>>> 05c63de44b74555735e03c4a647f597c9e43972e
