@@ -444,4 +444,12 @@ topic list
 <div class="container">
         <p id="userId"><%= currentUser.id %> </p>
 </div>
+<div class="container">
+        <p id="result"><%= currentUser %> </p>
+</div>
+<script>
+let quizResult = $("#result").text()
+console.log(quizResult)
+
+</script>
 <% include ./partials/footer %>
