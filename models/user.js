@@ -1,22 +1,23 @@
 var mongoose=require('mongoose');
 var Schema = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
-
-// var scoreSchema = mongoose.model('Score').schema;
-
-var UserSchema = mongoose.Schema({
+var Quiz = require('./quiz')
+var userSchema = Schema({
     username:String,
     surname:String,
-    school:String,
-    year:String,
     email:String,
-    medals:Number,
     password:String,
     score:Number,
-    quiz: String,
+    created:{type:Date, default: Date.now},
+    quiz: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Quiz"
+        }
+    ],
     subscription_type:String
 });
-UserSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
+userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
+var User = mongoose.model("User", userSchema);
 
-module.exports =mongoose.model("User", UserSchema);
-
+module.exports = User;

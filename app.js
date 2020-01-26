@@ -7,7 +7,7 @@ var flash = require('connect-flash');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
 var User = require('./models/user');
-var Quiz = require('./models/quiz');
+var Quiz = require('./models/quiz')
 var config = require('./config.js');
 var expressSanitizer = require("express-sanitizer");
 require('dotenv').config();
@@ -29,6 +29,7 @@ let chapters = require('./routes/chapters')
 app.use(chapters);
 let routes = require("./routes/index")
 app.use(routes)
+
     
 let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
@@ -57,7 +58,7 @@ app.enable('trust proxy');
 mongoose.connect(MONGODB_KEY, {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    })
+    } || "mongodb://localhost/maths_app")
     .then(() => console.log('DB Connected!'))
     .catch(err => {
         console.log("DB Connection Error");
@@ -68,26 +69,23 @@ app.get('/login', function (req, res) {
     res.render('login');
 });
 
-
 app.post('/login', function (req, res) {
-
     //have changed this redirect away from /profile to signup page
     req.body.username = req.body.email;
     passport.authenticate("local")(req, res, function () {
     res.redirect('/profile')
     })
-
 })
 
 app.get('/profile', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, users) {
+    User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
             if (req.user.subscription_type == 'Monthly') {
-                res.render('profile');
+                res.render('profile', {user:user});
             } else if (req.user.subscription_type == 'Yearly') {
-                res.render('profile');
+                res.render('profile', {user:user});             
             } else {
                 res.redirect('pricing');
             }
@@ -175,17 +173,8 @@ app.get('/sequences', isLoggedIn, function (req, res) {
         }
     });
 })
-app.get('/data1', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('data1', {
-                user: user
-            })
-        }
-    });
-})
+
+
 
 app.get('/data2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
@@ -195,10 +184,19 @@ app.get('/data2', isLoggedIn, function (req, res) {
             res.render('data2', {
                 user: user
             })
+            console.log(user)
         }
     });
 })
-
+app.get('/data3', isLoggedIn, function(req,res){
+    User.find({}, function(err, user){
+        if(err){
+            console.log(err)
+        } else {
+            res.render("data3", {user:user})
+        }
+    })   
+})
 app.get('/data3', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -1003,6 +1001,8 @@ app.get('/profilefree', isLoggedIn, function (req, res) {
 app.get('/help', function(req,res){
     res.send('/multdiv1.json')
 })
+
+
 app.listen(port, function (err) {
     if (err) {
         console.log("Error");
