@@ -83,6 +83,8 @@ router.post('/users', function (req, res) {
         }
     })
 });
+//show
+
 
 //update
 router.put('/users/:id', function (req, res) {

@@ -95,7 +95,15 @@ app.get('/profile', isLoggedIn, function (req, res) {
 
 
 //ROUTES
-
+app.get('/users/:id', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        if(err){
+            res.redirect('/profile')
+        } else {
+            res.render("show", {user:user})
+        }
+    })
+})
 //signup middle page
 app.get('/signup', isLoggedIn, function (req, res) {
     User.findById(req.params.id, req.body.users, function (err, showUser) {
