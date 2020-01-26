@@ -95,7 +95,7 @@ app.get('/profile', isLoggedIn, function (req, res) {
 
 
 //ROUTES
-app.get('/users/:id', function(req,res){
+app.get('/users/:id', isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         if(err){
             res.redirect('/profile')
