@@ -1,20 +1,20 @@
 var mongoose=require('mongoose');
 var Schema = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
-var Quiz = require('./quiz')
+
+var quizSchema = Schema({
+    quiz:String
+});
+var Quiz = mongoose.model("Quiz", quizSchema)
+
 var userSchema = Schema({
     username:String,
     surname:String,
     email:String,
     password:String,
-    score:Number,
+    score:{type:Number,default:0},
     created:{type:Date, default: Date.now},
-    quiz: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Quiz"
-        }
-    ],
+    quiz: [quizSchema],
     subscription_type:String
 });
 userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});

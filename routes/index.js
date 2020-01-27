@@ -77,25 +77,13 @@ router.get('/logout', function (req, res) {
 router.post('/users', function (req, res) {
     User.create(req.body.users, function (err, users) {
         if (err) {
-            console.log(err);;
+            console.log(err);
         } else {
-            res.redirect('/users');
+            res.redirect('/users', {users:users});
         }
     })
 });
 //show
-
-
-//update
-router.put('/users/:id', function (req, res) {
-    User.findByIdAndUpdate(req.params.id, req.body.users, function (err, updatedUser) {
-        if (err) {
-            res.redirect('/users');
-        } else {
-            res.redirect('/users/' + req.params.id);
-        }
-    })
-})
 
 router.get('/log', function (req, res) {
     res.render('register');

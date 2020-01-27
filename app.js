@@ -7,7 +7,7 @@ var flash = require('connect-flash');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
 var User = require('./models/user');
-var Quiz = require('./models/quiz')
+// var Quiz = require('./models/quiz');
 var config = require('./config.js');
 var expressSanitizer = require("express-sanitizer");
 require('dotenv').config();
@@ -40,7 +40,6 @@ app.use(require('express-session')({
     saveUninitialized: false
 }));
 
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(function (req, res, next) {
@@ -48,7 +47,7 @@ app.use(function (req, res, next) {
     res.locals.message = req.flash("error");
     next();
 });
-
+mongoose.set('useFindAndModify', false);
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -85,7 +84,7 @@ app.get('/profile', isLoggedIn, function (req, res) {
             if (req.user.subscription_type == 'Monthly') {
                 res.render('profile', {user:user});
             } else if (req.user.subscription_type == 'Yearly') {
-                res.render('profile', {user:user});             
+                res.render('profile', {user:user});           
             } else {
                 res.redirect('pricing');
             }
@@ -94,7 +93,8 @@ app.get('/profile', isLoggedIn, function (req, res) {
 });
 
 
-//ROUTES
+//USER ROUTES
+//SHOW
 app.get('/users/:id', isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         if(err){
@@ -103,6 +103,31 @@ app.get('/users/:id', isLoggedIn, function(req,res){
             res.render("show", {user:user})
         }
     })
+})
+//EDIT
+app.get('/users/:id/edit',isLoggedIn,function(req,res){
+    User.findById(req.params.id, function(err, user){
+        if(err){
+            res.redirect('/profile')
+        } else {
+            res.render("edit", {user:user})
+        }
+    })
+})
+
+//update
+// app.put('/users/:id', function (req, res) {
+//     User.findByIdAndUpdate(req.params.id, req.body.users, function (err, updatedUser) {
+//         if (err) {
+//             res.redirect('/users');
+//         } else {
+//             res.redirect('/users/' + req.params.id);
+//         }
+//     })
+// })
+
+app.put('/users/:id', function(req,res){
+    res.send("this is the update route")
 })
 //signup middle page
 app.get('/signup', isLoggedIn, function (req, res) {
@@ -1009,7 +1034,6 @@ app.get('/profilefree', isLoggedIn, function (req, res) {
 app.get('/help', function(req,res){
     res.send('/multdiv1.json')
 })
-
 
 app.listen(port, function (err) {
     if (err) {
