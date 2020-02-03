@@ -26,7 +26,7 @@ function trackProgress6() {
         type: "put",
         data: JSON.stringify({
             "$push": {
-                    "quiz": title
+                    "quiz": title + percentage
             }   
         }),
         contentType: "application/json",

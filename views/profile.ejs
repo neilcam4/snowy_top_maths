@@ -441,11 +441,25 @@ topic list
         <p id="userId"><%= currentUser.id %> </p>
 </div>
 <div class="container">
-        <p id="result"><%= currentUser %> </p>
+        <p id="result"><%= currentUser.quiz %> </p>
 </div>
 <script>
-let quizResult = $("#result").text()
-console.log(quizResult)
+  console.log($("#result").text())
+  let quizResult = $("#result").text()
+  var obj = Object.entries(quizResult)
+  console.log("object is " + obj)
+  function loop(){
+    
+    
+    let newResult = JSON.stringify(quizResult)
+    var newArray = []
+    console.log(newResult[14])
+    for(var i=0;i<quizResult.length;i++){
+      newArray.push(quizResult[i])
+    }
+    console.log(newArray)
+  }
+loop()
 
 </script>
 <% include ./partials/footer %>
