@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+
+    <title>True or False</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="collapse bg-inverse" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 py-4">
+            <h4 class="text-white">Area and Perimeter of Squares and Rectangles</h4>
+            
+          </div>
+          <div class="col-sm-4 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-inverse bg-inverse">
+      <div class="container d-flex justify-content-between">
+        <a href="/Year4" class="navbar-brand">Mr Campbell</a>
+        <a href="/TFaddsub1" class="navbar-brand">Fractions  5th February 2020</a>
+        <a href="/" class="navbar-brand">Norland Place Year 4</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+<title>True or False Fractions </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="main.js"></script>
+<style>
+body{
+  margin: 0;
+  color: #fff;
+} 
+.wrapper{
+  min-height: 100vh;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 50px;
+  background: #0B2649;
+}
+.footer{
+	color:white;
+	height: 50px;
+  background: #0B2649;
+}
+.content {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  color: #000;
+}
+.columns{
+  display: flex;
+  flex: 1;
+}
+.main{
+  flex: 1;
+  background: #fff;
+  padding-top:  10px;
+  font-size: 20px;
+  padding-bottom: 30px;
+
+}
+.sidebar{
+  width: 60%;
+  background: #fff
+}
+.container{
+	margin-left:auto;
+margin-right:auto;
+}
+#refresh{
+display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+/*
+#imageBox{
+	display: flex;
+  justify-content: center;
+}
+*/
+#Intro{
+	width: 80%;
+	margin-left: 20px;
+}
+.sqr{
+  background: #4682b4;
+  width: 25%;
+  padding-bottom: 25%;
+  display:inline-block;
+}
+#row1,#row2,#row3{
+	margin-left: 80px;
+}
+#sqr1:hover,#sqr2:hover,#sqr3:hover,#sqr7:hover,#sqr8:hover,#sqr9:hover{
+	background-color: green;
+}
+
+#sqr4:hover,#sqr5:hover,#sqr6:hover{
+	background-color: yellow;
+}
+
+#sqr7:hover,#sqr8:hover,#sqr9:hover{
+	background-color: red;
+}
+
+#button1,#button2,#button3,#button4,#button5,#button6,#button7,#button8,#button9 {
+	visibility:hidden;
+}
+
+#image{
+
+
+    display: flex;
+  justify-content: center;
+/*    text-align: center;*/
+  visibility:hidden;
+    
+}
+
+#question{
+	display: flex;
+  justify-content: center;
+}
+#qTemplate{
+	display: flex;
+	visibility:hidden;
+	background-color: red;
+	width:100%;
+	height: 300px;
+	font-size: 60px;
+	text-align: center;
+	border-width: 5px;
+	border-color: black;
+	border-style: solid;
+	margin-left: 40px;
+	margin-right:40px;
+	margin-top: 20px;
+	padding-left: 50px;
+	border-radius: 25px;
+}
+#answer{
+	visibility: hidden;
+	font-size: 50px;
+	text-align: center;
+}
+    #investigation{
+        visibility:hidden;
+    }
+    #Intro{
+        visibility:hidden;
+    }
+</style>
+
+</head>
+<body>
+ 
+   <div class="wrapper">
+
+  <section class="content">
+    <div class="columns">
+      <main class="main">
+      	<div>
+      		<p id="Intro">L.O. To explore the relationship between area and perimeter and describe your results with good mathematical statements </p>
+      	</div>
+      <div id="row1">
+			<div class="sqr" id="sqr1" onclick="appear1()"></div>
+			<div class="sqr" id="sqr2" onclick="appear2()"></div>
+			<div class="sqr" id="sqr3" onclick="appear3()"></div>
+		</div>
+		<div id="row2">
+			<div class="sqr" id="sqr4" onclick="appear4()" ></div>
+			<div class="sqr" id="sqr5" onclick="appear5()"></div>
+			<div class="sqr" id="sqr6" onclick="appear6()"></div>
+		</div>
+		<div id="row3">
+			<div class="sqr" id="sqr7"onclick="appear7()"></div>
+			<div class="sqr" id="sqr8" onclick="appear8()"></div>
+			<div class="sqr" id="sqr9" onclick="appear9()"></div>
+		</div>
+			<div class="container">
+				<form>
+					<input id="button1" type="button" class="btn btn-success btn-lg"value="Check 1" onclick="check1()">
+					<input id="button2" type="button" class="btn btn-success btn-lg"value="Check 2" onclick="check2()">
+					<input id="button3" type="button" class="btn btn-success btn-lg"value="Check 3" onclick="check3()">
+					<input id="button4" type="button" class="btn btn-warning btn-lg"value="Check 4" onclick="check4()">
+					<input id="button5" type="button" class="btn btn-warning btn-lg"value="Check 5" onclick="check5()">
+					<input id="button6" type="button" class="btn btn-warning btn-lg"value="Check 6" onclick="check6()">
+					<input id="button7" type="button" class="btn btn-danger btn-lg" value="Check 7" onclick="check7()">
+					<input id="button8" type="button" class="btn btn-danger btn-lg" value="Check 8" onclick="check8()">
+					<input id="button9" type="button" class="btn btn-danger btn-lg" value="Check 9" onclick="check9()">
+					
+				</form>
+			</div>
+				<div id = "refresh">
+					<input type="button" value="Refresh Page To Start Again" class="btn btn-success btn-lg" onClick="window.location.reload()">
+				</div>
+		</main>
+      <aside class="sidebar">
+      <div id="question">
+    <!-- <form id="quiz" name="quiz"> -->
+	<p id="qTemplate"></p>
+	<!-- </form> -->
+</div>
+	<div>
+		<p id="answer"></p>
+	</div>
+<!--
+	<div id="imageBox"> 
+		<img id="image">
+	</div>
+-->
+          <div class = "row" id = "investigation">
+          <div class="card" style="width: 15rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">Challenge 1</h5>
+    <p class="card-text">The area = perimeter</p>
+    
+  </div>
+</div>
+              <div class="card" style="width: 15rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">Challenge 2</h5>
+    <p class="card-text">The area is double the perimeter</p>
+    
+  </div>
+</div>
+              <div class="card" style="width: 15rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">Challenge 3</h5>
+    <p class="card-text">The area is half the perimeter</p>
+    
+  </div>
+</div>
+              </div>
+          <div class="card" style="width: 30rem;">
+  <img  class="card-img-top" id="image">
+  <div class="card-body">
+    
+  </div>
+</div>
+          
+	
+</aside>
+     </div>
+  </section>
+  <footer class="footer">Neil Campbell 2018</footer>
+</div>
+</body>
+<script type="text/javascript">
+	function check1(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "False!!";
+
+	}
+function check2(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "False!!";
+	}	
+function check3(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "True!!";		
+	}
+function check4(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "True!!";
+	}
+function check5(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = " False!!";
+		
+	}
+function check6(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "True!!";
+		document.getElementById("image").style.visibility = "visible";
+		document.getElementById("image").src = "https://metrouk2.files.wordpress.com/2016/09/610084506.jpg?w=548&h=298&crop=1";
+	}
+function check7(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "False!!";
+		document.getElementById("image").style.visibility = "visible";
+		document.getElementById("image").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEH7KbiiNFz5DZINnz5Y4i4uM_rAYgSdr2mq6BRyyP4OCGNPDh"
+	}	
+function check8(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "False!!";
+		document.getElementById("image").style.visibility = "visible";
+		document.getElementById("image").src = "http://www.standardmedia.co.ke/images/tuesday/arsenal_trolls_man_u561417da30e79.jpg";
+	}
+	function check9(){
+		document.getElementById("answer").style.visibility = "visible";
+		document.getElementById("answer").innerHTML = "True!!";
+		document.getElementById("image").style.visibility = "visible";
+		document.getElementById("image").src = "https://metrouk2.files.wordpress.com/2016/09/610084506.jpg?w=548&h=298&crop=1";
+	}
+function appear1(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr1").style.backgroundColor = "green";
+	document.getElementById("qTemplate").innerHTML = "1/3 = 8/12";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button1").style.visibility = "visible";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+    document.getElementById("image").style.visibility = "visible";
+	document.getElementById("image").src = "";
+
+}
+function appear2(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr2").style.backgroundColor = "green";
+	document.getElementById("qTemplate").innerHTML = "14/20 = 8/10";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hiddean";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "visible";
+    document.getElementById("image").src = "";
+}
+function appear3(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr3").style.backgroundColor = "green";
+	document.getElementById("qTemplate").innerHTML = "1/5 + 2/5 = 3/10 ";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "visible";
+
+}
+function appear4(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr4").style.backgroundColor = "yellow";
+	document.getElementById("qTemplate").innerHTML = "1/7 + 2/7 = 3/7";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "visible";
+    
+}
+function appear5(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+    document.getElementById("sqr5").style.backgroundColor = "yellow";
+    document.getElementById("qTemplate").style.fontSize = 5;
+	document.getElementById("qTemplate").innerHTML = "The lowest common multiple of 4 and 8 is 16";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+    document.getElementById("image").style.visibility = "visible";
+ 
+}
+function appear6(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr6").style.backgroundColor = "yellow";
+    document.getElementById("qTemplate").style.fontSize = 10;
+	document.getElementById("qTemplate").innerHTML = "In the fraction 3/4, the number 3 is the denominator";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "visible";
+    document.getElementById("Intro").style.visibility = "visible";
+}
+function appear7(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr7").style.backgroundColor = "red";
+	document.getElementById("qTemplate").innerHTML = "1/2 + 1/3 = 2/6";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "hidden";
+    
+    document.getElementById("investigation").style.visibility = "visible";
+}
+function appear8(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr8").style.backgroundColor = "red";
+	document.getElementById("qTemplate").innerHTML = "The numerator is always on top of the fraction";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "hidden";
+}
+function appear9(){
+	document.getElementById("qTemplate").style.visibility = "visible";
+	document.getElementById("sqr9").style.backgroundColor = "red";
+	document.getElementById("qTemplate").innerHTML = "1/3 + 1/4 = 7/12";
+	document.getElementById("answer").style.visibility = "hidden";
+	document.getElementById("button9").style.visibility = "visible";
+	document.getElementById("button1").style.visibility = "hidden";
+	document.getElementById("button2").style.visibility = "hidden";
+	document.getElementById("button3").style.visibility = "hidden";
+	document.getElementById("button4").style.visibility = "hidden";
+	document.getElementById("button5").style.visibility = "hidden";
+	document.getElementById("button6").style.visibility = "hidden";
+	document.getElementById("button7").style.visibility = "hidden";
+	document.getElementById("button8").style.visibility = "hidden";
+	document.getElementById("image").style.visibility = "hidden";
+	document.getElementById("qTemplate").style.fontSize = "60px";
+	
+}
+function colourchange1(){
+	document.getElementById('sqr1').style.background = "green";
+}
+</script>
+</html>
+
+
+  
+
+
+
+     

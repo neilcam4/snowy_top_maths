@@ -1035,6 +1035,10 @@ app.get('/help', function(req,res){
     res.send('/multdiv1.json')
 })
 
+app.get('/TrueOrFalse', function(req,res){
+    res.render('TorF.ejs')
+})
+
 app.listen(port, function (err) {
     if (err) {
         console.log("Error");
