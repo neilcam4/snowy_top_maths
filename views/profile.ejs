@@ -444,8 +444,18 @@ topic list
         <p id="result"><%= currentUser.quiz %> </p>
 </div>
 <script>
-  console.log($("#result").text())
+  var result = $("#result").text()
+  console.log("result = " + result)
+  var split = result.split(",")
+  console.log("split = " + Object.values(result))
+  var splitArray = []
   
+  {/* for(var i = 0;i < split.length;i++){
+    if(split[i]== "[a-z]"){
+      splitArray.push(split[i])
+    }
+    console.log("splitArray = " + splitArray)
+  } */}
   let quizResult = $("#result").text()
   console.log(" parsed = " + JSON.parse(quizResult))
   var obj = Object.entries(quizResult)
