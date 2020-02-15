@@ -445,20 +445,21 @@ topic list
 </div>
 <script>
   console.log($("#result").text())
+  
   let quizResult = $("#result").text()
+  console.log(" parsed = " + JSON.parse(quizResult))
   var obj = Object.entries(quizResult)
   console.log("object is " + obj)
-  function loop(){
-    
-    
+  function loop(){ 
     let newResult = JSON.stringify(quizResult)
     var newArray = []
-    console.log(newResult[14])
+    console.log("new result = " + newResult[14])
     for(var i=0;i<quizResult.length;i++){
       newArray.push(quizResult[i])
     }
     console.log(newArray)
   }
+  
 loop()
 
 </script>
