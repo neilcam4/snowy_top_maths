@@ -6,7 +6,8 @@ var methodOverride = require('method-override');
 var flash = require('connect-flash');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
-var User = require('./models/user');
+var passportLocalMongoose = require('passport-local-mongoose');
+// var User = require('./models/user');
 // var Quiz = require('./models/quiz');
 var config = require('./config.js');
 var expressSanitizer = require("express-sanitizer");
@@ -40,6 +41,31 @@ app.use(require('express-session')({
     saveUninitialized: false
 }));
 
+// SCHEMAS
+//QUIZ 
+var quizSchema = mongoose.Schema({
+    quiz:String
+});
+var Quiz = mongoose.model("Quiz", quizSchema)
+//USER SCHEMA
+var userSchema = mongoose.Schema({
+    username:String,
+    surname:String,
+    email:String,
+    password:String,
+    score:{type:Number,default:0},
+    created:{type:Date, default: Date.now},
+    quiz: [
+        {
+           type: mongoose.Schema.Types.ObjectId,
+           ref: "Quiz"
+        }
+     ],
+    subscription_type:String
+});
+userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
+var User = mongoose.model("User", userSchema);
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(function (req, res, next) {
@@ -62,6 +88,40 @@ mongoose.connect(MONGODB_KEY, {
     .catch(err => {
         console.log("DB Connection Error");
     });
+
+// Quiz Routes
+// var user1 = new User({
+//     username:"Bruno Fernandes",
+//     email:"BrunoManU@Fernandes.com"
+// })
+
+// user1.save(function(err, user){
+//     if(err){
+//         console.log(err)  
+//     } else {
+//         console.log("Bruno is saved " + user)
+//         Quiz.create({
+//             quiz:" Test for Bruno"
+//         }, function(err, quiz1){
+//             if(err){
+//                 console.log(err)
+//             } else {
+//                 quiz1.save()
+//                 user.quiz.push(quiz1)
+//                 console.log(quiz1)
+//                 console.log("final user = " + user)
+//             }    
+//         })
+//     }
+// })
+
+User.find({username:"Bruno Fernandes"}, function(err, user){
+    if(err){
+        console.log(err)
+    } else {
+        console.log(user)
+    }
+})
 //AUTH ROUTES
 
 app.get('/login', function (req, res) {

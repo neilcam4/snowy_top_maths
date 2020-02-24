@@ -147,8 +147,10 @@
                 <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
                 <button type="button" id="next1" class="btn btn-primary btn-raised" onclick="plusSlides(1)"> Next
                 </button>
+                <form method = "post" action ="/quiz">
                 <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal"
                     data-target="#myModal4"> Total Score </button>
+                </form>
             </div>
         </div>
 
@@ -266,9 +268,9 @@ $("#button1").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
 });
-$("#button").click(function () {
-    trackProgress6()
-})
+// $("#button").click(function () {
+//     trackProgress6()
+// })
     $("input").attr("maxlength", 5)
     
     function getJSON (){

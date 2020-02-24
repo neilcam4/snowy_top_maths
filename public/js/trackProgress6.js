@@ -1,16 +1,5 @@
-// require('../../models/user')
 
-// function trackProgress6(){
-//     var title = $("#heading").text()
-//     var percentage = Math.ceil(correct/6 * 100)
-//     User.findOne({username:"Neil Admin"}, function(error, user){
-//     if(error){
-//         console.log("THere has been an error" + error)
-//     } else {
-//         console.log("track progress6 working" + user)
-//     }
-// })
-// }
+
 
 function trackProgress6() {
     console.log("add progress function")
@@ -39,3 +28,4 @@ function trackProgress6() {
         }
     });
 };
+
