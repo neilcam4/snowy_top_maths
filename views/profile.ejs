@@ -445,32 +445,9 @@ topic list
 </div>
 <script>
   var result = $("#result").text()
-  console.log("result = " + result)
-  var split = result.split(",")
-  console.log("split = " + Object.values(result))
-  var splitArray = []
-  
-  {/* for(var i = 0;i < split.length;i++){
-    if(split[i]== "[a-z]"){
-      splitArray.push(split[i])
-    }
-    console.log("splitArray = " + splitArray)
-  } */}
-  let quizResult = $("#result").text()
-  console.log(" parsed = " + JSON.parse(quizResult))
-  var obj = Object.entries(quizResult)
-  console.log("object is " + obj)
-  function loop(){ 
-    let newResult = JSON.stringify(quizResult)
-    var newArray = []
-    console.log("new result = " + newResult[14])
-    for(var i=0;i<quizResult.length;i++){
-      newArray.push(quizResult[i])
-    }
-    console.log(newArray)
-  }
-  
-loop()
+  console.log(result)
+  rep =  Object.values(result).join('');
+console.log("rep = " + rep);
 
 </script>
 <% include ./partials/footer %>
