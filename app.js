@@ -44,7 +44,9 @@ app.use(require('express-session')({
 // SCHEMAS
 //QUIZ 
 var quizSchema = mongoose.Schema({
-    quiz:String
+    name:String,
+    score:{type:Number,default:0},
+    created:{type:Date, default: Date.now}
 });
 var Quiz = mongoose.model("Quiz", quizSchema)
 //USER SCHEMA
@@ -92,9 +94,9 @@ mongoose.connect(MONGODB_KEY, {
 // })
 
 // var user1 = new User({
-//     username:"Alfonso Davies",
-//     email:"The missing link",
-//     score:19
+//     username:"Bruno Fernandes",
+//     email:"nextScholes@hotmail.com",
+//     score:18
 // })
 
 // user1.save(function(err, user1){
@@ -102,7 +104,8 @@ mongoose.connect(MONGODB_KEY, {
 //         console.log(err)
 //     } else {
 //         Quiz.create({
-//             quiz:"New Quiz added hope it works"
+//             name:"multiplication",
+//             score:50
 //         }, function(err, quiz1){
 //             if(err){
 //                 console.log(err)
@@ -121,13 +124,27 @@ mongoose.connect(MONGODB_KEY, {
 // })
 //AUTH ROUTES
 
-User.findOne({score:19}, function(err, user){
-    if(err){
-        console.log(err)
-    } else {
-        console.log(user.quiz)
-    }
-})
+// User.findOne({username:"Neil Admin"}, function(err, user){
+//     if(err){
+//         console.log(err)
+//     } else {
+//         Quiz.create({name:"Subtraction", score:90}, function(err, quiz){
+//             if(err){
+//                 console.log(err)
+//             } else {
+//                 user.quiz.push(quiz)
+//                 user.save(function(err, newUser){
+//                     if(err){
+//                         console.log(err)
+//                     } else {
+//                         console.log("newUSer is " + newUser)
+//                     }
+//                 })
+//             }
+//         })
+//         console.log(user.quiz)
+//     }
+// })
 app.get('/login', function (req, res) {
     res.render('login');
 });
