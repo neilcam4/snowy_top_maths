@@ -55,12 +55,7 @@ var userSchema = mongoose.Schema({
     password:String,
     score:{type:Number,default:0},
     created:{type:Date, default: Date.now},
-    quiz: [
-        {
-           type: mongoose.Schema.Types.ObjectId,
-           ref: "Quiz"
-        }
-     ],
+    quiz: [quizSchema],
     subscription_type:String
 });
 userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
@@ -88,42 +83,51 @@ mongoose.connect(MONGODB_KEY, {
     .catch(err => {
         console.log("DB Connection Error");
     });
-
-// Quiz Routes
-// var user1 = new User({
-//     username:"Bruno Fernandes",
-//     email:"BrunoManU@Fernandes.com"
+// mongoose.connect("mongodb://localhost/maths_app", function(err, db){
+//     if(err){
+//         console.log("database not connected")
+//     } else {
+//         console.log("database CONNECTED")
+//     }
 // })
 
-// user1.save(function(err, user){
+// var user1 = new User({
+//     username:"Alfonso Davies",
+//     email:"The missing link",
+//     score:19
+// })
+
+// user1.save(function(err, user1){
 //     if(err){
-//         console.log(err)  
+//         console.log(err)
 //     } else {
-//         console.log("Bruno is saved " + user)
 //         Quiz.create({
-//             quiz:" Test for Bruno"
+//             quiz:"New Quiz added hope it works"
 //         }, function(err, quiz1){
 //             if(err){
 //                 console.log(err)
 //             } else {
-//                 quiz1.save()
-//                 user.quiz.push(quiz1)
-//                 console.log(quiz1)
-//                 console.log("final user = " + user)
-//             }    
+//                 user1.quiz.push(quiz1)
+//                 user1.save(function(err, user){
+//                     if(err){
+//                         console.log(err)
+//                     } else {
+//                         console.log("final user is " + user)
+//                     }
+//                 })
+//             }
 //         })
 //     }
 // })
+//AUTH ROUTES
 
-User.find({username:"Bruno Fernandes"}, function(err, user){
+User.findOne({score:19}, function(err, user){
     if(err){
         console.log(err)
     } else {
-        console.log(user)
+        console.log(user.quiz)
     }
 })
-//AUTH ROUTES
-
 app.get('/login', function (req, res) {
     res.render('login');
 });
