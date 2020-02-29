@@ -147,10 +147,9 @@
                 <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
                 <button type="button" id="next1" class="btn btn-primary btn-raised" onclick="plusSlides(1)"> Next
                 </button>
-                <form method = "post" action ="/quiz">
+                
                 <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal"
                     data-target="#myModal4"> Total Score </button>
-                </form>
             </div>
         </div>
 
@@ -202,6 +201,11 @@
             </div>
         </div>
     </div>
+</div>
+<div>
+    <form method ="PUT" action = '/users/quiz'>
+        <button>Add Quiz</button>
+    </form>
 </div>
 
 <div class = "container">
@@ -269,19 +273,18 @@ $("#button1").click(function () {
     document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
 });
 // $("#button").click(function () {
-//     trackProgress6()
+//    trackProgress6()
 // })
     $("input").attr("maxlength", 5)
     
     function getJSON (){
         fetch('./questions/multdiv1.json')
         .then(function(res){
-            console.log(res)
             return res.json()
            
         })
         .then(function(data){
-            console.log(data)
+            // console.log(data)
             let output1 = data[0].question_text
             let output2 = data[1].question_text
             let output3 = data[2].question_text
