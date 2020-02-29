@@ -53,5 +53,14 @@
   </tbody>
 </table>
 </div>
-
+<div>
+  <% user.quiz.forEach(function(quizName){ %>
+    <p><%=quizName.name %></p>
+    <p><%=quizName.score %></p>
+    <p><%=quizName.created %></p>
+  <% }) %>
+</div>
+<script>
+  
+</script>
 <% include ./partials/footer %>

@@ -128,7 +128,7 @@ mongoose.connect(MONGODB_KEY, {
 //     if(err){
 //         console.log(err)
 //     } else {
-//         Quiz.create({name:"Subtraction", score:90}, function(err, quiz){
+//         Quiz.create({name:"Algebra", score:100}, function(err, quiz){
 //             if(err){
 //                 console.log(err)
 //             } else {
@@ -156,7 +156,28 @@ app.post('/login', function (req, res) {
     res.redirect('/profile')
     })
 })
-
+app.put('/users/quiz', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        if(err){
+            console.log("An error has happened" + err)
+            res.redirect('/profile')
+        } else {
+            console.log(user)
+            Quiz.create({name:"Bruno Player Rating", score:500},
+            function(err, quiz){
+                if(err){
+                    console.log(err)
+                }else {
+                    quiz.save()
+                    user.quiz.push(quiz)
+                    user.save()
+                    res.redirect('/users/' + req.params.id)
+                }
+            }
+            )
+        }
+    })
+})
 app.get('/profile', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -774,10 +795,11 @@ app.get('/multdiv1', isLoggedIn, function (req, res) {
         if (err) {
             console.log(err);
         } else {
+            console.log(user)
             res.render('multdiv1', {
                 user: user
             })
-
+            console.log("user is here" + user)
         }
     });
 })
