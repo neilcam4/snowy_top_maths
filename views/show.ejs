@@ -1,66 +1,23 @@
-<% include ./partials/header %>
+<% include ./partials/header %> 
 
+<h1><%=user.username%>'s Progress Badges</h1>
 
-<h1><%=user.username%>'s Profile Page</h1>
-
-<div >
-<button class="ui blue button" href='/profile'>My Profile Page</button>
-</div>
-<div class="ui main text container segment">
-<table class="ui celled striped table">
-  <thead>
-    <tr><th colspan="3">
-      My Profile
-    </th>
-  </tr></thead>
-  <tbody>
-    <tr>
-      <td class="collapsing">
-        <i class="user circle icon"></i> <%=user.username%>
-      </td>
-      <td>Year: <%= user.year%></td>
-      <td class="right aligned collapsing"></td>
-    </tr>
-    <tr>
-      <td>
-        <i class="star icon"></i> Points:<%=user.score %>
-      </td>
-      <td>
-        </td>
-      <td class="right aligned"></td>
-    </tr>
-    <tr>
-      <td>
-        <i class="shield alternate icon"></i> <%=user.created %>
-      </td>
-      <td>Member since:</td>
-      <td class="right aligned"></td>
-    </tr>
-    <tr>
-      <td>
-        <i class="child icon"></i> Year Ranking
-      </td>
-      <td>Initial commit</td>
-      <td class="right aligned"></td>
-    </tr>
-    <tr>
-      <td>
-        <i class="comment outline icon"></i> Feedback
-      </td>
-      <td>Initial commit</td>
-      <td class="right aligned"></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div>
-  <% user.quiz.forEach(function(quizName){ %>
-    <p><%=quizName.name %></p>
-    <p><%=quizName.score %></p>
-    <p><%=quizName.created %></p>
+<div class="container">
+  <div class="ui four cards">
+    <% user.quiz.forEach(function(quizName){ %>
+    <div class="card">
+      <div class="image">
+      <img src="/images/snowy.jpg"></img>
+      </div>
+      <div class="extra">
+      <p>Quiz: <%=quizName.name %></p>
+      <p>Score: <%=quizName.score %>%</p>
+      <p>Date: <%=quizName.created %></p>
+      <div class="ui star rating" data-rating="4"></div>
+    </div>
+  </div>
   <% }) %>
 </div>
-<script>
-  
-</script>
+
+
 <% include ./partials/footer %>

@@ -202,11 +202,7 @@
         </div>
     </div>
 </div>
-<div>
-    <form method ="PUT" action = '/users/quiz'>
-        <button>Add Quiz</button>
-    </form>
-</div>
+
 
 <div class = "container">
 <div id="square"></div>
@@ -272,9 +268,9 @@ $("#button1").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
 });
-// $("#button").click(function () {
-//    trackProgress6()
-// })
+$("#button").click(function () {
+   trackProgress6()
+})
     $("input").attr("maxlength", 5)
     
     function getJSON (){
