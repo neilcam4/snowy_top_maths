@@ -391,6 +391,13 @@
 });
 $("#button").click(function () {
   trackProgress6()
+  if(correct === 3){
+      addBronze()
+  } else if (correct > 3 && correct <6){
+      addSilver()
+  } else if(correct === 6){
+      addGold()
+  }
 })
 $("input").attr("maxlength", 5)
 </script>

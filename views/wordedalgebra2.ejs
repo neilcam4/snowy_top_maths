@@ -230,9 +230,16 @@ $("#button1").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
 });
-    $("#button").click(function () {
-        trackProgress6()
-    })
+$("#button").click(function () {
+    trackProgress6()
+    if(correct === 3){
+        addBronze()
+    } else if (correct > 3 && correct <6){
+        addSilver()
+    } else if(correct === 6){
+        addGold()
+    }
+ })
     $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>
