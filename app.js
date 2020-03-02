@@ -49,6 +49,7 @@ var quizSchema = mongoose.Schema({
     name:String,
     score:{type:Number,default:0},
     created:{type:Date, default: Date.now}
+    
 });
 var Quiz = mongoose.model("Quiz", quizSchema)
 //USER SCHEMA
@@ -60,7 +61,10 @@ var userSchema = mongoose.Schema({
     score:{type:Number,default:0},
     created:{type:Date, default: Date.now},
     quiz: [quizSchema],
-    subscription_type:String
+    subscription_type:String,
+    gold:{type:Number,default:0},
+    silver:{type:Number,default:0},
+    bronze:{type:Number,default:0}
 });
 userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 var User = mongoose.model("User", userSchema);
@@ -95,58 +99,6 @@ mongoose.connect(MONGODB_KEY, {
 //     }
 // })
 
-// var user1 = new User({
-//     username:"Bruno Fernandes",
-//     email:"nextScholes@hotmail.com",
-//     score:18
-// })
-
-// user1.save(function(err, user1){
-//     if(err){
-//         console.log(err)
-//     } else {
-//         Quiz.create({
-//             name:"multiplication",
-//             score:50
-//         }, function(err, quiz1){
-//             if(err){
-//                 console.log(err)
-//             } else {
-//                 user1.quiz.push(quiz1)
-//                 user1.save(function(err, user){
-//                     if(err){
-//                         console.log(err)
-//                     } else {
-//                         console.log("final user is " + user)
-//                     }
-//                 })
-//             }
-//         })
-//     }
-// })
-//AUTH ROUTES
-
-// User.findOne({username:"Neil Admin"}, function(err, user){
-//     if(err){
-//         console.log(err)
-//     } else {
-//         Quiz.create({name:"Algebra", score:100}, function(err, quiz){
-//             if(err){
-//                 console.log(err)
-//             } else {
-//                 user.quiz.push(quiz)
-//                 user.save(function(err, newUser){
-//                     if(err){
-//                         console.log(err)
-//                     } else {
-//                         console.log("newUSer is " + newUser)
-//                     }
-//                 })
-//             }
-//         })
-//         console.log(user.quiz)
-//     }
-// })
 app.get('/login', function (req, res) {
     res.render('login');
 });
@@ -442,7 +394,6 @@ app.get('/addsubtract1', isLoggedIn, function (req, res) {
         }
     });
 })
-
 
 app.get('/multdiv', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user,page) {

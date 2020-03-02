@@ -1,7 +1,5 @@
-function trackProgress6() {
-    console.log("add progress function")
-    var percentage = Math.ceil(correct/6 * 100)
-    var title = $("#heading").text()
+
+function addSilver() {
     var id = $("#userId").text();
     var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
     var api = $("#example").text();
@@ -11,9 +9,9 @@ function trackProgress6() {
         url: finalApi,
         type: "put",
         data: JSON.stringify({
-            "$push": {
-                    "quiz": {name:title, score:percentage}
-            }   
+            "$inc": {
+                "silver": 1
+            }
         }),
         contentType: "application/json",
         success: function (data) {

@@ -16,20 +16,20 @@
                 <table class="table table-no-border table-striped">
                   <tr>
                     <th>
-                      <i class="zmdi zmdi-account mr-1 color-success"></i> Gold</th>
+                      <i class="zmdi zmdi-account mr-1 color-success"></i> Name</th>
                     <td><%=currentUser.username%></td>
                   </tr>
                   <tr>
                     <th>
-                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Silver</th>
+                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Points</th>
                     <td>
-                      <%=Math.ceil(currentUser.score/1100)%>
+                      <%=currentUser.score%>
 
                     </td>
                   </tr>
                   <tr>
                     <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Bronze</th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Progress</th>
                     <td>
                       <%=Math.ceil(currentUser.score/12000 *100)%>
                     </td>
@@ -55,25 +55,25 @@
     <div class="col-lg-8">
       <div class="row">
         <div class="col-sm-4">
-          <div class="card card-info card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-info"><%= currentUser.score%></h2>
-            <i class="fa fa-4x fa-star color-info"></i>
-            <p class="mt-2 no-mb lead small-caps color-info">Gold Medals</p>
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-warning"><%= currentUser.gold%></h2>
+            <i class="fa fa-4x fa-trophy color-warning"></i>
+            <p class="mt-2 no-mb lead small-caps color-warning">Gold Medals</p>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-success"><%=Math.ceil(currentUser.score/12000 *100)%></h2>
-            <i class="fa fa-4x fa-percent color-success"></i>
-            <p class="mt-2 no-mb lead small-caps color-success">Silver Medals</p>
+            <h2 class="counter color-secondary"><%= currentUser.silver %></h2>
+            <i class="fa fa-4x fa-trophy color-secondary"></i>
+            <p class="mt-2 no-mb lead small-caps color-secondary">Silver Medals</p>
           </div>
         </div>
 
         <div class="col-sm-4">
-          <div class="card card-royal card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-royal"><%=Math.ceil(currentUser.quiz.length) %></h2>
-            <i class="fa fa-4x fa-trophy color-warning"></i>
-            <p class="mt-2 no-mb lead small-caps color-royal"> Bronze Medals</p>
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-dark"><%= currentUser.bronze %></h2>
+            <i class="fa fa-4x fa-trophy color-dark"></i>
+            <p class="mt-2 no-mb lead small-caps color-dark"> Bronze Medals</p>
           </div>
         </div>
       </div>
