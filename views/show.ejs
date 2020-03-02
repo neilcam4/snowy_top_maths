@@ -1,6 +1,34 @@
 <% include ./partials/header %> 
+<div class="container">
+<h1><%=user.username%>'s Progress Summary</h1>
+</div>
 
-<h1><%=user.username%>'s Progress Badges</h1>
+<div class="col-lg-12">
+<div class="row">
+        <div class="col-sm-4">
+          <div class="card card-info card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-info"><%= currentUser.score%></h2>
+            <i class="fa fa-4x fa-star color-info"></i>
+            <p class="mt-2 no-mb lead small-caps color-info">Points</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-success"><%=Math.ceil(currentUser.score/12000 *100)%></h2>
+            <i class="fa fa-4x fa-percent color-success"></i>
+            <p class="mt-2 no-mb lead small-caps color-success">Progress</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card card-royal card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-royal"><%=Math.ceil(currentUser.quiz.length) %></h2>
+            <i class="fa fa-4x fa-trophy color-warning"></i>
+            <p class="mt-2 no-mb lead small-caps color-royal"> Badges</p>
+          </div>
+        </div>
+      </div>
+  </div>    
 
 <div class="container">
   <div class="ui four cards">
