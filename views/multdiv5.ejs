@@ -179,6 +179,9 @@
                 <div class="alert alert-info alert-light " role="alert">
                     <p id="medal"></p>
                 </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -235,18 +238,20 @@ $("#button1").click(function () {
     
 $("input").attr("maxlength", 5)
 $("#button").click(function () {
-    trackProgress6()
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     if(correct === 3){
         addBronze()
+        trackProgress6()
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 3 && correct <6){
         addSilver()
+        trackProgress6()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct === 6){
         addGold()
+        trackProgress6()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct < 3){

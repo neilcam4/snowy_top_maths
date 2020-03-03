@@ -1,4 +1,3 @@
-console.log("slideshow")
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -14,7 +13,6 @@ function currentSlide(n) {
     document.getElementById("tick").style.visibility = "hidden";
     document.getElementById("wrong").style.visibility = "hidden";
     document.getElementById("msg").style.visibility = "hidden";
-
 }
 
 function showSlides(n) {
@@ -35,7 +33,7 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    if (slideIndex == 6) {
+    if (slideIndex == slides.length) {
         document.getElementById("next1").style.visibility = "hidden";
     }
 }

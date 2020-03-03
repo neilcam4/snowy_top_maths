@@ -236,19 +236,29 @@
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
         }
-        document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
 });
 $("#button").click(function () {
-    trackProgress6()
+    document.getElementById("badge").textContent = `${correct} out of 6`; 
     if(correct === 3){
         addBronze()
+        trackProgress6()
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 3 && correct <6){
         addSilver()
+        trackProgress6()
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct === 6){
         addGold()
+        trackProgress6()
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+    } else if(correct < 3){
+        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })
-$("input").attr("maxlength", 5)
+ $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>

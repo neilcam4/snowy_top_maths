@@ -214,6 +214,9 @@
             </div>
                 <div class="alert alert-danger alert-light " role="alert"><p id="points"></p>
                 </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>    
@@ -314,17 +317,27 @@ function showSlides(n) {
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " One or more may be incorrect. Please try again."; 
         }  
-        document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!!`;
 });
 $("#button").click(function () {
-  trackProgress6()
+  document.getElementById("badge").textContent = `${correct} out of 6`; 
   if(correct === 3){
       addBronze()
+      trackProgress6()
+      document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+      document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
   } else if (correct > 3 && correct <6){
       addSilver()
+      trackProgress6()
+      document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+      document.getElementById("points").textContent = `Points:  ${correct * 10}`;
   } else if(correct === 6){
       addGold()
+      trackProgress6()
+      document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+      document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+  } else if(correct < 3){
+      document.getElementById("points").textContent = `Points: ${correct * 10}!`
+      document.getElementById("medal").textContent = `Try again to earn a Medal!`;
   }
 })
    
