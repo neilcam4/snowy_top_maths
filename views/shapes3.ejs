@@ -202,6 +202,9 @@
                 <div class="alert alert-danger alert-light " role="alert">
                     <p id="points"></p>
                 </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -252,8 +255,6 @@ $("#button1").click(function () {
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
     }
-    document.getElementById("badge").textContent = `${correct} out of 6`; 
-    document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
 });
 $("#button").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 

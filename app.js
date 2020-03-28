@@ -15,7 +15,6 @@ require('dotenv').config();
 var cors = require('cors')
 app.use(cors())
 app.use(express.json())
-// app.use(express.static('public'))
 app.use(express.static(__dirname + '/public'));
 app.use('/users', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
@@ -33,7 +32,6 @@ app.use(chapters);
 let routes = require("./routes/index")
 app.use(routes)
 
-    
 let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
@@ -99,6 +97,14 @@ mongoose.connect(MONGODB_KEY, {
 //     }
 // })
 
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login');
+    console.log("error loggedIn")
+}
+
 app.get('/login', function (req, res) {
     res.render('login');
 });
@@ -110,28 +116,28 @@ app.post('/login', function (req, res) {
     res.redirect('/profile')
     })
 })
-app.put('/users/quiz', function(req,res){
-    User.findById(req.params.id, function(err, user){
-        if(err){
-            console.log("An error has happened" + err)
-            res.redirect('/profile')
-        } else {
-            console.log(user)
-            Quiz.create({name:"Bruno Player Rating", score:500},
-            function(err, quiz){
-                if(err){
-                    console.log(err)
-                }else {
-                    quiz.save()
-                    user.quiz.push(quiz)
-                    user.save()
-                    res.redirect('/users/' + req.params.id)
-                }
-            }
-            )
-        }
-    })
-})
+// app.put('/users/quiz', function(req,res){
+//     User.findById(req.params.id, function(err, user){
+//         if(err){
+//             console.log("An error has happened" + err)
+//             res.redirect('/profile')
+//         } else {
+//             console.log(user)
+//             Quiz.create({name:"Bruno Player Rating", score:500},
+//             function(err, quiz){
+//                 if(err){
+//                     console.log(err)
+//                 }else {
+//                     quiz.save()
+//                     user.quiz.push(quiz)
+//                     user.save()
+//                     res.redirect('/users/' + req.params.id)
+//                 }
+//             }
+//             )
+//         }
+//     })
+// })
 app.get('/profile', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -147,7 +153,6 @@ app.get('/profile', isLoggedIn, function (req, res) {
         }
     });
 });
-
 
 //USER ROUTES
 //SHOW
@@ -198,20 +203,34 @@ app.get('/signup', isLoggedIn, function (req, res) {
     });
 });
 
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    req.flash("error", "You have not logged in" )
-    res.redirect('/login');
-}
-
 function isPriceLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
     res.render('pricing2');
 }
+
+app.get('/pastpapers', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/habs2018', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        if(err){
+            console.log(err)
+        } else {
+            res.render('habs2018', {user:user})
+        }
+    })
+})
 
 app.get('/pricing', isPriceLoggedIn, function (req, res) {
     res.render('pricing')
@@ -262,8 +281,6 @@ app.get('/sequences', isLoggedIn, function (req, res) {
         }
     });
 })
-
-
 
 app.get('/data2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {

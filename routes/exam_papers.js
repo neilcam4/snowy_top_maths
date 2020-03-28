@@ -14,18 +14,15 @@ router.get('/pastpapersfree', function (req, res) {
     res.render('pastpapersfree');
 });
 
-router.get('/pastpapers', function (req, res) {
-    res.render('pastpapers');
-});
 
 
 router.get('/stpaulsA', function (req, res) {
     res.render('stpaulA');
 });
 
-router.get('/habs2008', isLoggedIn, function (req, res) {
-    res.render('habs2008');
-});
+// router.get('/habs2008', isLoggedIn, function (req, res) {
+//     res.render('habs2008');
+// });
 
 router.get('/aboutus', function (req, res) {
     res.render('about');

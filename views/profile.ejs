@@ -437,17 +437,5 @@ topic list
         </li>
       </div>
     </div>
-<div class="container">
-        <p id="userId"><%= currentUser.id %> </p>
-</div>
-<div class="container">
-        <p id="result"><%= currentUser.quiz %> </p>
-</div>
-<script>
-  var result = $("#result").text()
-  console.log(result)
-  rep =  Object.values(result).join('');
-console.log("rep = " + rep);
 
-</script>
 <% include ./partials/footer %>
