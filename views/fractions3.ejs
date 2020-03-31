@@ -223,38 +223,51 @@
             question2 == '1.32m') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
             //third question
         } else if (slideIndex == 3 && question3 == 120 || slideIndex == 3 && question3 == '120cm' ||
             slideIndex == 3 && question3 == '1.2m' || slideIndex == 3 && question3 == '1.20m') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //first question
         else if (slideIndex == 1 && question1 == 168 || slideIndex == 1 && question1 == '168cm' || slideIndex ==
             1 && question1 == '1.68m') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 96 || slideIndex == 4 && question4 == '96cm') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 144 || slideIndex == 5 && question5 == '144cm' || slideIndex ==
             5 && question5 == '1.44m') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 104 || slideIndex == 6 && question6 == '104cm' || question6 ==
             '1.04m') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            numberError();
         }
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;

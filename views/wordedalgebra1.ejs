@@ -203,36 +203,49 @@
         //2nd question
         if (slideIndex == 2 && question2 == 32 || slideIndex == 2 && question2 == '32 goals') {
             checkAnswer30();
-            showTicks30()
+            showTicks30();
+            questionCounter();
+            algebraCounterUp();
             //third question
         } else if (slideIndex == 3 && question3 == 22.50 || slideIndex == 3 && question3 == '£22.50' ||
             slideIndex == 3 && question3 == '£22.5') {
             checkAnswer30();
-            showTicks30()
+            showTicks30();
+            questionCounter();
+            algebraCounterUp();
         }
         //first question
         else if (slideIndex == 1 && question1 == 20 || slideIndex == 1 && question1 == '20 goals') {
             checkAnswer30();
-            showTicks30()
+            showTicks30();
+            questionCounter();
+            algebraCounterUp();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 57 || slideIndex == 4 && question4 == '57 bananas') {
             checkAnswer30();
-            showTicks30()
+            showTicks30();
+            questionCounter();
+            algebraCounterUp();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 40 || slideIndex == 5 && question5 == '40 points') {
             checkAnswer30();
-            showTicks30()
+            showTicks30();
+            questionCounter();
+            algebraCounterUp();
         }
         //6th question
         else if (slideIndex == 6 && question6 == '65' || slideIndex == 6 && question6 == '65 years') {
             checkAnswer30();
-            showTicks30()
+            showTicks30();
+            questionCounter();
+            algebraCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            algebraError()
         }
     });
     $("#button").click(function () {

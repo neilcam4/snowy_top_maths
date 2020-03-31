@@ -246,29 +246,40 @@
         if (question2 == 140) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            dataCounterUp();
             //third question
         } else if (question3 == 120) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            dataCounterUp();
         }
         //first question
         else if (question1 == 40) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            dataCounterUp();
         }
         //4th question 
         else if (question4 == 105) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            dataCounterUp();
         }
         //6th question
         else if (question6 == 18) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            dataCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            dataError();
         } 
 });
 $("#button").click(function () {

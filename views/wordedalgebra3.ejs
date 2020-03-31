@@ -356,35 +356,48 @@
     if (slideIndex == 2 && question4 == 12 && question5 == 5 && question6 == 8 && question22 == 15) {
       checkAnswer30();
       showTicks30();
+      questionCounter();
+      algebraCounterUp();
       //third question
     } else if (slideIndex == 3 && question7 == 15 && question8 == 13 && question9 == 17 && question23 == 5) {
       checkAnswer30();
       showTicks30();
+      questionCounter();
+      algebraCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == 9 && question2 == 11 && question3 == 13 && question21 == 7) {
       checkAnswer30();
       showTicks30();
+      questionCounter();
+      algebraCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question10 == 3 && question11 == 4 && question12 == 6 && question24 == 9) {
       checkAnswer30();
       showTicks30();
+      questionCounter();
+      algebraCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question13 == 5 && question14 == 9 && question15 == 15 && question19 == 7) {
       checkAnswer30();
       showTicks30();
+      questionCounter();
+      algebraCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question16 == 8 && question17 == 12 && question18 == 14 && question20 == 16) {
       checkAnswer30();
       showTicks30();
+      questionCounter();
+      algebraCounterUp();
     } 
     else {
       document.getElementById("wrong").style.visibility = "visible";
       document.getElementById("msg").style.visibility = "visible";
       document.getElementById("msg").textContent = " Not Yet";
+      algebraError();
     }
 });
 $("#button").click(function () {

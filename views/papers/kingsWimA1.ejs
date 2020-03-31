@@ -1,37 +1,16 @@
-<% include ./partials/header %>
+<% include ../partials/header %>
+    
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Form the equation
-                as shown to solve the problems. Write numbers in this form 1,2,3,4. Each question is worth 20 points.
-                Good Luck!
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 20 points.
             </p>
         </div>
     </div>
 </div>
-
-<!--   Video        -->
-<div id="video" style="text-align: center">
-    <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Sequences 1</h3>
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
-            </div>
-            <div class="js-player">
-                <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe
-                    allow="autoplay" class="video-player-container vooplayer" data-playerId="MTQ3MDcw"
-                    allowtransparency="true" style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src=""
-                    watch-type="" url-params="" frameborder="0" scrolling="no"> </iframe>
-                <div class="card-body overflow-hidden text-center">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
+  <div class="container">
         <p id="userId"><%=currentUser.id %> </p>
-
     </div>
 
     <div style="text-align: center">
@@ -44,10 +23,17 @@
                 </div>
                 <div class="card-body">
                     <form name="quiz1">
-                        <p class="q"> Find 3 consecutive numbers that add up to 60</p>
-                        <div class="ui input focus">
-                            <input type="text" placeholder="example: 1,2,3" name="question1">
-                        </div>
+                        <p class="q">The 4 cards below represent a set of 4 numbers. If the mean of the numbers is 5,
+                            find the missing number in the 4th card.</p><img src="img/averages/ave1B.png" alt=""
+                            class="img-fluid">
+                              <div class="col-md-6" style="display:inline-block">
+                                <div class="row">
+<button class="huge ui primary basic button">1</button>
+<button class="huge ui secondary basic button">2</button>
+<button class="huge ui positive basic button">3</button>
+<button class="huge ui negative basic button">4</button>
+</div>
+</div>
                     </form>
                 </div>
             </div>
@@ -58,9 +44,11 @@
                 </div>
                 <div class="card-body">
                     <form name="quiz2">
-                        <p class="q"> Find 3 consecutive numbers that add up to 120</p>
+                        <p class="q"> The mean, mode and median of the 5 numbers below is 7. The range is 5. </p>
+                        <p class="q">Use these clues to find the missing number in the 5th card.</p><img
+                            src="img/averages/ave2.png" alt="" class="img-fluid">
                         <div class="ui input focus">
-                            <input type="text" placeholder="" name="question1">
+                            <input type="text" placeholder="Enter missing number.." name="question1">
                         </div>
                     </form>
                 </div>
@@ -72,9 +60,12 @@
                 </div>
                 <div class="card-body">
                     <form name="quiz3">
-                        <p class="q"> Find 3 consecutive numbers that add up to 300</p>
+                        <p class="q"> The 6 cards below represent a set of 6 numbers.</p>
+                        <p class="q">The mean is 6, the range is 7 and the median is 7.5</p>
+                        <p class="q"> Find the missing number in the 6th card.</p> <img src="img/averages/ave3.png"
+                            alt="" class="img-fluid">
                         <div class="ui input focus">
-                            <input type="text" placeholder=" " name="question1">
+                            <input type="text" placeholder="Enter missing number.." name="question1">
                         </div>
                     </form>
                 </div>
@@ -82,13 +73,15 @@
             <!--4th question        -->
             <div class="mySlides">
                 <div class="card-header">
-                    <h3 class="card-title">4.</h3>
+                    <h3 class="card-title">4a.</h3>
                 </div>
                 <div class="card-body">
                     <form name="quiz4">
-                        <p class="q"> Find 3 consecutive EVEN numbers that add up to 150</p>
+                        <p class="q"> For the following set of numbers, the mean, mode and range are all 8. </p><img
+                            src="img/averages/ave4A.png" alt="" class="img-fluid"><br>
+                        <p class="q"> Find the missing number if the mean, mode and range are 8. </p>
                         <div class="ui input focus">
-                            <input type="text" placeholder=" " name="question1">
+                            <input type="text" placeholder="Enter missing number.." name="question1">
                         </div>
                     </form>
                 </div>
@@ -96,13 +89,17 @@
             <!--    5th question    -->
             <div class="mySlides">
                 <div class="card-header">
-                    <h3 class="card-title">5.</h3>
+                    <h3 class="card-title">4b.</h3>
                 </div>
                 <div class="card-body">
                     <form name="quiz5">
-                        <p class="q"> Find 5 consecutive ODD numbers that add up to 275</p>
+                        <p class="q"> For the following set of numbers, the mean, mode and range are all 8. </p>
+
+                        <img src="img/averages/ave4A.png" alt="" class="img-fluid"><br>
+                        <p class="q"> Use that missing number found in 4a and find the median for the set of numbers.
+                        </p>
                         <div class="ui input focus">
-                            <input type="text" placeholder="" name="question1">
+                            <input type="text" placeholder="Enter median.." name="question1">
                         </div>
                     </form>
                 </div>
@@ -110,19 +107,71 @@
             <!--   6th question     -->
             <div class="mySlides">
                 <div class="card-header">
-                    <h3 class="card-title">6.</h3>
+                    <h3 class="card-title">5a.</h3>
                 </div>
                 <div class="card-body">
                     <form name="quiz6">
-                        <p class="q">On Sesame Street, the odd numbered houses are on one side of the road and the evens
-                            are on the other. Which 5 houses next to each other add up to 315?</p>
+                        <p class="q"> The seven numbers below have a mean of 4. </p> <img src="img/averages/ave5A.png"
+                            alt="" class="img-fluid">
+                        <p class="q"> Find the missing number on the 7th card. </p><br>
                         <div class="ui input focus">
-                            <input type="text" placeholder="" name="question1">
+                            <input type="text" placeholder="Enter missing number.." name="question1">
                         </div>
                     </form>
                 </div>
             </div>
-            <!--        buttons-->
+
+            <!--        7th question-->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">5b.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz7">
+                        <p class="q"> The seven numbers below have a mean of 4. </p> <img src="img/averages/ave5A.png"
+                            alt="" class="img-fluid">
+                        <p class="q">Use the missing number found in 5a and find the median for the set of numbers</p>
+                        <br>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="Enter median.." name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--        8th question-->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">6a.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz8">
+                        <p class="q"> The mean for the following set of numbers is 9.</p> <img
+                            src="img/averages/ave6A.png" alt="" class="img-fluid">
+                        <p class="q">Find the missing number in the 6th box.</p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="Enter missing number.." name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--9th question-->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">6b.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz9">
+                        <p class="q"> The mean for the following set of numbers is 9.</p> <img
+                            src="img/averages/ave6A.png" alt="" class="img-fluid">
+                        <p class="q">Use the missing number in the 6th box</p>
+                        <p class="q"> and find the median for the set of numbers</p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="Enter median.." name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- buttons-->
             <div class="container">
                 <div class="row" style="margin: 0 auto">
                     <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
@@ -144,8 +193,7 @@
                 </div>
             </div>
 
-
-            <div id="msg"></div>
+          <div id="msg"></div>
             <div class="dot-container">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -153,6 +201,9 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
                 <span class="dot" onclick="currentSlide(5)"></span>
                 <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
             </div>
             <!-- last 2 divs from top of card-->
         </div>
@@ -175,6 +226,9 @@
                     <div class="alert alert-danger alert-light " role="alert">
                         <p id="points"></p>
                     </div>
+                    <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -193,83 +247,86 @@ $("#button1").click(function () {
     var question4 = document.quiz4.question1.value;
     var question5 = document.quiz5.question1.value;
     var question6 = document.quiz6.question1.value;
+    var question7 = document.quiz7.question1.value;
+    var question8 = document.quiz8.question1.value;
+    var question9 = document.quiz9.question1.value;
 
     //2nd question
-    if (slideIndex == 2 && question2 == '39,40,41' || slideIndex == 2 && question2 == '39, 40, 41') {
+    if (slideIndex == 2 && question2 == '7') {
         checkAnswer20();
         showTicks20();
-        questionCounter();
-        numberCounterUp();
         //third question
-    } else if (slideIndex == 3 && question3 == '99, 100, 101' || slideIndex == 3 && question3 ==
-        '99,100,101') {
+    } else if (slideIndex == 3 && question3 == '3') {
         checkAnswer20();
         showTicks20();
-        questionCounter();
-        numberCounterUp();
     }
     //first question
-    else if (slideIndex == 1 && question1 == '19,20,21' || slideIndex == 1 && question1 ==
-        '19, 20, 21') {
+    else if (slideIndex == 1 && question1 == '2') {
         checkAnswer20();
         showTicks20();
-        questionCounter();
-        numberCounterUp();
     }
     //4th question 
-    else if (slideIndex == 4 && question4 == '48,50,52' || slideIndex == 4 && question4 ==
-        '48, 50, 52') {
+    else if (slideIndex == 4 && question4 == '6') {
         checkAnswer20();
         showTicks20();
-        questionCounter();
-        numberCounterUp();
     }
     //5th question 
-    else if (slideIndex == 5 && question5 == '51,53,55,57,59' || slideIndex == 5 && question5 ==
-        '51, 53, 55, 57, 59') {
+    else if (slideIndex == 5 && question5 == '3') {
         checkAnswer20();
         showTicks20();
-        questionCounter();
-        numberCounterUp();
     }
     //6th question
-    else if (slideIndex == 6 && question6 == '59, 61, 63, 65, 67') {
+    else if (slideIndex == 6 && question6 == '4') {
         checkAnswer20();
         showTicks20();
-        questionCounter();
-        numberCounterUp();
+    }
+    //7th question
+    else if (slideIndex == 7 && question7 == '8') {
+        checkAnswer20();
+        showTicks20();
+    }
+    //8th question
+    else if (slideIndex == 8 && question8 == '3') {
+        checkAnswer20();
+        showTicks20();
+    }
+    //9th question
+    else if (slideIndex == 9 && question9 == '9') {
+        checkAnswer20();
+        showTicks20();
     } else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
-        numberError();
     }
-    document.getElementById("badge").textContent = `${correct} out of 6`; 
-    document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
 });
 $("#button").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
-    if(correct === 3){
+    if(correct === 5){
         addBronze()
-        trackProgress6()
+        trackProgress9()
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
-    } else if (correct > 3 && correct <6){
+    } else if (correct > 5 && correct < 9){
         addSilver()
-        trackProgress6()
+        trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
-    } else if(correct === 6){
+    } else if(correct === 9){
         addGold()
-        trackProgress6()
+        trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
-    } else if(correct < 3){
+    } else if(correct < 5){
         document.getElementById("points").textContent = `Points: ${correct * 10}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
- })
+  })
+     
+      
+$("input").attr("maxlength", 5)
+</script>
+<% include ../partials/footer %></div>
 
-        $("input").attr("maxlength", 10)
-    </script>
-    <% include ./partials/footer %>
+
+<% include ../partials/footer %></div>

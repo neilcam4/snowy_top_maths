@@ -17,6 +17,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static(__dirname + '/public'));
 app.use('/users', express.static(__dirname + '/public'));
+app.use('/papers', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -60,6 +61,15 @@ var userSchema = mongoose.Schema({
     created:{type:Date, default: Date.now},
     quiz: [quizSchema],
     subscription_type:String,
+    questions:{type:Number,default:0},
+    number:{type:Number,default:0},
+    shape:{type:Number,default:0},
+    data:{type:Number,default:0},
+    algebra:{type:Number,default:0},
+    numberError:{type:Number,default:0},
+    shapeError:{type:Number,default:0},
+    dataError:{type:Number,default:0},
+    algebraError:{type:Number,default:0},
     gold:{type:Number,default:0},
     silver:{type:Number,default:0},
     bronze:{type:Number,default:0}
@@ -116,28 +126,7 @@ app.post('/login', function (req, res) {
     res.redirect('/profile')
     })
 })
-// app.put('/users/quiz', function(req,res){
-//     User.findById(req.params.id, function(err, user){
-//         if(err){
-//             console.log("An error has happened" + err)
-//             res.redirect('/profile')
-//         } else {
-//             console.log(user)
-//             Quiz.create({name:"Bruno Player Rating", score:500},
-//             function(err, quiz){
-//                 if(err){
-//                     console.log(err)
-//                 }else {
-//                     quiz.save()
-//                     user.quiz.push(quiz)
-//                     user.save()
-//                     res.redirect('/users/' + req.params.id)
-//                 }
-//             }
-//             )
-//         }
-//     })
-// })
+
 app.get('/profile', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -1112,6 +1101,29 @@ app.get('/TrueOrFalse', function(req,res){
     res.render('TorF.ejs')
 })
 
+app.get('/papers/KWA', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('papers/kingsWimA', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/papers/KWA1', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('papers/kingsWimA1', {
+                user: user
+            })
+        }
+    });
+})
 app.listen(port, function (err) {
     if (err) {
         console.log("Error");
