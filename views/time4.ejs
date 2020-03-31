@@ -203,39 +203,52 @@
             question2 == '1:42pm' || question2 == '1.42pm') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
             //third question
         } else if (question3 == '13:43' || question3 == '1:43pm' || question3 == '1:43pm' || question3 ==
             '1.43pm') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //first question
         else if (question1 == '12:53' || question1 == '12.53' || question1 == '12:53pm' || question1 ==
             '12.53pm') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //4th question 
         else if (question4 == '14:10' || question4 == '14.10' || question4 == '2:10pm' || question4 ==
             '2.10pm') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //5th question 
         else if (question5 == '15:11' || question5 == '15.11' || question5 == '3.11pm' || question5 ==
             '3:11pm') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //6th question
         else if (question6 == '59' || question6 == '59minutes' || question6 == '59 minutes' || question6 ==
             '59m' || question6 == '59 m') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            dataError();
         }
 });
 $("#button").click(function () {

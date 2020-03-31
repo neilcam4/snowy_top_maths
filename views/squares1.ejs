@@ -180,35 +180,48 @@
        if(slideIndex==2&&question2 == 'B'||slideIndex==2&&question2 == 'b'){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         //third question
         } else if(slideIndex==3&&question3 == 'C'||slideIndex==3&&question3 == 'c'){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         }
         //first question
          else if(slideIndex==1&&question1 == 'A'||slideIndex==1&&question1 == 'a'){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         } 
         //4th question 
         else if(slideIndex==4&&question4 == '10'){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         } 
         //5th question 
         else if(slideIndex==5&&question5 == 6){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         } 
         //6th question
         else if(slideIndex==6&&question6 == 0.4){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         } 
         else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Not Yet"; 
+            numberError();
         } 
 });
 $("#button").click(function () {

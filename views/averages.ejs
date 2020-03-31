@@ -228,39 +228,52 @@ $("#button1").click(function () {
         slideIndex == 2 && question2 == '1.35 m') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        dataCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == '1.50m' || slideIndex == 3 && question3 == '1.50' ||
         slideIndex == 3 && question3 == '1.5m') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        dataCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == '1.30m' || slideIndex == 1 && question1 == '1.30' ||
         slideIndex == 1 && question1 == '1.3m') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        dataCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == '1.60m' || slideIndex == 4 && question4 == '1.6m' ||
         slideIndex == 4 && question4 == '1.60' || slideIndex == 4 && question4 == '1.6') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        dataCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == '1.50m' || slideIndex == 5 && question5 == '150cm' ||
         slideIndex == 5 && question5 == '1.50' || slideIndex == 5 && question5 == '1.5') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        dataCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == '2.25m' || slideIndex == 6 && question6 == '2.25' ||
         slideIndex == 6 && question6 == '225cm') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        dataCounterUp();
     } else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
+        dataError();
     }
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;

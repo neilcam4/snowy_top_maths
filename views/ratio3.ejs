@@ -200,34 +200,47 @@
         if (slideIndex == 2 && question2 == 15) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
             //third question
         } else if (slideIndex == 3 && question3 == 20) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //first question
         else if (slideIndex == 1 && question1 == 5) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 48 || slideIndex == 4 && question4 == ' 48 hours') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 8 || slideIndex == 5 && question5 == '8 hours') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 12 || slideIndex == 6 && question6 == '12 people') {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            numberCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            numberError();
         }
         document.getElementById("badge").textContent = `${correct} out of 6`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;

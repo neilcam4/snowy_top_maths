@@ -198,34 +198,47 @@ $("#button1").click(function () {
     if (slideIndex == 2 && question2 == 9) {
         checkAnswer30();
         showTicks30();
+        questionCounter();
+      algebraCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == 12) {
         checkAnswer30();
         showTicks30();
+        questionCounter();
+      algebraCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == 11) {
         checkAnswer30();
         showTicks30();
+        questionCounter();
+      algebraCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == 8) {
         checkAnswer30();
         showTicks30();
+        questionCounter();
+      algebraCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == 4) {
         checkAnswer30();
         showTicks30();
+        questionCounter();
+        algebraCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == 62) {
         checkAnswer30();
         showTicks30();
+        questionCounter();
+        algebraCounterUp();
     } else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
+        algebraError();
     }
 }); 
 $("#button").click(function () {

@@ -323,49 +323,68 @@
         if (slideIndex == 2 && question2 == 148) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
             //third question
         } else if (slideIndex == 3 && question3 == 90) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //first question
         else if (slideIndex == 1 && question1 == 6) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 12) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 432) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 140) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //7th question
         else if (slideIndex == 7 && question7 == 6) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //8th question
         else if (slideIndex == 8 && question8 == 232) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //9th question
         else if (slideIndex == 9 && question9 == 315) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            shapeError();
         }
         document.getElementById("badge").textContent = `${correct} out of 9`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;

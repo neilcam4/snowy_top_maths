@@ -205,34 +205,47 @@ $("#button1").click(function () {
     if (slideIndex == 2 && question2 == 2970 || slideIndex == 2 && question2 == '2,970') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == 4368 || slideIndex == 3 && question3 == '4,368') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == 3360 || slideIndex == 1 && question1 == '3,360') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == 16320 || slideIndex == 4 && question4 == '16,320') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == 25920 || slideIndex == 5 && question5 == '25,920') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == 23712 || slideIndex == 6 && question6 == '23,712') {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     } else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
+        numberError();
     }
 });
 $("#button").click(function () {

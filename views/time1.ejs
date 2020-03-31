@@ -202,39 +202,52 @@
             question2 == '0.42' || question2 == '0:42') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
             //third question
         } else if (question3 == '08:54' || question3 == '8:54am' || question3 == '08:54am' || question3 ==
             '8.54am' || question3 == '8.54' || question3 == '8:54') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //first question
         else if (question1 == '09:42' || question1 == '9:42' || question1 == '09:42am' || question1 ==
             '9.42am') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //4th question 
         else if (question4 == '13:29' || question4 == '13:29pm' || question4 == '13.29pm' || question4 ==
             '13.29pm' || question4 == '13.29') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //5th question 
         else if (question5 == '19:01' || question5 == '7:01pm' || question5 == '19:01pm' || question5 ==
             '7.01pm') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         }
         //6th question
         else if (question6 == '09:54' || question6 == '9:54am' || question6 == '09:54am' || question6 ==
             '9.54am') {
             checkAnswer20();
             showTicks20();
+            questionCounter();
+            dataCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            dataError();
         }
 });
 $("#button").click(function () {

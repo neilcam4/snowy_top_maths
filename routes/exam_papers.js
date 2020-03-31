@@ -28,8 +28,8 @@ router.get('/aboutus', function (req, res) {
     res.render('about');
 });
 
-router.get('/KingsWimbledon', isLoggedIn, function (req, res) {
-    res.render('kingsWimA');
+router.get('papers/KingsWimA', isLoggedIn, function (req, res) {
+    res.render('papers/kingsWimA');
 });
 router.get('/magdalen', isLoggedIn, function (req, res) {
     res.render('mag');

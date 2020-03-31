@@ -232,6 +232,8 @@ $("#button1").click(function () {
         slideIndex == 2 && question4 % 11 !== 0 && question5 % 11 !== 0)) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
         //third question
     } else if ((slideIndex == 3 && parseInt(question7) + parseInt(question8) == 25) && (slideIndex == 3 &&
             question7 % 4 !== 0 && question8 % 4 !== 0) && (slideIndex == 3 && question7 % 3 !== 0 &&
@@ -240,6 +242,8 @@ $("#button1").click(function () {
             question7 % 7 !== 0 && question8 % 7 !== 0)) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //first question
     else if ((slideIndex == 1 && parseInt(question1) + parseInt(question2) == 16) && (slideIndex == 1 &&
@@ -247,6 +251,8 @@ $("#button1").click(function () {
             question2 % 9 !== 0)) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //4th question 
     else if ((slideIndex == 4 && parseInt(question10) + parseInt(question11) == 64) && (slideIndex == 4 &&
@@ -256,6 +262,8 @@ $("#button1").click(function () {
             question10 % 7 !== 0 && question11 % 7 !== 0)) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //5th question 
     else if ((slideIndex == 5 && parseInt(question13) + parseInt(question14) + parseInt(question15) ==
@@ -265,6 +273,8 @@ $("#button1").click(function () {
         slideIndex == 5 && question14 % 15 !== 0 && question15 % 15 !== 0)) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     }
     //6th question
     else if ((slideIndex == 6 && question16 == 2 && question17 == 3 && question18 == 11) || (slideIndex ==
@@ -275,10 +285,13 @@ $("#button1").click(function () {
             3 && question18 == 2)) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        numberCounterUp();
     } else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
+        numberError();
     }
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
