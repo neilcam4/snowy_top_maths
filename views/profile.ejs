@@ -44,7 +44,7 @@
                   <tr>
                     <th>
                       <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
-                    <td>
+                    <td id="numberCorrect">
                       <%= currentUser.number%>
                     </td>
                   </tr>
@@ -392,7 +392,13 @@ topic list
     <footer class="ms-footer">
       <div class="container">
         <p>Copyright SnowyTop Maths 2020</p>
-        
+        <div class="col-lg-3 col-sm-6">
+      <div class="text-center">
+        <div class="circle" id="circles-9"></div>
+        <h3 class="color-info">Number</h3>
+        <p class="small">Questions Answered Correctly</p>
+      </div>
+    </div>
       </div>
     </footer>
     <div class="btn-back-top">
@@ -501,4 +507,5 @@ topic list
       </div>
     </div>
 
+    
 <% include ./partials/footer %>
