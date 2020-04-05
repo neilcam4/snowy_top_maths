@@ -17,7 +17,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static(__dirname + '/public'));
 app.use('/users', express.static(__dirname + '/public'));
-app.use('/papers', express.static(__dirname + '/public'));
+app.use('/pastpapers', express.static(__dirname + '/public'));
+app.use('/problemsolving', express.static(__dirname + '/public'));
+app.use('/basics', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -199,17 +201,29 @@ function isPriceLoggedIn(req, res, next) {
     res.render('pricing2');
 }
 
-app.get('/pastpapers', isLoggedIn, function (req, res) {
+app.get('/pastpapers/list', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('pastpapers', {
+            res.render('pastpapers/list', {
                 user: user
             })
         }
     });
 })
+
+app.get('/problemsolving/menu', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('problemsolving/menu',{user:user})
+    })
+})
+
+// app.get('/basics/index, function(req,res){
+//     User.findById(req.params.id, function(err, user){
+//         res.render('basics/index',{user:user})
+//     })
+// })
 
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){
