@@ -3,12 +3,11 @@
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">
             <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 20 points. Good Luck!
+                worth 30 points. Good Luck!
             </p>
         </div>
     </div>
 </div>
-
 
 <!--   Video        -->
 <div id="video" style="text-align: center">
@@ -199,6 +198,9 @@
                 <div class="alert alert-danger alert-light " role="alert">
                     <p id="points"></p>
                 </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -270,27 +272,27 @@
             numberError();
         }
         document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
+        document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
 });
 $("#button").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     if(correct === 3){
         addBronze()
         trackProgress6()
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 3 && correct <6){
         addSilver();
         trackProgress6();
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct === 6){
         addGold();
         trackProgress6();
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })

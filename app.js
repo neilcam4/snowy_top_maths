@@ -1265,6 +1265,41 @@ app.get('/pastpapers/jags', isLoggedIn, function (req, res) {
         }
     });
 })
+
+app.get('/pastpapers/stolaves', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/olaves', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/nlc10', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/nlc10', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/pastpapers/albans', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/albans', {
+                user: user
+            })
+        }
+    });
+})
 app.get('/papers/KWA1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {

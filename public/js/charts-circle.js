@@ -1,20 +1,25 @@
 
 
 $( document ).ready(function() {
-    var numbersCorrect = $("#numberCorrect").text()
-    var shapeCorrect = $("#shapeCorrect").text()
-    var algebraCorrect = $("#algebraCorrect").text()
-    var dataCorrect = $("#dataCorrect").text()
-    var numbersError = $("#numberError").text()
-    var shapeError = $("#shapeError").text()
-    var algebraError = $("#algebraError").text()
-    var dataError = $("#dataError").text()
+    var numbersCorrect = parseInt($("#numberCorrect").text())
+    var shapeCorrect = parseInt($("#shapeCorrect").text())
+    var algebraCorrect = parseInt($("#algebraCorrect").text())
+    var dataCorrect = parseInt($("#dataCorrect").text())
+    var numbersError = parseInt($("#numberError").text())
+    var shapeError = parseInt($("#shapeError").text())
+    var algebraError = parseInt($("#algebraError").text())
+    var dataError = parseInt($("#dataError").text())
+    let numberTotal = (numbersCorrect+numbersError);
+    let shapeTotal = shapeCorrect + shapeError;
+    let algebraTotal = algebraCorrect + algebraError;
+    let dataTotal = dataCorrect + dataError;
+
     var myCircle = Circles.create({
 
         //number correct
         id: 'circles-1',
         radius: 60,
-        value: Math.ceil(numbersCorrect/(numbersCorrect + numbersError)*100),
+        value: Math.ceil(numbersCorrect/numberTotal*100),
         maxValue: 100,
         width: 10,
         text: function(value) {
@@ -33,7 +38,7 @@ $( document ).ready(function() {
     var myCircle2 = Circles.create({
         id: 'circles-2',
         radius: 60,
-        value: Math.ceil(shapeCorrect/(shapeCorrect + shapeError)*100),
+        value: Math.ceil(shapeCorrect/shapeTotal*100),
         maxValue: 100,
         width: 10,
         text: function(value) {
@@ -52,7 +57,7 @@ $( document ).ready(function() {
     var myCircle3 = Circles.create({
         id: 'circles-3',
         radius: 60,
-        value: Math.ceil(algebraCorrect/(algebraCorrect + algebraError)*100),
+        value: Math.ceil(algebraCorrect/algebraTotal*100),
         maxValue: 100,
         width: 10,
         text: function(value) {
@@ -71,7 +76,7 @@ $( document ).ready(function() {
     var myCircle4 = Circles.create({
         id: 'circles-4',
         radius: 60,
-        value: Math.ceil(dataCorrect/(dataCorrect + dataError)*100),
+        value: Math.ceil(dataCorrect/dataTotal *100),
         maxValue: 100,
         width: 10,
         text: function(value) {
