@@ -1114,19 +1114,157 @@ app.get('/help', function(req,res){
 app.get('/TrueOrFalse', function(req,res){
     res.render('TorF.ejs')
 })
-
-app.get('/papers/KWA', isLoggedIn, function (req, res) {
+//pastpapers
+app.get('/pastpapers/stpaulsA', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('papers/kingsWimA', {
+            res.render('pastpapers/stpaulsA', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/pastpapers/habs2008', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/habs2008', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/pastpapers/KWA', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/kingsWimA', {
                 user: user
             })
         }
     });
 })
 
+app.get('/pastpapers/magdalen', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/mag', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/pastpapers/stpaulsC', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/stpaulsC', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/pastpapers/mgs18B', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/mgs18B', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/pastpapers/mgs18A', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/mgs18A', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/perse', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/perse', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/londoncollegiate15', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/londoncollegiate15', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/whitgift', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/whitgift', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/stgeorgeascotA', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/stgeorgeascotA', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/stgeorgeweybridge', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/stgeorgeweybridge', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/pastpapers/jags', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('pastpapers/jags', {
+                user: user
+            })
+        }
+    });
+})
 app.get('/papers/KWA1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {

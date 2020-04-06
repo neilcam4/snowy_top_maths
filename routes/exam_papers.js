@@ -16,8 +16,8 @@ router.get('/pastpapersfree', function (req, res) {
 
 
 
-router.get('/stpaulsA', function (req, res) {
-    res.render('stpaulA');
+router.get('pastpapers/stpaulsA', function (req, res) {
+    res.render('pastpapers/kingsWimA');
 });
 
 // router.get('/habs2008', isLoggedIn, function (req, res) {
@@ -28,7 +28,7 @@ router.get('/aboutus', function (req, res) {
     res.render('about');
 });
 
-router.get('papers/KingsWimA', isLoggedIn, function (req, res) {
+router.get('pastpapers/KingsWimA', isLoggedIn, function (req, res) {
     res.render('papers/kingsWimA');
 });
 router.get('/magdalen', isLoggedIn, function (req, res) {
