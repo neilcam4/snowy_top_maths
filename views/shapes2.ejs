@@ -485,94 +485,131 @@
         if (slideIndex == 2 && question2 == 10) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
             //third question
         } else if (slideIndex == 3 && question3 == 100) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //first question
         else if (slideIndex == 1 && question1 == 5) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //4th question 
         else if (slideIndex == 4 && question4 == 6) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //5th question 
         else if (slideIndex == 5 && question5 == 15) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //6th question
         else if (slideIndex == 6 && question6 == 144) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //7th question
         else if (slideIndex == 7 && question7 == 10) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //8th question
         else if (slideIndex == 8 && question8 == 15) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //9th question
         else if (slideIndex == 9 && question9 == 160) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //10th question
         else if (slideIndex == 10 && question10 == 9) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //11th question
         else if (slideIndex == 11 && question11 == 18) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //12th question
         else if (slideIndex == 12 && question12 == 180) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //13th question
         else if (slideIndex == 13 && question13 == 11) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //14th question
         else if (slideIndex == 14 && question14 == 33) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //15th question
         else if (slideIndex == 15 && question15 == 108) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //16th question
         else if (slideIndex == 16 && question16 == 12) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //17th question
         else if (slideIndex == 17 && question17 == 15) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         }
         //18th question
         else if (slideIndex == 18 && question18 == 168) {
             checkAnswer30();
             showTicks30();
+            questionCounter();
+            shapeCounterUp();
         } else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
+            shapeError()
         }
 });
 $("#button").click(function () {
@@ -580,20 +617,20 @@ $("#button").click(function () {
     if(correct > 5 && correct < 10){
         addBronze()
         trackProgress18()
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 9 && correct < 16){
         addSilver()
         trackProgress18();
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct > 15){
         addGold();
         trackProgress18();
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
-    } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct <= 5){
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })

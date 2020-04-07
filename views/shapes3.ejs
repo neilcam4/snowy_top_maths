@@ -226,34 +226,47 @@ $("#button1").click(function () {
     if (slideIndex == 2 && question2 == 94) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == 30) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == 144) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == 21.5) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == 60) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == 63) {
         checkAnswer20();
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
     } else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = " Not Yet";
+        shapeError()
     }
 });
 $("#button").click(function () {
@@ -261,20 +274,20 @@ $("#button").click(function () {
     if(correct === 3){
         addBronze()
         trackProgress6()
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 20}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 3 && correct <6){
         addSilver();
         trackProgress6();
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 20}`;
     } else if(correct === 6){
         addGold();
         trackProgress6();
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 20}`;
     } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("points").textContent = `Points: ${correct * 20}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })
