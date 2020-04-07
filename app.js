@@ -285,15 +285,14 @@ app.get('/sequences', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/data2', isLoggedIn, function (req, res) {
+app.get('/problemsolving/data2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('data2', {
+            res.render('problemsolving/data2', {
                 user: user
             })
-            console.log(user)
         }
     });
 })
@@ -306,366 +305,205 @@ app.get('/data3', isLoggedIn, function(req,res){
         }
     })   
 })
-app.get('/data3', isLoggedIn, function (req, res) {
+
+app.get('/problemsolving/time1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('data3', {
+            res.render('problemsolving/time1', {
                 user: user
             })
         }
     });
 })
 
-app.get('/data4', isLoggedIn, function (req, res) {
+app.get('/problemsolving/time2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('data4', {
+            res.render('problemsolving/time2', {
                 user: user
             })
         }
     });
 })
 
-app.get('/time1', isLoggedIn, function (req, res) {
+app.get('/problemsolving/time3', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('time1', {
+            res.render('problemsolving/time3', {
                 user: user
             })
         }
     });
 })
 
-app.get('/time2', isLoggedIn, function (req, res) {
+app.get('/problemsolving/time4', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('time2', {
+            res.render('problemsolving/time4', {
                 user: user
             })
         }
     });
 })
 
-app.get('/time3', isLoggedIn, function (req, res) {
+app.get('/problemsolving/time5', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('time3', {
+            res.render('problemsolving/time5', {
                 user: user
             })
         }
     });
 })
 
-app.get('/time4', isLoggedIn, function (req, res) {
+app.get('/problemsolving/addsubtract', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('time4', {
+            res.render('problemsolving/addsubtract', {
                 user: user
             })
         }
     });
 })
-
-app.get('/time5', isLoggedIn, function (req, res) {
+app.get('/problemsolving/addsubtract1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('time5', {
+            res.render('problemsolving/addsubtract1', {
                 user: user
             })
         }
     });
 })
 
-
-
-app.get('/addsubtract', isLoggedIn, function (req, res) {
+app.get('/problemsolving/percentages1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('addsubtract', {
+            res.render('problemsolving/percentages1', {
                 user: user
             })
         }
     });
 })
-app.get('/addsubtract1', isLoggedIn, function (req, res) {
+
+app.get('/problemsolving/wordedalgebra1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('addsubtract1', {
+            res.render('problemsolving/wordedalgebra1', {
                 user: user
             })
         }
     });
 })
 
-app.get('/multdiv', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user,page) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('multdiv', {
-                user: user
-            })
-        }
-    });
-})
-
-app.get('/fractions', isLoggedIn, function (req, res) {
+app.get('/problemsolving/wordedalgebra2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('fractions', {
+            res.render('problemsolving/wordedalgebra2', {
                 user: user
             })
-
         }
     });
 })
-app.get('/percentages', isLoggedIn, function (req, res) {
+
+app.get('/problemsolving/wordedalgebra3', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('percentages', {
+            res.render('problemsolving/wordedalgebra3', {
                 user: user
             })
 
         }
     });
 })
-app.get('/percentages1', isLoggedIn, function (req, res) {
+
+app.get('/problemsolving/wordedalgebra4', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('percentages1', {
+            res.render('problemsolving/wordedalgebra4', {
                 user: user
             })
         }
     });
 })
-app.get('/decimals', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('decimals', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/equations', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('equations', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/addsubtract1', isLoggedIn, function (req, res) {
-    config;
-    User.findById(req.params.id, function (err, user, config) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('addsubtract1', {
-                user: user,
-                config: config
-            })
-
-        }
-    });
-})
-app.get('/addsubtract2', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('addsubtract2', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/wordedalgebra', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('wordedalgebra', {
-                user: user
-            })
-
-        }
-    });
-})
-
-app.get('/wordedalgebra1', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('wordedalgebra1', {
-                user: user
-            })
-
-        }
-    });
-})
-
-app.get('/wordedalgebra2', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('wordedalgebra2', {
-                user: user
-            })
-
-        }
-    });
-})
-
-app.get('/wordedalgebra3', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('wordedalgebra3', {
-                user: user
-            })
-
-        }
-    });
-})
-
-app.get('/wordedalgebra4', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('wordedalgebra4', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/wordedalgebra5', isLoggedIn, function (req, res) {
+app.get('/problemsolving/wordedalgebra5', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user, testFunction) {
         if (err) {
             console.log(err);
         } else {
-            res.render('wordedalgebra5', 
+            res.render('problemsolving/wordedalgebra5', 
             {
                 user: user,
                 testFunction: testFunction
             })
-
         }
     });
 })
-app.get('/area', isLoggedIn, function (req, res) {
+
+app.get('/problemsolving/volume', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('area', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/perimeter', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('perimeter', {
+            res.render('problemsolving/volume', {
                 user: user
             })
 
         }
     });
 })
-app.get('/volume', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('volume', {
-                user: user
-            })
 
-        }
-    });
-})
-app.get('/properties', isLoggedIn, function (req, res) {
+app.get('/problemsolving/piecharts', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('properties', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/piecharts', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('piecharts', {
+            res.render('problemsolving/piecharts', {
                 user: user
             })
         }
     });
 })
-app.get('/barcharts', isLoggedIn, function (req, res) {
+app.get('/problemsolving/barcharts', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('piecharts2', {
+            res.render('problemsolving/piecharts2', {
                 user: user
             })
         }
     });
 })
-app.get('/averages', isLoggedIn, function (req, res) {
+app.get('/problemsolving/averages', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('averages', {
+            res.render('problemsolving/averages', {
                 user: user
             })
 
@@ -686,12 +524,12 @@ app.get('/averages1', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/averages2', isLoggedIn, function (req, res) {
+app.get('/problemsolving/averages2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('averages2', {
+            res.render('problemsolving/averages2', {
                 user: user
             })
 
@@ -699,12 +537,13 @@ app.get('/averages2', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/prime', isLoggedIn, function (req, res) {
+
+app.get('/problemsolving/prime1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('prime', {
+            res.render('problemsolving/prime1', {
                 user: user
             })
 
@@ -712,64 +551,25 @@ app.get('/prime', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/prime1', isLoggedIn, function (req, res) {
+app.get('/problemsolving/prime2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('prime1', {
+            res.render('problemsolving/prime2', {
                 user: user
             })
-
         }
     });
 })
 
-app.get('/prime2', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('prime2', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/prime3', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('prime3', {
-                user: user
-            })
-
-        }
-    });
-})
-
-app.get('/prime4', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('prime4', {
-                user: user
-            })
-
-        }
-    });
-})
-
-app.get('/multdiv1', isLoggedIn, function (req, res) {
+app.get('/problemsolving/multdiv1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
             console.log(user)
-            res.render('multdiv1', {
+            res.render('problemsolving/multdiv1', {
                 user: user
             })
             console.log("user is here" + user)
@@ -777,36 +577,36 @@ app.get('/multdiv1', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/multdiv2', isLoggedIn, function (req, res) {
+app.get('/problemsolving/multdiv2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('multdiv2', {
+            res.render('problemsolving/multdiv2', {
                 user: user
             })
         }
     });
 })
 
-app.get('/multdiv3', isLoggedIn, function (req, res) {
+app.get('/problemsolving/multdiv3', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('multdiv3', {
+            res.render('problemsolving/multdiv3', {
                 user: user
             })
         }
     });
 })
 
-app.get('/multdiv4', isLoggedIn, function (req, res) {
+app.get('/problemsolving/multdiv4', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('multdiv4', {
+            res.render('problemsolving/multdiv4', {
                 user: user
             })
 
@@ -814,160 +614,125 @@ app.get('/multdiv4', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/multdiv5', isLoggedIn, function (req, res) {
+app.get('/problemsolving/multdiv5', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('multdiv5', {
+            res.render('problemsolving/multdiv5', {
                 user: user
             })
         }
     });
 })
-app.get('/sequences1', isLoggedIn, function (req, res) {
+app.get('/problemsolving/sequences1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('sequences1', {
-                user: user
-            })
-        }
-    });
-})
-
-app.get('/sequences2', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('sequences2', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/sequences3', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('sequences3', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/sequences4', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('sequences4', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/fractions1', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('fractions1', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/fractions2', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('fractions2', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/fractions3', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('fractions3', {
+            res.render('problemsolving/sequences1', {
                 user: user
             })
         }
     });
 })
 
+app.get('/problemsolving/sequences2', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/sequences2', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/sequences3', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/sequences3', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/sequences4', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/sequences4', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/fractions1', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/fractions1', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/fractions2', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/fractions2', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/fractions3', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/fractions3', {
+                user: user
+            })
+        }
+    });
+})
 
-app.get('/ratio', isLoggedIn, function (req, res) {
+app.get('/problemsolving/ratio1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('ratio', {
-                user: user
-            })
-
-        }
-    });
-})
-app.get('/ratio1', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('ratio1', {
+            res.render('problemsolving/ratio1', {
                 user: user
             })
         }
     });
 })
-app.get('/ratio3', isLoggedIn, function (req, res) {
+app.get('/problemsolving/ratio3', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('ratio3', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/ratio4', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('ratio4', {
-                user: user
-            })
-        }
-    });
-})
-app.get('/ratio5', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('ratio5', {
+            res.render('problemsolving/ratio3', {
                 user: user
             })
         }
     });
 })
 
-app.get('/squares1', isLoggedIn, function (req, res) {
+app.get('/problemsolving/squares1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('squares1', {
+            res.render('problemsolving/squares1', {
                 user: user
             })
         }
@@ -1010,63 +775,62 @@ app.get('/squares4', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/shapes1', isLoggedIn, function (req, res) {
+app.get('/problemsolving/shapes1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('shapes1', {
+            res.render('problemsolving/shapes1', {
                 user: user
             })
         }
     });
 })
 
-app.get('/shapes2', isLoggedIn, function (req, res) {
+app.get('/problemsolving/shapes2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('shapes2', {
+            res.render('problemsolving/shapes2', {
                 user: user
             })
         }
     });
 })
 
-app.get('/shapes3', isLoggedIn, function (req, res) {
+app.get('/problemsolving/shapes3', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('shapes3', {
+            res.render('problemsolving/shapes3', {
                 user: user
             })
         }
     });
 })
 
-app.get('/shapes4', isLoggedIn, function (req, res) {
+app.get('/problemsolving/shapes4', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('shapes4', {
+            res.render('problemsolving/shapes4', {
                 user: user
             })
         }
     });
 })
 
-app.get('/shapes5', isLoggedIn, function (req, res) {
+app.get('/problemsolving/shapes5', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            res.render('shapes5', {
+            res.render('problemsolving/shapes5', {
                 user: user
             })
-
         }
     });
 })
