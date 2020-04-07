@@ -1,0 +1,377 @@
+<% include ../partials/header %>
+<!--   Video        -->
+<div id="video" style="text-align: center">
+    <div class="col-md-6" style="display:inline-block">
+        <h3 class="text-center">Volume and Surface Area</h3>
+        <div class="card card-info-inverse">
+            <div class="card-header">
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
+            </div>
+            <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay"
+                class="video-player-container vooplayer" data-playerId="MTYyOTcx" allowtransparency="true"
+                style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params=""
+                frameborder="0" scrolling="no"> </iframe>
+
+            <div class="card-body overflow-hidden text-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <p id="userId"><%=currentUser.id %> </p>
+</div>
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> </p>
+            <p> Each question is worth 30 points. All measurements are in cm.</p>
+        </div>
+    </div>
+</div>
+<div style="text-align: center">
+    <div class="card card-royal col-md-6" style="display:inline-block">
+        <!--        First question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 id="header" class="card-title">1a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz1">
+                    <p class="q">If the volume = 120cm&#179;, find the height</p><img src="img/volume/vol1b.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter height.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--     2nd question                -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">1b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz2">
+                    <p class="q">Using your answer from 1a, find the surface area of the cuboid</p><img
+                        src="img/volume/vol1b.png" alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter surface area.." name="question1">
+                        <div class="ui basic label">
+                            cm&#178;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   3rd question       -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">1c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz3">
+                    <p class="q"> Find the volume of this cuboid in cm &#179;</p><img src="img/volume/vol1aa.png" alt=""
+                        class="img-fluid">
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="" name="question1">
+                        <div class="ui basic label">
+                            cm &#179;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--4th question        -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz4">
+                    <p class="q">If the volume = 576 cm &#179;, find the missing length</p><img
+                        src="img/volume/vol2a.png" alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--    5th question    -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz5">
+                    <p class="q">Using your answer in 2a, find the surface area for the cuboid in cm&#178;<img
+                            src="img/volume/vol2.png" alt="" class="img-fluid"></p><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter surface area.." name="question1">
+                        <div class="ui basic label">
+                            cm&#178;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   6th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz6">
+                    <p class="q">If the sides of a cuboid have a surface area of 28cm&#178;, 35cm&#178; and
+                        20cm&#178;,find the volume of the cuboid in cm&#179;</p><img src="img/volume/volnew.png" alt=""
+                        class="img-fluid">
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="" name="question1">
+                        <div class="ui basic label">
+                            cm&#179;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--7th question        -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz7">
+                    <p class="q">If the volume = 216cm&#179;, find the missing length<img src="img/volume/vol3aa.png"
+                            alt="" class="img-fluid"></p><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--    8th question    -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz8">
+                    <p class="q">Using your answer in 3a, find the surface area for the cuboid in cm&#178;</p><img
+                        src="img/volume/vol3aa.png" alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter area.." name="question1">
+                        <div class="ui basic label">
+                            cm&#178;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   9th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz9">
+                    <p class="q">If the sides of a cuboid have a surface area of 35cm&#178;, 45cm&#178; and
+                        63cm&#178;,find the volume of the cuboid in cm&#179;</p><img src="img/volume/volnew.png" alt=""
+                        class="img-fluid"><br>
+
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter volume.." name="question1">
+                        <div class="ui basic label">
+                            cm&#179;
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--        buttons-->
+        <div class="container">
+            <div class="row" style="margin: 0 auto">
+                <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
+                <button type="button" id="next1" class="btn btn-primary btn-raised" onclick="plusSlides(1)"> Next
+                </button>
+                <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal"
+                    data-target="#myModal4"> Total Score </button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 0 auto">
+                <span id="tick" class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                </span>
+                <span id="wrong" class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                </span>
+            </div>
+        </div>
+
+
+        <div id="msg"></div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+
+
+        </div>
+        <!-- last 2 divs from top of card-->
+    </div>
+</div>
+<div id="example"></div>
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3> <button
+                    type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success alert-light " role="alert">
+                    <p id="badge"></p>
+                </div>
+                <div class="alert alert-danger alert-light " role="alert">
+                    <p id="points"></p>
+                </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#example").load("./config");
+    var correct = 0;
+
+    $("#button1").click(function () {
+        var question1 = document.quiz1.question1.value;
+        var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        var question4 = document.quiz4.question1.value;
+        var question5 = document.quiz5.question1.value;
+        var question6 = document.quiz6.question1.value;
+        var question7 = document.quiz7.question1.value;
+        var question8 = document.quiz8.question1.value;
+        var question9 = document.quiz9.question1.value;
+        //2nd question
+        if (slideIndex == 2 && question2 == 148) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+            //third question
+        } else if (slideIndex == 3 && question3 == 90) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //first question
+        else if (slideIndex == 1 && question1 == 6) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //4th question 
+        else if (slideIndex == 4 && question4 == 12) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //5th question 
+        else if (slideIndex == 5 && question5 == 432) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //6th question
+        else if (slideIndex == 6 && question6 == 140) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //7th question
+        else if (slideIndex == 7 && question7 == 6) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //8th question
+        else if (slideIndex == 8 && question8 == 232) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //9th question
+        else if (slideIndex == 9 && question9 == 315) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        } else {
+            document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent = " Not Yet";
+            shapeError();
+        }
+        document.getElementById("badge").textContent = `${correct} out of 9`; 
+        document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
+});
+$("#button").click(function () {
+    document.getElementById("badge").textContent = `${correct} out of 9`; 
+    if(correct > 3 && correct < 6){
+        addBronze()
+        trackProgress9()
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
+    } else if (correct > 5 && correct < 8){
+        addSilver();
+        trackProgress9();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct > 7){
+        addGold();
+        trackProgress9();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct < 3){
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
+        document.getElementById("medal").textContent = `Try again to earn a Medal!`;
+    }
+ })
+    $("input").attr("maxlength", 5)
+</script>
+<% include ../partials/footer %>

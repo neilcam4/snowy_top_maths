@@ -1,13 +1,27 @@
 
 
 $( document ).ready(function() {
-    var numbersCorrect = $("#numberCorrect").text()
+    var numbersCorrect = parseInt($("#numberCorrect").text())
+    var shapeCorrect = parseInt($("#shapeCorrect").text())
+    var algebraCorrect = parseInt($("#algebraCorrect").text())
+    var dataCorrect = parseInt($("#dataCorrect").text())
+    var numbersError = parseInt($("#numberError").text())
+    var shapeError = parseInt($("#shapeError").text())
+    var algebraError = parseInt($("#algebraError").text())
+    var dataError = parseInt($("#dataError").text())
+    let numberTotal = (numbersCorrect+numbersError);
+    let shapeTotal = shapeCorrect + shapeError;
+    let algebraTotal = algebraCorrect + algebraError;
+    let dataTotal = dataCorrect + dataError;
+
     var myCircle = Circles.create({
+
+        //number correct
         id: 'circles-1',
         radius: 60,
-        value: numbersCorrect,
+        value: Math.ceil(numbersCorrect/numberTotal*100),
         maxValue: 100,
-        width: 5,
+        width: 10,
         text: function(value) {
             return value + '%';
         },
@@ -20,13 +34,13 @@ $( document ).ready(function() {
         styleWrapper: true,
         styleText: true
     });
-
+    //shape and space
     var myCircle2 = Circles.create({
         id: 'circles-2',
         radius: 60,
-        value: 60,
+        value: Math.ceil(shapeCorrect/shapeTotal*100),
         maxValue: 100,
-        width: 5,
+        width: 10,
         text: function(value) {
             return value + '%';
         },
@@ -39,13 +53,13 @@ $( document ).ready(function() {
         styleWrapper: true,
         styleText: true
     });
-
+//algebra correct
     var myCircle3 = Circles.create({
         id: 'circles-3',
         radius: 60,
-        value: 80,
+        value: Math.ceil(algebraCorrect/algebraTotal*100),
         maxValue: 100,
-        width: 5,
+        width: 10,
         text: function(value) {
             return value + '%';
         },
@@ -58,13 +72,13 @@ $( document ).ready(function() {
         styleWrapper: true,
         styleText: true
     });
-
+    //data circle
     var myCircle4 = Circles.create({
         id: 'circles-4',
         radius: 60,
-        value: 100,
+        value: Math.ceil(dataCorrect/dataTotal *100),
         maxValue: 100,
-        width: 5,
+        width: 10,
         text: function(value) {
             return value + '%';
         },
@@ -77,11 +91,11 @@ $( document ).ready(function() {
         styleWrapper: true,
         styleText: true
     });
-
+    //data circle
     var myCircle5 = Circles.create({
         id: 'circles-5',
         radius: 60,
-        value: 43,
+        value: dataCorrect,
         maxValue: 100,
         width: 10,
         text: function(value) {
@@ -153,7 +167,7 @@ $( document ).ready(function() {
         styleWrapper: true,
         styleText: true
     });
-
+//number correct
     var myCircle9 = Circles.create({
         id:         'circles-9',
         radius:     60,

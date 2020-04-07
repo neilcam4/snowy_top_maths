@@ -1,8 +1,38 @@
 <% include ./partials/header %> 
-<div class="container">
-<h1><%=user.username%>'s Progress Summary</h1>
-</div>
 
+<div class="ms-footer">
+  <div class="col-lg-9 ms-paper-content-container">
+  <div class="ms-paper-content">
+    <h1><%=user.username%>'s</h1>
+    <section class="ms-component-section">
+      <h2 class="section-title"> My Badges</h2>
+      <div class="row mt-4">
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center">
+            <div class="circle" id="circles-9"></div>
+            <h3 class="color-primary">Number</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center">
+            <div class="circle" id="circles-2"></div>
+            <h3 class="color-primary">Shape and Space</h3>
+          </div>
+        </div>
+    <div class="col-lg-3 col-sm-6">
+      <div class="text-center">
+        <div class="circle" id="circles-3"></div>
+        <h3 class="color-primary">Algebra</h3>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+      <div class="text-center">
+        <div class="circle" id="circles-4"></div>
+        <h3 class="color-primary">Data</h3>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="col-lg-12">
 <div class="row">
         <div class="col-sm-4">
@@ -46,6 +76,96 @@
   </div>
   <% }) %>
 </div>
+<div class="container">
+  <div class="card card-primary animated fadeInUp animation-delay-12">
+                <table class="table table-no-border table-striped">
+                  <tr>
+                    <th>
+                      <i class="zmdi zmdi-account mr-1 color-success"></i> Name</th>
+                    <td><%=currentUser.username%></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Points</th>
+                    <td>
+                      <%=currentUser.score%>
 
-
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Progress</th>
+                    <td>
+                      <%=Math.ceil(currentUser.score/12000 *100)%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Questions Attempted</th>
+                    <td>
+                      <%= currentUser.questions%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
+                    <td id="numberCorrect">
+                      <%= currentUser.number%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Correct</th>
+                    <td>
+                      <%= currentUser.shape%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Correct</th>
+                    <td>
+                      <%= currentUser.algebra%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Correct</th>
+                    <td>
+                      <%= currentUser.data%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Wrong</th>
+                    <td>
+                      <%= currentUser.numberError%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Wrong</th>
+                    <td>
+                      <%= currentUser.shapeError%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Wrong</th>
+                    <td>
+                      <%= currentUser.algebraError%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Wrong</th>
+                    <td>
+                      <%= currentUser.dataError%>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>     
 <% include ./partials/footer %>
