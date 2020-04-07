@@ -219,11 +219,11 @@ app.get('/problemsolving/menu', function(req,res){
     })
 })
 
-// app.get('/basics/index, function(req,res){
-//     User.findById(req.params.id, function(err, user){
-//         res.render('basics/index',{user:user})
-//     })
-// })
+app.get('/basics/index', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/index',{user:user})
+    })
+})
 
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){

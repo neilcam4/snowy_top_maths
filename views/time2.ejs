@@ -290,20 +290,20 @@ $("#button").click(function () {
     if(correct === 3){
         addBronze()
         trackProgress6()
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 3 && correct <6){
         addSilver()
         trackProgress6()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct === 6){
         addGold()
         trackProgress6()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })

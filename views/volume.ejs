@@ -268,48 +268,6 @@
 </div>
 <script>
     $("#example").load("./config");
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-        document.getElementById("tick").style.visibility = "hidden";
-        document.getElementById("wrong").style.visibility = "hidden";
-        document.getElementById("msg").style.visibility = "hidden";
-
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        if (slideIndex == 9) {
-            document.getElementById("next1").style.visibility = "hidden";
-        }
-    }
     var correct = 0;
 
     $("#button1").click(function () {
@@ -392,6 +350,28 @@
         document.getElementById("badge").textContent = `${correct} out of 9`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 30} points!`;
 });
+$("#button").click(function () {
+    document.getElementById("badge").textContent = `${correct} out of 9`; 
+    if(correct > 3 && correct < 6){
+        addBronze()
+        trackProgress9()
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
+    } else if (correct > 5 && correct < 8){
+        addSilver();
+        trackProgress9();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct > 7){
+        addGold();
+        trackProgress9();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct < 3){
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
+        document.getElementById("medal").textContent = `Try again to earn a Medal!`;
+    }
+ })
     $("input").attr("maxlength", 5)
 </script>
 <% include ./partials/footer %>

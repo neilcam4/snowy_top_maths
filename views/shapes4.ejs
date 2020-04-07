@@ -412,96 +412,133 @@ $("#button1").click(function(){
        if(slideIndex==2&&question2 == 4){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
            //third question
   } else if(slideIndex==3&&question3 == 16){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   }
         //first question
          else if(slideIndex==1&&question1 == 64){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //4th question 
         else if(slideIndex==4&&question4 == 384){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //5th question 
         else if(slideIndex==5&&question5 == 24){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //6th question
         else if(slideIndex==6&&question6 == 16){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //7th question
         else if(slideIndex==7&&question7 == 270){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
     //8th question
         else if(slideIndex==8&&question8 == 10){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   }     
         //9th question
         else if(slideIndex==9&&question9 == 27){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //10th question
         else if(slideIndex==10&&question10 == 48){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //11th question
         else if(slideIndex==11&&question11 == 6){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //12th question
         else if(slideIndex==12&&question12 == 8){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //13th question
         else if(slideIndex==13&&question13 == 64){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
             //14th question
         else if(slideIndex==14&&question14 == 32){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //15th question
         else if(slideIndex==15&&question15 == 8){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //16th question
         else if(slideIndex==16&&question16 == 4){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //17th question
         else if(slideIndex==17&&question17 == 5){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         //18th question
         else if(slideIndex==18&&question18 == 12){
         checkAnswer20();     
         showTicks20();
+        questionCounter();
+        shapeCounterUp();
   } 
         else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Not Yet"; 
-  } 
+            shapeError()
+          } 
     
         document.getElementById("badge").textContent = `${correct} out of 18`; 
         document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
@@ -523,7 +560,7 @@ $("#button").click(function () {
       trackProgress18();
       document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
       document.getElementById("points").textContent = `Points:  ${correct * 20}`;
-  } else if(correct < 3){
+  } else if(correct <= 5){
       document.getElementById("points").textContent = `Points: ${correct * 20}!`
       document.getElementById("medal").textContent = `Try again to earn a Medal!`;
   }
