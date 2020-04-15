@@ -6,6 +6,7 @@ var methodOverride = require('method-override');
 var flash = require('connect-flash');
 var LocalStrategy = require('passport-local');
 var passport = require('passport');
+var fs = require('fs');
 var passportLocalMongoose = require('passport-local-mongoose');
 // var User = require('./models/user');
 // var Quiz = require('./models/quiz');
@@ -25,6 +26,33 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(flash());
+app.enable('trust proxy');
+// mongoose.connect("mongodb://neilcam4:Wanaka10@ds115283.mlab.com:15283/maths_app", { useNewUrlParser: true });
+
+mongoose.set('useFindAndModify', false);
+
+app.use(express.static('public'));
+let port = 3000;
+
+require('https').createServer({
+    key: fs.readFileSync('snowytopmaths.co.uk.key','utf8'),
+    cert: fs.readFileSync('8c0c3151b93843bd.crt','utf8'),
+    ca: [fs.readFileSync('gd_bundle_g1.crt','utf8'),
+        fs.readFileSync('gd_bundle_g2.crt','utf8'),
+        fs.readFileSync('gd_bundle_g3.crt','utf8')] // <----- note this part
+}, app).listen(443);
+
+app.use (function (req, res, next) {
+        if (req.secure) {
+                // request was via https, so do no special handling
+                next();
+        } else {
+                // request was via http, so redirect to https
+                res.redirect('https://' + req.headers.host 
+                + req.url);
+        }
+});
+
 app.use(expressSanitizer());
 app.use(bodyParser.json())
 app.use(methodOverride("_method"));
@@ -39,7 +67,7 @@ let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
 let MONGODB_KEY = process.env.MONGODB_KEY
 app.use(require('express-session')({
-    secret: EXPRESS_SECRET,
+    secret: 'Wanaka268775gjsdgfsd',
     resave: false,
     saveUninitialized: false
 }));
@@ -78,7 +106,9 @@ var userSchema = mongoose.Schema({
 });
 userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 var User = mongoose.model("User", userSchema);
-
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(function (req, res, next) {
@@ -86,14 +116,8 @@ app.use(function (req, res, next) {
     res.locals.message = req.flash("error");
     next();
 });
-mongoose.set('useFindAndModify', false);
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-app.use(express.static('public'));
-let port = 3000;
 app.enable('trust proxy');
-mongoose.connect(MONGODB_KEY, {
+mongoose.connect("mongodb://neilcam4:Wanaka10@ds115283.mlab.com:15283/maths_app", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     } || "mongodb://localhost/maths_app")
