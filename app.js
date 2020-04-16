@@ -34,25 +34,6 @@ mongoose.set('useFindAndModify', false);
 app.use(express.static('public'));
 let port = 3000;
 
-require('https').createServer({
-    key: fs.readFileSync('snowytopmaths.co.uk.key','utf8'),
-    cert: fs.readFileSync('8c0c3151b93843bd.crt','utf8'),
-    ca: [fs.readFileSync('gd_bundle_g1.crt','utf8'),
-        fs.readFileSync('gd_bundle_g2.crt','utf8'),
-        fs.readFileSync('gd_bundle_g3.crt','utf8')] // <----- note this part
-}, app).listen(443);
-
-app.use (function (req, res, next) {
-        if (req.secure) {
-                // request was via https, so do no special handling
-                next();
-        } else {
-                // request was via http, so redirect to https
-                res.redirect('https://' + req.headers.host 
-                + req.url);
-        }
-});
-
 app.use(expressSanitizer());
 app.use(bodyParser.json())
 app.use(methodOverride("_method"));
