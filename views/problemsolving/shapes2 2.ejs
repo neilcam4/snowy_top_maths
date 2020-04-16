@@ -1,0 +1,639 @@
+<% include ../partials/header %>
+
+<!--   Video        -->
+<div id="video" style="text-align: center">
+    <div class="col-md-6" style="display:inline-block">
+        <h3 class="text-center" id="heading">Area and Perimeter Problems with Squares and Rectangles</h3>
+        <div class="card card-info-inverse">
+            <div class="card-header">
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
+            </div>
+            <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay"
+                class="video-player-container vooplayer" data-playerId="MTQ3MDUx" allowtransparency="true"
+                style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params=""
+                frameborder="0" scrolling="no"> </iframe>
+
+            <div class="card-body overflow-hidden text-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <p id="userId"><%=currentUser.id %> </p>
+</div>
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> </p>
+            <p> Each question is worth 20 points.</p>
+        </div>
+    </div>
+</div>
+<div style="text-align: center">
+    <div class="card card-royal col-md-6" style="display:inline-block">
+        <!--        First question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 id="header" class="card-title">1a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz1">
+                    <p>Here is a cross made out of 4 identical rectangles. If the pink shaded square in the middle of
+                        the cross is 25cm&#178;. Find the length of the square.</p><img src="img/area1/area1A.png"
+                        alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--     2nd question                -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">1b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz2">
+                    <p>The area of the cross (shaded blue) is 8 times the area of the pink square in the middle. What is
+                        the other length of the rectangle.</p><img src="img/area1/area1A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   3rd question       -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">1c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz3">
+                    <p>Use your answers from 1a and 1b.</p>
+                    <p>What is the total perimeter of the shape shaded blue (4 blue rectangles), in cm?</p>
+                    <img src="img/area1/area1A.png" alt="" class="img-fluid">
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter perimeter.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--4th question        -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz4">
+                    <p>Here is a cross made out of 4 identical rectangles. If the pink shaded square in the middle of
+                        the cross is 36cm&#178;. Find the length of the square.<img src="img/area1/area2A.png" alt=""
+                            class="img-fluid"></p><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--    5th question    -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz5">
+                    <p>The area of the cross (shaded blue) is 10 times the area of the pink square in the middle. What
+                        is the other length of the rectangle?</p><img src="img/area1/area2A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   6th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz6">
+                    <p>What is the total perimeter of the blue shape made by the 4 rectangles?</p><img
+                        src="img/area1/area2A.png" alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--7th question        -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz7">
+                    <p>Here is a cross made out of 4 identical rectangles. If the pink shaded square in the middle of
+                        the cross is 100cm&#178;. Find the length of the square.</p> <img src="img/area1/area3A.png"
+                        alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--    8th question    -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz8">
+                    <p>Use your answer from 3a.</p>
+                    <p>This diagram is not drawn to scale.Use the numbers and follow the method as described in the
+                        value.</p>
+                    <p>The area of the cross (shaded blue) is 6 times the area of the pink square in the middle.</p>
+                    <p>What is the other length of the rectangle?</p><img src="img/area1/area3A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   9th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz9">
+                    <p>Using your answers from 3a and 3b, answer the following.</p>
+                    <p>What is the total perimeter of the blue cross?</p><img src="img/area1/area3A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   10th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">4a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz10">
+                    <p>Here is a cross made out of 4 identical rectangles. If the pink shaded square in the middle of
+                        the cross is 81cm&#178;. Find the length of the square.</p><img src="img/area1/area4A.png"
+                        alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--   11th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">4b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz11">
+                    <p>The area of the cross (shaded blue) is 8 times the area of the pink square in the middle. What is
+                        the other length of the rectangle?</p><img src="img/area1/area4A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        12th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">4c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz12">
+                    <p>Using your answers from 4a and 4b, answer the following.</p>
+                    <p>What is the total perimeter of the blue cross?</p><img src="img/area1/area4A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        13th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">5a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz13">
+                    <p>Here is a cross made out of 4 identical rectangles. If the pink shaded square in the middle of
+                        the cross is 121cm&#178;. Find the length of the square.</p><img src="img/area1/area5A.png"
+                        alt="" class="img-fluid"> <br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        14th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">5b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz14">
+                    <p>Use your answer from 5a.</p>
+                    <p>This diagram is not drawn to scale.Use the numbers and follow the method as described in the
+                        value.</p>
+                    <p>The area of the cross (shaded blue) is 12 times the area of the pink square in the middle. What
+                        is the other length of the rectangle?</p><img src="img/area1/area5A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        15th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">5c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz15">
+                    <p>Using your answers from 5a and 5b, answer the following.</p>
+                    <p>What is the total perimeter of the blue cross?</p><img src="img/area1/area5A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        16th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">6a.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz16">
+                    <p>Here is a cross made out of 4 identical rectangles. If the pink shaded square in the middle of
+                        the cross is 144cm&#178;. Find the length of the square.</p><img src="img/area1/area6A.png"
+                        alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        17th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">6b.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz17">
+                    <p>The area of the cross (shaded blue) is 5 times the area of the pink square in the middle. What is
+                        the other length of the rectangle?</p><img src="img/area1/area6A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter length.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        18th question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">6c.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz18">
+                    <p>What is the total perimeter of the blue cross?</p><img src="img/area1/area6A.png" alt=""
+                        class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter perimeter.." name="question1">
+                        <div class="ui basic label">
+                            cm
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--        buttons-->
+        <div class="container">
+            <div class="row" style="margin: 0 auto">
+                <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
+                <button type="button" id="next1" class="btn btn-primary btn-raised" onclick="plusSlides(1)"> Next
+                </button>
+                <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal"
+                    data-target="#myModal4"> Total Score </button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 0 auto">
+                <span id="tick" class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                </span>
+                <span id="wrong" class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                </span>
+            </div>
+        </div>
+
+
+        <div id="msg"></div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(15)"></span>
+            <span class="dot" onclick="currentSlide(16)"></span>
+            <span class="dot" onclick="currentSlide(17)"></span>
+            <span class="dot" onclick="currentSlide(18)"></span>
+
+
+
+        </div>
+        <!-- last 2 divs from top of card-->
+    </div>
+</div>
+<div id="example"></div>
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3> <button
+                    type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success alert-light " role="alert">
+                    <p id="badge"></p>
+                </div>
+                <div class="alert alert-danger alert-light " role="alert">
+                    <p id="points"></p>
+                </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#example").load("./config");
+    var correct = 0;
+
+    $("#button1").click(function () {
+        var question1 = document.quiz1.question1.value;
+        var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        var question4 = document.quiz4.question1.value;
+        var question5 = document.quiz5.question1.value;
+        var question6 = document.quiz6.question1.value;
+        var question7 = document.quiz7.question1.value;
+        var question8 = document.quiz8.question1.value;
+        var question9 = document.quiz9.question1.value;
+        var question10 = document.quiz10.question1.value;
+        var question11 = document.quiz11.question1.value;
+        var question12 = document.quiz12.question1.value;
+        var question13 = document.quiz13.question1.value;
+        var question14 = document.quiz14.question1.value;
+        var question15 = document.quiz15.question1.value;
+        var question16 = document.quiz16.question1.value;
+        var question17 = document.quiz17.question1.value;
+        var question18 = document.quiz18.question1.value;
+
+        //2nd question
+        if (slideIndex == 2 && question2 == 10) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+            //third question
+        } else if (slideIndex == 3 && question3 == 100) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //first question
+        else if (slideIndex == 1 && question1 == 5) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //4th question 
+        else if (slideIndex == 4 && question4 == 6) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //5th question 
+        else if (slideIndex == 5 && question5 == 15) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //6th question
+        else if (slideIndex == 6 && question6 == 144) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //7th question
+        else if (slideIndex == 7 && question7 == 10) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //8th question
+        else if (slideIndex == 8 && question8 == 15) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //9th question
+        else if (slideIndex == 9 && question9 == 160) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //10th question
+        else if (slideIndex == 10 && question10 == 9) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //11th question
+        else if (slideIndex == 11 && question11 == 18) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //12th question
+        else if (slideIndex == 12 && question12 == 180) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //13th question
+        else if (slideIndex == 13 && question13 == 11) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //14th question
+        else if (slideIndex == 14 && question14 == 33) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //15th question
+        else if (slideIndex == 15 && question15 == 108) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //16th question
+        else if (slideIndex == 16 && question16 == 12) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //17th question
+        else if (slideIndex == 17 && question17 == 15) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        }
+        //18th question
+        else if (slideIndex == 18 && question18 == 168) {
+            checkAnswer30();
+            showTicks30();
+            questionCounter();
+            shapeCounterUp();
+        } else {
+            document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent = " Not Yet";
+            shapeError()
+        }
+});
+$("#button").click(function () {
+    document.getElementById("badge").textContent = `${correct} out of 18`; 
+    if(correct > 5 && correct < 10){
+        addBronze()
+        trackProgress18()
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
+    } else if (correct > 9 && correct < 16){
+        addSilver()
+        trackProgress18();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct > 15){
+        addGold();
+        trackProgress18();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+    } else if(correct <= 5){
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
+        document.getElementById("medal").textContent = `Try again to earn a Medal!`;
+    }
+ })
+$("input").attr("maxlength", 5)
+</script>
+<% include ../partials/footer %>

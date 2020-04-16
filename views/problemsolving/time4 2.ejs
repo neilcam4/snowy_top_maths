@@ -1,0 +1,281 @@
+<% include ../partials/header %>
+<!--   Video        -->
+<div id="video" style="text-align: center">
+    <div class="col-md-6" style="display:inline-block">
+        <h3 class="text-center" id="heading">Catching the Train</h3>
+        <div class="card card-info-inverse">
+            <div class="card-header">
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
+            </div>
+            <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay"
+                class="video-player-container vooplayer" data-playerId="MTUyMTE2" allowtransparency="true"
+                style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params=""
+                frameborder="0" scrolling="no"> </iframe>
+            <div class="card-body overflow-hidden text-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <p id="userId"><%=currentUser.id %> </p>
+</div>
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span>
+                <p>This is a timetable for trains from Guildford to Portsmouth Harbour on a particular day. Answer the
+                    following questions below relating to the timetable.Each question is worth 20 points. Good Luck!</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="alert alert-light alert-info">
+            <img src="img/timetable/timetable2.png" style="width: 50rem">
+
+        </div>
+        <div class="card card-royal col-md-6 ">
+
+            <!--        First question-->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 id="header" class="card-title">1.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz1">
+                        <p class="q">What time does the 12:30 train from Guildford arrive at Haslemere? </p>
+                        <div class="ui input focus">
+                            <input type="text" name="question1" placeholder="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--     2nd question                -->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">2.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz2">
+                        <p class="q">What time does the 13:19 train from Godalming arrive at Petersfield? </p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="" name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--   3rd question       -->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">3.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz3">
+                        <p class="q">What time do you expect train 4 to leave Portsmouth Harbour for the return trip to
+                            Guildford? </p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="" name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--4th question        -->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">4.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz4">
+                        <p class="q">What time does train 4 from Portsmouth Harbour arrive in Godalming? </p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="" name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--    5th question    -->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">5.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz5">
+                        <p class="q">What time does the 14:21 train from Portsmouth Harbour arrive in Guildford? </p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="" name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--   6th question     -->
+            <div class="mySlides">
+                <div class="card-header">
+                    <h3 class="card-title">6.</h3>
+                </div>
+                <div class="card-body">
+                    <form name="quiz6">
+                        <p class="q">Simon wants to catch the 12:25 train from Petersfield to Guildford, but arrives 23
+                            minutes late. How many minutes will he have to wait for the next train to leave Petersfield?
+                        </p>
+                        <div class="ui input focus">
+                            <input type="text" placeholder="" name="question1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--        buttons-->
+            <div class="container">
+                <div class="row" style="margin: 0 auto">
+                    <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
+                    <button type="button" id="next1" class="btn btn-primary btn-raised" onclick="plusSlides(1)"> Next
+                    </button>
+                    <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal"
+                        data-target="#myModal4"> Total Score </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="margin: 0 auto">
+                <span id="tick" class="ms-icon ms-icon-lg ms-icon-circle color-success">
+                    <i class="fa fa-check"></i>
+                </span>
+                <span id="wrong" class="ms-icon ms-icon-lg ms-icon-circle color-danger">
+                    <i class="fa fa-remove"></i>
+                </span>
+            </div>
+        </div>
+
+
+        <div id="msg"></div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+        <!-- last 2 divs from top of card-->
+    </div>
+</div>
+<div id="example"></div>
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3> <button
+                    type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success alert-light " role="alert">
+                    <p id="badge"></p>
+                </div>
+                <div class="alert alert-danger alert-light " role="alert">
+                    <p id="points"></p>
+                </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#example").load("./config");
+    var correct = 0;
+
+    $("#button1").click(function () {
+        var question1 = document.quiz1.question1.value;
+        var question2 = document.quiz2.question1.value;
+        var question3 = document.quiz3.question1.value;
+        var question4 = document.quiz4.question1.value;
+        var question5 = document.quiz5.question1.value;
+        var question6 = document.quiz6.question1.value;
+
+        //2nd question
+        if (question2 == '13:42' || question2 == '13:42pm' || question2 == '13.42pm' || question2 == '13.42' ||
+            question2 == '1:42pm' || question2 == '1.42pm') {
+            checkAnswer20();
+            showTicks20();
+            questionCounter();
+            dataCounterUp();
+            //third question
+        } else if (question3 == '13:43' || question3 == '1:43pm' || question3 == '1:43pm' || question3 ==
+            '1.43pm') {
+            checkAnswer20();
+            showTicks20();
+            questionCounter();
+            dataCounterUp();
+        }
+        //first question
+        else if (question1 == '12:53' || question1 == '12.53' || question1 == '12:53pm' || question1 ==
+            '12.53pm') {
+            checkAnswer20();
+            showTicks20();
+            questionCounter();
+            dataCounterUp();
+        }
+        //4th question 
+        else if (question4 == '14:10' || question4 == '14.10' || question4 == '2:10pm' || question4 ==
+            '2.10pm') {
+            checkAnswer20();
+            showTicks20();
+            questionCounter();
+            dataCounterUp();
+        }
+        //5th question 
+        else if (question5 == '15:11' || question5 == '15.11' || question5 == '3.11pm' || question5 ==
+            '3:11pm') {
+            checkAnswer20();
+            showTicks20();
+            questionCounter();
+            dataCounterUp();
+        }
+        //6th question
+        else if (question6 == '59' || question6 == '59minutes' || question6 == '59 minutes' || question6 ==
+            '59m' || question6 == '59 m') {
+            checkAnswer20();
+            showTicks20();
+            questionCounter();
+            dataCounterUp();
+        } else {
+            document.getElementById("wrong").style.visibility = "visible";
+            document.getElementById("msg").style.visibility = "visible";
+            document.getElementById("msg").textContent = " Not Yet";
+            dataError();
+        }
+});
+$("#button").click(function () {
+    document.getElementById("badge").textContent = `${correct} out of 6`; 
+    if(correct === 3){
+        addBronze()
+        trackProgress6()
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
+    } else if (correct > 3 && correct <6){
+        addSilver();
+        trackProgress6();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+    } else if(correct === 6){
+        addGold();
+        trackProgress6();
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+    } else if(correct < 3){
+        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("medal").textContent = `Try again to earn a Medal!`;
+    }
+ })
+$("input").attr("maxlength", 5)
+</script>
+<% include ../partials/footer %>
