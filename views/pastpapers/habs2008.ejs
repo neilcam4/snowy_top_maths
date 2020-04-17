@@ -806,6 +806,7 @@ Assuming that Craig takes the same time to answer each question, how long does h
 var slideIndex = 1;
 showSlides(slideIndex);
 
+
 function plusSlides(n) {
   showSlides(slideIndex += n);    
     document.getElementById("tick").style.visibility = "hidden";
@@ -839,7 +840,7 @@ function showSlides(n) {
     if(slideIndex==54){
         document.getElementById("next1").style.visibility = "hidden";
     }
-}    
+}  
     var correct = 0;
    
     $("#button1").click(function(){       
@@ -907,6 +908,7 @@ function showSlides(n) {
            document.getElementById("msg").style.visibility = "visible";
            document.getElementById("msg").textContent= " Correct!";
             correct++;
+            questionCounter();
            //third question
   } else if(slideIndex==3&&question3 == 504){
         checkAnswer();     
@@ -914,6 +916,7 @@ function showSlides(n) {
       document.getElementById("msg").style.visibility = "visible";
       document.getElementById("msg").textContent= " Correct!";
       correct++;
+      questionCounter();
   }
         //first question
          else if(slideIndex==1&&question1 == 84){
@@ -922,6 +925,7 @@ function showSlides(n) {
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
             correct++;
+            questionCounter();
   } 
         //4th question 
         else if(slideIndex==4&&question4 == 18){
@@ -930,6 +934,7 @@ function showSlides(n) {
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
             correct++;
+            questionCounter();
   } 
         //5th question 
         else if(slideIndex==5&&question5 == 6.49){
@@ -938,6 +943,7 @@ function showSlides(n) {
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
             correct++;
+            questionCounter();
   } 
         //6th question
         else if(slideIndex==6&&question6 == 79){
@@ -945,7 +951,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //7th question
         else if(slideIndex==7&&question7 == 14028){
@@ -953,7 +959,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
     //8th question
         else if(slideIndex==8&&question8 == 9/16){
@@ -961,7 +967,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
         //9th question
         else if(slideIndex==9&&question9 == "0.005, 0.024, 1.006, 1.01"||slideIndex==9&&question9 == "0.005,0.024,1.006,1.01"){
@@ -969,7 +975,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //10th question 
         else if(slideIndex==10&&question10 == 48){
@@ -977,7 +983,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //11a question 
         else if(slideIndex==11&&question11 == 422){
@@ -985,7 +991,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //11b question
         else if(slideIndex==12&&question12 == 140){
@@ -993,7 +999,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         // question 12
         else if(slideIndex==13&&question13 ==500||slideIndex==13&&question13 == '500g'||slideIndex==13&&question13 == '500grams'||slideIndex==13&&question13 == '500 grams'){
@@ -1001,7 +1007,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
     //13a question
         else if(slideIndex==14&&question14 == 36||slideIndex==14&&question14 == '36 hours'){
@@ -1009,7 +1015,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
         //13b question
         else if(slideIndex==15&&question15 == 9||slideIndex==15&&question15 == '9 hours'){
@@ -1017,7 +1023,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }  
              //14a question 
         else if(slideIndex==16&&question16 == 90){
@@ -1025,7 +1031,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //14b question
         else if(slideIndex==17&&question17 == 36){
@@ -1033,7 +1039,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //14c question
         else if(slideIndex==18&&question18 == 23){
@@ -1041,7 +1047,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
     //14d question
         else if(slideIndex==19&&question19 == 8){
@@ -1049,7 +1055,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
         //15a question
         else if(slideIndex==20&&question20 == 'True'||slideIndex==20&&question20 == 'true'){
@@ -1057,7 +1063,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //15b question 
         else if(slideIndex==21&&question21 == 'false'||slideIndex==21&&question21 == 'False'){
@@ -1065,7 +1071,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //15c question 
         else if(slideIndex==22&&question22 == 'False'||slideIndex==22&&question22 == 'false'){
@@ -1073,7 +1079,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //16a question
         else if(slideIndex==23&&question23 == 83){
@@ -1081,7 +1087,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //16b question
         else if(slideIndex==24&&question24 == 65){
@@ -1089,7 +1095,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
     //17a question
         else if(slideIndex==25&&question25 == 4){
@@ -1097,7 +1103,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
 //17b question
         else if(slideIndex==26&&question26 == 8){
@@ -1105,7 +1111,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }  
 //17c question 
         else if(slideIndex==27&&question27 == 10){
@@ -1113,7 +1119,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
  //18a question
         else if(slideIndex==28&&question28 == 220){
@@ -1121,7 +1127,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //18b question
         else if(slideIndex==29&&question29 == 57){
@@ -1129,7 +1135,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //19 question
         else if(slideIndex==30&&question30 == 52){
@@ -1137,7 +1143,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
 //20 question
         else if(slideIndex==31&&question31 == 21){
@@ -1145,7 +1151,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
  //21a question 
         else if(slideIndex==32&&question32 == '3, 15, 21'||slideIndex==32&&question32 == '3,15,21'||slideIndex==32&&question32 == '15, 3, 21'||slideIndex==32&&question32 == '21, 15, 3'){
@@ -1153,7 +1159,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //21b question 
         else if(slideIndex==33&&question33 == '6,12,24'||slideIndex==33&&question33 == '6, 12, 24'){
@@ -1161,7 +1167,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //21c question
         else if(slideIndex==34&&question34 == '1, 7, 11, 19'){
@@ -1169,7 +1175,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //21d question
         else if(slideIndex==35&&question35 == '2,4,16,22'||slideIndex==35&&question35 == '2, 4, 16, 22'){
@@ -1177,7 +1183,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //22 question
         else if(slideIndex==36&&question36 == 15000){
@@ -1185,7 +1191,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
 //23 question
         else if(slideIndex==37&&question37 == 56){
@@ -1193,7 +1199,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }  
 //24a question 
         else if(slideIndex==38&&question38 == 1){
@@ -1201,7 +1207,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //24b question
         else if(slideIndex==39&&question39 == 1){
@@ -1209,7 +1215,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         //24c question
         else if(slideIndex==40&&question40 == 2){
@@ -1217,7 +1223,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
     //24d question
         else if(slideIndex==41&&question41 == 2){
@@ -1225,7 +1231,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
 //25 question
         else if(slideIndex==42&&question42 == 200){
@@ -1233,7 +1239,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //26a question 
         else if(slideIndex==43&&question43 == 27){
@@ -1241,7 +1247,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //26b question 
         else if(slideIndex==44&&question44 == 2){
@@ -1249,7 +1255,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //26c question
         else if(slideIndex==45&&question45 == 19||slideIndex==45&&question45 == 26){
@@ -1257,7 +1263,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //27a question
         else if(slideIndex==46&&question46 == 992){
@@ -1265,7 +1271,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //27b question
         else if(slideIndex==47&&question47 == 299){
@@ -1273,7 +1279,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
 //28th question
         else if(slideIndex==48&&question48 == 12){
@@ -1281,7 +1287,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //29a question
         else if(slideIndex==49&&question49 == 14){
@@ -1289,7 +1295,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //29b(i) question
         else if(slideIndex==50&&question50 == '2.10'){
@@ -1297,7 +1303,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //29b(ii) question
         else if(slideIndex==51&&question51 == 26){
@@ -1305,7 +1311,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
 //30a question
         else if(slideIndex==52&&question52 == 2){
@@ -1313,7 +1319,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
 //30b question
         else if(slideIndex==53&&question53 == 120){
@@ -1321,7 +1327,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   }     
         //30c question
         else if(slideIndex==54&&question54 == '5 hours 15 minutes'){
@@ -1329,7 +1335,7 @@ function showSlides(n) {
         document.getElementById("tick").style.visibility = "visible";
              document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent= " Correct!"; 
-            correct++;
+            correct++;questionCounter();
   } 
         else {
       document.getElementById("wrong").style.visibility = "visible";
