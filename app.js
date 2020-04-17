@@ -246,11 +246,47 @@ app.get('/basics/anglequad', function(req,res){
     })
 })
 
+app.get('/basics/addsubtract', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/addsubtract',{user:user})
+    })
+})
+app.get('/basics/multiplyIntegers', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/multiplyIntegers',{user:user})
+    })
+})
+app.get('/basics/multiplydecimals', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/multiplyDecimals',{user:user})
+    })
+})
+app.get('/basics/multiplyfractions', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/multiplyfractions',{user:user})
+    })
+})
+app.get('/basics/addfractions', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/addfractions',{user:user})
+    })
+})
+app.get('/basics/dividingfractions', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/dividingfractions',{user:user})
+    })
+})
+app.get('/basics/subtractfractions', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/subtractfractions',{user:user})
+    })
+})
 app.get('/basics/anglepoint', function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglepoint',{user:user})
     })
 })
+
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){
         if(err){
