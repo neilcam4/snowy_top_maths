@@ -240,7 +240,17 @@ app.get('/basics/anglesStraightLine', function(req,res){
         res.render('basics/anglesStraightLine',{user:user})
     })
 })
+app.get('/basics/anglequad', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/anglequad',{user:user})
+    })
+})
 
+app.get('/basics/anglepoint', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/anglepoint',{user:user})
+    })
+})
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){
         if(err){
