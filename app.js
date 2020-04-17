@@ -840,6 +840,18 @@ app.get('/problemsolving/shapes5', isLoggedIn, function (req, res) {
     });
 })
 
+app.get('/problemsolving/shapes6', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/shapes6', {
+                user: user
+            })
+        }
+    });
+})
+
 app.get('/config', isLoggedIn, function (req, res) {
     res.send(API_KEY_MLAB)
 })
