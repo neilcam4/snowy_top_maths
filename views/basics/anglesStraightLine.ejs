@@ -2,7 +2,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Angles inside Triangles</h3>
+        <h3 class="text-center" id="heading">Angles on a Straight Line</h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
@@ -39,8 +39,8 @@
             </div>
             <div class="card-body">
                 <form name="quiz1">
-                    <p class="q">Find the angle X<img
-                            src="img/anglesTriangle/triangle1.png" alt="" class="img-fluid"></p> <br>
+                    <p class="q">Find the missing angle labelled<img
+                            src="img/anglesStraightLine/anglestraightline.png" alt="" class="img-fluid"></p> <br>
                     <div class="ui right labeled input focus">
                         <input type="text" placeholder="Enter angle.." name="question1">
                         <div class="ui basic label">
@@ -58,7 +58,7 @@
             <div class="card-body">
                 <form name="quiz2">
                     <p class="q">Find the angle X</p>
-                        <img src="img/anglesTriangle/triangle1.png" alt="" class="img-fluid">
+                        <img src="img/anglesStraightLine/anglestraightline2.png" alt="" class="img-fluid">
                     <div class="ui right labeled input focus">
                         <input type="text" placeholder="Enter angle.." name="question1">
                         <div class="ui basic label">
@@ -76,7 +76,7 @@
             <div class="card-body">
                 <form name="quiz3">
                     <p class="q">Find the angle X</p><img
-                        src="img/anglesTriangle/triangle1.png" alt="" class="img-fluid"><br>
+                        src="img/anglesStraightLine/anglestraightline3.png" alt="" class="img-fluid"><br>
                     <div class="ui right labeled input focus">
                         <input type="text" placeholder="Enter angle.." name="question1">
                         <div class="ui basic label">
@@ -93,7 +93,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz4">
-                    <p class="q">Find the angle X</p><img src="img/anglesTriangle/triangle4.png" alt=""
+                    <p class="q">Find the angle X</p><img src="img/anglesStraightLine/anglestraightline4.png" alt=""
                             class="img-fluid"><br>
                     <div class="ui right labeled input focus">
                         <input type="text" placeholder="Enter angle.." name="question1">
@@ -111,7 +111,7 @@
             </div>
             <div class="card-body">
                 <form name="quiz5">
-                <p class="q">Find the angle X</p><img src="img/anglesTriangle/triangle5.png" alt=""
+                <p class="q">Find the angle X</p><img src="img/anglesStraightLine/anglestraightline8.png" alt=""
                             class="img-fluid"></img><br>
                     <div class="ui right labeled input focus">
                         <input type="text" placeholder="Enter angle.." name="question1">
@@ -130,7 +130,7 @@
             <div class="card-body">
                 <form name="quiz6">
                 <p class="q">Find the angle X</p><img
-                            src="img/anglesTriangle/triangle6.png" alt="" class="img-fluid"></p><br>
+                            src="img/anglesStraightLine/anglestraightline6.png" alt="" class="img-fluid"></p><br>
                     <div class="ui right labeled input focus">
                         <input type="text" placeholder="Enter angle.." name="question1">
                         <div class="ui basic label">
@@ -141,23 +141,6 @@
             </div>
         </div>
 
-        <div class="mySlides">
-            <div class="card-header">
-                <h3 class="card-title">7.</h3>
-            </div>
-            <div class="card-body">
-                <form name="quiz7">
-                <p class="q">Find the angle Y</p><img
-                            src="img/anglesTriangle/angletriangle.png" alt="" class="img-fluid"></p><br>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
         <!--        buttons-->
         <div class="container">
             <div class="row" style="margin: 0 auto">
@@ -189,9 +172,6 @@
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
             <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-
-
         </div>
         <!-- last 2 divs from top of card-->
     </div>
@@ -235,7 +215,6 @@
         var question4 = document.quiz4.question1.value;
         var question5 = document.quiz5.question1.value;
         var question6 = document.quiz6.question1.value;
-        var question7 = document.quiz7.question1.value;
 
         //2nd question
         if (slideIndex == 2 && question2 == 100) {
@@ -277,14 +256,8 @@
             showTicks20();
             questionCounter();
             shapeCounterUp();
-        } 
-        
-        else if (slideIndex == 7 && question6 == 55) {
-            checkAnswer20();
-            showTicks20();
-            questionCounter();
-            shapeCounterUp();
-        } else {
+        }  
+        else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";

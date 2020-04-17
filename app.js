@@ -230,6 +230,17 @@ app.get('/basics/index', function(req,res){
     })
 })
 
+app.get('/basics/anglesTriangle', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/anglesTriangle',{user:user})
+    })
+})
+app.get('/basics/anglesStraightLine', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/anglesStraightLine',{user:user})
+    })
+})
+
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){
         if(err){
