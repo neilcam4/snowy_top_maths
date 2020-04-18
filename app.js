@@ -41,8 +41,7 @@ let examPapers = require("./routes/exam_papers")
 app.use(examPapers);
 let chapters = require('./routes/chapters')
 app.use(chapters);
-let routes = require("./routes/index")
-app.use(routes)
+
 
 let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
@@ -106,13 +105,7 @@ mongoose.connect("mongodb://neilcam4:Wanaka10@ds115283.mlab.com:15283/maths_app"
     .catch(err => {
         console.log("DB Connection Error");
     });
-// mongoose.connect("mongodb://localhost/maths_app", function(err, db){
-//     if(err){
-//         console.log("database not connected")
-//     } else {
-//         console.log("database CONNECTED")
-//     }
-// })
+
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -151,6 +144,85 @@ app.get('/profile', isLoggedIn, function (req, res) {
 });
 
 //USER ROUTES
+app.get('/users/new', function(req,res){
+    res.render('register');
+});
+
+app.get('/register', function (req, res) {
+    res.render('register');
+});
+
+app.get('/freevideos', function(req,res){
+    res.render('freevideos')
+}
+);
+//handling user sign up
+///****sending user details through to register page
+app.post('/register', function (req, res) {
+    User.register(new User({
+        username: req.body.username,
+        surname: req.body.surname,
+        year: req.body.year,
+        school: req.body.school,
+        medals: req.body.medals,
+        score: req.body.score,
+        id: req.params.id,
+        email: req.body.email
+    }), req.body.password, function (err, users) {
+        if (err) {
+            console.log(err);
+            res.render("register");
+        }
+        req.body.username = req.body.email;
+        passport.authenticate("local")(req, res, function () {
+            res.redirect('/profile')
+        })
+    })
+})
+
+//registerfree
+app.post('/registerfree', function (req, res) {
+    User.register(new User({
+        username: req.body.username,
+        surname: req.body.surname,
+        score: req.body.score,
+        id: req.params.id,
+        subscription_type: 'Yearly',
+        email: req.body.email
+    }), req.body.password, function (err, users) {
+        if (err) {
+            console.log(err);
+            res.render("register");
+        }
+        req.body.username = req.body.email;
+        passport.authenticate("local")(req, res, function () {
+            res.redirect('/profilefree')
+        })
+    })
+})
+app.get('/', function (req, res) {
+    res.render('home');
+
+});
+app.get('/logout', function (req, res) {
+    req.logout();
+    res.redirect('/');
+})
+app.post('/users', function (req, res) {
+    User.create(req.body.users, function (err, users) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect('/users', {users:users});
+        }
+    })
+});
+//show
+
+app.get('/log', function (req, res) {
+    res.render('register');
+});
+
 //SHOW
 app.get('/users/:id', isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
@@ -331,7 +403,7 @@ app.get('/basics/ratiototal', isLoggedIn, function(req,res){
         res.render('basics/ratiototal',{user:user})
     })
 })
-app.get('/basics/anglepoint', function(req,res){
+app.get('/basics/anglepoint',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglepoint',{user:user})
     })
@@ -1199,6 +1271,8 @@ app.get('/papers/KWA1', isLoggedIn, function (req, res) {
         }
     });
 })
+
+
 app.listen(port, function (err) {
     if (err) {
         console.log("Error");
