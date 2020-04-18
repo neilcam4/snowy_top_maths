@@ -281,6 +281,46 @@ app.get('/basics/subtractfractions', function(req,res){
         res.render('basics/subtractfractions',{user:user})
     })
 })
+app.get('/basics/DtoF', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/DtoF',{user:user})
+    })
+})
+app.get('/basics/FtoD', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/FtoD',{user:user})
+    })
+})
+app.get('/basics/FtoP', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/FtoP',{user:user})
+    })
+})
+app.get('/basics/DtoP', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/DtoP',{user:user})
+    })
+})
+app.get('/basics/shortdivision', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/shortdivision',{user:user})
+    })
+})
+app.get('/basics/longdivision', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/longdivision',{user:user})
+    })
+})
+app.get('/basics/algebraintro', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/algebraintro',{user:user})
+    })
+})
+app.get('/basics/algebrasolve', function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/algebrasolve',{user:user})
+    })
+})
 app.get('/basics/anglepoint', function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglepoint',{user:user})
