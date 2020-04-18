@@ -218,107 +218,117 @@ app.get('/pastpapers/list', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/problemsolving/menu', function(req,res){
+app.get('/problemsolving/menu',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('problemsolving/menu',{user:user})
     })
 })
 
-app.get('/basics/index', function(req,res){
+app.get('/basics/index',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/index',{user:user})
     })
 })
 
-app.get('/basics/anglesTriangle', function(req,res){
+app.get('/basics/anglesTriangle',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglesTriangle',{user:user})
     })
 })
-app.get('/basics/anglesStraightLine', function(req,res){
+app.get('/basics/anglesStraightLine',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglesStraightLine',{user:user})
     })
 })
-app.get('/basics/anglequad', function(req,res){
+app.get('/basics/anglequad',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglequad',{user:user})
     })
 })
 
-app.get('/basics/addsubtract', function(req,res){
+app.get('/basics/addsubtract',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/addsubtract',{user:user})
     })
 })
-app.get('/basics/multiplyIntegers', function(req,res){
+app.get('/basics/multiplyIntegers',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyIntegers',{user:user})
     })
 })
-app.get('/basics/multiplydecimals', function(req,res){
+app.get('/basics/multiplydecimals', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyDecimals',{user:user})
     })
 })
-app.get('/basics/multiplyfractions', function(req,res){
+app.get('/basics/multiplyfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyfractions',{user:user})
     })
 })
-app.get('/basics/addfractions', function(req,res){
+app.get('/basics/addfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/addfractions',{user:user})
     })
 })
-app.get('/basics/dividingfractions', function(req,res){
+app.get('/basics/dividingfractions', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/dividingfractions',{user:user})
     })
 })
-app.get('/basics/subtractfractions', function(req,res){
+app.get('/basics/subtractfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/subtractfractions',{user:user})
     })
 })
-app.get('/basics/DtoF', function(req,res){
+app.get('/basics/DtoF',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/DtoF',{user:user})
     })
 })
-app.get('/basics/FtoD', function(req,res){
+app.get('/basics/FtoD',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/FtoD',{user:user})
     })
 })
-app.get('/basics/FtoP', function(req,res){
+app.get('/basics/FtoP',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/FtoP',{user:user})
     })
 })
-app.get('/basics/DtoP', function(req,res){
+app.get('/basics/DtoP', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/DtoP',{user:user})
     })
 })
-app.get('/basics/shortdivision', function(req,res){
+app.get('/basics/shortdivision', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/shortdivision',{user:user})
     })
 })
-app.get('/basics/longdivision', function(req,res){
+app.get('/basics/longdivision',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/longdivision',{user:user})
     })
 })
-app.get('/basics/algebraintro', function(req,res){
+app.get('/basics/algebraintro',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/algebraintro',{user:user})
     })
 })
-app.get('/basics/algebrasolve', function(req,res){
+app.get('/basics/algebrasolve',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/algebrasolve',{user:user})
+    })
+})
+app.get('/basics/ratiodivide',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/ratiodivide',{user:user})
+    })
+})
+app.get('/basics/ratiototal', isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/ratiototal',{user:user})
     })
 })
 app.get('/basics/anglepoint', function(req,res){
