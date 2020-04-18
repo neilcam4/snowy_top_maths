@@ -716,7 +716,17 @@ app.get('/problemsolving/averages2', isLoggedIn, function (req, res) {
             res.render('problemsolving/averages2', {
                 user: user
             })
-
+        }
+    });
+})
+app.get('/problemsolving/meanaverage', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/meanaverage', {
+                user: user
+            })
         }
     });
 })
