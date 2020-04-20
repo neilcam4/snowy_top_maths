@@ -203,6 +203,9 @@
                     <div class="alert alert-danger alert-light " role="alert">
                         <p id="points"></p>
                     </div>
+                    <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -223,8 +226,8 @@ $("#button1").click(function () {
     var question6 = document.quiz6.question1.value;
 
     //2nd question
-    if (slideIndex == 2 && question2 == '1.35m' || slideIndex == 2 && question2 == '1.35' ||
-        slideIndex == 2 && question2 == '1.35 m') {
+    if (slideIndex == 2 && question2 == '1.75m' || slideIndex == 2 && question2 == '1.75' ||
+        slideIndex == 2 && question2 == '1.75 m') {
         checkAnswer20();
         showTicks20();
         questionCounter();

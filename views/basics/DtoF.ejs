@@ -1,24 +1,14 @@
 <% include ../partials/header %>
-<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span>
-                <p>Each question is worth 20 points. Good Luck!</p>
-        </div>
-    </div>
-</div>
-
-
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Ratio: Sharing Sweets</h3>
+        <h3 class="text-center" id="heading">Converting Decimals to Fractions</h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
             </div>
             <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay"
-                class="video-player-container vooplayer" data-playerId="MTQ3MDY4" allowtransparency="true"
+                class="video-player-container vooplayer" data-playerId="MTQ3NTg1" allowtransparency="true"
                 style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params=""
                 frameborder="0" scrolling="no"> </iframe>
             <div class="card-body overflow-hidden text-center">
@@ -31,7 +21,14 @@
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
 </div>
-
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> </p>
+            <p>Find the missing angles labelled in these quadrilaterals. Each question is worth 20 points. </p>
+        </div>
+    </div>
+</div>
 <div style="text-align: center">
     <div class="card card-royal col-md-6" style="display:inline-block">
         <!--        First question-->
@@ -41,10 +38,13 @@
             </div>
             <div class="card-body">
                 <form name="quiz1">
-                    <p class="q">If Homer, Bart and Lisa share 56 doughnuts. Homer gets twice as many as Lisa. Bart gets
-                        5 times as much as Lisa. How many does Lisa get?</p>
-                    <div class="ui input focus">
-                        <input type="text" name="question1" placeholder="">
+                    <p class="q">Find the missing angle labelled X<img
+                            src="img/anglepoint/anglepoint.png" alt="" class="img-fluid"></p> <br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter angle.." name="question1">
+                        <div class="ui basic label">
+                            &#176;
+                        </div>
                     </div>
                 </form>
             </div>
@@ -56,10 +56,13 @@
             </div>
             <div class="card-body">
                 <form name="quiz2">
-                    <p class="q">Mickey, Donald and Pluto share 36 sandwiches. Mickey gets 3 times as many as Donald and
-                        Pluto gets 5 times as many as Donald. How many does Donald receive?</p>
-                    <div class="ui input focus">
-                        <input type="text" placeholder="" name="question1">
+                    <p class="q">Find the missing angle X</p>
+                        <img src="img/anglepoint/anglepoint2.png" alt="" class="img-fluid">
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter angle.." name="question1">
+                        <div class="ui basic label">
+                            &#176;
+                        </div>
                     </div>
                 </form>
             </div>
@@ -71,10 +74,13 @@
             </div>
             <div class="card-body">
                 <form name="quiz3">
-                    <p class="q">Andre, Pete and Bjorn share 64 tennis balls. Pete receives double the amount of Andre
-                        and Bjorn receives 5 times as many as Andre. How many does Bjorn receive?</p>
-                    <div class="ui input focus">
-                        <input type="text" placeholder="" name="question1">
+                    <p class="q">Find the missing angle X</p><img
+                        src="img/anglepoint/anglepoint3.png" alt="" class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter angle.." name="question1">
+                        <div class="ui basic label">
+                            &#176;
+                        </div>
                     </div>
                 </form>
             </div>
@@ -86,11 +92,13 @@
             </div>
             <div class="card-body">
                 <form name="quiz4">
-                    <p class="q">The length of a football pitch is 5 times the length of a tennis court. The length of
-                        the pool is half the length of the football pitch. In total, their 3 lengths sum up to 136m. How
-                        long, in metres, is the pool?</p>
-                    <div class="ui input focus">
-                        <input type="text" placeholder="" name="question1">
+                    <p class="q">Find the angle X</p><img src="img/anglepoint/anglepoint4.png" alt=""
+                            class="img-fluid"><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter angle.." name="question1">
+                        <div class="ui basic label">
+                            &#176;
+                        </div>
                     </div>
                 </form>
             </div>
@@ -102,10 +110,13 @@
             </div>
             <div class="card-body">
                 <form name="quiz5">
-                    <p class="q">Ariana, Gaga and Katie share 190 dresses. If Gaga gets 3 times as many as Ariana and
-                        half the amount of Katie, how may does Gaga get?</p>
-                    <div class="ui input focus">
-                        <input type="text" placeholder="" name="question1"></input>
+                <p class="q">Find the angle Y</p><img src="img/anglepoint/anglepoint4.png" alt=""
+                            class="img-fluid"></img><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter angle.." name="question1">
+                        <div class="ui basic label">
+                            &#176;
+                        </div>
                     </div>
                 </form>
             </div>
@@ -117,15 +128,18 @@
             </div>
             <div class="card-body">
                 <form name="quiz6">
-                    <p class="q">David, Paul and Nicky score 39 goals in a season in total. David scored 50% the amount
-                        of Paul and 4 times the number of goals for Nicky. How many more goals did Paul score than
-                        Nicky?</p>
-                    <div class="ui input focus">
-                        <input type="text" placeholder="" name="question1">
+                <p class="q">The circle is divided up into 5 equal parts. Find the missing angle x</p><img
+                            src="img/anglepoint/anglepoint5.png" alt="" class="img-fluid"></p><br>
+                    <div class="ui right labeled input focus">
+                        <input type="text" placeholder="Enter angle.." name="question1">
+                        <div class="ui basic label">
+                            &#176;
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
+
         <!--        buttons-->
         <div class="container">
             <div class="row" style="margin: 0 auto">
@@ -192,6 +206,7 @@
 <script>
     $("#example").load("../config");
     var correct = 0;
+
     $("#button1").click(function () {
         var question1 = document.quiz1.question1.value;
         var question2 = document.quiz2.question1.value;
@@ -201,76 +216,77 @@
         var question6 = document.quiz6.question1.value;
 
         //2nd question
-        if (question2 == 4) {
-            checkAnswer20();
-            showTicks20();
+        if (slideIndex == 2 && question2 == 303) {
+            checkAnswer10();
+            showTicks10();
             questionCounter();
-            numberCounterUp();
+            shapeCounterUp();
             //third question
-        } else if (question3 == 40) {
-            checkAnswer20();
-            showTicks20();
+        } else if (slideIndex == 3 && question3 == 106) {
+            checkAnswer10();
+            showTicks10();
             questionCounter();
-            numberCounterUp();
+            shapeCounterUp();
         }
         //first question
-        else if (question1 == 7) {
-            checkAnswer20();
-            showTicks20();
+        else if (slideIndex == 1 && question1 == 110) {
+            checkAnswer10();
+            showTicks10();
             questionCounter();
-            numberCounterUp();
+            shapeCounterUp();
         }
         //4th question 
-        else if (question4 == 40) {
-            checkAnswer20();
-            showTicks20();
+        else if (slideIndex == 4 && question4 == 55) {
+            checkAnswer10();
+            showTicks10();
             questionCounter();
-            numberCounterUp();
+            shapeCounterUp();
         }
         //5th question 
-        else if (question5 == '57') {
-            checkAnswer20();
-            showTicks20();
+        else if (slideIndex == 5 && question5 == 125) {
+            checkAnswer10();
+            showTicks10();
             questionCounter();
-            numberCounterUp();
+            shapeCounterUp();   
         }
         //6th question
-        else if (question6 == 21) {
-            checkAnswer20();
-            showTicks20();
+        else if (slideIndex == 6 && question6 == 72) {
+            checkAnswer10();
+            showTicks10();
             questionCounter();
-            numberCounterUp();
-        } else {
+            shapeCounterUp();
+        }  
+        else {
             document.getElementById("wrong").style.visibility = "visible";
             document.getElementById("msg").style.visibility = "visible";
             document.getElementById("msg").textContent = " Not Yet";
-            numberError();
+            shapeError()
         }
-        document.getElementById("badge").textContent = `${correct} out of 6`; 
-        document.getElementById("points").textContent = `Points earned:  ${correct * 20} points!`;
-}); 
+            document.getElementById("badge").textContent = `${correct} out of 6`; 
+            document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
+});
 $("#button").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     if(correct === 3){
         addBronze()
         trackProgress6()
-        document.getElementById("points").textContent = `Points:  ${correct * 20}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct > 3 && correct <6){
         addSilver()
         trackProgress6()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 20}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct === 6){
         addGold()
         trackProgress6()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 20}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 20}!`
+        document.getElementById("points").textContent = `Points: ${correct * 10}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })
 $("input").attr("maxlength", 5)
 </script>
-<% include ../partials/footer %>
+<% include ../partials/footer %></div>

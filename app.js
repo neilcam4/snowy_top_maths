@@ -41,8 +41,7 @@ let examPapers = require("./routes/exam_papers")
 app.use(examPapers);
 let chapters = require('./routes/chapters')
 app.use(chapters);
-let routes = require("./routes/index")
-app.use(routes)
+
 
 let API_KEY_MLAB = process.env.API_KEY_MLAB
 let EXPRESS_SECRET = process.env.EXPRESS_SECRET
@@ -106,13 +105,7 @@ mongoose.connect("mongodb://neilcam4:Wanaka10@ds115283.mlab.com:15283/maths_app"
     .catch(err => {
         console.log("DB Connection Error");
     });
-// mongoose.connect("mongodb://localhost/maths_app", function(err, db){
-//     if(err){
-//         console.log("database not connected")
-//     } else {
-//         console.log("database CONNECTED")
-//     }
-// })
+
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -151,6 +144,85 @@ app.get('/profile', isLoggedIn, function (req, res) {
 });
 
 //USER ROUTES
+app.get('/users/new', function(req,res){
+    res.render('register');
+});
+
+app.get('/register', function (req, res) {
+    res.render('register');
+});
+
+app.get('/freevideos', function(req,res){
+    res.render('freevideos')
+}
+);
+//handling user sign up
+///****sending user details through to register page
+app.post('/register', function (req, res) {
+    User.register(new User({
+        username: req.body.username,
+        surname: req.body.surname,
+        year: req.body.year,
+        school: req.body.school,
+        medals: req.body.medals,
+        score: req.body.score,
+        id: req.params.id,
+        email: req.body.email
+    }), req.body.password, function (err, users) {
+        if (err) {
+            console.log(err);
+            res.render("register");
+        }
+        req.body.username = req.body.email;
+        passport.authenticate("local")(req, res, function () {
+            res.redirect('/profile')
+        })
+    })
+})
+
+//registerfree
+app.post('/registerfree', function (req, res) {
+    User.register(new User({
+        username: req.body.username,
+        surname: req.body.surname,
+        score: req.body.score,
+        id: req.params.id,
+        subscription_type: 'Yearly',
+        email: req.body.email
+    }), req.body.password, function (err, users) {
+        if (err) {
+            console.log(err);
+            res.render("register");
+        }
+        req.body.username = req.body.email;
+        passport.authenticate("local")(req, res, function () {
+            res.redirect('/profilefree')
+        })
+    })
+})
+app.get('/', function (req, res) {
+    res.render('home');
+
+});
+app.get('/logout', function (req, res) {
+    req.logout();
+    res.redirect('/');
+})
+app.post('/users', function (req, res) {
+    User.create(req.body.users, function (err, users) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect('/users', {users:users});
+        }
+    })
+});
+//show
+
+app.get('/log', function (req, res) {
+    res.render('register');
+});
+
 //SHOW
 app.get('/users/:id', isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
@@ -218,70 +290,120 @@ app.get('/pastpapers/list', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/problemsolving/menu', function(req,res){
+app.get('/problemsolving/menu',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('problemsolving/menu',{user:user})
     })
 })
 
-app.get('/basics/index', function(req,res){
+app.get('/basics/index',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/index',{user:user})
     })
 })
 
-app.get('/basics/anglesTriangle', function(req,res){
+app.get('/basics/anglesTriangle',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglesTriangle',{user:user})
     })
 })
-app.get('/basics/anglesStraightLine', function(req,res){
+app.get('/basics/anglesStraightLine',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglesStraightLine',{user:user})
     })
 })
-app.get('/basics/anglequad', function(req,res){
+app.get('/basics/anglequad',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglequad',{user:user})
     })
 })
 
-app.get('/basics/addsubtract', function(req,res){
+app.get('/basics/addsubtract',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/addsubtract',{user:user})
     })
 })
-app.get('/basics/multiplyIntegers', function(req,res){
+app.get('/basics/multiplyIntegers',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyIntegers',{user:user})
     })
 })
-app.get('/basics/multiplydecimals', function(req,res){
+app.get('/basics/multiplydecimals', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyDecimals',{user:user})
     })
 })
-app.get('/basics/multiplyfractions', function(req,res){
+app.get('/basics/multiplyfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyfractions',{user:user})
     })
 })
-app.get('/basics/addfractions', function(req,res){
+app.get('/basics/addfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/addfractions',{user:user})
     })
 })
-app.get('/basics/dividingfractions', function(req,res){
+app.get('/basics/dividingfractions', isLoggedIn,function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/dividingfractions',{user:user})
     })
 })
-app.get('/basics/subtractfractions', function(req,res){
+app.get('/basics/subtractfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/subtractfractions',{user:user})
     })
 })
-app.get('/basics/anglepoint', function(req,res){
+app.get('/basics/DtoF',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/DtoF',{user:user})
+    })
+})
+app.get('/basics/FtoD',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/FtoD',{user:user})
+    })
+})
+app.get('/basics/FtoP',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/FtoP',{user:user})
+    })
+})
+app.get('/basics/DtoP', isLoggedIn,function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/DtoP',{user:user})
+    })
+})
+app.get('/basics/shortdivision', isLoggedIn,function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/shortdivision',{user:user})
+    })
+})
+app.get('/basics/longdivision',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/longdivision',{user:user})
+    })
+})
+app.get('/basics/algebraintro',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/algebraintro',{user:user})
+    })
+})
+app.get('/basics/algebrasolve',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/algebrasolve',{user:user})
+    })
+})
+app.get('/basics/ratiodivide',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/ratiodivide',{user:user})
+    })
+})
+app.get('/basics/ratiototal', isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/ratiototal',{user:user})
+    })
+})
+app.get('/basics/anglepoint',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/anglepoint',{user:user})
     })
@@ -594,7 +716,17 @@ app.get('/problemsolving/averages2', isLoggedIn, function (req, res) {
             res.render('problemsolving/averages2', {
                 user: user
             })
-
+        }
+    });
+})
+app.get('/problemsolving/meanaverage', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/meanaverage', {
+                user: user
+            })
         }
     });
 })
@@ -1149,6 +1281,8 @@ app.get('/papers/KWA1', isLoggedIn, function (req, res) {
         }
     });
 })
+
+
 app.listen(port, function (err) {
     if (err) {
         console.log("Error");
