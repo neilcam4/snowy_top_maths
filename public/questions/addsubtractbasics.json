@@ -1,37 +1,46 @@
 [
     {
        "question_number": "1",
-       "question_text": "Calculate 123 + 567",
-       "answer_1":"9",
-       "answer_2":"11"
+       "question_text": "Calculate 123 + 58",
+       "answer_1":181
     },
     {
       "question_number": "2",
-      "question_text": "Calculate 812 + 239",
-      "answer_1":"9",
-       "answer_2":"11"
+      "question_text": "Calculate 812 + 79",
+      "answer_1":"891"
    },
    {
       "question_number": "3",
-      "question_text": "Calculate 568 + 765",
-      "answer_1":"9",
-       "answer_2":"11"
+      "question_text": "Calculate 968 + 76",
+      "answer_1":"1044"
    },
    {
       "question_number": "4",
-      "question_text": "Calculate 987- 432",
-      "answer_1":"9",
-       "answer_2":"11"
+      "question_text": "Calculate 287 + 435",
+      "answer_1":"722"
    },
    {  "question_number": "5",
-      "question_text": "Calculate 678 - 489",
-      "answer_1":"9",
-       "answer_2":"11"
+      "question_text": "1267 + 654",
+      "answer_1":"1921"
    },
    {
       "question_number": "6",
-      "question_text": "Calculate 786- 569",
-      "answer_1":"9",
-       "answer_2":"11"
-   }
+      "question_text": "Calculate 678 - 49",
+      "answer_1":"629"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Calculate 327 - 149",
+    "answer_1":"178"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Calculate 974 - 657",
+    "answer_1":"317"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Calculate 1546 - 988",
+    "answer_1":"558"
+ }
    ]
