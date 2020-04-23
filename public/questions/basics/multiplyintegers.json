@@ -1,0 +1,53 @@
+[
+    {
+       "question_number": "1",
+       "question_text": "Calculate 42 x 6",
+       "answer_1":252
+    },
+    {
+      "question_number": "2",
+      "question_text": "Calculate 32  x 47",
+      "answer_1":"1504",
+      "answer_2":"1,504"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Calculate 89 x 76",
+      "answer_1":"6764",
+      "answer_2":"6,764"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Calculate 123 x 5",
+      "answer_1":"615"
+   },
+   {  "question_number": "5",
+      "question_text": "432 x 26",
+      "answer_1":"11232",
+      "answer_2":"11,232"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Calculate 789 x 73",
+      "answer_1":"57597",
+      "answer_2":"57,597"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Calculate 368 x 241",
+    "answer_1":"88688",
+    "answer_2":"88,688"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Calculate 563 x 647",
+    "answer_1":"364261",
+    "answer_2":"36,4261"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Calculate 768 x 894",
+    "answer_1":"686592",
+    "answer_2":"686,592"
+ }
+   ]
