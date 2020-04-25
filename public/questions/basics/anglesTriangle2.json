@@ -1,77 +1,77 @@
 [
     {
        "question_number": "1",
-       "title":"Find the angle x",
-       "question_text": "Calculate 4.2 x 6",
-       "answer_1":"25.2"
+       "title":"Angles in a Triangle and on a Straigth Line",
+       "question_text": "Find the angle x",
+       "answer_1":"99"
     },
     {
       "question_number": "2",
       "question_text": "Find the angle z",
-      "answer_1":"12.8"
+      "answer_1":"81"
    },
    {
       "question_number": "3",
-      "question_text": "Find the angle m",
-      "answer_1":"9.6"
+      "question_text": "Find the angle w",
+      "answer_1":"28"
    },
    {
       "question_number": "4",
       "question_text": "Find the angle y",
-      "answer_1":"61.5"
+      "answer_1":"152"
    },
    {  "question_number": "5",
-      "question_text": "Find the angle y",
-      "answer_1":"0.24"
+      "question_text": "Find the angle x",
+      "answer_1":"108"
    },
    {
       "question_number": "6",
-      "question_text": "Find the angle y",
-      "answer_1":"10.35"
+      "question_text": "Find the angle z",
+      "answer_1":"72"
    },
    {
     "question_number": "7",
-    "question_text": "Find the angle y",
-    "answer_1":"35.91"
+    "question_text": "Find the angle w",
+    "answer_1":"29"
  },
  {
     "question_number": "8",
     "question_text": "Find the angle y",
-    "answer_1":"36.032"
+    "answer_1":"151"
  },
  {
     "question_number": "9",
-    "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "question_text": "Find the angle x",
+    "answer_1":"114"
  },
  {
     "question_number": "10",
-    "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "question_text": "Find the angle z",
+    "answer_1":"66"
  },
  {
     "question_number": "11",
-    "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "question_text": "Find the angle w",
+    "answer_1":"29"
  },
  {
     "question_number": "12",
     "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "answer_1":"151"
  },
  {
     "question_number": "13",
     "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "answer_1":"125"
  },
  {
     "question_number": "14",
-    "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "question_text": "Find the angle x",
+    "answer_1":"97"
  },
  {
     "question_number": "15",
     "question_text": "Find the angle y",
-    "answer_1":"68.6592"
+    "answer_1":"161"
  }
    ]
