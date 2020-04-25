@@ -408,6 +408,11 @@ app.get('/basics/anglepoint',isLoggedIn, function(req,res){
         res.render('basics/anglepoint',{user:user})
     })
 })
+app.get('/basics/anglesTriangle2',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/anglesTriangle2',{user:user})
+    })
+})
 
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){

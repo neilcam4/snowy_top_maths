@@ -245,7 +245,7 @@ var correct = 0;
     
     function getJSON (){
         document.getElementById("answers").style.visibility = "hidden";
-        fetch('./questions/basics/multiplydecimals.json')
+        fetch('./questions/basics/anglesTriangle2.json')
         .then(function(res){
             return res.json()
            
@@ -260,6 +260,12 @@ var correct = 0;
             let output7 = data[6].question_text
             let output8 = data[7].question_text
             let output9 = data[8].question_text
+            let output10 = data[9].question_text
+            let output11 = data[10].question_text
+            let output12 = data[11].question_text
+            let output13 = data[12].question_text
+            let output14 = data[13].question_text
+            let output15 = data[14].question_text
             var answer1 = data[0].answer_1
             var answer2 = data[1].answer_1
             var answer3 = data[2].answer_1
@@ -269,6 +275,12 @@ var correct = 0;
             var answer7 = data[6].answer_1
             var answer8 = data[7].answer_1
             var answer9 = data[8].answer_1
+            var answer10 = data[9].answer_1
+            var answer11= data[10].answer_1
+            var answer12= data[11].answer_1
+            var answer13= data[12].answer_1
+            var answer14 = data[13].answer_1
+            var answer15 = data[14].answer_1
             var headingMain = data[0].title
             document.getElementById("q1").innerHTML = output1
             document.getElementById("q2").innerHTML = output2
@@ -322,59 +334,59 @@ $("#button1").click(function () {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == answer3) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == answer1) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == answer4) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == answer5) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == answer6) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     else if (slideIndex == 7 && question7 == answer7) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     } 
     else if (slideIndex == 8 && question8 == answer8) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     else if (slideIndex == 9 && question9 == answer9) {
         checkAnswer10();
         showTicks10();
         questionCounter();
-        numberCounterUp();
+         shapeCounterUp();
     }
     else {
         document.getElementById("wrong").style.visibility = "visible";

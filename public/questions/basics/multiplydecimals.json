@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Multiplication of Decimals",
+       "question_text": "Calculate 4.2 x 6",
+       "answer_1":"25.2"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Calculate 3.2  x 4",
+      "answer_1":"12.8"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Calculate 0.6 x 16",
+      "answer_1":"9.6"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Calculate 12.3 x 5",
+      "answer_1":"61.5"
+   },
+   {  "question_number": "5",
+      "question_text": "0.4 x 0.6",
+      "answer_1":"0.24"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Calculate 2.3 x 4.5",
+      "answer_1":"10.35"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Calculate 5.7 x 6.3",
+    "answer_1":"35.91"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Calculate 5.63 x 6.4",
+    "answer_1":"36.032"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Calculate 7.68 x 8.94",
+    "answer_1":"68.6592"
+ }
+   ]
