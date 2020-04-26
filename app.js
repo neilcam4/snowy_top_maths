@@ -925,6 +925,17 @@ app.get('/problemsolving/ratio3', isLoggedIn, function (req, res) {
         }
     });
 })
+app.get('/problemsolving/ratio4', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/ratio4', {
+                user: user
+            })
+        }
+    });
+})
 
 app.get('/problemsolving/squares1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {

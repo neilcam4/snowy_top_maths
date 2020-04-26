@@ -13,7 +13,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id ="heading">Angles and Ratio</h3>
+        <h3 class="text-center" id ="heading"></h3>
         <div class="card card-info-inverse">
             <div class="card-header">
                 <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Tutorial Coming Soon</h3>
@@ -41,6 +41,8 @@
             <div class="card-body">
                 <form name="quiz1">
                     <p class="q" id="q1"></p>
+                    <img src="img/angleratio/angleratio11.png" alt="" class="img-fluid">
+
                     <div class="ui input focus">
                         <input type="text"   name="question1"></input>
                     </div>
@@ -55,8 +57,9 @@
             <div class="card-body">
                 <form name="quiz2">
                 <p class="q" id="q2"></p>
+                <img src="img/angleratio/angleratio11.png" alt="" class="img-fluid">
                     <div class="ui input focus">
-                        <input type="text"   name="question1"></input>
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -69,6 +72,7 @@
             <div class="card-body">
                 <form name="quiz3">
                 <p class="q" id="q3"></p>
+                <img src="img/angleratio/angleratio1.png" alt="" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text"   name="question1"></input>
                     </div>
@@ -83,8 +87,9 @@
             <div class="card-body">
                 <form name="quiz4">
                 <p class="q" id="q4"></p>
+                <img src="img/angleratio/angleratio1.png" alt="" class="img-fluid">
                     <div class="ui input focus">
-                        <input type="text"   name="question1"></input>
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -97,6 +102,7 @@
             <div class="card-body">
                 <form name="quiz5">
                 <p class="q" id="q5"></p>
+                <img src="img/angleratio/angleratio1.png" alt="" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -111,6 +117,7 @@
             <div class="card-body">
                 <form name="quiz6">
                 <p class="q" id="q6"></p>
+                <img src="img/angleratio/angleratio2.png" alt="" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -124,6 +131,7 @@
             <div class="card-body">
                 <form name="quiz7">
                 <p class="q" id="q7"></p>
+                <img src="img/angleratio/angleratio2.png" alt="" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -137,6 +145,7 @@
             <div class="card-body">
                 <form name="quiz8">
                 <p class="q" id="q8"></p>
+                <img src="img/angleratio/angleratio3.png" alt="" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -150,6 +159,7 @@
             <div class="card-body">
                 <form name="quiz9">
                 <p class="q" id="q9"></p>
+                <img src="img/angleratio/angleratio3.png" alt="" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -246,7 +256,7 @@ var correct = 0;
     
     function getJSON (){
         document.getElementById("answers").style.visibility = "hidden";
-        fetch('./questions/basics/multiplyintegers.json')
+        fetch('./questions/problemsolving/ratio4.json')
         .then(function(res){
             return res.json()
            
@@ -261,6 +271,7 @@ var correct = 0;
             let output7 = data[6].question_text
             let output8 = data[7].question_text
             let output9 = data[8].question_text
+            var heading = data[0].title
             var answer1 = data[0].answer_1
             var answer2 = data[1].answer_1
             var answer3 = data[2].answer_1
@@ -270,7 +281,7 @@ var correct = 0;
             var answer7 = data[6].answer_1
             var answer8 = data[7].answer_1
             var answer9 = data[8].answer_1
-            
+            document.getElementById("heading").innerHTML = heading
             document.getElementById("q1").innerHTML = output1
             document.getElementById("q2").innerHTML = output2
             document.getElementById("q3").innerHTML = output3
@@ -279,8 +290,7 @@ var correct = 0;
             document.getElementById("q6").innerHTML = output6
             document.getElementById("q7").innerHTML = output7
             document.getElementById("q8").innerHTML = output8
-            document.getElementById("q9").innerHTML = output9
-            document.getElementById("heading").innerHTML = heading
+            document.getElementById("q9").innerHTML = output9      
             document.getElementById("answer_1").innerHTML = answer1
             document.getElementById("answer_2").innerHTML = answer2
             document.getElementById("answer_3").innerHTML = answer3
@@ -297,7 +307,6 @@ var correct = 0;
     }
     getJSON()
 
-
 $("#button1").click(function () {
     var answer1 = document.getElementById("answer_1").innerHTML 
     var answer2 = document.getElementById("answer_2").innerHTML 
@@ -306,7 +315,7 @@ $("#button1").click(function () {
     var answer5 = document.getElementById("answer_5").innerHTML
     var answer6 = document.getElementById("answer_6").innerHTML
     var answer7 = document.getElementById("answer_7").innerHTML
-    var answer7 = document.getElementById("answer_8").innerHTML
+    var answer8 = document.getElementById("answer_8").innerHTML
     var answer9 = document.getElementById("answer_9").innerHTML
     var question1 = document.quiz1.question1.value;
     var question2 = document.quiz2.question1.value;
@@ -320,89 +329,89 @@ $("#button1").click(function () {
 
     //2nd question
     if (slideIndex == 2 && question2 == answer2) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == answer3) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == answer1) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == answer4) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == answer5) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == answer6) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     else if (slideIndex == 7 && question7 == answer7) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     } 
     else if (slideIndex == 8 && question8 == answer8) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     else if (slideIndex == 9 && question9 == answer9) {
-        checkAnswer10();
-        showTicks10();
+        checkAnswer30();
+        showTicks30();
         questionCounter();
-        numberCounterUp();
+        shapeCounterUp();
     }
     else {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " One or more may be incorrect. Please try again.";
-        numberError();
+        document.getElementById("msg").textContent = "Please try again.";
+        shapeError();
     }
 });
 $("#button").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 9`; 
-    if(correct > 4 && correct < 6){
+    if(correct >= 3 && correct <= 5){
         addBronze()
         trackProgress9()
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
-    } else if (correct > 5 && correct < 8){
+    } else if (correct >= 6 && correct <= 7){
         addSilver()
         trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct > 7){
         addGold()
         trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
     } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("points").textContent = `Points: ${correct * 30}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })
