@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Converting Fractions to Percentages",
+       "question_text": "Convert 1/10 into a percentage  ",
+       "answer_1":"10"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Convert 1/5 into a percentage  ",
+      "answer_1":"20"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Convert 3/10 into a percentage  ",
+      "answer_1":"30"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Convert 8/10 into a percentage  ",
+      "answer_1":"80"
+   },
+   {  "question_number": "5",
+    "question_text": "Convert 3/50 into a percentage  ",
+    "answer_1":"6"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Convert 2/100 into a percentage  ",
+      "answer_1":"2"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Convert 21/50 into a percentage  ",
+    "answer_1":"42"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Convert 16/40 into a percentage  ",
+    "answer_1":"40"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Convert 48/60 into a percentage  ",
+    "answer_1":"80"
+ }
+   ]

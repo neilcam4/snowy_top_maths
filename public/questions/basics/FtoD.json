@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Converting Fractions to Decimals",
+       "question_text": "Convert 1/10 into a decimal",
+       "answer_1":"0.1"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Convert 1/5 into a decimal",
+      "answer_1":"0.2"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Convert 5/100 into a decimal",
+      "answer_1":"0.05"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Convert 6/10 into a decimal",
+      "answer_1":"0.6"
+   },
+   {  "question_number": "5",
+    "question_text": "Convert 73/100 into a decimal",
+    "answer_1":"0.73"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Convert 3/20 into a decimal",
+      "answer_1":"0.15"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Convert 45/60 into a decimal",
+    "answer_1":"0.75"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Convert 45/1000 into a decimal",
+    "answer_1":"0.045"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Convert 1/8 into a decimal",
+    "answer_1":"0.125"
+ }
+   ]
