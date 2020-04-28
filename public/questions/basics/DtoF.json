@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Converting Fractions to Decimals",
+       "question_text": "Convert 0.1 into a fraction in its lowest terms",
+       "answer_1":"1/10"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Convert 0.2 into a fraction in its lowest terms",
+      "answer_1":"1/5"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Convert 0.15 into a fraction in its lowest terms",
+      "answer_1":"3/20"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Convert 0.78 into a fraction in its lowest terms",
+      "answer_1":"39/50"
+   },
+   {  "question_number": "5",
+    "question_text": "Convert 0.05 into a fraction in its lowest terms",
+    "answer_1":"1/20"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Convert 0.08 into a fraction in its lowest terms",
+      "answer_1":"2/25"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Convert 0.125 into a fraction in its lowest terms",
+    "answer_1":"1/8"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Convert 0.005 into a fraction in its lowest terms",
+    "answer_1":"1/200"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Convert 0.844 into a fraction in its lowest terms",
+    "answer_1":"211/250"
+ }
+   ]
