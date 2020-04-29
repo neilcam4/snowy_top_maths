@@ -3,34 +3,19 @@
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
         <h3 class="text-center" id="heading">Adding Fractions</h3>
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
-            </div>
-            <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay"
-                class="video-player-container vooplayer" data-playerId="MTQ3NTkz" allowtransparency="true"
-                style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params=""
-                frameborder="0" scrolling="no"> </iframe>
-            <div class="card-body overflow-hidden text-center">
-            </div>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HiCI_gqfvs0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
     </div>
 </div>
-
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
 </div>
-<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> </p>
-            <p>Find the missing angles labelled in these quadrilaterals. Each question is worth 20 points. </p>
-        </div>
-    </div>
-</div>
+
 <div style="text-align: center">
     <div class="card card-royal col-md-6" style="display:inline-block">
+    <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> </p>
+        </div>
         <!--        First question-->
         <div class="mySlides">
             <div class="card-header">
