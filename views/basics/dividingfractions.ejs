@@ -1,50 +1,49 @@
 <% include ../partials/header %>
+<p id = "input"></p>
+
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 10 points. 
+                <strong>Good Luck! </strong> </p>
+        </div>
+    </div>
+</div>
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Dividing Fractions</h3>
+        <h3 class="text-center" id ="heading"></h3>
         <div class="card card-info-inverse">
             <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Tutorial Coming Soon</h3>
             </div>
-            <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe allow="autoplay"
-                class="video-player-container vooplayer" data-playerId="MTQ3NTgz" allowtransparency="true"
-                style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src="" watch-type="" url-params=""
-                frameborder="0" scrolling="no"> </iframe>
+            
             <div class="card-body overflow-hidden text-center">
             </div>
         </div>
     </div>
 </div>
 
-
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
+  
 </div>
-<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> </p>
-            <p>Find the missing angles labelled in these quadrilaterals. Each question is worth 20 points. </p>
-        </div>
-    </div>
-</div>
+
 <div style="text-align: center">
     <div class="card card-royal col-md-6" style="display:inline-block">
+
         <!--        First question-->
         <div class="mySlides">
             <div class="card-header">
-                <h3 id="header" class="card-title">1.</h3>
+                <h3 class="card-title">1.</h3>
             </div>
             <div class="card-body">
                 <form name="quiz1">
-                    <p class="q">Find the missing angle labelled X<img
-                            src="img/anglepoint/anglepoint.png" alt="" class="img-fluid"></p> <br>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
+                    <p class="q" id="q1"></p>
+                    <img src="img/dividingfractions/divfrac.png" alt="" class="img-fluid"></img> <br></br>
+                    <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -56,13 +55,10 @@
             </div>
             <div class="card-body">
                 <form name="quiz2">
-                    <p class="q">Find the missing angle X</p>
-                        <img src="img/anglepoint/anglepoint2.png" alt="" class="img-fluid">
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
+                <p class="q" id="q2"></p>
+                <img src="img/dividingfractions/divfrac1.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -74,13 +70,10 @@
             </div>
             <div class="card-body">
                 <form name="quiz3">
-                    <p class="q">Find the missing angle X</p><img
-                        src="img/anglepoint/anglepoint3.png" alt="" class="img-fluid"><br>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
+                <p class="q" id="q3"></p>
+                <img src="img/dividingfractions/divfrac2.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -92,13 +85,10 @@
             </div>
             <div class="card-body">
                 <form name="quiz4">
-                    <p class="q">Find the angle X</p><img src="img/anglepoint/anglepoint4.png" alt=""
-                            class="img-fluid"><br>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
+                <p class="q" id="q4"></p>
+                <img src="img/dividingfractions/divfrac3.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -110,13 +100,10 @@
             </div>
             <div class="card-body">
                 <form name="quiz5">
-                <p class="q">Find the angle Y</p><img src="img/anglepoint/anglepoint4.png" alt=""
-                            class="img-fluid"></img><br>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
+                <p class="q" id="q5"></p>
+                <img src="img/dividingfractions/divfrac4.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -128,24 +115,63 @@
             </div>
             <div class="card-body">
                 <form name="quiz6">
-                <p class="q">The circle is divided up into 5 equal parts. Find the missing angle x</p><img
-                            src="img/anglepoint/anglepoint5.png" alt="" class="img-fluid"></p><br>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter angle.." name="question1">
-                        <div class="ui basic label">
-                            &#176;
-                        </div>
+                <p class="q" id="q6"></p>
+                <img src="img/dividingfractions/divfrac6.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
                     </div>
                 </form>
             </div>
         </div>
-
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">7.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz7">
+                <p class="q" id="q7"></p>
+                <img src="img/dividingfractions/divfrac7.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">8.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz8">
+                <p class="q" id="q8"></p>
+                <img src="img/dividingfractions/divfrac8.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">9.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz9">
+                <p class="q" id="q9"></p>
+                <img src="img/dividingfractions/divfrac9.png" alt="" class="img-fluid"></img> <br></br>
+                <div class="ui input focus">
+                        <input type="text" placeholder="" name="question1"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
         <!--        buttons-->
         <div class="container">
             <div class="row" style="margin: 0 auto">
                 <button type="button" id="button1" class="btn btn-success btn-raised"> Check </button>
                 <button type="button" id="next1" class="btn btn-primary btn-raised" onclick="plusSlides(1)"> Next
                 </button>
+                
                 <button type="button" id="button" class="btn btn-danger btn-raised" data-toggle="modal"
                     data-target="#myModal4"> Total Score </button>
             </div>
@@ -159,21 +185,38 @@
                 <span id="wrong" class="ms-icon ms-icon-lg ms-icon-circle color-danger">
                     <i class="fa fa-remove"></i>
                 </span>
+                <span id="answer">
+                    <p></p>
+                </span>
             </div>
         </div>
 
 
         <div id="msg"></div>
         <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
         <!-- last 2 divs from top of card-->
     </div>
+    <div id ="answers" class = "container">
+<p id="answer_1"></p>
+<p id="answer_2"></p>
+<p id="answer_3"></p>
+<p id="answer_4"></p>
+<p id="answer_5"></p>
+<p id="answer_6"></p>
+<p id="answer_7"></p>
+<p id="answer_8"></p>
+<p id="answer_9"></p>
+</div>
 </div>
 <div id="example"></div>
 <!-- Modal -->
@@ -203,83 +246,166 @@
         </div>
     </div>
 </div>
+
+
 <script>
-    $("#example").load("../config");
-    var correct = 0;
+$("#example").load("../config");
+var correct = 0;
+    
+    function getJSON (){
+        document.getElementById("answers").style.visibility = "hidden";
+        fetch('./questions/basics/dividingfractions.json')
+        .then(function(res){
+            return res.json()
+           
+        })
+        .then(function(data){
+            let output1 = data[0].question_text
+            let output2 = data[1].question_text
+            let output3 = data[2].question_text
+            let output4 = data[3].question_text
+            let output5 = data[4].question_text
+            let output6 = data[5].question_text
+            let output7 = data[6].question_text
+            let output8 = data[7].question_text
+            let output9 = data[8].question_text
+            var heading = data[0].title
+            var answer1 = data[0].answer_1
+            var answer2 = data[1].answer_1
+            var answer3 = data[2].answer_1
+            var answer4 = data[3].answer_1
+            var answer5 = data[4].answer_1
+            var answer6 = data[5].answer_1
+            var answer7 = data[6].answer_1
+            var answer8 = data[7].answer_1
+            var answer9 = data[8].answer_1
+            document.getElementById("heading").innerHTML = heading
+            document.getElementById("q1").innerHTML = output1
+            document.getElementById("q2").innerHTML = output2
+            document.getElementById("q3").innerHTML = output3
+            document.getElementById("q4").innerHTML = output4
+            document.getElementById("q5").innerHTML = output5
+            document.getElementById("q6").innerHTML = output6
+            document.getElementById("q7").innerHTML = output7
+            document.getElementById("q8").innerHTML = output8
+            document.getElementById("q9").innerHTML = output9      
+            document.getElementById("answer_1").innerHTML = answer1
+            document.getElementById("answer_2").innerHTML = answer2
+            document.getElementById("answer_3").innerHTML = answer3
+            document.getElementById("answer_4").innerHTML = answer4
+            document.getElementById("answer_5").innerHTML = answer5
+            document.getElementById("answer_6").innerHTML = answer6
+            document.getElementById("answer_7").innerHTML = answer7
+            document.getElementById("answer_8").innerHTML = answer8
+            document.getElementById("answer_9").innerHTML = answer9
+  })
+        .catch(function(error){
+            console.log("error loading JSON")
+        })
+    }
+    getJSON()
 
-    $("#button1").click(function () {
-        var question1 = document.quiz1.question1.value;
-        var question2 = document.quiz2.question1.value;
-        var question3 = document.quiz3.question1.value;
-        var question4 = document.quiz4.question1.value;
-        var question5 = document.quiz5.question1.value;
-        var question6 = document.quiz6.question1.value;
+$("#button1").click(function () {
+    var answer1 = document.getElementById("answer_1").innerHTML 
+    var answer2 = document.getElementById("answer_2").innerHTML 
+    var answer3 = document.getElementById("answer_3").innerHTML
+    var answer4 = document.getElementById("answer_4").innerHTML
+    var answer5 = document.getElementById("answer_5").innerHTML
+    var answer6 = document.getElementById("answer_6").innerHTML
+    var answer7 = document.getElementById("answer_7").innerHTML
+    var answer8 = document.getElementById("answer_8").innerHTML
+    var answer9 = document.getElementById("answer_9").innerHTML
+    var question1 = document.quiz1.question1.value;
+    var question2 = document.quiz2.question1.value;
+    var question3 = document.quiz3.question1.value;
+    var question4 = document.quiz4.question1.value;
+    var question5 = document.quiz5.question1.value;
+    var question6 = document.quiz6.question1.value;
+    var question7 = document.quiz7.question1.value;
+    var question8 = document.quiz8.question1.value;
+    var question9 = document.quiz9.question1.value;
 
-        //2nd question
-        if (slideIndex == 2 && question2 == 303) {
-            checkAnswer10();
-            showTicks10();
-            questionCounter();
-            shapeCounterUp();
-            //third question
-        } else if (slideIndex == 3 && question3 == 106) {
-            checkAnswer10();
-            showTicks10();
-            questionCounter();
-            shapeCounterUp();
-        }
-        //first question
-        else if (slideIndex == 1 && question1 == 110) {
-            checkAnswer10();
-            showTicks10();
-            questionCounter();
-            shapeCounterUp();
-        }
-        //4th question 
-        else if (slideIndex == 4 && question4 == 55) {
-            checkAnswer10();
-            showTicks10();
-            questionCounter();
-            shapeCounterUp();
-        }
-        //5th question 
-        else if (slideIndex == 5 && question5 == 125) {
-            checkAnswer10();
-            showTicks10();
-            questionCounter();
-            shapeCounterUp();   
-        }
-        //6th question
-        else if (slideIndex == 6 && question6 == 72) {
-            checkAnswer10();
-            showTicks10();
-            questionCounter();
-            shapeCounterUp();
-        }  
-        else {
-            document.getElementById("wrong").style.visibility = "visible";
-            document.getElementById("msg").style.visibility = "visible";
-            document.getElementById("msg").textContent = " Not Yet";
-            shapeError()
-        }
-            document.getElementById("badge").textContent = `${correct} out of 6`; 
-            document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
+    //2nd question
+    if (slideIndex == 2 && question2 == answer2) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+        //third question
+    } else if (slideIndex == 3 && question3 == answer3) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    //first question
+    else if (slideIndex == 1 && question1 == answer1) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    //4th question 
+    else if (slideIndex == 4 && question4 == answer4) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    //5th question 
+    else if (slideIndex == 5 && question5 == answer5) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    //6th question
+    else if (slideIndex == 6 && question6 == answer6) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    else if (slideIndex == 7 && question7 == answer7) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    } 
+    else if (slideIndex == 8 && question8 == answer8) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    else if (slideIndex == 9 && question9 == answer9) {
+        checkAnswer10();
+        showTicks10();
+        questionCounter();
+        shapeCounterUp();
+    }
+    else {
+        document.getElementById("wrong").style.visibility = "visible";
+        document.getElementById("msg").style.visibility = "visible";
+        document.getElementById("msg").textContent = "Please try again.";
+        shapeError();
+    }
 });
 $("#button").click(function () {
-    document.getElementById("badge").textContent = `${correct} out of 6`; 
-    if(correct === 3){
+    document.getElementById("badge").textContent = `${correct} out of 9`; 
+    if(correct >= 3 && correct <= 5){
         addBronze()
-        trackProgress6()
+        trackProgress9()
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
-    } else if (correct > 3 && correct <6){
+    } else if (correct >= 6 && correct <= 7){
         addSilver()
-        trackProgress6()
+        trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
-    } else if(correct === 6){
+    } else if(correct > 7){
         addGold()
-        trackProgress6()
+        trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct < 3){
@@ -287,6 +413,7 @@ $("#button").click(function () {
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })
-$("input").attr("maxlength", 5)
+    $("input").attr("maxlength", 8)
+    
 </script>
 <% include ../partials/footer %></div>

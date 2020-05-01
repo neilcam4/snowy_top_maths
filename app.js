@@ -418,6 +418,11 @@ app.get('/basics/areasquare',isLoggedIn, function(req,res){
         res.render('basics/areasquare',{user:user})
     })
 })
+app.get('/basics/dividingfractions',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/dividingfractions',{user:user})
+    })
+})
 
 app.get('/habs2018', function(req,res){
     User.findById(req.params.id, function(err, user){

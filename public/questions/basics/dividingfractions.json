@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Dividing Fractions",
+       "question_text": "Find the answer to",
+       "answer_1":"3/4"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Find the answer to",
+      "answer_1":"7/24"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Find the answer and simplify",
+      "answer_1":"11/12"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Find the answer to",
+      "answer_1":"15/26"
+   },
+   {  "question_number": "5",
+    "question_text": "Find the answer to and simplify",
+    "answer_1":"5/17"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Find the answer to",
+      "answer_1":"8/15"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Find the answer to",
+    "answer_1":"15/26"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Find the answer to",
+    "answer_1":"8/27"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Find the answer to",
+    "answer_1":"14/15"
+ }
+   ]
