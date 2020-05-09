@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Pie Charts and Angles",
+       "question_text": "How many people voted for lighning? ",
+       "answer_1":"32"
+    },
+    {
+      "question_number": "2",
+      "question_text": "How many people voted for sunshine?",
+      "answer_1":"84"
+   },
+   {
+      "question_number": "3",
+      "question_text": "How many people voted for snow?",
+      "answer_1":"28"
+   },
+   {
+      "question_number": "4",
+      "question_text": "How many people voted for Internet Explorer?",
+      "answer_1":"15"
+   },
+   {  "question_number": "5",
+    "question_text": "How many people voted for Chrome?",
+    "answer_1":"35"
+   },
+   {
+      "question_number": "6",
+      "question_text": "How many people voted for Firefox?",
+      "answer_1":"40"
+   },
+   {
+    "question_number": "7",
+    "question_text": "How many people voted for Rhino?",
+    "answer_1":"18"
+ },
+ {
+    "question_number": "8",
+    "question_text": "How many people voted for the Camel?",
+    "answer_1":"54"
+ },
+ {
+    "question_number": "9",
+    "question_text": "How many people voted for dogs?",
+    "answer_1":"84"
+ }
+   ]

@@ -353,6 +353,11 @@ app.get('/basics/subtractfractions',isLoggedIn, function(req,res){
         res.render('basics/subtractfractions',{user:user})
     })
 })
+app.get('/basics/piechartsangles',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/piechartsangles',{user:user})
+    })
+})
 app.get('/basics/DtoF',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/DtoF',{user:user})
