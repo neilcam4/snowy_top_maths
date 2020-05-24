@@ -1,33 +1,11 @@
 <% include ../partials/header %>
 <p id = "input"></p>
 
-<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 10 points. Remember to read the signs!
-                <strong>Good Luck! </strong> </p>
-        </div>
-    </div>
-</div>
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id ="heading">Multiplication of Whole Numbers</h3>
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
-            </div>
-            <div class="js-player">
-                <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe
-                    allow="autoplay" class="video-player-container vooplayer" data-playerId="MTQ1NjMy"
-                    allowtransparency="true" style="max-width:100%" name="vooplayerframe" allowfullscreen="true"
-                    src="https://snowytopmaths.cdn.vooplayer.com/publish/MTQ1NjMy" frameborder="0" scrolling="no">
-                </iframe>
-            </div>
-            <div class="card-body overflow-hidden text-center">
-            </div>
-        </div>
+        <h3 id = "heading" class="text-center">Operations: Worded Problems</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KB86n5yUDBk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </iframe>
     </div>
 </div>
 
@@ -38,7 +16,15 @@
 
 <div style="text-align: center">
     <div class="card card-royal col-md-6" style="display:inline-block">
-
+    <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 10 points. 
+                <strong>Good Luck! </strong> </p>
+        </div>
+    </div>
+</div>
         <!--        First question-->
         <div class="mySlides">
             <div class="card-header">
@@ -167,12 +153,12 @@
 
         <div id="msg"></div>
         <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
         </div>
         <!-- last 2 divs from top of card-->
     </div>
@@ -209,7 +195,6 @@
 
 <div class = "container">
 <div id="square"></div>
-<button id="changeSquare">Change Number</button>
 
 </div>
 <script>
@@ -307,7 +292,7 @@ $("#button").click(function () {
     $("input").attr("maxlength", 5)
     
     function getJSON (){
-        fetch('./questions/multdiv1.json')
+        fetch('./questions/problemsolving/multdiv1.json')
         .then(function(res){
             return res.json()
            

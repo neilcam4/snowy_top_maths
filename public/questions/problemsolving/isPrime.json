@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Find the Prime Number",
+       "question_text": "Which is the only prime number from these numbers below?",
+       "answer_1":"2017"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Which is the only prime number from these numbers below?",
+      "answer_1":"3317"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Which is the only prime number from these numbers below?",
+      "answer_1":"2819"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Which is the only prime number from these numbers below?",
+      "answer_1":"1429"
+   },
+   {  "question_number": "5",
+    "question_text": "Which is the only prime number from these numbers below?",
+    "answer_1":"3541"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Which is the only prime number from these numbers below?",
+      "answer_1":"4283"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Which is the only prime number from these numbers below?",
+    "answer_1":"2681" 
+ },
+ {
+    "question_number": "8",
+    "question_text": "Which is the only prime number from these numbers below?",
+    "answer_1":"4243"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Which is the only prime number from these numbers below?",
+    "answer_1":"2539"
+ }
+   ]

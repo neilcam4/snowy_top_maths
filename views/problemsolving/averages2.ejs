@@ -1,33 +1,11 @@
 <% include ../partials/header %>
-<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 20 points.
-            </p>
-        </div>
-    </div>
-</div>
-
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Averages: Mean, Mode, Median and Range</h3>
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
-            </div>
-            <div class="js-player">
-                <script src="https://snowytopmaths.cdn.vooplayer.com/assets/vooplayer.js"></script><iframe
-                    allow="autoplay" class="video-player-container vooplayer" data-playerId="MTUyMzU3"
-                    allowtransparency="true" style="max-width:100%" name="vooplayerframe" allowfullscreen="true" src=""
-                    watch-type="" url-params="" frameborder="0" scrolling="no"> </iframe>
-                <div class="card-body overflow-hidden text-center">
-                </div>
-            </div>
-        </div>
+        <h3 id = "heading" class="text-center">Mode, Median and Mean</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ifOnyeIby_c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
+</div>
     <div class="container">
         <p id="userId"><%=currentUser.id %> </p>
 
@@ -36,6 +14,15 @@
     <div style="text-align: center">
         <div class="card card-royal col-md-6" style="display:inline-block">
 
+        <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+            <div class="ms-paper-content" style="display:inline-block">
+                <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 20 points.
+            </p>
+                </div>
+            </div>
+        </div>
             <!--        First question-->
             <div class="mySlides">
                 <div class="card-header">
@@ -76,7 +63,7 @@
                 <div class="card-body">
                     <form name="quiz3">
                         <p class="q"> The 6 cards below represent a set of 6 numbers.</p>
-                        <p class="q">The mean is 7, the range is 7 and the median is 7.5</p>
+                        <p class="q">The mean is 6, the range is 7 and the median is 7.5</p>
                         <p class="q"> Find the missing number in the 6th card.</p> <img src="img/averages/ave3.png"
                             alt="" class="img-fluid">
                         <div class="ui input focus">
@@ -210,15 +197,15 @@
 
           <div id="msg"></div>
             <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
             </div>
             <!-- last 2 divs from top of card-->
         </div>
@@ -294,28 +281,28 @@ $("#button1").click(function () {
         dataCounterUp();
     }
     //5th question 
-    else if (slideIndex == 5 && question5 == '8') {
+    else if (slideIndex == 5 && question5 == '3') {
         checkAnswer20();
         showTicks20();
         questionCounter();
         dataCounterUp();
     }
     //6th question
-    else if (slideIndex == 6 && question6 == '3') {
+    else if (slideIndex == 6 && question6 == '4') {
         checkAnswer20();
         showTicks20();
         questionCounter();
         dataCounterUp();
     }
     //7th question
-    else if (slideIndex == 7 && question7 == '3') {
-        checkAnswer20()
+    else if (slideIndex == 7 && question7 == '8') {
+        checkAnswer20();
         showTicks20();
         questionCounter();
         dataCounterUp();
     }
     //8th question
-    else if (slideIndex == 8 && question8 == '8') {
+    else if (slideIndex == 8 && question8 == '3') {
         checkAnswer20();
         showTicks20();
         questionCounter();

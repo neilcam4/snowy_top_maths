@@ -104,7 +104,7 @@
         </div>
               <div class="col-lg-12 col-md-12 order-md-3 order-lg-2">
                 <a href="/users/<%=currentUser.id %>" class="btn btn-warning btn-raised btn-block animated fadeInUp animation-delay-12">
-                  <i class="zmdi zmdi-shield-check"></i> My Progress Summary</a>        
+                  <i class="zmdi zmdi-shield-check"></i> My Badges and Progress</a>        
               </div>
         <div class="col-lg-12 col-md-6 order-md-2 order-lg-3">
           <div class="card animated fadeInUp animation-delay-12">
@@ -120,9 +120,9 @@
         <div class="col-sm-4">
         <a href = "/basics/index">
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-dark">Master the Basics</h2>
+            <h2 class="counter color-dark">Build the Basics</h2>
             <i class="fa fa-4x fa-trophy color-dark"></i>
-            <p class="mt-2 no-mb lead small-caps color-dark">Enter</p>
+            <p class="mt-2 no-mb lead small-caps color-dark">Enter Course</p>
           </div>
           </a>
         </div>
@@ -131,7 +131,7 @@
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
             <h2 class="counter color-secondary">Problem Solving</h2>
             <i class="fa fa-4x fa-trophy color-secondary"></i>
-            <p class="mt-2 no-mb lead small-caps color-secondary">Enter</p>
+            <p class="mt-2 no-mb lead small-caps color-secondary">Enter Course</p>
           </div>
           </a>
         </div>
@@ -139,10 +139,10 @@
         <div class="col-sm-4">
         <a href = "/pastpapers/list">
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-warning">Past Papers  
+            <h2 class="counter color-warning">Practice Papers  
             </h2>
             <i class="fa fa-4x fa-trophy color-warning"></i>
-            <p class="mt-2 no-mb lead small-caps color-warning">Enter</p>
+            <p class="mt-2 no-mb lead small-caps color-warning">Enter Course</p>
           </div>
           </a>
         </div>
@@ -229,12 +229,12 @@ topic list
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
             </a>
             <a href="/problemsolving/sequences3" class="list-group-item list-group-item-action withripple">
-              &#9313; Fun Rules
+              &#9313; Follow a given rule
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
                   class=" fa fa-mortar-board"></i></span>
             </a>
             <a href="/problemsolving/sequences2" class="list-group-item list-group-item-action withripple">
-              &#9314; Which page of a newspaper?<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+              &#9314; Newspaper Sequences<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
                   class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
             <a href="/problemsolving/sequences4" class="list-group-item list-group-item-action withripple">
               &#9315; Adding Consecutive Numbers
@@ -252,13 +252,16 @@ topic list
               &#9312; Add together primes to make a square
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
             </a>
+            <a href="/problemsolving/isPrime" class="list-group-item list-group-item-action withripple">
+              &#9313; Identify the Prime Number
+              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+            </a>
             <a href="/problemsolving/squares1" class="list-group-item list-group-item-action withripple">
-              &#9313; Square Number Problems
+              &#9314; Square Number Problems
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
             </a>
-
             <a href="/problemsolving/prime1" class="list-group-item list-group-item-action withripple">
-              &#9314; Common Multiples <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
+              &#9315; Common Multiples <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
                   class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
           </div>
         </div>
@@ -302,14 +305,14 @@ topic list
             <a href="" class="list-group-item list-group-item-action withripple active">
               &#x278F; Ratio and Proportion</a>
             <a href="/problemsolving/ratio1" class="list-group-item list-group-item-action withripple">
-              &#9312; Dividing by a Ratio 
+              &#9312; Dividing into a Ratio
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
             </a>
             <a href="/problemsolving/ratio3" class="list-group-item list-group-item-action withripple">
-              &#9313; Indirect Proportion
+              &#9313; Inverse Proportion
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
                   class=" fa fa-mortar-board"></i></span></a>
-            <a href="/problemsolving/ratio4" class="list-group-item list-group-item-action withripple">
+                  <a href="/problemsolving/ratio4" class="list-group-item list-group-item-action withripple">
               &#9314; Ratio and Angles
               <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
                   class=" fa fa-mortar-board"></i></span></a>
@@ -384,6 +387,11 @@ topic list
                   class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
                   class=" fa fa-mortar-board"></i></span>
             </a>
+            <a href="/problemsolving/perimeteralgebra" class="list-group-item list-group-item-action withripple">
+              &#9317; Perimeter with algebraic terms<span class="ml-auto "><i
+                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+                  class=" fa fa-mortar-board"></i></span>
+            </a>
           </div>
         </div>
       </div>
@@ -408,7 +416,7 @@ topic list
         <div class="card card-success animated fadeInUp animation-delay-12">
           <div class="list-group">
             <a class="list-group-item list-group-item-action withripple active">
-              &#x2793; Pie Charts and Bar Charts</a>
+            &#x278A;&#x278A; Pie Charts and Bar Charts</a>
               <a href="/problemsolving/data2" class="list-group-item list-group-item-action withripple">
                 &#9312; Bar Charts and Averages<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
                     class=" fa fa-mortar-board"></i></span>

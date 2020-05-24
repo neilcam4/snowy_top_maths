@@ -1,0 +1,51 @@
+[
+    {
+       "question_number": "1",
+       "title":"Solving Linear Equations",
+       "question_text": "2x + 1 = 9",
+       "answer_1":"4"
+    },
+    {
+      "question_number": "2",
+      "question_text": "3x + 4 = 19",
+      "answer_1":"5"
+   },
+   {
+      "question_number": "3",
+      "question_text": "4x + 7  = 19",
+      "answer_1":"3",
+      "answer_2":"5/6"
+   },
+   {
+      "question_number": "4",
+      "question_text": "3x - 8 = 13",
+      "answer_1":"7"
+   },
+   {  "question_number": "5",
+    "question_text": "6x - 8 = 22",
+    "answer_1":"5",
+    "answer_2":"3/4"
+   },
+   {
+      "question_number": "6",
+      "question_text": "7x - 6 = 43",
+      "answer_1":"7"
+   },
+   {
+    "question_number": "7",
+    "question_text": "3x + 4 = -2",
+    "answer_1":"-2",
+    "answer_2":"7/9"
+ },
+ {
+    "question_number": "8",
+    "question_text": "4x + 5 = 1",
+    "answer_1":"-1"
+ },
+ {
+    "question_number": "9",
+    "question_text": "5x - 8 = -18",
+    "answer_1":"-2",
+    "answer_2":"3/10"
+ }
+   ]
