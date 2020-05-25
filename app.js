@@ -50,16 +50,16 @@ require('https').createServer({
         fs.readFileSync('gd_bundle_g3.crt','utf8')] // <----- note this part
 }, app).listen(443);
 
-app.use (function (req, res, next) {
-        if (req.secure) {
-                // request was via https, so do no special handling
-                next();
-        } else {
-                // request was via http, so redirect to https
-                res.redirect('https://' + req.headers.host 
-                + req.url);
-        }
-});
+// app.use (function (req, res, next) {
+//         if (req.secure) {
+//                 // request was via https, so do no special handling
+//                 next();
+//         } else {
+//                 // request was via http, so redirect to https
+//                 res.redirect('https://' + req.headers.host 
+//                 + req.url);
+//         }
+// });
 
 app.use(expressSanitizer());
 app.use(bodyParser.json())
@@ -1315,6 +1315,11 @@ app.get('/basics/subtractfractions',isLoggedIn, function(req,res){
 app.get('/basics/piechartsangles',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/piechartsangles',{user:user})
+    })
+})
+app.get('/basics/algebraintro',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/algebraintro',{user:user})
     })
 })
 app.listen(port, function (err) {

@@ -2,50 +2,50 @@
     {
        "question_number": "1",
        "title":"Simplifying algebraic expressions",
-       "question_text": "3x + 5x",
-       "answer_1":"1"
+       "question_text": "",
+       "answer_1":"B"
     },
     {
       "question_number": "2",
-      "question_text": "3x + 2y + 4x + 7y ",
-      "answer_1":"2"
+      "question_text": "",
+      "answer_1":"C"
    },
    {
       "question_number": "3",
-      "question_text": "6x + 5y - 2x - 3y",
-      "answer_1":"4",
+      "question_text": "",
+      "answer_1":"D",
       "answer_2":"5/6"
    },
    {
       "question_number": "4",
-      "question_text": "14a + 35b - 8a + 26b",
-      "answer_1":"1"
+      "question_text": "",
+      "answer_1":"D"
    },
    {  "question_number": "5",
-    "question_text": "27m + 36n + 23m + 14n - 8m - 9n",
-    "answer_1":"3",
+    "question_text": "",
+    "answer_1":"B",
     "answer_2":"3/4"
    },
    {
       "question_number": "6",
-      "question_text": "8x + 14y + 9x - 20y + 6z + x",
-      "answer_1":"18x - 6y + 6z"
+      "question_text": "",
+      "answer_1":"A"
    },
    {
     "question_number": "7",
-    "question_text": "- 4n + 5m + 7n - 8m",
-    "answer_1":"3n - 3m",
+    "question_text": "",
+    "answer_1":"A",
     "answer_2":"7/9"
  },
  {
     "question_number": "8",
-    "question_text": "3a + 4b - 8a + 9b - 6a + 4c",
-    "answer_1":"-11a + 13b + 4c"
+    "question_text": "",
+    "answer_1":"C"
  },
  {
     "question_number": "9",
-    "question_text": "14x + 15y - 20x - 19y + 3z",
-    "answer_1":"-6x - 4y + 3z",
+    "question_text": "",
+    "answer_1":"D",
     "answer_2":"3/10"
  }
    ]
