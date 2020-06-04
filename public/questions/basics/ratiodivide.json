@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Divide an amount into a ratio",
+       "question_text": "£30 is divided into the ratio 2:3. How much is 3 parts worth?",
+       "answer_1":"18"
+    },
+    {
+      "question_number": "2",
+      "question_text": "£40 is divided into the ratio 3:5. How much is 3 parts worth?",
+      "answer_1":"15"
+   },
+   {
+      "question_number": "3",
+      "question_text": "£20 is divided into the ratio 1:3. How much is 1 part worth?",
+      "answer_1":"5"
+   },
+   {
+      "question_number": "4",
+      "question_text": "£45 is divided into the ratio 2:7. How much is 7 parts worth?",
+      "answer_1":"35"
+   },
+   {  "question_number": "5",
+    "question_text": "£50 is divided into the ratio 2:3. How much is 3 parts worth?",
+    "answer_1":"30"
+   },
+   {
+      "question_number": "6",
+      "question_text": "£60 is divided into the ratio 5:7. How much is 5 parts worth?",
+      "answer_1":"25"
+   },
+   {
+    "question_number": "7",
+    "question_text": "£80 is divided into the ratio 2:3. How much is 3 parts worth?",
+    "answer_1":"48"
+ },
+ {
+    "question_number": "8",
+    "question_text": "£120 is divided into the ratio 2:3. How much is 3 parts worth?",
+    "answer_1":"72"
+ },
+ {
+    "question_number": "9",
+    "question_text": "£144 is divided into the ratio 7:5. How much is 7 parts worth?",
+    "answer_1":"84"
+ }
+   ]

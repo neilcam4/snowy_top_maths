@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"The Surface Area of a Square-based Pyramid",
+       "question_text": "Find the surface area of this square-based pyramid",
+       "answer_1":"128"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Find the surface area of this square-based pyramid",
+      "answer_1":"132"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Find the surface area of this square-based pyramid",
+      "answer_1":"125"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Find the surface area of this square-based pyramid",
+      "answer_1":"217"
+   },
+   {  "question_number": "5",
+    "question_text": "Find the surface area of this square-based pyramid",
+    "answer_1":"288"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Find the surface area of this square-based pyramid",
+      "answer_1":"380"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Find the surface area of this square-based pyramid",
+    "answer_1":"261" 
+ },
+ {
+    "question_number": "8",
+    "question_text": "Find the surface area of this square-based pyramid",
+    "answer_1":"385"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Find the surface area of this square-based pyramid",
+    "answer_1":"533"
+ }
+   ]

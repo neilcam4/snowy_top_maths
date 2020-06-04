@@ -816,6 +816,30 @@ app.get('/problemsolving/fractions3', isLoggedIn, function (req, res) {
         }
     });
 })
+app.get('/problemsolving/FDP', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/FDP', {
+                user: user
+            })
+        }
+    });
+})
+
+app.get('/problemsolving/surfaceareapyramid', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/surfaceareapyramid', {
+                user: user
+            })
+        }
+    });
+})
+
 
 app.get('/problemsolving/ratio1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
@@ -1320,6 +1344,11 @@ app.get('/basics/piechartsangles',isLoggedIn, function(req,res){
 app.get('/basics/algebraintro',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/algebraintro',{user:user})
+    })
+})
+app.get('/basics/ratiodivide',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/ratiodivide',{user:user})
     })
 })
 app.listen(port, function (err) {
