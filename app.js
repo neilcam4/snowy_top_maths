@@ -469,7 +469,17 @@ app.get('/problemsolving/time5', isLoggedIn, function (req, res) {
         }
     });
 })
-
+app.get('/problemsolving/slowclock', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/slowclock', {
+                user: user
+            })
+        }
+    });
+})
 app.get('/problemsolving/addsubtract', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {

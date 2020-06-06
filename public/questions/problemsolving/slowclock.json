@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Slow Clocks and Time",
+       "question_text": "John's watch is slow and loses 2 minutes every hour. If John sets the correct time on his watch at 2 pm, what time will his watch show in exactly three hours?",
+       "answer_1":"2017"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Tina's watch is slow and loses 4 minutes every hour. If Tina sets the correct time on his watch at 3 pm, what time will his watch show in exactly four hours?",
+      "answer_1":"3317"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Jim's watch is slow and loses 3 minutes every hour. If Jim sets the correct time on his watch at 4 pm, what time will his watch show in exactly five hours?",
+      "answer_1":"2819"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Jenny's watch is slow and loses 5 minutes every hour. If Jenny sets the correct time on his watch at 5 pm, what time will his watch show in exactly six hours?",
+      "answer_1":"1429"
+   },
+   {  "question_number": "5",
+    "question_text": "Fiona's watch is slow and loses 7 minutes every hour. If Fiona sets the correct time on his watch at 2 pm, what time will his watch show in exactly seven hours?",
+    "answer_1":"3541"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Matt's watch is slow and loses 9 minutes every hour. If Matt sets the correct time on his watch at 2 pm, what time will his watch show in exactly three hours?",
+      "answer_1":"4283"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Elena's watch is fast and gains 2 minutes every hour. If Elena sets the correct time on his watch at 2 pm, what time will his watch show in exactly four hours?",
+    "answer_1":"2681" 
+ },
+ {
+    "question_number": "8",
+    "question_text": "Joydeep's watch is fast and gains 2 minutes every hour. If Joydeep sets the correct time on his watch at 2 pm, what time will his watch show in exactly five hours?",
+    "answer_1":"4243"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Omar's watch is fast and gains 2 minutes every hour. If Omar sets the correct time on his watch at 2 pm, what time will his watch show in exactly six hours?",
+    "answer_1":"2539"
+ }
+   ]
