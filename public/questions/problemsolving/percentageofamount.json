@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Lowest Common Multiples",
+       "question_text": "Every year, the value of a gold cup increases by 10% compared to its price in the previous year. In 2015, the value of the gold cup was £1,000. In 2016, the value of the gold cup was £1,100. What was the value of the gold cup in 2018?",
+       "answer_1":"1331"
+    },
+    {
+      "question_number": "2",
+      "question_text": "The price of a £20 shirt was decreased by 10% in a sale. After a week, the sale price was increased by 10%. What was the final price of the shirt?",
+      "answer_1":"19.80"
+   },
+   {
+      "question_number": "3",
+      "question_text": "The sale price of a coat is £400. This represents a 20% discount from the original price. What was the original price of the coat?",
+      "answer_1":"500"
+   },
+   {
+      "question_number": "4",
+      "question_text": "In Gotham City, 65% of the population voted in the election. 20% of the voters voted for Batman. If the population of Gotham City is 250,000, how many people voted for Batman?",
+      "answer_1":"32500"
+   },
+   {  "question_number": "5",
+    "question_text": "Every year, the value of a silver spoon increases by 20% compared to its price in the previous year. In 2016, the value of the silver spoon was £1,000. In 2017, the value of the silver spoon was £1,200. What was the value of the silver spoon in 2019?",
+    "answer_1":"1728"
+   },
+   {
+      "question_number": "6",
+      "question_text": "The price of a £30 hat was decreased by 20% in a sale. After a week, the sale price was increased by 20%. What was the final price of the hat?",
+      "answer_1":"28.80"
+   },
+   {
+    "question_number": "7",
+    "question_text": "The sale price of a computer is £800. This represents a 20% discount from the original price. What was the original price of the computer?",
+    "answer_1":"1000"
+ },
+ {
+    "question_number": "8",
+    "question_text": "In Metropolis, 55% of the population voted in the election. 30% of the voters voted for Lex Luthur. If the population of Metropolis is 500,000, how many people voted for lex Luthur?",
+    "answer_1":"82500"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Every year, the value of a diamond ring increases by 30% compared to its price in the previous year. In 2015, the value of the diamond ring was £2,000. In 2016, the value of the gold cup was £2,600. What was the value of the diamond ring in 2018?",
+    "answer_1":"4394"
+ }
+   ]

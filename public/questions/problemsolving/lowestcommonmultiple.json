@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Lowest Common Multiples",
+       "question_text": "Bell A chimes every 4 seconds. Bell B Chimes every 6 seconds and Bell C chimes every 10 seconds. After how many seconds will they first chime together?",
+       "answer_1":"60"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Horn A sounds every 5 seconds. Horn B sounds every 8 seconds and Horn C sounds every 10 seconds. After how many seconds will they first sound together?",
+      "answer_1":"40"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Bell A chimes every 6 seconds. Bell B Chimes every 8 seconds and Bell C chimes every 10 seconds. After how many seconds will they first chime together?",
+      "answer_1":"120"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Horn A sounds every 8 seconds. Horn B sounds every 10 seconds and Horn C sounds every 14 seconds. After how many seconds will they first sound together?",
+      "answer_1":"280"
+   },
+   {  "question_number": "5",
+    "question_text": "Bell A chimes every 5 seconds. Bell B Chimes every 6 seconds and Bell C chimes every 7 seconds. After how many seconds will they first chime together?",
+    "answer_1":"210"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Horn A sounds every 3 seconds. Horn B sounds every 8 seconds and Horn C sounds every 12 seconds. After how many seconds will they first sound together?",
+      "answer_1":"24"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Bell A chimes every 10 seconds. Bell B Chimes every 12 seconds and Bell C chimes every 14 seconds. After how many seconds will they first chime together?",
+    "answer_1":"210"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Horn A sounds every 3 seconds. Horn B sounds every 7 seconds and Horn C sounds every 9 seconds. After how many seconds will they first sound together?",
+    "answer_1":"63"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Bell A chimes every 12 seconds. Bell B Chimes every 14 seconds and Bell C chimes every 16 seconds. After how many seconds will they first chime together?",
+    "answer_1":"336"
+ }
+   ]

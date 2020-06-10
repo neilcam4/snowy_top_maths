@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Multiplication of Fractions",
+       "question_text": "Calculate and simplify:",
+       "answer_1":"3/20"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Calculate and simplify:",
+      "answer_1":"1/10"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Calculate and simplify:",
+      "answer_1":"3/10"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Calculate and simplify:",
+      "answer_1":"8/35"
+   },
+   {  "question_number": "5",
+    "question_text": "Calculate and simplify:",
+    "answer_1":"1/3"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Calculate and simplify:",
+      "answer_1":"2/3"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Calculate and simplify:",
+    "answer_1":"35.91"
+ },
+ {
+    "question_number": "8",
+    "question_text": "Calculate and simplify:",
+    "answer_1":"3/5"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Calculate and simplify:",
+    "answer_1":"3/5"
+ }
+   ]

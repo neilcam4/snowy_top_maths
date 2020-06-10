@@ -1,13 +1,12 @@
 <% include ../partials/header %>
 <p id = "input"></p>
 
+<!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
         <h3 class="text-center" id ="heading"></h3>
     </div>
 </div>
-
-<!--   Video        -->
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
@@ -34,7 +33,7 @@
                 <form name="quiz1">
                     <p class="q" id="q1"></p>
                     <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00"  name="question1"></input>
+                        <input type="text"   name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -48,7 +47,7 @@
                 <form name="quiz2">
                 <p class="q" id="q2"></p>
                     <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -62,7 +61,7 @@
                 <form name="quiz3">
                 <p class="q" id="q3"></p>
                     <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00"  name="question1"></input>
+                        <input type="text"   name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -76,7 +75,7 @@
                 <form name="quiz4">
                 <p class="q" id="q4"></p>
                     <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -90,7 +89,7 @@
                 <form name="quiz5">
                 <p class="q" id="q5"></p>
                     <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -103,8 +102,8 @@
             <div class="card-body">
                 <form name="quiz6">
                 <p class="q" id="q6"></p>
-                <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                    <div class="ui input focus">
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -116,8 +115,8 @@
             <div class="card-body">
                 <form name="quiz7">
                 <p class="q" id="q7"></p>
-                <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                   <div class="ui input focus">
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -129,8 +128,8 @@
             <div class="card-body">
                 <form name="quiz8">
                 <p class="q" id="q8"></p>
-                <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                    <div class="ui input focus">
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -142,8 +141,8 @@
             <div class="card-body">
                 <form name="quiz9">
                 <p class="q" id="q9"></p>
-                 <div class="ui input focus">
-                        <input type="text" placeholder="write as 00:00" name="question1"></input>
+                    <div class="ui input focus">
+                        <input type="text" name="question1"></input>
                     </div>
                 </form>
             </div>
@@ -236,7 +235,7 @@ var correct = 0;
     
     function getJSON (){
         document.getElementById("answers").style.visibility = "hidden";
-        fetch('./questions/problemsolving/slowclock.json')
+        fetch('./questions/problemsolving/percentageofamount.json')
         .then(function(res){
             return res.json()
            
@@ -374,7 +373,7 @@ $("#button1").click(function () {
         document.getElementById("wrong").style.visibility = "visible";
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("msg").textContent = "Please try again.";
-        shapeError();
+        numberError();
     }
 });
 $("#button").click(function () {

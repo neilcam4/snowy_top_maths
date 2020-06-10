@@ -906,6 +906,29 @@ app.get('/problemsolving/isPrime', isLoggedIn, function (req, res) {
         }
     });
 })
+
+app.get('/problemsolving/lowestcommonmultiple', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/lowestcommonmultiple', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/percentageofamount', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/percentageofamount', {
+                user: user
+            })
+        }
+    });
+})
 app.get('/problemsolving/squares1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -1314,6 +1337,15 @@ app.get('/basics/addsubtract',isLoggedIn, function(req,res){
 app.get('/basics/multiplyIntegers',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/multiplyIntegers',{user:user})
+    })
+})
+app.get('/basics/multiplyfractions',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        if(err){
+            res.redirect('/basics/index')
+        } else {
+            res.render('basics/multiplyfractions',{user:user})
+        }
     })
 })
 app.get('/basics/FtoD',isLoggedIn, function(req,res){
