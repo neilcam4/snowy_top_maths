@@ -929,6 +929,17 @@ app.get('/problemsolving/percentageofamount', isLoggedIn, function (req, res) {
         }
     });
 })
+app.get('/problemsolving/fractionofamounts', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/fractionofamounts', {
+                user: user
+            })
+        }
+    });
+})
 app.get('/problemsolving/squares1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {

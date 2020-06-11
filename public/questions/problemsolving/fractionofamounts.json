@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Fraction of Amounts",
+       "question_text": "A train begins its journey with 48 passengers. At the first stop, 1⁄3 of the passengers get off and none get on. At the second stop 3⁄4 of the remaining passengers get off and 5 new passengers get on. How many passengers are now on the train?",
+       "answer_1":"13"
+    },
+    {
+      "question_number": "2",
+      "question_text": "60 ducks are swimming in a pond. 1⁄5 of them have brown feathers and the rest have black feathers. 5⁄6 of the geese with brown feathers have yellow beaks. How many ducks with brown feathers do not have yellow beaks?",
+      "answer_1":"2"
+   },
+   {
+      "question_number": "3",
+      "question_text": "A survey is done on how the 40 pupils travel to school in Year 5. If 1/4 of them walk,  1/3 of the remaining pupils catch the bus and the rest travel by car. How many pupils travel by car to school?",
+      "answer_1":"20"
+   },
+   {
+      "question_number": "4",
+      "question_text": "A train begins its journey with 80 passengers. At the first stop, 1⁄5 of the passengers get off and none get on. At the second stop 1/8 of the remaining passengers get off and 4 new passengers get on. How many passengers are now on the train?",
+      "answer_1":"60"
+   },
+   {  "question_number": "5",
+    "question_text": "80 sweets are in a bag. 2/5 of them are lollipops and the rest are choclates. 2/3 of the chocolates have nuts and the rest do not. How many chocolates do not have nuts?",
+    "answer_1":"16"
+   },
+   {
+      "question_number": "6",
+      "question_text": "A survey is done on the favourite sports of 60 pupils in Year 5. If 1/5 of them choose Football,  1/4 of the remaining pupils choose Rugby and the rest chose Tennis. How many pupils chose Tennis as their favourite sport?",
+      "answer_1":"36"
+   },
+   {
+    "question_number": "7",
+    "question_text": "A train begins its journey with 120 passengers. At the first stop, 1⁄4 of the passengers get off and 10 get on. At the second stop 3⁄4 of the remaining passengers get off and none get on. How many passengers are now on the train?",
+    "answer_1":"25"
+ },
+ {
+    "question_number": "8",
+    "question_text": "A selection of 48 balls are in a bag. 1⁄6 of them are blue, 1/4 are red and the rest are white. 3/4 of the white balls are golf balls? How many white golf balls are there?",
+    "answer_1":"21"
+ },
+ {
+    "question_number": "9",
+    "question_text": "A survey is done on the favourite food of 70 pupils in Year 5. If 2/7 of them chose Lasagne,  1/5 of the remaining pupils chose Pizza and the rest chose Burgers. How many pupils chose Burgers as their favourite food?",
+    "answer_1":"40"
+ }
+   ]
