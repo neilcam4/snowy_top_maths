@@ -895,6 +895,7 @@ app.get('/problemsolving/perimeteralgebra', isLoggedIn, function (req, res) {
         }
     });
 })
+
 app.get('/problemsolving/isPrime', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -1344,6 +1345,28 @@ app.get('/basics/addsubtract',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/addsubtract',{user:user})
     })
+})
+app.get('/problemsolving/addsubtract2', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/addsubtract2', {
+                user: user
+            })
+        }
+    });
+})
+app.get('/problemsolving/distance1', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/distance1', {
+                user: user
+            })
+        }
+    });
 })
 app.get('/basics/multiplyIntegers',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){

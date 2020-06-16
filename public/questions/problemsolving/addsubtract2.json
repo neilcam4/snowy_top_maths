@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Add and Subtract",
+       "question_text": "Every day, a beetle climbs 4 cm up a window before slipping 2.5 cm down again. How far up the window will the beetle climb after 30 days?",
+       "answer_1":"45"
+    },
+    {
+      "question_number": "2",
+      "question_text": "What is the difference between the largest and smallest 5-digit numbers that can be made by rearranging all five of these digits? 7 8 3 2 9",
+      "answer_1":"74943"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Pencils costs 7 p each and exercise books cost 17 p each. Simon buys 4 pencils and 3 exercise books. He pays with a £5 note. How much change does Simon receive?",
+      "answer_1":"4.21"
+   },
+   {
+      "question_number": "4",
+      "question_text": "A bakery sells 17 loaves of bread and 13 cookies per day. How many more loaves of bread than cookies does the bakery sell in a fortnight?",
+      "answer_1":"56"
+   },
+   {  "question_number": "5",
+    "question_text": "Ann, Ben, Chris and Dana all read books during the summer holidays. Ann read twice as many books as Ben. Dana read 5 books more than Chris but 6 books less than Ann. Chris read 5 books. How many books did they read altogether?",
+    "answer_1":"39"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Two magazines and one pencil cost £2. One board game and one book cost £4. Two pencil cases and one magazine cost £7.50. What is the total cost of one magazine, one pencil and one pencil case?",
+      "answer_1":"36"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Every day, a spider climbs 7 cm up a window before slipping 4.5 cm down again. How far up the window will the spider climb after 40 days?",
+    "answer_1":"100"
+ },
+ {
+    "question_number": "8",
+    "question_text": "What is the difference between the largest and smallest 5-digit numbers that can be made by rearranging all five of these digits? 6 4 5 1 8",
+    "answer_1":"71973"
+ },
+ {
+    "question_number": "9",
+    "question_text": "A tuck shop sells 22 snickers and 17 dairy milks per day. How many more snickers than dairy milks does the tuck shop sell in a 3 weeks?",
+    "answer_1":"105"
+ }
+   ]

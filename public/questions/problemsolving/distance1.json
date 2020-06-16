@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Multiply and Divide with m and km",
+       "question_text": "John runs 350m every day. How far does he run in a week? Give your answer in km",
+       "answer_1":"2.45"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Each of Kylie's steps is 80cm long. She takes 45 steps per minute. How many metres does she walk in half an hour?",
+      "answer_1":"2160"
+   },
+   {
+      "question_number": "3",
+      "question_text": "On Sachin's bicycle, one full turn of the wheel moves his bike forward 90cm. How far will he travel after 550 turns? Give your answer in metres",
+      "answer_1":"495"
+   },
+   {
+      "question_number": "4",
+      "question_text": "How many pieces of wood, each 15cm long, can you cut from a plank of wood that measures 5m long?",
+      "answer_1":"33"
+   },
+   {  "question_number": "5",
+    "question_text": "Sophie completed a 10km cycling race. She travelled 80 cms each for each turn of her wheel. How many turns did she take in the race?",
+    "answer_1":"12500"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Jadon runs 625m every day. How far does he run in a fortnight? Give your answer in km",
+      "answer_1":"8.75"
+   },
+   {
+    "question_number": "7",
+    "question_text": "Each of Naga's steps is 75cm long. She takes 52 steps per minute. How far, in km, does she walk in two hours?",
+    "answer_1":"4.68"
+ },
+ {
+    "question_number": "8",
+    "question_text": "On Sachin's bicycle, one full turn of the wheel moves his bike forward 125cm. In one minute, he completes 130 turns. How far will he travel in 10 minutes. Give your answer in km",
+    "answer_1":"1.625"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Arthur completed a 15km cycling race. He travelled 1.2 metres each for each turn of his wheel. How many turns of the wheel did he take to finish the race?",
+    "answer_1":"12500"
+ }
+   ]
