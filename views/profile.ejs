@@ -41,62 +41,7 @@
                       <%= currentUser.questions%>
                     </td>
                   </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
-                    <td id="numberCorrect">
-                      <%= currentUser.number%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Correct</th>
-                    <td id="shapeCorrect">
-                      <%= currentUser.shape%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Correct</th>
-                    <td id="algebraCorrect">
-                      <%= currentUser.algebra%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Correct</th>
-                    <td id="dataCorrect">
-                      <%= currentUser.data%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Wrong</th>
-                    <td id="numberError">
-                      <%= currentUser.numberError%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Wrong</th>
-                    <td id="shapeError">
-                      <%= currentUser.shapeError%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Wrong</th>
-                    <td id="algebraError">
-                      <%= currentUser.algebraError%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Wrong</th>
-                    <td id="dataError">
-                      <%= currentUser.dataError%>
-                    </td>
-                  </tr>
+                  
                 </table>
               </div>
             </div>
@@ -115,24 +60,24 @@
       </div>
     </div>
   
-    <div class="col-lg-8">
-        <div class="row">
-        <div class="col-sm-4">
+  <div class="col-lg-8">
+    <div class="row">
+      <div class="col-sm-4">
         <a href = "/basics/index">
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-dark">Build the Basics</h2>
+            <h2 class="counter color-dark">Build your Basics</h2>
             <i class="fa fa-4x fa-trophy color-dark"></i>
             <p class="mt-2 no-mb lead small-caps color-dark">Enter</p>
           </div>
           </a>
-        </div>
+      </div>
         <div class="col-sm-4">
-        <a href = "/problemsolving/menu">
-          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-secondary">Problem Solving</h2>
-            <i class="fa fa-4x fa-trophy color-secondary"></i>
-            <p class="mt-2 no-mb lead small-caps color-secondary">Enter</p>
-          </div>
+          <a href = "/problemsolving/menu">
+            <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+              <h2 class="counter color-secondary">Problem Solving</h2>
+              <i class="fa fa-4x fa-trophy color-secondary"></i>
+              <p class="mt-2 no-mb lead small-caps color-secondary">Enter</p>
+            </div>
           </a>
         </div>
         
@@ -146,12 +91,12 @@
           </div>
           </a>
         </div>
-        <div class="ms-footer">
-  <div class="col-lg-12 ms-paper-content-container">
-  <div class="ms-paper-content">
-    <h1><%=currentUser.username%>'s</h1>
-    <section class="ms-component-section">
-      <h2 class="section-title"> Performance Chart</h2>
+    <div class="ms-footer">
+      <div class="col-lg-12 ms-paper-content-container">
+        <div class="ms-paper-content">
+          <h1><%=currentUser.username%>'s</h1>
+            <section class="ms-component-section">
+              <h2 class="section-title"> Performance Chart</h2>
       <div class="row mt-4">
         <div class="col-lg-3 col-sm-6">
           <div class="text-center">
@@ -212,12 +157,6 @@
       <!--
 topic list
 -->
-     
-    <div class="btn-back-top">
-      <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
-        <i class="zmdi zmdi-long-arrow-up"></i>
-      </a>
-    </div>
 
     <!-- ms-site-container -->
     <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
@@ -276,7 +215,7 @@ topic list
                 <a href="page-about.html">Sequences</a>
               </li>
               <li>
-                <a href="/wordedproblems">Worderd Problems</a>
+                <a href="/wordedproblems">Worded Problems</a>
               </li>
               <li>
                 <a href="/equations">Equations</a>
@@ -319,5 +258,71 @@ topic list
       </div>
     </div>
 
+<div class="container" id="stats">
+  <table>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
+      <td id="numberCorrect">
+        <%= currentUser.number%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Correct</th>
+      <td id="shapeCorrect">
+        <%= currentUser.shape%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Correct</th>
+      <td id="algebraCorrect">
+        <%= currentUser.algebra%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Correct</th>
+      <td id="dataCorrect">
+        <%= currentUser.data%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Wrong</th>
+      <td id="numberError">
+        <%= currentUser.numberError%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Wrong</th>
+      <td id="shapeError">
+        <%= currentUser.shapeError%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Wrong</th>
+      <td id="algebraError">
+        <%= currentUser.algebraError%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Wrong</th>
+      <td id="dataError">
+        <%= currentUser.dataError%>
+      </td>
+    </tr>
+
+    <div class="btn-back-top">
+      <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+        <i class="zmdi zmdi-long-arrow-up"></i>
+      </a>
+    </div>
+  </table>
+</div>
     
 <% include ./partials/footer %>
