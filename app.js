@@ -1373,6 +1373,11 @@ app.get('/basics/multiplyIntegers',isLoggedIn, function(req,res){
         res.render('basics/multiplyIntegers',{user:user})
     })
 })
+app.get('/basics/multiplydecimals',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/multiplydecimals',{user:user})
+    })
+})
 app.get('/basics/multiplyfractions',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         if(err){
