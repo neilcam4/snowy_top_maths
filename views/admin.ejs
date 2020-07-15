@@ -1,0 +1,819 @@
+<% include ./partials/header %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="col-lg-12 col-md-6 order-md-1">
+          <div class="card animated fadeInUp animation-delay-7">
+            <div class="ms-hero-bg-primary ms-hero-img-mountain">
+              <h3 class="color-white index-1 text-center no-m pt-4"><%=currentUser.username%></h3>
+              <img src="img/demo/m1.png" alt="..." class="img-avatar-circle">
+            </div>
+            <div class="card-body pt-4 text-center">
+              <h3 class="color-primary" id="avatar"></h3>
+              <p></p>
+              <div class="card card-primary animated fadeInUp animation-delay-12">
+                <table class="table table-no-border table-striped">
+                  <tr>
+                    <th>
+                      <i class="zmdi zmdi-account mr-1 color-success"></i> Name</th>
+                    <td><%=currentUser.username%></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Points</th>
+                    <td>
+                      <%=currentUser.score%>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Progress</th>
+                    <td>
+                      <%=Math.ceil(currentUser.score/12000 *100)%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Questions Attempted</th>
+                    <td>
+                      <%= currentUser.questions%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
+                    <td id="numberCorrect">
+                      <%= currentUser.number%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Correct</th>
+                    <td>
+                      <%= currentUser.shape%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Correct</th>
+                    <td>
+                      <%= currentUser.algebra%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Correct</th>
+                    <td>
+                      <%= currentUser.data%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Wrong</th>
+                    <td>
+                      <%= currentUser.numberError%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Wrong</th>
+                    <td>
+                      <%= currentUser.shapeError%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Wrong</th>
+                    <td>
+                      <%= currentUser.algebraError%>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Wrong</th>
+                    <td>
+                      <%= currentUser.dataError%>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="col-lg-12 col-md-12 order-md-3 order-lg-2">
+                <p href="/users/<%=currentUser.id %>" class="btn btn-warning btn-raised btn-block animated fadeInUp animation-delay-12">
+                  <i class="zmdi zmdi-shield-check"></i> My Badges and Progress</p>        
+              </div>
+        <div class="col-lg-12 col-md-6 order-md-2 order-lg-3">
+          <div class="card animated fadeInUp animation-delay-12">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-sm-4">
+        <p href = "/basics/index">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-dark">Build the Basics</h2>
+            <i class="fa fa-4x fa-trophy color-dark"></i>
+            <p class="mt-2 no-mb lead small-caps color-dark">Enter Course</p>
+          </div>
+          </p>
+        </div>
+        <div class="col-sm-4">
+        <p href = "/problemsolving/menu">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-secondary">Problem Solving</h2>
+            <i class="fa fa-4x fa-trophy color-secondary"></i>
+            <p class="mt-2 no-mb lead small-caps color-secondary">Enter Course</p>
+          </div>
+          </p>
+        </div>
+        
+        <div class="col-sm-4">
+        <p href = "/pastpapers/list">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-warning">Practice Papers  
+            </h2>
+            <i class="fa fa-4x fa-trophy color-warning"></i>
+            <p class="mt-2 no-mb lead small-caps color-warning">Enter Course</p>
+          </div>
+          </p>
+        </div>
+      </div>
+
+      
+      <!--
+topic list
+-->
+<div class="card card-info animated fadeInUp animation-delay-12">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="zmdi zmdi-library"></i> Problem Solving</h3>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">&#x278A;
+              Working with Numbers <span class="ml-auto "> Assign
+                </span>
+              </p>
+            <p  class="list-group-item list-group-item-action withripple">
+              &#9312; What Number Did I Start With? <span class="ml-auto "><button type="button" id="Chapter1Button1" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4">  <i class="paperclip icon"></i>
+                </button> </span>
+            </p>
+            <p href="/problemsolving/addsubtract2" class="list-group-item list-group-item-action withripple">
+              &#9313; Add, Subtract, Divide and Multiply 1 <span class="ml-auto ">
+                  <button type="button" id="Chapter1Button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button></span>
+            </p>
+            <p href="/problemsolving/multdiv1" class="list-group-item list-group-item-action withripple">
+              &#9314; Multiplication of Whole Numbers
+              <span class="ml-auto ">
+                  <button type="button" id="Chapter1Button3" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button></span></p>
+            <p href="/problemsolving/addsubtract1" class="list-group-item list-group-item-action withripple">
+              &#9315; Add and Subtract Integers
+              <span class="ml-auto "><button type="button" id="Chapter1Button4" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+              </span>
+            </p>
+            <p href="/problemsolving/multdiv2" class="list-group-item list-group-item-action withripple">
+              &#9316; Multiply and Divide Whole Numbers <span class="ml-auto "><button type="button" id="Chapter1Button5" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button></span></p>
+            <p href="/problemsolving/multdiv3" class="list-group-item list-group-item-action withripple">
+              &#9317; Multiply and Divide multi-Digit Numbers <span class="ml-auto "><button type="button" id="Chapter1Button6" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/multdiv4" class="list-group-item list-group-item-action withripple">
+              &#9318; Missing Digit Multiplication<span class="ml-auto "><button type="button" id="Chapter1Button7" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span> 
+            </p>
+            <p href="/problemsolving/distance1" class="list-group-item list-group-item-action withripple">
+              &#9319; Multiply and Divide with cm,m & km<span class="ml-auto "><button type="button" id="Chapter1Button8" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span> 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x278B; Fractions, Percentages and Decimals</p>
+            <p href="/problemsolving/fractions1" class="list-group-item list-group-item-action withripple">
+              &#9312; What is the missing fraction?
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/fractions2" class="list-group-item list-group-item-action withripple">
+              &#9313; Fractions of Amounts 1
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/fractions3" class="list-group-item list-group-item-action withripple">
+              &#9314; Fractions of Amounts 2
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/fractionofamounts" class="list-group-item list-group-item-action withripple">
+              &#9315; Fractions of Amounts 3
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/percentages1" class="list-group-item list-group-item-action withripple">
+              &#9316; Ordering Percentages, Fractions and Decimals
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/FDP" class="list-group-item list-group-item-action withripple">
+              &#9317; Converting Percentages, Fractions and Decimals
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/percentageofamount" class="list-group-item list-group-item-action withripple">
+              &#9318; Percentage of Amounts 1
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x278C; Sequences</p>
+            <p href="/problemsolving/sequences1" class="list-group-item list-group-item-action withripple">
+              &#9312; Find consecutive numbers that add up to 90
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/sequences3" class="list-group-item list-group-item-action withripple">
+              &#9313; Follow a given rule
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/sequences2" class="list-group-item list-group-item-action withripple">
+              &#9314; Newspaper Sequences<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/sequences4" class="list-group-item list-group-item-action withripple">
+              &#9315; Adding Consecutive Numbers
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x278D;Primes, Multiples, Squares and Factors</p>
+            <p href="/problemsolving/prime2" class="list-group-item list-group-item-action withripple">
+              &#9312; Add together primes to make a square
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/isPrime" class="list-group-item list-group-item-action withripple">
+              &#9313; Identify the Prime Number
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/squares1" class="list-group-item list-group-item-action withripple">
+              &#9314; Square Number Problems
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/prime1" class="list-group-item list-group-item-action withripple">
+              &#9315; Common Multiples <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/lowestcommonmultiple" class="list-group-item list-group-item-action withripple">
+              &#9316;Lowest Common Multiples <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--
+            Insert new table here
+-->
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x278E; Time</p>
+
+            <p href="/problemsolving/time1" class="list-group-item list-group-item-action withripple">
+              &#9312; Taking a holiday<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/time4" class="list-group-item list-group-item-action withripple">
+              &#9313; Catching the train<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button></span></p>
+            <p href="/problemsolving/time5" class="list-group-item list-group-item-action withripple">
+              &#9314; Catching the train 2<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/time3" class="list-group-item list-group-item-action withripple">
+              &#9315; Angles around a clock
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/slowclock" class="list-group-item list-group-item-action withripple">
+              &#9316; My watch is slow 1
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/time2" class="list-group-item list-group-item-action withripple">
+              &#9317; My watch is slow 2
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p href="" class="list-group-item list-group-item-action withripple active">
+              &#x278F; Ratio and Proportion</p>
+            <p href="/problemsolving/ratio1" class="list-group-item list-group-item-action withripple">
+              &#9312; Dividing into a Ratio
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/ratio3" class="list-group-item list-group-item-action withripple">
+              &#9313; Inverse Proportion
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+                  <p href="/problemsolving/ratio4" class="list-group-item list-group-item-action withripple">
+              &#9314; Ratio and Angles
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x2790; Problems Solved with Algebra</p>
+            <p href="/problemsolving/wordedalgebra1" class="list-group-item list-group-item-action withripple">
+              &#9312; How many goals were scored? <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/wordedalgebra2" class="list-group-item list-group-item-action withripple">
+              &#9313; How old is Alan? <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/wordedalgebra3" class="list-group-item list-group-item-action withripple">
+              &#9314;Algebra Grids<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/wordedalgebra4" class="list-group-item list-group-item-action withripple">
+              &#9315; Abstract Worded Problems <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/wordedalgebra5" class="list-group-item list-group-item-action withripple">
+              &#9316; Algebra and Time <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x2791; Angles in Shapes</p>
+            <p href="/problemsolving/shapes1" class="list-group-item list-group-item-action withripple">
+              &#9312; Angles in Composite Regular Polygons
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/shapes6" class="list-group-item list-group-item-action withripple">
+              &#9313; Angles in Composite Polygons
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x2792; Area, Perimeter and Volume</p>
+            <p href="/problemsolving/shapes5" class="list-group-item list-group-item-action withripple">
+              &#9312; Area and Perimeter with Squares and Rectangles 1
+              <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/shapes3" class="list-group-item list-group-item-action withripple">
+              &#9313; Areas inside other Areas <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/shapes4" class="list-group-item list-group-item-action withripple">
+              &#9314; Areas of Rectangles and Triangles<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/volume" class="list-group-item list-group-item-action withripple">
+              &#9315; Volume <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+            <p href="/problemsolving/shapes2" class="list-group-item list-group-item-action withripple">
+              &#9316; Area and Perimeter with Squares and Rectangles 2<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/perimeteralgebra" class="list-group-item list-group-item-action withripple">
+              &#9317; Perimeter with algebraic terms<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+            <p href="/problemsolving/surfaceareapyramid" class="list-group-item list-group-item-action withripple">
+              &#9318; Surface Area of Square-based Pyramids<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+              &#x2793; Averages</p>
+              <p href="/problemsolving/meanaverage" class="list-group-item list-group-item-action withripple">
+                &#9312; Problems with Mean<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+              <p href="/problemsolving/averages" class="list-group-item list-group-item-action withripple">
+                &#9313; Problems with Mean 2<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+              <p href="/problemsolving/averages2" class="list-group-item list-group-item-action withripple">
+                &#9314; Averages (Mode, Mean and Median)<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card card-success animated fadeInUp animation-delay-12">
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple active">
+            &#x278A;&#x278A; Pie Charts and Bar Charts</p>
+              <p href="/problemsolving/data2" class="list-group-item list-group-item-action withripple">
+                &#9312; Bar Charts and Averages<span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span>
+              </p>
+              <p href="/problemsolving/piecharts" class="list-group-item list-group-item-action withripple">
+                &#9315; Pie Charts <span class="ml-auto "><button type="button" id="button2" class="ui icon button" data-toggle="modal"
+                    data-target="#myModal4"><i class="paperclip icon"></i>
+                </button>
+                </span></p>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <p id="userId"><%=currentUser.id %> </p>
+</div>
+
+    <div class="btn-back-top">
+        <p href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+        <i class="zmdi zmdi-long-arrow-up"></i>
+        </p>
+    </div>
+
+    <!-- ms-site-container -->
+    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+        <div class="sb-slidebar-container">
+        <header class="ms-slidebar-header">
+
+            <div class="ms-slidebar-title">
+
+            <div class="ms-slidebar-t">
+
+                <h3>SnowyTop
+                <span>Maths</span>
+                </h3>
+            </div>
+            </div>
+        </header>
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+            <li class="card" role="tab" id="sch1">
+            <p class="collapsed" role="button" data-toggle="collapse" href="#sc1" aria-expanded="false"
+                aria-controls="sc1">
+                <i class="zmdi zmdi-home"></i> Number </p>
+            <ul id="sc1" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch1"
+                data-parent="#slidebar-menu">
+                <!--
+                <li>
+                <p href="/addsubtract">Addition and Subtraction</p>
+                </li>
+    -->
+                <li>
+                <p href="/multdiv">Multiply and Divide</p>
+                </li>
+                <li>
+                <p href="/fractions">Fractions</p>
+                </li>
+                <li>
+                <p href="/percentages">Percentages</p>
+                </li>
+                <li>
+                <p href="/time">Time</p>
+                </li>
+                <li>
+                <p href="/prime">Primes &amp; Factors</p>
+                </li>
+                <li>
+                <p href="/ratio">Ratio</p>
+                </li>
+            </ul>
+            </li>
+            <li class="card" role="tab" id="sch2">
+            <p class="collapsed" role="button" data-toggle="collapse" href="#sc2" aria-expanded="false"
+                aria-controls="sc2">
+                <i class="zmdi zmdi-desktop-mac"></i> Algebra </p>
+            <ul id="sc2" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch2"
+                data-parent="#slidebar-menu">
+                <li>
+                <p href="page-about.html">Sequences</p>
+                </li>
+                <li>
+                <p href="/wordedproblems">Worded Problems</p>
+                </li>
+                <li>
+                <p href="/equations">Equations</p>
+                </li>
+            </ul>
+            </li>
+            <li class="card" role="tab" id="sch4">
+            <p class="collapsed" role="button" data-toggle="collapse" href="#sc4" aria-expanded="false"
+                aria-controls="sc4">
+                <i class="zmdi zmdi-edit"></i> Shape </p>
+            <ul id="sc4" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch4"
+                data-parent="#slidebar-menu">
+                <!--
+                <li>
+                <p href="/perimeter">Perimeter</p>
+                </li>
+                <li>
+                <p href="/area">Area</p>
+                </li>
+                <li>
+                <p href="/volume">Volume</p>
+                </li>
+    -->
+
+            </ul>
+            </li>
+            <li class="card" role="tab" id="sch5">
+            <p class="collapsed" role="button" data-toggle="collapse" href="#sc5" aria-expanded="false"
+                aria-controls="sc5">
+                <i class="zmdi zmdi-shopping-basket"></i> Data </p>
+            <ul id="sc5" class="card-collapse collapse" role="tabpanel" aria-labelledby="sch5"
+                data-parent="#slidebar-menu">
+            </ul>
+            </li>
+
+        </ul>
+        <li>
+            <p href="/logout">Logout <%=currentUser.username %></p>
+        </li>
+        </div>
+    </div>
+
+
+        <!--        buttons-->
+        <div class="container">
+            <div class="row" style="margin: 0 auto">
+               
+                <button type="button" id="button2" class="btn btn-danger btn-raised" data-toggle="modal"
+                    data-target="#myModal4"> Assign 
+                </button>
+            </div>
+        </div>
+
+        <div id="msg"></div>
+   
+        <!-- last 2 divs from top of card-->
+    </div>
+</div>
+<div id="example"></div>
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3> <button
+                    type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success alert-light " role="alert">
+                    <p id="badge"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$("#example").load("./config");
+
+$("#Chapter1Button1").click(function () {
+  assignTask1(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 1 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+ $("#Chapter1Button2").click(function () {
+  assignTask2(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 2 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+  $("#Chapter1Button3").click(function () {
+  assignTask3(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 3 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+   $("#Chapter1Button4").click(function () {
+  assignTask4(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 4 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+   $("#Chapter1Button5").click(function () {
+  assignTask5(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 5 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+   $("#Chapter1Button6").click(function () {
+  assignTask6(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 6 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+   $("#Chapter1Button7").click(function () {
+  assignTask7(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 7 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+   $("#Chapter1Button8").click(function () {
+  assignTask8(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("chapter 1 button 7 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made";    
+ })
+ $("#button2").click(function () {
+  assignTask2(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log("button 2 pushed")
+      }
+  })
+    document.getElementById("badge").textContent = "Assignment Made"; 
+   
+ })
+$("input").attr("maxlength", 8)
+</script>
+<% include ./partials/footer %></div>

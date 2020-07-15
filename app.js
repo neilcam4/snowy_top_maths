@@ -79,6 +79,16 @@ app.use(require('express-session')({
 }));
 
 // SCHEMAS
+//Assigned Task
+
+var taskSchema = mongoose.Schema({
+    name:String,
+    link:String,
+    score:{type:Number,default:7},
+    created:{type:Date, default: Date.now}
+})
+var Task = mongoose.model("Task", taskSchema)
+
 //QUIZ 
 var quizSchema = mongoose.Schema({
     name:String,
@@ -96,6 +106,7 @@ var userSchema = mongoose.Schema({
     score:{type:Number,default:0},
     created:{type:Date, default: Date.now},
     quiz: [quizSchema],
+    task:[taskSchema],
     subscription_type:String,
     questions:{type:Number,default:0},
     number:{type:Number,default:0},
@@ -110,6 +121,19 @@ var userSchema = mongoose.Schema({
     silver:{type:Number,default:0},
     bronze:{type:Number,default:0}
 });
+
+// var testTask = new Task({
+//     name:"Adding and Subtracting Fractions",
+//     link:"www.snowytopmaths.co.uk/fractions1"
+// })
+
+// testTask.save(function(err,task){
+// if(err){
+//     console.log(err)
+// } else{
+//     console.log(task)
+// }
+// })
 userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 var User = mongoose.model("User", userSchema);
 passport.use(new LocalStrategy(User.authenticate()));
@@ -377,6 +401,18 @@ app.post("/monthlyCharge", isLoggedIn, (req, res) => {
         .then(monthlyCharge => res.redirect("profile"));
 });
 //pages
+app.get('/admin', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('admin', {
+                user: user
+            })
+        }
+    });
+})
+
 app.get('/sequences', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
