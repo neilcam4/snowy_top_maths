@@ -182,6 +182,7 @@ $("#example").load("../config");
 var correct = 0;
 
 $("#button1").click(function () {
+   
     var question1 = document.quiz1.question1.value;
     var question2 = document.quiz2.question1.value;
     var question3 = document.quiz3.question1.value;
@@ -240,6 +241,13 @@ $("#button1").click(function () {
     document.getElementById("points").textContent = `Points earned:  ${correct * 10} points!`;
 });
 $("#button").click(function () {
+  assignTask(function(err, task){
+      if(err){
+          console.log(err)
+      }else{
+          console.log(task)
+      }
+  })
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     if(correct === 3){
         addBronze()

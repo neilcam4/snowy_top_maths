@@ -303,6 +303,9 @@ body {font-family: Verdana, sans-serif; margin:0}
 #stats{
    visibility:hidden
 }
+#Chapter1Button1,#Chapter1Button2,#Chapter1Button3,#Chapter1Button4,#Chapter1Button5,#Chapter1Button6,#Chapter1Button7,#Chapter1Button8{
+   background-color:mistyrose ;
+}
 </style>
 
         

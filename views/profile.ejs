@@ -41,6 +41,13 @@
                       <%= currentUser.questions%>
                     </td>
                   </tr>
+                  <tr>
+                    <th>
+                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Assigned Tasks</th>
+                    <td>
+                      <%= currentUser.task%>
+                    </td>
+                  </tr>
                   
                 </table>
               </div>
@@ -110,7 +117,6 @@
             <div class="circle" id="circles-2"></div>
             <h3 class="color-primary">Shape and Space</h3>
             <p class="small"><%= currentUser.shape + currentUser.shapeError %> questions</p>
-
           </div>
         </div>
     <div class="col-lg-3 col-sm-6">
