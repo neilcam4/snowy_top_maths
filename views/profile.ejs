@@ -41,14 +41,6 @@
                       <%= currentUser.questions%>
                     </td>
                   </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Assigned Tasks</th>
-                    <td>
-                      <%= currentUser.task%>
-                    </td>
-                  </tr>
-                  
                 </table>
               </div>
             </div>
@@ -58,12 +50,7 @@
                 <a href="/users/<%=currentUser.id %>" class="btn btn-warning btn-raised btn-block animated fadeInUp animation-delay-12">
                   <i class="zmdi zmdi-shield-check"></i> My Badges</a>        
               </div>
-        <div class="col-lg-12 col-md-6 order-md-2 order-lg-3">
-          <div class="card animated fadeInUp animation-delay-12">
-
-
-          </div>
-        </div>
+        
       </div>
     </div>
   
@@ -98,6 +85,27 @@
           </div>
           </a>
         </div>
+
+        <div class="col-lg-12 ms-paper-content-container">
+              <div class="ms-paper-content">
+                <section class="ms-component-section">
+                  <div class="row">
+                    <div class="col-md-12">
+                     <div class="card">
+                      <ul class="list-group">
+                      <a href="javascript:void(0)" class="list-group-item list-group-item-action withripple active">
+                      <i class="icon ion-ios-attach"></i>My Assignments</a>
+                      <% currentUser.task.forEach(function(newtask){ %>
+                        <a href= "<%=newtask.link%>" class="list-group-item ">
+                        <i class="zmdi zmdi-star"></i><%= newtask.name %></a>
+                        <% }) %></div>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                  </div>
+                  
+                  
     <div class="ms-footer">
       <div class="col-lg-12 ms-paper-content-container">
         <div class="ms-paper-content">
