@@ -27,6 +27,7 @@ app.use('/users', express.static(__dirname + '/public'));
 app.use('/pastpapers', express.static(__dirname + '/public'));
 app.use('/problemsolving', express.static(__dirname + '/public'));
 app.use('/basics', express.static(__dirname + '/public'));
+app.use('/admin', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -413,16 +414,16 @@ app.get('/admin', isLoggedIn, function (req, res) {
     });
 })
 
-app.get('/sequences', isLoggedIn, function (req, res) {
-    User.findById(req.params.id, function (err, user) {
+app.get('/admin/students', isLoggedIn, function (req, res) {
+    User.find(),function (err, users) {
         if (err) {
             console.log(err);
         } else {
-            res.render('sequences', {
-                user: user
+            res.render('students', {
+                users: users
             })
         }
-    });
+    }
 })
 
 app.get('/problemsolving/data2', isLoggedIn, function (req, res) {
