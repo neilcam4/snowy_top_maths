@@ -1,5 +1,5 @@
 function assignTask1() {
-    console.log("add asign task function")
+    console.log("add assign task function")
     var id = $("#userId").text();
     var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
     var api = $("#example").text();
@@ -18,7 +18,7 @@ function assignTask1() {
             console.log("bookmark added")
         },
         error: function (xhr, status, error) {
-            console.log(error);
+            console.log(error + "Error: No bookmark added");
         }
     });
 };
@@ -1963,3 +1963,27 @@ function BasicsChapter9Button4() {
         }
     });
 }
+function BasicsChapter9Button5() {
+    var id = $("#userId").text();
+    var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+    var api = $("#example").text();
+    var sliced = id.slice(0, -1);
+    var finalApi = url + sliced + api;
+    $.ajax({
+        url: finalApi,
+        type: "put",
+        data: JSON.stringify({
+            "$push": {
+                    "task": {name:"Pie Charts and Angles", link:"/basics/piechartsangles"}
+            }   
+        }),
+        contentType: "application/json",
+        success: function (data) {
+            console.log("bookmark added")
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        }
+    });
+}
+
