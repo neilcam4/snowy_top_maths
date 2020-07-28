@@ -2,7 +2,7 @@
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 id = "heading" class="text-center">What number did I start with?</h3>
+        <h3 id = "heading" class="text-center">What Number Did I start with?</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/bGWUGHdq69s" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
@@ -237,8 +237,10 @@ $("#button1").click(function () {
     
 $("input").attr("maxlength", 5)
 $("#button").click(function () {
+    removeTask1();
     document.getElementById("badge").textContent = `${correct} out of 6`; 
     if(correct === 3){
+        document.getElementById("chap1ex1bronze").style.visibility = "visible";
         addBronze()
         trackProgress6()
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;

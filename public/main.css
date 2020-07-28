@@ -336,6 +336,15 @@ body {font-family: Verdana, sans-serif; margin:0}
 #Chapter11Button1,#Chapter11Button2,#Chapter11Button3,#Chapter11Button4,#Chapter11Button5,#Chapter11Button6,#Chapter11Button7{
    background-color:mistyrose ;
 }
+#chap1ex1bronze{
+   visibility: visible;
+}
+#chap1ex1silver{
+   visibility: visible;
+}
+#chap1ex1gold{
+   visibility: visible;
+}
 </style>
 
         

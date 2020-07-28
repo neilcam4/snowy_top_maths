@@ -123,18 +123,6 @@ var userSchema = mongoose.Schema({
     bronze:{type:Number,default:0}
 });
 
-// var testTask = new Task({
-//     name:"Adding and Subtracting Fractions",
-//     link:"www.snowytopmaths.co.uk/fractions1"
-// })
-
-// testTask.save(function(err,task){
-// if(err){
-//     console.log(err)
-// } else{
-//     console.log(task)
-// }
-// })
 userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 var User = mongoose.model("User", userSchema);
 passport.use(new LocalStrategy(User.authenticate()));
@@ -282,7 +270,9 @@ app.get('/users/:id', isLoggedIn, function(req,res){
         if(err){
             res.redirect('/profile')
         } else {
-            res.render("show", {user:user})
+            res.render("show", {
+                user:user
+                })
         }
     })
 })
