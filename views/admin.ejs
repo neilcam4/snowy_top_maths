@@ -1,4 +1,5 @@
 <% include ./partials/header %>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
@@ -7,7 +8,7 @@
           <div class="card animated fadeInUp animation-delay-7">
             <div class="ms-hero-bg-primary ms-hero-img-mountain">
               <h3 class="color-white index-1 text-center no-m pt-4"><%=currentUser.username%></h3>
-              <img src="img/demo/m1.png" alt="..." class="img-avatar-circle">
+              <img src="img/demo/m1.png" alt="..." class="img-avatar-circle"></img>
             </div>
             <div class="card-body pt-4 text-center">
               <h3 class="color-primary" id="avatar"></h3>
@@ -94,8 +95,306 @@
 
       
       <!--
-topic list
+topic list basics
 -->
+<div class="card card-success animated fadeInUp animation-delay-12">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="zmdi zmdi-library"></i> Build The Basics</h3>
+        </div>
+      </div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">&#x278A;
+      Number Calculations <span class="ml-auto ">
+      
+      </span>
+    </p>
+    <p href="/basics/addsubtract" class="list-group-item list-group-item-action withripple">
+      &#9312; Column Addition and Subtraction <span class="ml-auto ">
+      <button type="button" id="BasicsChapter1Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span></p>
+    <p href="/basics/multiplyIntegers" class="list-group-item list-group-item-action withripple">
+      &#9313; Multiplication of Whole Numbers
+      <span class="ml-auto ">
+        <button type="button" id="BasicsChapter1Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span></p>
+    <p href="/basics/multiplydecimals" class="list-group-item list-group-item-action withripple">
+      &#9314; Multiplication of Decimals
+      <span class="ml-auto "><button type="button" id="BasicsChapter1Button3" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button></span>
+    </p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x278B; Fractions</p>
+      <p href="/basics/multiplyfractions" class="list-group-item list-group-item-action withripple">
+      &#9312; Multiplication of Fractions <span class="ml-auto ">
+        <button type="button" id="BasicsChapter2Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span></p>
+    <p href="/basics/addfractions" class="list-group-item list-group-item-action withripple">
+      &#9313; Adding Fractions <span class="ml-auto ">
+      <button type="button" id="BasicsChapter2Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button></span></p>
+    <p href="/basics/subtractfractions" class="list-group-item list-group-item-action withripple">
+      &#9314; Subtracting Fractions<span class="ml-auto ">
+      <button type="button" id="BasicsChapter2Button3" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span> </p>
+    <p href="/basics/dividingfractions" class="list-group-item list-group-item-action withripple">
+      &#9315; Dividing Fractions<span class="ml-auto ">
+      <button type="button" id="BasicsChapter2Button4" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span> </p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x278C; Converting Percentages, Fractions and Decimals</p>
+    <p href="/basics/DtoF" class="list-group-item list-group-item-action withripple">
+      &#9312; Decimals to Fractions
+      <span class="ml-auto ">
+        <button type="button" id="BasicsChapter3Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/FtoD" class="list-group-item list-group-item-action withripple">
+      &#9313; Fractions to Decimals
+      <span class="ml-auto "><button type="button" id="BasicsChapter3Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button></span>
+    </p>
+    <p href="/basics/FtoP" class="list-group-item list-group-item-action withripple">
+      &#9314; Fractions to Percentages<span class="ml-auto ">
+      <button type="button" id="BasicsChapter3Button3" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span></p>
+    <p href="/basics/DtoP" class="list-group-item list-group-item-action withripple">
+      &#9315; Decimals to Percentages
+      <span class="ml-auto ">
+        <button type="button" id="BasicsChapter3Button4" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span></p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x278D;Division</p>
+    <p href="/basics/shortdivision" class="list-group-item list-group-item-action withripple">
+      &#9312; Short Division
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter4Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/longdivision" class="list-group-item list-group-item-action withripple">
+      &#9313; Long Division
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter4Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x278E; Algebra</p>
+    <p href="/basics/algebraintro" class="list-group-item list-group-item-action withripple">
+      &#9312; Intro to Algebra<span class="ml-auto ">
+      <button type="button" id="BasicsChapter5Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+        </span></p>
+    <p href="/basics/algebrasolve" class="list-group-item list-group-item-action withripple">
+      &#9313; Solving Algebraic Equations<span class="ml-auto ">
+      <button type="button" id="BasicsChapter5Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+        </span></p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p href="" class="list-group-item list-group-item-action withripple active">
+      &#x278F; Ratio and Proportion</p>
+    <p href="/basics/ratiodivide" class="list-group-item list-group-item-action withripple">
+      &#9312; How to divide by a ratio
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter6Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/ratiototal" class="list-group-item list-group-item-action withripple">
+      &#9313; How to find the total amount
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter6Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+        </span></p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x2790; Angles and Shapes</p>
+    <p href="/basics/anglesStraightLine" class="list-group-item list-group-item-action withripple">
+      &#9312; Angles on a Straight Line sum to 180
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter7Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/anglepoint" class="list-group-item list-group-item-action withripple">
+      &#9313; Angles around a point sum to 360
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter7Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+        </span>
+        </p>
+
+    <p href="/basics/anglesTriangle" class="list-group-item list-group-item-action withripple">
+      &#9314; Angles inside a Triangle <span class="ml-auto ">
+      <button type="button" id="BasicsChapter7Button3" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span>
+    </p>
+    <p href="/basics/anglesTriangle2" class="list-group-item list-group-item-action withripple">
+      &#9315; Angles in a Triangle and on a Straight Line
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter7Button4" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/anglequad" class="list-group-item list-group-item-action withripple">
+      &#9316; Angles inside a quadrilateral<span class="ml-auto ">
+      <button type="button" id="BasicsChapter7Button5" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span>
+    </p>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x2791; Perimeter, Area and Volume</p>
+    <p href="/basics/anglesStraightLine" class="list-group-item list-group-item-action withripple">
+      &#9312; Perimeter of 2D shapes
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter8Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/areasquare" class="list-group-item list-group-item-action withripple">
+      &#9313; Area of Squares and Rectangles
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter8Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+        </span>
+        </p>
+
+    <p href="/basics/anglesTriangle" class="list-group-item list-group-item-action withripple">
+      &#9314; Area of Triangles <span class="ml-auto ">
+      <button type="button" id="BasicsChapter8Button3" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    <p href="/basics/anglesTriangle2" class="list-group-item list-group-item-action withripple">
+      &#9315; Volume
+      <span class="ml-auto ">
+      <button type="button" id="BasicsChapter8Button4" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+      </span>
+    </p>
+    
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card card-success animated fadeInUp animation-delay-12">
+  <div class="list-group">
+    <p class="list-group-item list-group-item-action withripple active">
+      &#x2792; Data
+      <p href="/basics/barcharts" class="list-group-item list-group-item-action withripple">
+        &#9312; Bar Charts<span class="ml-auto ">
+        <button type="button" id="BasicsChapter9Button1" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+        </span>
+      </p>
+      <p href="/basics/averages1" class="list-group-item list-group-item-action withripple">
+        &#9313; Calculate the mean<span class="ml-auto ">
+        <button type="button" id="BasicsChapter9Button2" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span></p>
+      <p href="/basics/averages2" class="list-group-item list-group-item-action withripple">
+        &#9314; Averages (Mode, Mean and Median)<span class="ml-auto ">
+        <button type="button" id="BasicsChapter9Button3" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span></p>
+      <p href="/basics/piecharts" class="list-group-item list-group-item-action withripple">
+        &#9315; Pie Charts <span class="ml-auto ">
+        <button type="button" id="BasicsChapter9Button4" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span></p>
+            <p href="/basics/piechartsangles" class="list-group-item list-group-item-action withripple">
+        &#9316; Pie Charts and Angles<span class="ml-auto ">
+        <button type="button" id="BasicsChapter9Button5" class="ui icon button" data-toggle="modal"
+        data-target="#myModal4"><i class="paperclip icon"></i>
+      </button>
+          </span></p>
+  </div>
+</div>
+</div>
+
+
 <div class="card card-info animated fadeInUp animation-delay-12">
         <div class="card-header">
           <h3 class="card-title">
@@ -671,20 +970,7 @@ topic list
         </li>
         </div>
     </div>
-
-
-        <!--        buttons-->
-        <div class="container">
-            <div class="row" style="margin: 0 auto">
-               
-                <button type="button" id="button2" class="btn btn-danger btn-raised" data-toggle="modal"
-                    data-target="#myModal4"> Assign 
-                </button>
-            </div>
-        </div>
-
         <div id="msg"></div>
-   
         <!-- last 2 divs from top of card-->
     </div>
 </div>
@@ -711,7 +997,7 @@ topic list
     </div>
 </div>
 <script>
-$("#example").load("./config");
+$("#example").load("../config");
 
 $("#Chapter1Button1").click(function () {
   assignTask1(function(err, task){
@@ -723,7 +1009,8 @@ $("#Chapter1Button1").click(function () {
   })
     document.getElementById("badge").textContent = "Assignment Made";    
  })
- $("#Chapter1Button2").click(function () {
+
+$("#Chapter1Button2").click(function () {
   assignTask2(function(err, task){
       if(err){
           console.log(err)
@@ -1234,6 +1521,316 @@ $("#Chapter1Button1").click(function () {
   })
     document.getElementById("badge").textContent = "Assignment Made";    
  })
-$("input").attr("maxlength", 8)
+
+$("#BasicsChapter1Button1").click(function () {
+    BasicsChapter1Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button1 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+   })
+$("#BasicsChapter1Button2").click(function () {
+    BasicsChapter1Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+   })
+$("#BasicsChapter1Button3").click(function () {
+    BasicsChapter1Button3(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+   })
+$("#BasicsChapter2Button1").click(function () {
+    BasicsChapter2Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter2Button2").click(function () {
+    BasicsChapter2Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter2Button3").click(function () {
+    BasicsChapter2Button3(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter2Button4").click(function () {
+    BasicsChapter2Button4(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter3Button1").click(function () {
+    BasicsChapter3Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter3Button2").click(function () {
+    BasicsChapter3Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter3Button3").click(function () {
+    BasicsChapter3Button3(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter3Button4").click(function () {
+    BasicsChapter3Button4(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter4Button1").click(function () {
+    BasicsChapter4Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter4Button2").click(function () {
+    BasicsChapter4Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter5Button1").click(function () {
+    BasicsChapter5Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter5Button2").click(function () {
+    BasicsChapter5Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter6Button1").click(function () {
+    BasicsChapter6Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter6Button2").click(function () {
+    BasicsChapter6Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter7Button1").click(function () {
+    BasicsChapter7Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter7Button2").click(function () {
+    BasicsChapter7Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter7Button3").click(function () {
+    BasicsChapter7Button3(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter7Button4").click(function () {
+    BasicsChapter7Button4(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter7Button5").click(function () {
+    BasicsChapter7Button5(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter8Button1").click(function () {
+    BasicsChapter8Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter8Button2").click(function () {
+    BasicsChapter8Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter8Button3").click(function () {
+    BasicsChapter8Button3(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter8Button4").click(function () {
+    BasicsChapter8Button4(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter9Button1").click(function () {
+    BasicsChapter9Button1(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter9Button2").click(function () {
+    BasicsChapter9Button2(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter9Button3").click(function () {
+    BasicsChapter9Button3(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter9Button4").click(function () {
+    BasicsChapter9Button4(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
+$("#BasicsChapter9Button5").click(function () {
+    BasicsChapter9Button5(function(err, task){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("BasicsChapter1Button2 pushed")
+        }
+    })
+      document.getElementById("badge").textContent = "Assignment Made";    
+})
 </script>
 <% include ./partials/footer %></div>

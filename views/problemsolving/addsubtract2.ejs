@@ -35,7 +35,7 @@
                     <div class="ui right labeled input">
                         <input type="text" name="question1"></input>
                             <div class="ui basic label">
-                            days
+                            cm
                             </div>
                     </div>
                 </form>
@@ -312,7 +312,7 @@ $("#next1").click(function(){
     document.getElementById ("button1").style.visibility = "visible";
 })
 $("#button1").click(function () {
-        document.getElementById ("button1").style.visibility = "hidden";
+    document.getElementById ("button1").style.visibility = "hidden";
     var answer1 = document.getElementById("answer_1").innerHTML 
     var answer2 = document.getElementById("answer_2").innerHTML 
     var answer3 = document.getElementById("answer_3").innerHTML
@@ -402,8 +402,9 @@ $("#button").click(function () {
     document.getElementById("button").style.visibility = "hidden";
     document.getElementById("badge").textContent = `${correct} out of 9`; 
     if(correct >= 3 && correct <= 5){
-        addBronze()
-        trackProgress9()
+        addBronze();
+        insertBronze();
+        trackProgress9();
         document.getElementById("points").textContent = `Points:  ${correct * 20}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct >= 6 && correct <= 7){
@@ -422,6 +423,21 @@ $("#button").click(function () {
     }
  })
     $("input").attr("maxlength", 8)
-    
+
+function insertBronze(){
+    fetch('http://localhost:3000/problemsolving/menu')
+            .then(function(res){
+                return res.text()
+                
+            })
+            .then(function(data){
+                document.getElementById("chap1ex1medal").innerHTML = "hello"
+                console.log(data)
+        
+        })
+            .catch(function(error){
+                console.log("error inserting Bronze")
+            })
+        }
 </script>
 <% include ../partials/footer %></div>

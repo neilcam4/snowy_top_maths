@@ -1,4 +1,5 @@
 <% include ../partials/header %>
+<body>
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
@@ -7,7 +8,7 @@
           <div class="card animated fadeInUp animation-delay-7">
             <div class="ms-hero-bg-primary ms-hero-img-mountain">
               <h3 class="color-white index-1 text-center no-m pt-4"><%=currentUser.username%></h3>
-              <img src="img/demo/m1.png" alt="..." class="img-avatar-circle">
+              <span id="avatar"></span>
             </div>
             <div class="card-body pt-4 text-center">
               <h3 class="color-primary" id="avatar"></h3>
@@ -22,7 +23,7 @@
                   <tr>
                     <th>
                       <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Points</th>
-                    <td>
+                    <td id="myPoints">
                       <%=currentUser.score%>
 
                     </td>
@@ -163,39 +164,34 @@ topic list
         <div class="card card-success animated fadeInUp animation-delay-12">
           <div class="list-group">
             <a class="list-group-item list-group-item-action withripple active">&#x278A;
-              Working with Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i> Difficulty
-                Level</span>
+              Working with Numbers <span class="ml-auto "> Medal Achieved</span>
               </a>
             <a href="/problemsolving/multdiv5" class="list-group-item list-group-item-action withripple">
-              &#9312; What Number Did I Start With? <span> </span>
+              &#9312; <span id="titlechap1ex1">What Number Did I start with?</span> <span class="ml-auto" id="chap1ex1medal" ></span>
             </a>
             <a href="/problemsolving/addsubtract2" class="list-group-item list-group-item-action withripple">
-              &#9313; Add, Subtract, Divide and Multiply 1 <span class="ml-auto "><i
-                  class=" fa fa-mortar-board"></i></span>
+              &#9313; <span id="titlechap1ex2">Add, Subtract, Divide and Multiply 1</span> <span class="ml-auto" id="chap1ex2medal"></span>
             </a>
             <a href="/problemsolving/multdiv1" class="list-group-item list-group-item-action withripple">
-              &#9314; Multiplication of Whole Numbers
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span></a>
+              &#9314; <span id="titlechap1ex3">Multiplication of Whole Numbers</span>
+              <span class="ml-auto" id="chap1ex3medal"> </span></a>
             <a href="/problemsolving/addsubtract1" class="list-group-item list-group-item-action withripple">
-              &#9315; Add and Subtract Integers
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+              &#9315; <span id="titlechap1ex4">Add and Subtract Integers</span>
+              <span class="ml-auto" id="chap1ex4medal"> </span>
             </a>
             <a href="/problemsolving/multdiv2" class="list-group-item list-group-item-action withripple">
-              &#9316; Multiply and Divide Whole Numbers <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9316; <span id="titlechap1ex5">Multiply and Divide Whole Numbers</span> <span class="ml-auto " id="chap1ex5medal"></span></a>
             <a href="/problemsolving/multdiv3" class="list-group-item list-group-item-action withripple">
-              &#9317; Multiply and Divide multi-Digit Numbers <span class="ml-auto "><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9317; <span id="titlechap1ex6">Multiply and Divide multi-Digit Numbers</span> <span class="ml-auto" id="chap1ex6medal">
+                </span></a>
             <a href="/problemsolving/multdiv4" class="list-group-item list-group-item-action withripple">
-              &#9318; Missing Digit Multiplication<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span> 
+              &#9318; <span id="titlechap1ex7">Missing Digit Multiplication</span><span class="ml-auto" id="chap1ex1medal"> 
+              </span> 
             </a>
             <a href="/problemsolving/distance1" class="list-group-item list-group-item-action withripple">
-              &#9319; Multiply and Divide with cm,m & km<span class="ml-auto "><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span> 
+              &#9319; <span id="titlechap1ex8">Multiply and Divide with cm,m & km</span><span class="ml-auto" id="chap1ex1medal">
+              </span> 
             </a>
-
           </div>
         </div>
       </div>
@@ -207,36 +203,33 @@ topic list
               &#x278B; Fractions, Percentages and Decimals</a>
             <a href="/problemsolving/fractions1" class="list-group-item list-group-item-action withripple">
               &#9312; What is the missing fraction?
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "> </span>
             </a>
             <a href="/problemsolving/fractions2" class="list-group-item list-group-item-action withripple">
               &#9313; Fractions of Amounts 1
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/fractions3" class="list-group-item list-group-item-action withripple">
               &#9314; Fractions of Amounts 2
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/fractionofamounts" class="list-group-item list-group-item-action withripple">
               &#9315; Fractions of Amounts 3
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/percentages1" class="list-group-item list-group-item-action withripple">
               &#9316; Ordering Percentages, Fractions and Decimals
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/FDP" class="list-group-item list-group-item-action withripple">
               &#9317; Converting Percentages, Fractions and Decimals
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto ">
+
+              </span>
             </a>
             <a href="/problemsolving/percentageofamount" class="list-group-item list-group-item-action withripple">
               &#9318; Percentage of Amounts 1
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
+              <span class="ml-auto ">  <i
                   class=" fa fa-mortar-board"></i></span>
             </a>
           </div>
@@ -249,20 +242,17 @@ topic list
               &#x278C; Sequences</a>
             <a href="/problemsolving/sequences1" class="list-group-item list-group-item-action withripple">
               &#9312; Find consecutive numbers to make a sum
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto ">  </span>
             </a>
             <a href="/problemsolving/sequences3" class="list-group-item list-group-item-action withripple">
               &#9313; Follow a given rule
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/sequences2" class="list-group-item list-group-item-action withripple">
-              &#9314; Newspaper Sequences<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+              &#9314; Newspaper Sequences<span class="ml-auto "> </span></a>
             <a href="/problemsolving/sequences4" class="list-group-item list-group-item-action withripple">
               &#9315; Adding Consecutive Numbers
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              <span class="ml-auto "></span></a>
           </div>
         </div>
       </div>
@@ -273,23 +263,21 @@ topic list
               &#x278D;Primes, Multiples, Squares and Factors</a>
             <a href="/problemsolving/prime2" class="list-group-item list-group-item-action withripple">
               &#9312; Add together primes to make a square
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "> </span>
             </a>
             <a href="/problemsolving/isPrime" class="list-group-item list-group-item-action withripple">
               &#9313; Identify the Prime Number
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "> </span>
             </a>
             <a href="/problemsolving/squares1" class="list-group-item list-group-item-action withripple">
               &#9314; Square Number Problems
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto ">  </span>
             </a>
             <a href="/problemsolving/prime1" class="list-group-item list-group-item-action withripple">
-              &#9315; Common Multiples <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              &#9315; Common Multiples <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/lowestcommonmultiple" class="list-group-item list-group-item-action withripple">
-              &#9316;Lowest Common Multiples <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              &#9316;Lowest Common Multiples <span class="ml-auto "></span>
             </a>
           </div>
         </div>
@@ -305,28 +293,22 @@ topic list
               &#x278E; Time</a>
 
             <a href="/problemsolving/time1" class="list-group-item list-group-item-action withripple">
-              &#9312; Taking a holiday<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9312; Taking a holiday<span class="ml-auto "></span></a>
             <a href="/problemsolving/time4" class="list-group-item list-group-item-action withripple">
-              &#9313; Catching the train<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9313; Catching the train<span class="ml-auto "></span></a>
             <a href="/problemsolving/time5" class="list-group-item list-group-item-action withripple">
-              &#9314; Catching the train 2<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9314; Catching the train 2<span class="ml-auto "></span></a>
             <a href="/problemsolving/time3" class="list-group-item list-group-item-action withripple">
               &#9315; Angles around a clock
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/slowclock" class="list-group-item list-group-item-action withripple">
               &#9316; My watch is slow 1
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/time2" class="list-group-item list-group-item-action withripple">
               &#9317; My watch is slow 2
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto "></span>
             </a>
           </div>
         </div>
@@ -339,16 +321,14 @@ topic list
               &#x278F; Ratio and Proportion</a>
             <a href="/problemsolving/ratio1" class="list-group-item list-group-item-action withripple">
               &#9312; Dividing into a Ratio
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto ">  </span>
             </a>
             <a href="/problemsolving/ratio3" class="list-group-item list-group-item-action withripple">
               &#9313; Inverse Proportion
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              <span class="ml-auto "></span></a>
                   <a href="/problemsolving/ratio4" class="list-group-item list-group-item-action withripple">
               &#9314; Ratio and Angles
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              <span class="ml-auto "></span></a>
           </div>
         </div>
       </div>
@@ -359,22 +339,17 @@ topic list
             <a class="list-group-item list-group-item-action withripple active">
               &#x2790; Problems Solved with Algebra</a>
             <a href="/problemsolving/wordedalgebra1" class="list-group-item list-group-item-action withripple">
-              &#9312; How many goals were scored? <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              &#9312; How many goals were scored? <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/wordedalgebra2" class="list-group-item list-group-item-action withripple">
-              &#9313; How old is Alan? <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              &#9313; How old is Alan? <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/wordedalgebra3" class="list-group-item list-group-item-action withripple">
-              &#9314;Algebra Grids<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+              &#9314;Algebra Grids<span class="ml-auto "></span></a>
             <a href="/problemsolving/wordedalgebra4" class="list-group-item list-group-item-action withripple">
-              &#9315; Abstract Worded Problems <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+              &#9315; Abstract Worded Problems <span class="ml-auto "> </span></a>
             <a href="/problemsolving/wordedalgebra5" class="list-group-item list-group-item-action withripple">
-              &#9316; Algebra and Time <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+              &#9316; Algebra and Time <span class="ml-auto "></span></a>
           </div>
         </div>
       </div>
@@ -386,11 +361,11 @@ topic list
               &#x2791; Angles in Shapes</a>
             <a href="/problemsolving/shapes1" class="list-group-item list-group-item-action withripple">
               &#9312; Angles in Composite Regular Polygons
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto ">  </span>
             </a>
             <a href="/problemsolving/shapes6" class="list-group-item list-group-item-action withripple">
               &#9313; Angles in Composite Polygons
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span>
+              <span class="ml-auto ">  </span>
             </a>
           </div>
         </div>
@@ -402,33 +377,24 @@ topic list
               &#x2792; Area, Perimeter and Volume</a>
             <a href="/problemsolving/shapes5" class="list-group-item list-group-item-action withripple">
               &#9312; Area and Perimeter with Squares and Rectangles 1
-              <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i></span></a>
+              <span class="ml-auto ">  </span></a>
 
             <a href="/problemsolving/shapes3" class="list-group-item list-group-item-action withripple">
-              &#9313; Areas inside other Areas <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              &#9313; Areas inside other Areas <span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/shapes4" class="list-group-item list-group-item-action withripple">
-              &#9314; Areas of Rectangles and Triangles<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9314; Areas of Rectangles and Triangles<span class="ml-auto "></span></a>
 
             <a href="/problemsolving/volume" class="list-group-item list-group-item-action withripple">
-              &#9315; Volume <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span></a>
+              &#9315; Volume <span class="ml-auto "></span></a>
             <a href="/problemsolving/shapes2" class="list-group-item list-group-item-action withripple">
-              &#9316; Area and Perimeter with Squares and Rectangles 2<span class="ml-auto "><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              &#9316; Area and Perimeter with Squares and Rectangles 2<span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/perimeteralgebra" class="list-group-item list-group-item-action withripple">
-              &#9317; Perimeter with algebraic terms<span class="ml-auto "><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              &#9317; Perimeter with algebraic terms<span class="ml-auto "></span>
             </a>
             <a href="/problemsolving/surfaceareapyramid" class="list-group-item list-group-item-action withripple">
-              &#9318; Surface Area of Square-based Pyramids<span class="ml-auto "><i
-                  class=" fa fa-mortar-board"></i><i class=" fa fa-mortar-board"></i><i
-                  class=" fa fa-mortar-board"></i></span>
+              &#9318; Surface Area of Square-based Pyramids<span class="ml-auto "></span>
             </a>
           </div>
         </div>
@@ -439,14 +405,11 @@ topic list
             <a class="list-group-item list-group-item-action withripple active">
               &#x2793; Averages</a>
               <a href="/problemsolving/meanaverage" class="list-group-item list-group-item-action withripple">
-                &#9312; Problems with Mean<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                    class=" fa fa-mortar-board"></i></span></a>
+                &#9312; Problems with Mean<span class="ml-auto "></span></a>
               <a href="/problemsolving/averages" class="list-group-item list-group-item-action withripple">
-                &#9313; Problems with Mean 2<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                    class=" fa fa-mortar-board"></i></span></a>
+                &#9313; Problems with Mean 2<span class="ml-auto "></span></a>
               <a href="/problemsolving/averages2" class="list-group-item list-group-item-action withripple">
-                &#9314; Averages (Mode, Mean and Median)<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                    class=" fa fa-mortar-board"></i></span></a>
+                &#9314; Averages (Mode, Mean and Median)<span class="ml-auto "></span></a>
           </div>
         </div>
       </div>
@@ -456,12 +419,14 @@ topic list
             <a class="list-group-item list-group-item-action withripple active">
             &#x278A;&#x278A; Pie Charts and Bar Charts</a>
               <a href="/problemsolving/data2" class="list-group-item list-group-item-action withripple">
-                &#9312; Bar Charts and Averages<span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                    class=" fa fa-mortar-board"></i></span>
+                &#9312; Bar Charts and Averages<span class="ml-auto ">
+                   
+                   <i class="fa fa-trophy" style="color:#cd7f32"></i>
+                   <i class="fa fa-trophy" style="color:#c4c9cd"></i>
+                   <i class="fa fa-trophy color-warning"></i></span>
               </a>
               <a href="/problemsolving/piecharts" class="list-group-item list-group-item-action withripple">
-                &#9315; Pie Charts <span class="ml-auto "><i class=" fa fa-mortar-board"></i><i
-                    class=" fa fa-mortar-board"></i></span></a>
+                &#9315; Pie Charts <span class="ml-auto "></span></a>
           </div>
         </div>
       </div>
@@ -587,7 +552,180 @@ topic list
 
 </div>
 <div id="example"></div>
+<div id="badgeList">
+  <div class="col-md-12">
+      <% currentUser.quiz.forEach(function(quizName){ %>
+      <div class="list-group">
+        <p class="list-group-item list-group-item-action withripple">
+          <span class="title"><%=quizName.name %></span><span class="theScore"><%=quizName.score %></span>
+    <span class="ml-auto" id="medal">
+</span>
+</p>
+      <% }) %>   
+    </div> 
+    </div> 
+</div>
+<script>
 
+function avatarPic(){
+  const points = document.getElementById("myPoints").innerHTML
+  console.log("total points is " + points)
+  if(points => 0){
+    document.getElementById("avatar").innerHTML = '<img src="img/demo/panda.jpg" class="img-avatar-circle">'
+  }
+  if(points => 500 ){
+    document.getElementById("avatar").innerHTML = '<img src="img/demo/panda.jpg" class="img-avatar-circle">'
+  }
+}
+avatarPic()
+  
 
-    
+  function assignMedal1() {
+    var title = document.getElementById("titlechap1ex1").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal1()
+function assignMedal2() {
+  var title = document.getElementById("titlechap1ex2").innerHTML
+  console.log("ex 2 title = " + title)
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex2medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal2()
+function assignMedal3() {
+  var title = document.getElementById("titlechap1ex3").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    console.log("score medal3= " + badgeScore)
+    console.log("title = " + badgeTitle)
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal3()
+
+function assignMedal4() {
+  var title = document.getElementById("titlechap1ex4").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    console.log("score medal4= " + badgeScore)
+    console.log("title = " + badgeTitle)
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal4()
+
+function assignMedal5() {
+  var title = document.getElementById("titlechap1ex5").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    console.log("score medal5= " + badgeScore)
+    console.log("title = " + badgeTitle)
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal5()
+
+function assignMedal6() {
+  var title = document.getElementById("titlechap1ex6").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    console.log("score medal6= " + badgeScore)
+    console.log("title = " + badgeTitle)
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal6()
+
+function assignMedal7() {
+  var title = document.getElementById("titlechap1ex7").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    console.log("score medal7= " + badgeScore)
+    console.log("title = " + badgeTitle)
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal7()
+
+function assignMedal8() {
+  var title = document.getElementById("titlechap1ex8").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    console.log("score medal8= " + badgeScore)
+    console.log("title = " + badgeTitle)
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedal8()
+</script>         
 <% include ../partials/footer %></div>
+

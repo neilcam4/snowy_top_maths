@@ -62,21 +62,20 @@
 </div>
 
 <div class="container">
-  <div class="ui four cards">
-    <% user.quiz.forEach(function(quizName){ %>
-    <div class="card">
-      <div class="image">
-      <img src="/images/snowy.jpg"></img>
-      </div>
-      <div class="extra">
-      <p>Quiz: <%=quizName.name %></p>
-      <p>Score: <%=quizName.score %>%</p>
-      <p>Date: <%=quizName.created %></p>
-      <div class="ui star rating" data-rating="4"></div>
-    </div>
-  </div>
-  <% }) %>
-</div>
+      <div class="col-md-12">
+          <% user.quiz.forEach(function(quizName){ %>
+          <div class="list-group">
+            <p class="list-group-item list-group-item-action withripple">
+              <%=quizName.name %><span id="theScore"><%=quizName.score %></span>
+             
+    <span class="ml-auto" id="medal">
+    </span>
+</p>
+          <% }) %>   
+       </div> 
+       </div> 
+       </div>
+
 <div class="container">
   <div class="card card-primary animated fadeInUp animation-delay-12">
                 <table class="table table-no-border table-striped">
@@ -174,5 +173,20 @@
       </div>
       </div>
       </div>
+      <script>
+        function checkMedal(){
+        const score = document.getElementById("theScore").innerHTML
+          console.log("score is + " +score)
+          if(score => 44 && score <= 60){
+            document.getElementById("medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>'
+          }
+          else if(score => 60 && score <= 85){
+            document.getElementById("medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd" id="chap1ex1silver"></i>'
+          }
+        }
+          
+            
+checkMedal()
+</script>
 
 <% include ./partials/footer %>

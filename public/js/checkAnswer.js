@@ -2,7 +2,6 @@ function checkAnswer20() {
     var id = $("#userId").text();
     var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
     var api = $("#example").text();
-   
     var sliced = id.slice(0, -1);
     var finalApi = url + sliced + api;
    
