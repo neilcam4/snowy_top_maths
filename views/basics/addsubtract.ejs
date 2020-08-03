@@ -390,7 +390,7 @@ $("#button1").click(function () {
 });
 $("#button").click(function () {
     document.getElementById("badge").textContent = `${correct} out of 9`; 
-    if(correct > 4 && correct < 6){
+    if(correct => 4 && correct < 6){
         addBronze()
         trackProgress9()
         document.getElementById("points").textContent = `Points:  ${correct * 10}`;

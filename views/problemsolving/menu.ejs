@@ -185,11 +185,11 @@ topic list
               &#9317; <span id="titlechap1ex6">Multiply and Divide multi-Digit Numbers</span> <span class="ml-auto" id="chap1ex6medal">
                 </span></a>
             <a href="/problemsolving/multdiv4" class="list-group-item list-group-item-action withripple">
-              &#9318; <span id="titlechap1ex7">Missing Digit Multiplication</span><span class="ml-auto" id="chap1ex1medal"> 
+              &#9318; <span id="titlechap1ex7">Missing Digit Multiplication</span><span class="ml-auto" id="chap1ex7medal"> 
               </span> 
             </a>
             <a href="/problemsolving/distance1" class="list-group-item list-group-item-action withripple">
-              &#9319; <span id="titlechap1ex8">Multiply and Divide with cm,m & km</span><span class="ml-auto" id="chap1ex1medal">
+              &#9319; <span id="titlechap1ex8">Multiply and Divide with cm,m & km</span><span class="ml-auto" id="chap1ex8medal">
               </span> 
             </a>
           </div>
@@ -202,35 +202,33 @@ topic list
             <a class="list-group-item list-group-item-action withripple active">
               &#x278B; Fractions, Percentages and Decimals</a>
             <a href="/problemsolving/fractions1" class="list-group-item list-group-item-action withripple">
-              &#9312; What is the missing fraction?
-              <span class="ml-auto "> </span>
+              &#9312; <span id="titlechap2ex1">What is the missing fraction?</span>
+              <span class="ml-auto" id="chap2ex1medal">
+              </span> 
             </a>
             <a href="/problemsolving/fractions2" class="list-group-item list-group-item-action withripple">
-              &#9313; Fractions of Amounts 1
-              <span class="ml-auto "></span>
+              &#9313; <span id="titlechap2ex2">Fractions of Amounts 1</span>
+              <span class="ml-auto" id="chap2ex2medal"></span>
             </a>
             <a href="/problemsolving/fractions3" class="list-group-item list-group-item-action withripple">
-              &#9314; Fractions of Amounts 2
-              <span class="ml-auto "></span>
+              &#9314; <span id="titlechap2ex3">Fractions of Amounts 2</span>
+              <span class="ml-auto" id="chap2ex3medal"></span>
             </a>
             <a href="/problemsolving/fractionofamounts" class="list-group-item list-group-item-action withripple">
-              &#9315; Fractions of Amounts 3
-              <span class="ml-auto "></span>
+              &#9315; <span id="titlechap2ex4">Fractions of Amounts 3</span>
+              <span class="ml-auto" id="chap2ex4medal"></span>
             </a>
             <a href="/problemsolving/percentages1" class="list-group-item list-group-item-action withripple">
-              &#9316; Ordering Percentages, Fractions and Decimals
-              <span class="ml-auto "></span>
+              &#9316; <span id="titlechap2ex5">Calculating with Percentages, Fractions and Decimals</span>
+              <span class="ml-auto" id="chap2ex5medal"></span>
             </a>
             <a href="/problemsolving/FDP" class="list-group-item list-group-item-action withripple">
-              &#9317; Converting Percentages, Fractions and Decimals
-              <span class="ml-auto ">
-
-              </span>
+              &#9317; <span id="titlechap2ex6">Converting Percentages, Fractions and Decimals</span>
+              <span class="ml-auto" id="chap2ex6medal"></span>
             </a>
             <a href="/problemsolving/percentageofamount" class="list-group-item list-group-item-action withripple">
-              &#9318; Percentage of Amounts 1
-              <span class="ml-auto ">  <i
-                  class=" fa fa-mortar-board"></i></span>
+              &#9318; <span id="titlechap2ex7">Percentage of Amounts 1</span>
+              <span class="ml-auto" id="chap2ex7medal"></span>
             </a>
           </div>
         </div>
@@ -578,27 +576,24 @@ function avatarPic(){
   }
 }
 avatarPic()
-  
-
-  function assignMedal1() {
-    var title = document.getElementById("titlechap1ex1").innerHTML
+function assignMedalChap1Ex1() {
+  var title = document.getElementById("titlechap1ex1").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedal1()
-function assignMedal2() {
+  var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+  var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+  if(badgeTitle == title && badgeScore == 50){
+    document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+  } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+    document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+  } else if(badgeTitle == title && badgeScore ==100){
+    document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+     }     
+  }
+}  
+assignMedalChap1Ex1()
+function assignMedalChap1Ex2() {
   var title = document.getElementById("titlechap1ex2").innerHTML
-  console.log("ex 2 title = " + title)
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
@@ -612,15 +607,13 @@ function assignMedal2() {
        }     
  }
 }
-assignMedal2()
-function assignMedal3() {
+assignMedalChap1Ex2()
+function assignMedalChap1Ex3() {
   var title = document.getElementById("titlechap1ex3").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
     var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    console.log("score medal3= " + badgeScore)
-    console.log("title = " + badgeTitle)
     if(badgeTitle == title && badgeScore == 50){
       document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
     } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
@@ -630,16 +623,14 @@ function assignMedal3() {
        }     
  }
 }
-assignMedal3()
+assignMedalChap1Ex3()
 
-function assignMedal4() {
+function assignMedalChap1Ex4() {
   var title = document.getElementById("titlechap1ex4").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
     var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    console.log("score medal4= " + badgeScore)
-    console.log("title = " + badgeTitle)
     if(badgeTitle == title && badgeScore == 50){
       document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
     } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
@@ -649,16 +640,14 @@ function assignMedal4() {
        }     
  }
 }
-assignMedal4()
+assignMedalChap1Ex4()
 
-function assignMedal5() {
+function assignMedalChap1Ex5() {
   var title = document.getElementById("titlechap1ex5").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
     var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    console.log("score medal5= " + badgeScore)
-    console.log("title = " + badgeTitle)
     if(badgeTitle == title && badgeScore == 50){
       document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
     } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
@@ -668,16 +657,14 @@ function assignMedal5() {
        }     
  }
 }
-assignMedal5()
+assignMedalChap1Ex5()
 
-function assignMedal6() {
+function assignMedalChap1Ex6() {
   var title = document.getElementById("titlechap1ex6").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
     var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    console.log("score medal6= " + badgeScore)
-    console.log("title = " + badgeTitle)
     if(badgeTitle == title && badgeScore == 50){
       document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
     } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
@@ -687,16 +674,14 @@ function assignMedal6() {
        }     
  }
 }
-assignMedal6()
+assignMedalChap1Ex6()
 
-function assignMedal7() {
+function assignMedalChap1Ex7() {
   var title = document.getElementById("titlechap1ex7").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
     var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    console.log("score medal7= " + badgeScore)
-    console.log("title = " + badgeTitle)
     if(badgeTitle == title && badgeScore == 50){
       document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
     } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
@@ -706,16 +691,14 @@ function assignMedal7() {
        }     
  }
 }
-assignMedal7()
+assignMedalChap1Ex7()
 
-function assignMedal8() {
+function assignMedalChap1Ex8() {
   var title = document.getElementById("titlechap1ex8").innerHTML
   var newTitles = document.getElementsByClassName("title")
   for (var i = 0; i < newTitles.length; i++) {
     var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
     var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    console.log("score medal8= " + badgeScore)
-    console.log("title = " + badgeTitle)
     if(badgeTitle == title && badgeScore == 50){
       document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
     } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
@@ -725,7 +708,126 @@ function assignMedal8() {
        }     
  }
 }
-assignMedal8()
+assignMedalChap1Ex8()
+
+//chapter 2
+function assignMedalChap2Ex1() {
+  var title = document.getElementById("titlechap2ex1").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+  var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+  var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+  if(badgeTitle == title && badgeScore == 50){
+    document.getElementById("chap2ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+  } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+    document.getElementById("chap2ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+  } else if(badgeTitle == title && badgeScore ==100){
+    document.getElementById("chap2ex1medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+     }     
+  }
+}  
+assignMedalChap2Ex1()
+function assignMedalChap2Ex2() {
+  var title = document.getElementById("titlechap2ex2").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap2ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap2ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap2ex2medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedalChap2Ex2()
+function assignMedalChap2Ex3() {
+  var title = document.getElementById("titlechap2ex3").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap2ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap2ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap2ex3medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedalChap2Ex3()
+
+function assignMedalChap2Ex4() {
+  var title = document.getElementById("titlechap2ex4").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap2ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 43 && badgeScore <=56){
+      document.getElementById("chap2ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap2ex4medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedalChap2Ex4()
+
+function assignMedalChap2Ex5() {
+  var title = document.getElementById("titlechap2ex5").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap2ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap2ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap2ex5medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedalChap2Ex5()
+
+function assignMedalChap2Ex6() {
+  var title = document.getElementById("titlechap2ex6").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap2ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap2ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap2ex6medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedalChap2Ex6()
+
+function assignMedalChap2Ex7() {
+  var title = document.getElementById("titlechap2ex7").innerHTML
+  var newTitles = document.getElementsByClassName("title")
+  for (var i = 0; i < newTitles.length; i++) {
+    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
+    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
+    if(badgeTitle == title && badgeScore == 50){
+      document.getElementById("chap2ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
+    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
+      document.getElementById("chap2ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
+    } else if(badgeTitle == title && badgeScore ==100){
+      document.getElementById("chap2ex7medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
+       }     
+ }
+}
+assignMedalChap2Ex7()
+
 </script>         
 <% include ../partials/footer %></div>
 

@@ -1,7 +1,7 @@
 [
     {
        "question_number": "1",
-       "title":"Lowest Common Multiples",
+       "title":"Percentage of Amounts 1",
        "question_text": "Every year, the value of a gold cup increases by 10% compared to its price in the previous year. In 2015, the value of the gold cup was £1,000. In 2016, the value of the gold cup was £1,100. What was the value of the gold cup in 2018?",
        "answer_1":"1331"
     },

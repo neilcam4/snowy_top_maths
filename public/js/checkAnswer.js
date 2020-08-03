@@ -4,7 +4,6 @@ function checkAnswer20() {
     var api = $("#example").text();
     var sliced = id.slice(0, -1);
     var finalApi = url + sliced + api;
-   
     $.ajax({
         url: finalApi,
         type: "put",

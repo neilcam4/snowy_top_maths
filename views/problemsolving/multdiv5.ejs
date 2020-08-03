@@ -174,7 +174,22 @@
         </div>
     </div>
 </div>
+<div id="badgeList">
+  <div class="col-md-12">
+      <% currentUser.quiz.forEach(function(quizName){ %>
+      <div class="list-group">
+        <p class="list-group-item list-group-item-action withripple">
+          <span class="title"><%=quizName.name %></span><span class="theScore"><%=quizName.score %></span>
+    <span class="ml-auto" id="medal">
+</span>
+</p>
+      <% }) %>   
+    </div> 
+    </div> 
+</div>
 <script>
+
+
 $("#example").load("../config");
 var correct = 0;
 

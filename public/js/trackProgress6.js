@@ -1,5 +1,4 @@
 function trackProgress6() {
-    console.log("add progress function")
     var percentage = Math.ceil(correct/6 * 100)
     var title = $("#heading").text()
     var id = $("#userId").text();
