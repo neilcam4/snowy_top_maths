@@ -1,29 +1,13 @@
 <% include ../partials/header %>
 <p id = "input"></p>
-
-<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 10 points. Write number only, no commas
-                <strong>Good Luck! </strong> </p>
-        </div>
-    </div>
-</div>
-<!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id ="heading"></h3>
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Tutorial Coming Soon</h3>
-            </div>
-            
-            <div class="card-body overflow-hidden text-center">
-            </div>
+        <h3 id = "heading" class="text-center">Adding Fractions</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HiCI_gqfvs0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </div>
 </div>
+<!--   Video        -->
+
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
@@ -32,7 +16,15 @@
 
 <div style="text-align: center">
     <div class="card card-royal col-md-6" style="display:inline-block">
-
+    <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 10 points. Write number only, no commas
+                <strong>Good Luck! </strong> </p>
+        </div>
+    </div>
+</div>
         <!--        First question-->
         <div class="mySlides">
             <div class="card-header">

@@ -28,6 +28,8 @@ app.use('/pastpapers', express.static(__dirname + '/public'));
 app.use('/problemsolving', express.static(__dirname + '/public'));
 app.use('/basics', express.static(__dirname + '/public'));
 app.use('/admin', express.static(__dirname + '/public'));
+app.use('/13+', express.static(__dirname + '/public'));
+app.use('/13+/basics', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -1457,6 +1459,17 @@ app.get('/basics/algebraintro',isLoggedIn, function(req,res){
 app.get('/basics/ratiodivide',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('basics/ratiodivide',{user:user})
+    })
+})
+//13+
+app.get('/13/home',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/home',{user:user})
+    })
+})
+app.get('/13/basics/index',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/basics/index',{user:user})
     })
 })
 app.listen(port, function (err) {

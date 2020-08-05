@@ -1,6 +1,10 @@
 <% include ../partials/header %>
 <p id = "input"></p>
-
+<div id="video" style="text-align: center">
+    <div class="col-md-6" style="display:inline-block">
+        <h3 class="text-center" id="heading">Intro to Algebra</h3>  
+    </div>
+</div>
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">
@@ -11,29 +15,9 @@
     </div>
 </div>
 <!--   Video        -->
-<div id="video" style="text-align: center">
-    <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id ="heading"></h3>
-        <div class="card card-info-inverse">
-            <div class="card-header">
-                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Watch the tutorial below:</h3>
-            </div>
-            <div class="js-player">
-                <script src=""></script><iframe
-                    allow="autoplay" class="video-player-container vooplayer" data-playerId="MTQ1NjMy"
-                    allowtransparency="true" style="max-width:100%" name="vooplayerframe" allowfullscreen="true"
-                    src="https://snowytopmaths.cdn.vooplayer.com/publish/MTQ1NjMy" frameborder="0" scrolling="no">
-                </iframe>
-            </div>
-            <div class="card-body overflow-hidden text-center">
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container">
     <p id="userId"><%=currentUser.id %> </p>
-  
 </div>
 
 <div style="text-align: center">
@@ -209,15 +193,15 @@
 
         <div id="msg"></div>
         <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
 
         </div>
         <!-- last 2 divs from top of card-->
@@ -333,7 +317,7 @@ $("#button1").click(function () {
     var answer5 = document.getElementById("answer_5").innerHTML
     var answer6 = document.getElementById("answer_6").innerHTML
     var answer7 = document.getElementById("answer_7").innerHTML
-    var answer7 = document.getElementById("answer_8").innerHTML
+    var answer8 = document.getElementById("answer_8").innerHTML
     var answer9 = document.getElementById("answer_9").innerHTML
     var question1 = document.quiz1.question1.value;
     var question2 = document.quiz2.question1.value;
