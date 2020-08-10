@@ -1030,6 +1030,17 @@ app.get('/problemsolving/shapes6', isLoggedIn, function (req, res) {
     });
 })
 
+app.get('/problemsolving/shapes7', isLoggedIn, function (req, res) {
+    User.findById(req.params.id, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('problemsolving/shapes7', {
+                user: user
+            })
+        }
+    });
+})
 app.get('/problemsolving/shapes1', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {

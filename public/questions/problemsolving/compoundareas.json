@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Compound Areas of Rectangles and Squares",
+       "question_text": "Find the area of this compound shape (not drawn to scale)",
+       "answer_1":"54"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Find the area of this compound shape (not drawn to scale)",
+      "answer_1":"58"
+   },
+   {
+      "question_number": "3",
+      "question_text": "Find the area of this compound shape (not drawn to scale)",
+      "answer_1":"73"
+   },
+   {
+      "question_number": "4",
+      "question_text": "Find the area of this compound shape (not drawn to scale)",
+      "answer_1":"132"
+   },
+   {  "question_number": "5",
+    "question_text": "Find the area of this compound shape (not drawn to scale)",
+    "answer_1":"78"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Find the area of this compound shape (not drawn to scale)",
+      "answer_1":"64"
+   },
+   {
+    "question_number": "7",
+    "question_text": "",
+    "answer_1":"9" 
+ },
+ {
+    "question_number": "8",
+    "question_text": "Find the area of this compound shape (not drawn to scale)",
+    "answer_1":"122.5"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Find the area of this compound shape (not drawn to scale)",
+    "answer_1":"105"
+ }
+   ]

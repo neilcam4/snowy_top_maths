@@ -1109,6 +1109,29 @@ function assignChapter9Button7() {
         }
     });
 }
+function assignChapter9Button8() {
+    var id = $("#userId").text();
+    var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+    var api = $("#example").text();
+    var sliced = id.slice(0, -1);
+    var finalApi = url + sliced + api;
+    $.ajax({
+        url: finalApi,
+        type: "put",
+        data: JSON.stringify({
+            "$push": {
+                    "task": {name:"Compound Areas of Rectangles and Squares", link:"/problemsolving/shapes7"}
+            }   
+        }),
+        contentType: "application/json",
+        success: function (data) {
+            console.log("bookmark added")
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        }
+    });
+}
 /*chapter10*/
 function assignChapter10Button1() {
     var id = $("#userId").text();
