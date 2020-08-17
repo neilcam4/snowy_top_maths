@@ -1,5 +1,4 @@
 <% include ../partials/header %>
-<body>
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
@@ -8,7 +7,7 @@
           <div class="card animated fadeInUp animation-delay-7">
             <div class="ms-hero-bg-primary ms-hero-img-mountain">
               <h3 class="color-white index-1 text-center no-m pt-4"><%=currentUser.username%></h3>
-              <span id="avatar"></span>
+              <img src="img/demo/m1.png" alt="..." class="img-avatar-circle">
             </div>
             <div class="card-body pt-4 text-center">
               <h3 class="color-primary" id="avatar"></h3>
@@ -23,7 +22,7 @@
                   <tr>
                     <th>
                       <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Points</th>
-                    <td id="myPoints">
+                    <td>
                       <%=currentUser.score%>
 
                     </td>
@@ -42,62 +41,6 @@
                       <%= currentUser.questions%>
                     </td>
                   </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
-                    <td id="numberCorrect">
-                      <%= currentUser.number%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Correct</th>
-                    <td>
-                      <%= currentUser.shape%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Correct</th>
-                    <td>
-                      <%= currentUser.algebra%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Correct</th>
-                    <td>
-                      <%= currentUser.data%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Wrong</th>
-                    <td>
-                      <%= currentUser.numberError%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Wrong</th>
-                    <td>
-                      <%= currentUser.shapeError%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Wrong</th>
-                    <td>
-                      <%= currentUser.algebraError%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Wrong</th>
-                    <td>
-                      <%= currentUser.dataError%>
-                    </td>
-                  </tr>
                 </table>
               </div>
             </div>
@@ -105,346 +48,129 @@
         </div>
               <div class="col-lg-12 col-md-12 order-md-3 order-lg-2">
                 <a href="/users/<%=currentUser.id %>" class="btn btn-warning btn-raised btn-block animated fadeInUp animation-delay-12">
-                  <i class="zmdi zmdi-shield-check"></i> My Badges and Progress</a>        
+                  <i class="zmdi zmdi-shield-check"></i> My Badges</a>        
               </div>
-        <div class="col-lg-12 col-md-6 order-md-2 order-lg-3">
-          <div class="card animated fadeInUp animation-delay-12">
-
-
-          </div>
-        </div>
+        
       </div>
     </div>
-
-    <div class="col-lg-8">
-      <div class="row">
-        <div class="col-sm-4">
-        <a href = "/basics/index">
+  
+  <div class="col-lg-8">
+    <div class="row">
+      <div class="col-sm-4">
+        <a href = "/13/basics/index">
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-dark">Build the Basics</h2>
+            <h2 class="counter color-dark">13+ Build the Basics</h2>
             <i class="fa fa-4x fa-trophy color-dark"></i>
-            <p class="mt-2 no-mb lead small-caps color-dark">Enter Course</p>
+            <p class="mt-2 no-mb lead small-caps color-dark">Enter</p>
           </div>
           </a>
-        </div>
+      </div>
         <div class="col-sm-4">
-        <a href = "/problemsolving/menu">
-          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-secondary">Problem Solving</h2>
-            <i class="fa fa-4x fa-trophy color-secondary"></i>
-            <p class="mt-2 no-mb lead small-caps color-secondary">Enter Course</p>
-          </div>
+          <a href = "/13/problemsolving/menu">
+            <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+              <h2 class="counter color-secondary">13+ Problem Solving</h2>
+              <i class="fa fa-4x fa-trophy color-secondary"></i>
+              <p class="mt-2 no-mb lead small-caps color-secondary">Enter</p>
+            </div>
           </a>
         </div>
         
         <div class="col-sm-4">
-        <a href = "/pastpapers/list">
+        <a href = "/13/pastpapers/list">
           <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
-            <h2 class="counter color-warning">Practice Papers  
+            <h2 class="counter color-warning">13+ Practice Papers  
             </h2>
             <i class="fa fa-4x fa-trophy color-warning"></i>
-            <p class="mt-2 no-mb lead small-caps color-warning">Enter Course</p>
+            <p class="mt-2 no-mb lead small-caps color-warning">Enter</p>
           </div>
           </a>
         </div>
-      </div>
 
-      
+        <div class="col-lg-12 ms-paper-content-container">
+              <div class="ms-paper-content">
+                <section class="ms-component-section">
+                  <div class="row">
+                    <div class="col-md-12">
+                     <div class="card">
+                      <ul class="list-group">
+                      <a href="javascript:void(0)" class="list-group-item list-group-item-action withripple active">
+                      <i class="icon ion-ios-attach"></i>My Homework</a>
+                      <% currentUser.task.forEach(function(newtask){ %>
+                        <a href= "<%=newtask.link%>" class="list-group-item ">
+                        <i class="zmdi zmdi-star"></i><%= newtask.name %></a>
+                        <% }) %></div>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                  </div>
+                  
+                  
+    <div class="ms-footer">
+      <div class="col-lg-12 ms-paper-content-container">
+        <div class="ms-paper-content">
+          <h1><%=currentUser.username%>'s</h1>
+            <section class="ms-component-section">
+              <h2 class="section-title"> Performance Chart</h2>
+      <div class="row mt-4">
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center">
+            <div class="circle" id="circles-1"></div>
+            <h3 class="color-primary">Number</h3>
+            <p class="small"><%= currentUser.number + currentUser.numberError %> questions</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center">
+            <div class="circle" id="circles-2"></div>
+            <h3 class="color-primary">Shape and Space</h3>
+            <p class="small"><%= currentUser.shape + currentUser.shapeError %> questions</p>
+          </div>
+        </div>
+    <div class="col-lg-3 col-sm-6">
+      <div class="text-center">
+        <div class="circle" id="circles-3"></div>
+        <h3 class="color-primary">Algebra</h3>
+        <p class="small"><%= currentUser.algebra + currentUser.algebraError %> questions</p>
+
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+      <div class="text-center">
+        <div class="circle" id="circles-4"></div>
+        <h3 class="color-primary">Data</h3>
+        <p class="small"><%= currentUser.data + currentUser.dataError %> questions</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+        <div class="col-sm-4">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-warning"><%= currentUser.gold%></h2>
+            <i class="fa fa-4x fa-trophy color-warning"></i>
+            <p class="mt-2 no-mb lead small-caps color-warning">Gold Medals</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-secondary"><%= currentUser.silver %></h2>
+            <i class="fa fa-4x fa-trophy color-secondary"></i>
+            <p class="mt-2 no-mb lead small-caps color-secondary">Silver Medals</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card card-success card-body overflow-hidden text-center wow zoomInUp animation-delay-2">
+            <h2 class="counter color-dark"><%= currentUser.bronze %></h2>
+            <i class="fa fa-4x fa-trophy color-dark"></i>
+            <p class="mt-2 no-mb lead small-caps color-dark"> Bronze Medals</p>
+          </div>
+        </div>
+      </div>      
       <!--
 topic list
 -->
-<div class="card card-info animated fadeInUp animation-delay-12">
-        <div class="card-header">
-          <h3 class="card-title">
-            <i class="zmdi zmdi-library"></i> Problem Solving</h3>
-        </div>
-      </div>
-      <div class="col-md-12">
-
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">&#x278A;
-              Working with Numbers <span class="ml-auto "> Medal Achieved</span>
-              </a>
-            <a href="/problemsolving/multdiv5" class="list-group-item list-group-item-action withripple">
-              &#9312; <span id="titlechap1ex1">Round to the nearest 10,100,1000</span> <span class="ml-auto" id="chap1ex1medal" ></span>
-            </a>
-            <a href="/problemsolving/addsubtract2" class="list-group-item list-group-item-action withripple">
-              &#9313; <span id="titlechap1ex2">Round to 3 decimal places</span> <span class="ml-auto" id="chap1ex2medal"></span>
-            </a>
-            <a href="/problemsolving/multdiv1" class="list-group-item list-group-item-action withripple">
-              &#9314; <span id="titlechap1ex3">Round up to 3 significant figures </span>
-              <span class="ml-auto" id="chap1ex3medal"> </span></a>
-            <a href="/problemsolving/addsubtract1" class="list-group-item list-group-item-action withripple">
-              &#9315; <span id="titlechap1ex4">Write numbers in standard form</span>
-              <span class="ml-auto" id="chap1ex4medal"> </span>
-            </a>
-            <a href="/problemsolving/multdiv2" class="list-group-item list-group-item-action withripple">
-              &#9316; <span id="titlechap1ex5">Multiply and Divide Whole Numbers</span> <span class="ml-auto " id="chap1ex5medal"></span></a>
-            <a href="/problemsolving/multdiv3" class="list-group-item list-group-item-action withripple">
-              &#9317; <span id="titlechap1ex6">Multiply and Divide multi-Digit Numbers</span> <span class="ml-auto" id="chap1ex6medal">
-                </span></a>
-            <a href="/problemsolving/multdiv4" class="list-group-item list-group-item-action withripple">
-              &#9318; <span id="titlechap1ex7">Missing Digit Multiplication</span><span class="ml-auto" id="chap1ex7medal"> 
-              </span> 
-            </a>
-            <a href="/problemsolving/distance1" class="list-group-item list-group-item-action withripple">
-              &#9319; <span id="titlechap1ex8">Multiply and Divide with cm,m & km</span><span class="ml-auto" id="chap1ex8medal">
-              </span> 
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x278B; Fractions, Percentages and Decimals</a>
-            <a href="/problemsolving/fractions1" class="list-group-item list-group-item-action withripple">
-              &#9312; <span id="titlechap2ex1">What is the missing fraction?</span>
-              <span class="ml-auto" id="chap2ex1medal">
-              </span> 
-            </a>
-            <a href="/problemsolving/fractions2" class="list-group-item list-group-item-action withripple">
-              &#9313; <span id="titlechap2ex2">Fractions of Amounts 1</span>
-              <span class="ml-auto" id="chap2ex2medal"></span>
-            </a>
-            <a href="/problemsolving/fractions3" class="list-group-item list-group-item-action withripple">
-              &#9314; <span id="titlechap2ex3">Fractions of Amounts 2</span>
-              <span class="ml-auto" id="chap2ex3medal"></span>
-            </a>
-            <a href="/problemsolving/fractionofamounts" class="list-group-item list-group-item-action withripple">
-              &#9315; <span id="titlechap2ex4">Fractions of Amounts 3</span>
-              <span class="ml-auto" id="chap2ex4medal"></span>
-            </a>
-            <a href="/problemsolving/percentages1" class="list-group-item list-group-item-action withripple">
-              &#9316; <span id="titlechap2ex5">Calculating with Percentages, Fractions and Decimals</span>
-              <span class="ml-auto" id="chap2ex5medal"></span>
-            </a>
-            <a href="/problemsolving/FDP" class="list-group-item list-group-item-action withripple">
-              &#9317; <span id="titlechap2ex6">Converting Percentages, Fractions and Decimals</span>
-              <span class="ml-auto" id="chap2ex6medal"></span>
-            </a>
-            <a href="/problemsolving/percentageofamount" class="list-group-item list-group-item-action withripple">
-              &#9318; <span id="titlechap2ex7">Percentage of Amounts 1</span>
-              <span class="ml-auto" id="chap2ex7medal"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x278C; Sequences</a>
-            <a href="/problemsolving/sequences1" class="list-group-item list-group-item-action withripple">
-              &#9312; Find consecutive numbers to make a sum
-              <span class="ml-auto ">  </span>
-            </a>
-            <a href="/problemsolving/sequences3" class="list-group-item list-group-item-action withripple">
-              &#9313; Follow a given rule
-              <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/sequences2" class="list-group-item list-group-item-action withripple">
-              &#9314; Newspaper Sequences<span class="ml-auto "> </span></a>
-            <a href="/problemsolving/sequences4" class="list-group-item list-group-item-action withripple">
-              &#9315; Adding Consecutive Numbers
-              <span class="ml-auto "></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x278D;Primes, Multiples, Squares and Factors</a>
-            <a href="/problemsolving/prime2" class="list-group-item list-group-item-action withripple">
-              &#9312; Add together primes to make a square
-              <span class="ml-auto "> </span>
-            </a>
-            <a href="/problemsolving/isPrime" class="list-group-item list-group-item-action withripple">
-              &#9313; Identify the Prime Number
-              <span class="ml-auto "> </span>
-            </a>
-            <a href="/problemsolving/squares1" class="list-group-item list-group-item-action withripple">
-              &#9314; Square Number Problems
-              <span class="ml-auto ">  </span>
-            </a>
-            <a href="/problemsolving/prime1" class="list-group-item list-group-item-action withripple">
-              &#9315; Common Multiples <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/lowestcommonmultiple" class="list-group-item list-group-item-action withripple">
-              &#9316;Lowest Common Multiples <span class="ml-auto "></span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!--
-            Insert new table here
--->
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x278E; Time</a>
-
-            <a href="/problemsolving/time1" class="list-group-item list-group-item-action withripple">
-              &#9312; Taking a holiday<span class="ml-auto "></span></a>
-            <a href="/problemsolving/time4" class="list-group-item list-group-item-action withripple">
-              &#9313; Catching the train<span class="ml-auto "></span></a>
-            <a href="/problemsolving/time5" class="list-group-item list-group-item-action withripple">
-              &#9314; Catching the train 2<span class="ml-auto "></span></a>
-            <a href="/problemsolving/time3" class="list-group-item list-group-item-action withripple">
-              &#9315; Angles around a clock
-              <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/slowclock" class="list-group-item list-group-item-action withripple">
-              &#9316; My watch is slow 1
-              <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/time2" class="list-group-item list-group-item-action withripple">
-              &#9317; My watch is slow 2
-              <span class="ml-auto "></span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a href="" class="list-group-item list-group-item-action withripple active">
-              &#x278F; Ratio and Proportion</a>
-            <a href="/problemsolving/ratio1" class="list-group-item list-group-item-action withripple">
-              &#9312; Dividing into a Ratio
-              <span class="ml-auto ">  </span>
-            </a>
-            <a href="/problemsolving/ratio3" class="list-group-item list-group-item-action withripple">
-              &#9313; Inverse Proportion
-              <span class="ml-auto "></span></a>
-                  <a href="/problemsolving/ratio4" class="list-group-item list-group-item-action withripple">
-              &#9314; Ratio and Angles
-              <span class="ml-auto "></span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x2790; Problems Solved with Algebra</a>
-            <a href="/problemsolving/wordedalgebra1" class="list-group-item list-group-item-action withripple">
-              &#9312; How many goals were scored? <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/wordedalgebra2" class="list-group-item list-group-item-action withripple">
-              &#9313; How old is Alan? <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/wordedalgebra3" class="list-group-item list-group-item-action withripple">
-              &#9314;Algebra Grids<span class="ml-auto "></span></a>
-            <a href="/problemsolving/wordedalgebra4" class="list-group-item list-group-item-action withripple">
-              &#9315; Abstract Worded Problems <span class="ml-auto "> </span></a>
-            <a href="/problemsolving/wordedalgebra5" class="list-group-item list-group-item-action withripple">
-              &#9316; Algebra and Time <span class="ml-auto "></span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x2791; Angles in Shapes</a>
-            <a href="/problemsolving/shapes1" class="list-group-item list-group-item-action withripple">
-              &#9312; Angles in Composite Regular Polygons
-              <span class="ml-auto ">  </span>
-            </a>
-            <a href="/problemsolving/shapes6" class="list-group-item list-group-item-action withripple">
-              &#9313; Angles in Composite Polygons
-              <span class="ml-auto ">  </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x2792; Area, Perimeter and Volume</a>
-            <a href="/problemsolving/shapes5" class="list-group-item list-group-item-action withripple">
-              &#9312; Area and Perimeter with Squares and Rectangles 1
-              <span class="ml-auto ">  </span></a>
-
-            <a href="/problemsolving/shapes3" class="list-group-item list-group-item-action withripple">
-              &#9313; Areas inside other Areas <span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/shapes4" class="list-group-item list-group-item-action withripple">
-              &#9314; Areas of Rectangles and Triangles<span class="ml-auto "></span></a>
-
-            <a href="/problemsolving/volume" class="list-group-item list-group-item-action withripple">
-              &#9315; Volume <span class="ml-auto "></span></a>
-            <a href="/problemsolving/shapes2" class="list-group-item list-group-item-action withripple">
-              &#9316; Area and Perimeter with Squares and Rectangles 2<span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/perimeteralgebra" class="list-group-item list-group-item-action withripple">
-              &#9317; Perimeter with algebraic terms<span class="ml-auto "></span>
-            </a>
-            <a href="/problemsolving/surfaceareapyramid" class="list-group-item list-group-item-action withripple">
-              &#9318; Surface Area of Square-based Pyramids<span class="ml-auto "></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-              &#x2793; Averages</a>
-              <a href="/problemsolving/meanaverage" class="list-group-item list-group-item-action withripple">
-                &#9312; Problems with Mean<span class="ml-auto "></span></a>
-              <a href="/problemsolving/averages" class="list-group-item list-group-item-action withripple">
-                &#9313; Problems with Mean 2<span class="ml-auto "></span></a>
-              <a href="/problemsolving/averages2" class="list-group-item list-group-item-action withripple">
-                &#9314; Averages (Mode, Mean and Median)<span class="ml-auto "></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="card card-success animated fadeInUp animation-delay-12">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action withripple active">
-            &#x278A;&#x278A; Pie Charts and Bar Charts</a>
-              <a href="/problemsolving/data2" class="list-group-item list-group-item-action withripple">
-                &#9312; Bar Charts and Averages<span class="ml-auto ">
-                   
-                   <i class="fa fa-trophy" style="color:#cd7f32"></i>
-                   <i class="fa fa-trophy" style="color:#c4c9cd"></i>
-                   <i class="fa fa-trophy color-warning"></i></span>
-              </a>
-              <a href="/problemsolving/piecharts" class="list-group-item list-group-item-action withripple">
-                &#9315; Pie Charts <span class="ml-auto "></span></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <footer class="ms-footer">
-    <div class="col-lg-12 ms-paper-content-container">
-  <div class="ms-paper-content">
-      
-        <p>Copyright SnowyTop Maths 2020</p>
-        
-    
-      </div>
-      </div>
-    </footer>
-    <div class="btn-back-top">
-      <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
-        <i class="zmdi zmdi-long-arrow-up"></i>
-      </a>
-    </div>
 
     <!-- ms-site-container -->
     <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
@@ -545,289 +271,72 @@ topic list
         </li>
       </div>
     </div>
-    <div class="container">
-    <p id="userId"><%=currentUser.id %> </p>
 
-</div>
-<div id="example"></div>
-<div id="badgeList">
-  <div class="col-md-12">
-      <% currentUser.quiz.forEach(function(quizName){ %>
-      <div class="list-group">
-        <p class="list-group-item list-group-item-action withripple">
-          <span class="title"><%=quizName.name %></span><span class="theScore"><%=quizName.score %></span>
-    <span class="ml-auto" id="medal">
-</span>
-</p>
-      <% }) %>   
-    </div> 
-    </div> 
-</div>
-<script>
+<div class="container" id="stats">
+  <table>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Correct</th>
+      <td id="numberCorrect">
+        <%= currentUser.number%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Correct</th>
+      <td id="shapeCorrect">
+        <%= currentUser.shape%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Correct</th>
+      <td id="algebraCorrect">
+        <%= currentUser.algebra%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Correct</th>
+      <td id="dataCorrect">
+        <%= currentUser.data%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Number Questions Wrong</th>
+      <td id="numberError">
+        <%= currentUser.numberError%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Shape Questions Wrong</th>
+      <td id="shapeError">
+        <%= currentUser.shapeError%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Algebra Questions Wrong</th>
+      <td id="algebraError">
+        <%= currentUser.algebraError%>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Data Questions Wrong</th>
+      <td id="dataError">
+        <%= currentUser.dataError%>
+      </td>
+    </tr>
 
-function avatarPic(){
-  const points = document.getElementById("myPoints").innerHTML
-  console.log("total points is " + points)
-  if(points => 0){
-    document.getElementById("avatar").innerHTML = '<img src="img/demo/panda.jpg" class="img-avatar-circle">'
-  }
-  if(points => 500 ){
-    document.getElementById("avatar").innerHTML = '<img src="img/demo/panda.jpg" class="img-avatar-circle">'
-  }
-}
-avatarPic()
-function assignMedalChap1Ex1() {
-  var title = document.getElementById("titlechap1ex1").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-  var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-  var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-  if(badgeTitle == title && badgeScore == 50){
-    document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-  } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-    document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-  } else if(badgeTitle == title && badgeScore ==100){
-    document.getElementById("chap1ex1medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-     }     
-  }
-}  
-assignMedalChap1Ex1()
-function assignMedalChap1Ex2() {
-  var title = document.getElementById("titlechap1ex2").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex2medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex2()
-function assignMedalChap1Ex3() {
-  var title = document.getElementById("titlechap1ex3").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex3medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex3()
-
-function assignMedalChap1Ex4() {
-  var title = document.getElementById("titlechap1ex4").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex4medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex4()
-
-function assignMedalChap1Ex5() {
-  var title = document.getElementById("titlechap1ex5").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex5medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex5()
-
-function assignMedalChap1Ex6() {
-  var title = document.getElementById("titlechap1ex6").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex6medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex6()
-
-function assignMedalChap1Ex7() {
-  var title = document.getElementById("titlechap1ex7").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex7medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex7()
-
-function assignMedalChap1Ex8() {
-  var title = document.getElementById("titlechap1ex8").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap1ex8medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap1Ex8()
-
-//chapter 2
-function assignMedalChap2Ex1() {
-  var title = document.getElementById("titlechap2ex1").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-  var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-  var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-  if(badgeTitle == title && badgeScore == 50){
-    document.getElementById("chap2ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-  } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-    document.getElementById("chap2ex1medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-  } else if(badgeTitle == title && badgeScore ==100){
-    document.getElementById("chap2ex1medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-     }     
-  }
-}  
-assignMedalChap2Ex1()
-function assignMedalChap2Ex2() {
-  var title = document.getElementById("titlechap2ex2").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap2ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap2ex2medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap2ex2medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap2Ex2()
-function assignMedalChap2Ex3() {
-  var title = document.getElementById("titlechap2ex3").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap2ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap2ex3medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap2ex3medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap2Ex3()
-
-function assignMedalChap2Ex4() {
-  var title = document.getElementById("titlechap2ex4").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap2ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 43 && badgeScore <=56){
-      document.getElementById("chap2ex4medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap2ex4medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap2Ex4()
-
-function assignMedalChap2Ex5() {
-  var title = document.getElementById("titlechap2ex5").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap2ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap2ex5medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap2ex5medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap2Ex5()
-
-function assignMedalChap2Ex6() {
-  var title = document.getElementById("titlechap2ex6").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap2ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap2ex6medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap2ex6medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap2Ex6()
-
-function assignMedalChap2Ex7() {
-  var title = document.getElementById("titlechap2ex7").innerHTML
-  var newTitles = document.getElementsByClassName("title")
-  for (var i = 0; i < newTitles.length; i++) {
-    var badgeTitle = document.getElementsByClassName("title")[i].innerHTML
-    var badgeScore = document.getElementsByClassName("theScore")[i].innerHTML
-    if(badgeTitle == title && badgeScore == 50){
-      document.getElementById("chap2ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#cd7f32"></i>' 
-    } else if(badgeTitle == title && badgeScore > 50 && badgeScore <=84){
-      document.getElementById("chap2ex7medal").innerHTML = '<i class="fa fa-trophy" style="color:#c4c9cd"></i>'
-    } else if(badgeTitle == title && badgeScore ==100){
-      document.getElementById("chap2ex7medal").innerHTML = '<i class="fa fa-trophy color-warning"></i>'
-       }     
- }
-}
-assignMedalChap2Ex7()
-
-</script>         
+    <div class="btn-back-top">
+      <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+        <i class="zmdi zmdi-long-arrow-up"></i>
+      </a>
+    </div>
+  </table>
+</div> 
 <% include ../partials/footer %></div>
 

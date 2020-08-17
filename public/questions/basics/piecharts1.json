@@ -1,0 +1,47 @@
+[
+    {
+       "question_number": "1",
+       "title":"Pie Charts and Angles 1",
+       "question_text": "This pie chart shows the favourite hobbies for a Year 6 class of 120 students. How many students voted for playing the guitar? ",
+       "answer_1":"30"
+    },
+    {
+      "question_number": "2",
+      "question_text": "This pie chart shows the favourite hobbies for a Year 6 class of 120 students. How many students voted for playing on the computer? ",
+      "answer_1":"60"
+   },
+   {
+      "question_number": "3",
+      "question_text": "This pie chart shows the favourite hobbies for a Year 6 class of 120 students. How many students voted for listening to music? ",
+      "answer_1":"25"
+   },
+   {
+      "question_number": "4",
+      "question_text": "This pie chart shows the favourite animals for a Year 6 class of 60 students. How many students voted for the dolphin? ",
+      "answer_1":"10"
+   },
+   {  "question_number": "5",
+    "question_text": "This pie chart shows the favourite animals for a Year 6 class of 60 students. How many students voted for the duck? ",
+    "answer_1":"5"
+   },
+   {
+      "question_number": "6",
+      "question_text": "This pie chart shows the favourite animals for a Year 6 class of 60 students. How many students voted for the goldfish? ",
+      "answer_1":"20"
+   },
+   {
+    "question_number": "7",
+    "question_text": "This pie chart shows the favourite animals for a Year 5 group of 80 students. How many students voted for the monkey? ",
+    "answer_1":"10"
+ },
+ {
+    "question_number": "8",
+    "question_text": "This pie chart shows the favourite animals for a Year 5 group of 80 students. How many students voted for the rabbit? ",
+    "answer_1":"20"
+ },
+ {
+    "question_number": "9",
+    "question_text": "This pie chart shows the favourite animals for a Year 5 group of 80 students. How many students voted for the dog? ",
+    "answer_1":"30"
+ }
+   ]

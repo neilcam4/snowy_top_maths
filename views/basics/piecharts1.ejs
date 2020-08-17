@@ -1,10 +1,27 @@
-<% include ../partials/header %>
+o<% include ../partials/header %>
 <p id = "input"></p>
 
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 30 points. 
+                <strong>Good Luck! </strong> </p>
+        </div>
+    </div>
+</div>
 <!--   Video        -->
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id ="heading"></h3>
+        <h3 class="text-center" id ="heading">Pie Charts and Angles 1</h3>
+        <div class="card card-info-inverse">
+            <div class="card-header">
+                <h3 class="card-title"><i class="zmdi zmdi-graduation-cap"></i> Tutorial Coming Soon</h3>
+            </div>
+            
+            <div class="card-body overflow-hidden text-center">
+            </div>
+        </div>
     </div>
 </div>
 
@@ -15,15 +32,7 @@
 
 <div style="text-align: center">
     <div class="card card-royal col-md-6" style="display:inline-block">
-    <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
-    <div class="ms-paper-content" style="display:inline-block">
-        <div class="alert alert-light alert-info">
-            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 30 points. 
-                <strong>Good Luck! </strong> </p>
-        </div>
-    </div>
-</div>
+
         <!--        First question-->
         <div class="mySlides">
             <div class="card-header">
@@ -31,14 +40,15 @@
             </div>
             <div class="card-body">
                 <form name="quiz1">
+                    
+                    <img src="img/piecharts1/piecharts1.png" alt="" class="img-fluid"></img> <br></br>
                     <p class="q" id="q1"></p>
-                    <img src="img/compoundareas/compoundarea1.png" alt="compoundareas" class="img-fluid"></img>
-                        <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                    <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -49,14 +59,14 @@
             </div>
             <div class="card-body">
                 <form name="quiz2">
+                <img src="img/piecharts1/piecharts1.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q2"></p>
-                <img src="img/compoundareas/compoundarea2.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -67,14 +77,14 @@
             </div>
             <div class="card-body">
                 <form name="quiz3">
+                <img src="img/piecharts1/piecharts1.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q3"></p>
-                <img src="img/compoundareas/compoundarea3.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -85,14 +95,14 @@
             </div>
             <div class="card-body">
                 <form name="quiz4">
+                <img src="img/piecharts1/piecharts2.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q4"></p>
-                <img src="img/compoundareas/compoundarea4.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -103,84 +113,81 @@
             </div>
             <div class="card-body">
                 <form name="quiz5">
+                <img src="img/piecharts1/piecharts2.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q5"></p>
-                <img src="img/compoundareas/compoundarea5.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-        <!--    6th question    -->
+        <!--   6th question     -->
         <div class="mySlides">
             <div class="card-header">
                 <h3 class="card-title">6.</h3>
             </div>
             <div class="card-body">
                 <form name="quiz6">
+                <img src="img/piecharts1/piecharts2.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q6"></p>
-                <img src="img/compoundareas/compoundarea6.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-        <!--    7th question    -->
         <div class="mySlides">
             <div class="card-header">
                 <h3 class="card-title">7.</h3>
             </div>
             <div class="card-body">
                 <form name="quiz7">
+                <img src="img/piecharts1/piecharts3.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q7"></p>
-                <img src="img/compoundareas/compoundarea7.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter length " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-        <!--    8th question    -->
         <div class="mySlides">
             <div class="card-header">
                 <h3 class="card-title">8.</h3>
             </div>
             <div class="card-body">
                 <form name="quiz8">
+                <img src="img/piecharts1/piecharts3.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q8"></p>
-                <img src="img/compoundareas/compoundarea8.png" alt="compoundareas" class="img-fluid"></img>
-                <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
-                        </div>
+                    </div>
                 </form>
             </div>
         </div>
-        <!--    9th question    -->
         <div class="mySlides">
             <div class="card-header">
                 <h3 class="card-title">9.</h3>
             </div>
             <div class="card-body">
                 <form name="quiz9">
+                <img src="img/piecharts1/piecharts3.png" alt="" class="img-fluid"></img> <br></br>
                 <p class="q" id="q9"></p>
-                <img src="img/compoundareas/compoundarea9.png" alt="compoundareas" class="img-fluid"></img>
-                    <div class="ui right labeled input focus">
-                        <input type="text" placeholder="Enter area " name="question1"></input>
+                <div class="ui right labeled input">
+                        <input type="text" name= "question1"></input>
                             <div class="ui basic label">
-                            cm&#178;
+                            students
                             </div>
                     </div>
                 </form>
@@ -211,18 +218,19 @@
                 </span>
             </div>
         </div>
+
+
         <div id="msg"></div>
         <div class="dot-container">
             <span class="dot"></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-            <span class="dot"  ></span>
-
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
         <!-- last 2 divs from top of card-->
     </div>
@@ -260,9 +268,9 @@
                     <p id="medal"></p>
                 </div>
             </div>
-            <a href="/problemsolving/menu" class="list-group-item list-group-item-action withripple">
-               Return to Problem Solving
-              </a>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
         </div>
     </div>
 </div>
@@ -274,7 +282,7 @@ var correct = 0;
     
     function getJSON (){
         document.getElementById("answers").style.visibility = "hidden";
-        fetch('./questions/problemsolving/compoundareas.json')
+        fetch('./questions/basics/piecharts1.json')
         .then(function(res){
             return res.json()
            
@@ -325,11 +333,7 @@ var correct = 0;
     }
     getJSON()
 
-$("#next1").click(function(){
-    document.getElementById ("button1").style.visibility = "visible";
-})
 $("#button1").click(function () {
-        document.getElementById ("button1").style.visibility = "hidden";
     var answer1 = document.getElementById("answer_1").innerHTML 
     var answer2 = document.getElementById("answer_2").innerHTML 
     var answer3 = document.getElementById("answer_3").innerHTML
@@ -354,59 +358,59 @@ $("#button1").click(function () {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
         //third question
     } else if (slideIndex == 3 && question3 == answer3) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     //first question
     else if (slideIndex == 1 && question1 == answer1) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     //4th question 
     else if (slideIndex == 4 && question4 == answer4) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     //5th question 
     else if (slideIndex == 5 && question5 == answer5) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     //6th question
     else if (slideIndex == 6 && question6 == answer6) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     else if (slideIndex == 7 && question7 == answer7) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     } 
     else if (slideIndex == 8 && question8 == answer8) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     else if (slideIndex == 9 && question9 == answer9) {
         checkAnswer30();
         showTicks30();
         questionCounter();
-        shapeCounterUp();
+        dataCounterUp();
     }
     else {
         document.getElementById("wrong").style.visibility = "visible";
@@ -421,20 +425,20 @@ $("#button").click(function () {
     if(correct >= 3 && correct <= 5){
         addBronze()
         trackProgress9()
-        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
         document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
     } else if (correct >= 6 && correct <= 7){
         addSilver()
         trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
-    } else if(correct > 7 && correct < 10){
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+    } else if(correct > 7){
         addGold()
         trackProgress9()
         document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
-        document.getElementById("points").textContent = `Points:  ${correct * 30}`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
     } else if(correct < 3){
-        document.getElementById("points").textContent = `Points: ${correct * 30}!`
+        document.getElementById("points").textContent = `Points: ${correct * 10}!`
         document.getElementById("medal").textContent = `Try again to earn a Medal!`;
     }
  })

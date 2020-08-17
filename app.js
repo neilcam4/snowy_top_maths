@@ -30,6 +30,8 @@ app.use('/basics', express.static(__dirname + '/public'));
 app.use('/admin', express.static(__dirname + '/public'));
 app.use('/13+', express.static(__dirname + '/public'));
 app.use('/13+/basics', express.static(__dirname + '/public'));
+app.use('/13+/pastpapers', express.static(__dirname + '/public'));
+app.use('/13+/problemsolving', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -1386,6 +1388,11 @@ app.get('/basics/addsubtract',isLoggedIn, function(req,res){
         res.render('basics/addsubtract',{user:user})
     })
 })
+app.get('/basics/piecharts1',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('basics/piecharts1',{user:user})
+    })
+})
 app.get('/problemsolving/addsubtract2', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -1481,6 +1488,16 @@ app.get('/13/home',isLoggedIn, function(req,res){
 app.get('/13/basics/index',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('13/basics/index',{user:user})
+    })
+})
+app.get('/13/problemsolving/menu',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/problemsolving/menu',{user:user})
+    })
+})
+app.get('/13/pastpapers/list',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/pastpapers/list',{user:user})
     })
 })
 app.listen(port, function (err) {
