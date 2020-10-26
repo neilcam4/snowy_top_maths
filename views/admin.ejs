@@ -22,26 +22,12 @@
                   </tr>
                   <tr>
                     <th>
-                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> Points</th>
+                      <i class="mr-1 zmdi zmdi-graduation-cap zmdi-hc-fw color-success" id="level"></i> School</th>
                     <td>
-                      <%=currentUser.score%>
+                      <%=currentUser.school%>
 
                     </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Progress</th>
-                    <td>
-                      <%=Math.ceil(currentUser.score/12000 *100)%>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <i class="mr-1 zmdi zmdi-seat zmdi-hc-fw color-royal"></i>Questions Attempted</th>
-                    <td>
-                      <%= currentUser.questions%>
-                    </td>
-                  </tr>
+                  </tr> 
                 </table>
               </div>
             </div>
@@ -61,6 +47,54 @@
     </div>
 
   <div class="col-lg-8">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-globe"></i> Set Up A Class
+        </h3>
+      </div>
+        <div class="panel-body">
+        <form class="form-group" action='/users/<%=currentUser._id %>?_method=PUT' method="POST">
+          <div class="input-group">
+            <span class="input-group-addon">School Name</span>
+            <p><input type="text" name="schoolname" class="form-control" value="Newton Prep "></input></p>           
+                
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">Class Name</span>
+            <p><input type="text" name="classname" class="form-control"></input></p>           
+                
+          </div>
+          <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </span>
+          </form> 
+      </div>
+      </div>
+
+      <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-globe"></i> Add a Pupil
+        </h3>
+      </div>
+        <div class="panel-body">
+        <form class="form-group" action='/pupilregister' method="POST">
+          <label class="control-label" for="addon1">Enter Class Details</label>
+          <div class="input-group">
+            <span class="input-group-addon">Pupil Name</span>
+            <input type="text" name="username" class="form-control"></input>
+            <span class="input-group-addon">Password</span>
+            <input type="password" name="password" class="form-control"></input>
+
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </span>    
+          </div>
+          </form> 
+      </div>
+      </div>
+    
     <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">

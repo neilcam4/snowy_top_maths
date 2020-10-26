@@ -1,15 +1,15 @@
-<% include ../partials/header %>
+<% include ../../partials/header %>
 <p id = "input"></p>
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Intro to Algebra</h3>  
+        <h3 class="text-center" id="heading">Solving Simultaneous Equations</h3>  
     </div>
 </div>
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">
             <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 10 points. 
+                worth 30 points. 
                 <strong>Good Luck! </strong> </p>
         </div>
     </div>
@@ -32,7 +32,7 @@
                 <form name="quiz1">
                     <p class="q">Simplify the following expression</p>
                     <p class="q" id="q1"></p>
-                    <img src="img/algebraintro/algebraintro1.png" alt="algebraic expression" class="img-fluid">
+                    <img src="img/Pythagoras/Pythag1.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1" placeholder="Enter A,B,C or D"></input>
                     </div>
@@ -48,7 +48,7 @@
                 <form name="quiz2">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q2"></p>
-                <img src="img/algebraintro/algebraintro2.png" alt="algebraic expression" class="img-fluid">
+                <img src="img/Pythagoras/Pythag2.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1" placeholder="Enter A,B,C or D"></input>
                     </div>
@@ -64,7 +64,7 @@
                 <form name="quiz3">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q3"></p>
-                <img src="img/algebraintro/algebraintro3.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag3.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text"   name="question1"></input>
                     </div>
@@ -80,7 +80,7 @@
                 <form name="quiz4">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q4"></p>
-                <img src="img/algebraintro/algebraintro4.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag4.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text"   name="question1"></input>
                     </div>
@@ -96,7 +96,7 @@
                 <form name="quiz5">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q5"></p>
-                <img src="img/algebraintro/algebraintro5.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag5.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -112,7 +112,7 @@
                 <form name="quiz6">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q6"></p>
-                <img src="img/algebraintro/algebraintro6.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag6.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -127,7 +127,7 @@
                 <form name="quiz7">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q7"></p>
-                <img src="img/algebraintro/algebraintro7.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag7.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -142,7 +142,7 @@
                 <form name="quiz8">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q8"></p>
-                <img src="img/algebraintro/algebraintro8.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag8.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -157,7 +157,7 @@
                 <form name="quiz9">
                 <p class="q">Simplify the following expression</p>
                 <p class="q" id="q9"></p>
-                <img src="img/algebraintro/algebraintro9.png" alt="algebraic expression" class="img-fluid" placeholder="Enter A,B,C or D">
+                <img src="img/Pythagoras/Pythag9.png" alt="algebraic expression" class="img-fluid">
                     <div class="ui input focus">
                         <input type="text" name="question1"></input>
                     </div>
@@ -254,7 +254,7 @@ var correct = 0;
     
     function getJSON (){
         document.getElementById("answers").style.visibility = "hidden";
-        fetch('./questions/basics/algebraintro.json')
+        fetch('./questions/13/problemsolving/solvesimequations.json')
         .then(function(res){
             return res.json()
            
@@ -306,6 +306,7 @@ var correct = 0;
 
 $("#next1").click(function(){
         document.getElementById ("button1").style.visibility = "visible";
+
 })
 $("#button1").click(function () {
     document.getElementById ("button1").style.visibility = "hidden";
@@ -419,4 +420,4 @@ $("#button").click(function () {
     $("input").attr("maxlength", 5)
     
 </script>
-<% include ../partials/footer %></div>
+<% include ../../partials/footer %></div>

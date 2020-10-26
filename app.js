@@ -101,12 +101,29 @@ var quizSchema = mongoose.Schema({
     
 });
 var Quiz = mongoose.model("Quiz", quizSchema)
+//pupil Schema
+var pupilSchema = mongoose.Schema({
+    username:String,
+    password:String
+})
+
+var Pupil = mongoose.model("Pupil", pupilSchema)
+//class Schema
+var classSchema = mongoose.Schema({
+    classname:String,
+    pupil:[pupilSchema]
+})
+var Class = mongoose.model("Class", classSchema)
+
 //USER SCHEMA
 var userSchema = mongoose.Schema({
     username:String,
     surname:String,
     email:String,
     password:String,
+    school:String,
+    teacher:Boolean,
+    class:[classSchema],
     score:{type:Number,default:0},
     created:{type:Date, default: Date.now},
     quiz: [quizSchema],
@@ -148,8 +165,6 @@ mongoose.connect("mongodb://neilcam4:Wanaka10@ds115283.mlab.com:15283/maths_app"
         console.log("DB Connection Error");
     });
 
-
-
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
@@ -170,6 +185,15 @@ app.post('/login', function (req, res) {
     })
 })
 
+app.get('/pupillogin', function(req,res){
+    res.render('pupillogin')
+})
+
+app.post('/pupillogin', function (req, res) {
+    passport.authenticate("local")(req, res, function () {
+    res.redirect('/profile')
+    })
+})
 app.get('/profile', isLoggedIn, function (req, res) {
     User.findById(req.params.id, function (err, user) {
         if (err) {
@@ -223,6 +247,30 @@ app.post('/register', function (req, res) {
     })
 })
 
+app.get('/teachersignup', function(req,res){
+    res.render("teachersignup")
+})
+app.post('/teachersignup', function (req, res) {
+    User.register(new User({
+        username: req.body.username,
+        surname: req.body.surname,
+        school: req.body.school,
+        teacher:true,
+        id: req.params.id,
+        subscription:"Yearly",
+        email: req.body.email
+    }), req.body.password, function (err, users) {
+        if (err) {
+            console.log(err);
+            res.render("teachersignup");
+        }
+        req.body.username = req.body.email;
+        passport.authenticate("local")(req, res, function () {
+            res.redirect('/admin')
+        })
+    })
+})
+
 //registerfree
 app.post('/registerfree', function (req, res) {
     User.register(new User({
@@ -243,6 +291,29 @@ app.post('/registerfree', function (req, res) {
         })
     })
 })
+
+app.post('/pupilregister', function (req, res) {
+    User.register(new User({
+        username: req.body.username,
+        surname: req.body.surname,
+        year: req.body.year,
+        school: req.body.school,
+        medals: req.body.medals,
+        score: req.body.score,
+        id: req.params.id,
+        subscription:"Yearly",
+        email: req.body.email
+    }), req.body.password, function (err, users) {
+        if (err) {
+            console.log(err);
+            res.render("register");
+        }
+        passport.authenticate("local")(req, res, function () {
+            res.redirect('/profile')
+        })
+    })
+})
+
 app.get('/', function (req, res, next) {
     res.render('home');
 
@@ -262,7 +333,48 @@ app.post('/users', function (req, res) {
     })
 });
 //show
+//add school
 
+app.put('/users/id', function(req,res){
+   User.findByIdAndUpdate(req.params.id, function(err, user){
+        if(err){
+            console.log(err)
+            res.render("profile")
+        }else {
+          res.send("Helloo!")
+        }       
+    // user.save(function(err, user){
+    //     if(err){
+    //         console.log(err)
+    //     }else{
+    //         newUser.class.push({
+    //             classname:"5C"
+    //         })
+    //         console.log(user)
+    //         res.redirect("/profile")
+    //         }
+    //     })
+    })
+})
+// var newUser = new User({
+//   username:"Neil1"  
+// }, function(err, user){
+//     if(err){
+//         console.log(err)
+//     } else {
+//         console.log(user)
+//     }
+// })
+// newUser.save(function(err, user){
+//     if(err){
+//         console.log(err)
+//     } else {
+//         user.class.push({
+//             classname:"5C"
+//         })
+//         console.log(user)
+//     }
+// })
 app.get('/log', function (req, res) {
     res.render('register');
 });
@@ -301,9 +413,7 @@ app.get('/users/:id/edit',isLoggedIn,function(req,res){
 //     })
 // })
 
-app.put('/users/:id', function(req,res){
-    res.send("this is the update route")
-})
+
 //signup middle page
 app.get('/signup', isLoggedIn, function (req, res) {
     User.findById(req.params.id, req.body.users, function (err, showUser) {
