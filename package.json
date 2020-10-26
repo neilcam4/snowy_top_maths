@@ -14,7 +14,7 @@
     "express-sanitizer": "^1.0.5",
     "express-session": "^1.15.6",
     "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "method-override": "^2.3.10",
     "mongodb": "^3.3.4",
     "mongoose": "^5.7.11",
