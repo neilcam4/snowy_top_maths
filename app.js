@@ -1599,6 +1599,11 @@ app.get('/13/basics/index',isLoggedIn, function(req,res){
         res.render('13/basics/index',{user:user})
     })
 })
+app.get('/13/basics/roundinginteger',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/basics/roundinginteger',{user:user})
+    })
+})
 app.get('/13/problemsolving/menu',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('13/problemsolving/menu',{user:user})
