@@ -188,15 +188,11 @@
                 <div class="container">
                 <div class="row" style="margin: 0 auto">
                     <div class ="col">
-                <button type="button" id="answer_33" class="btn  btn-success btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
-                <button type="button" id="answer_34" class="btn  btn-primary btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
+                <button type="button" id="answer_33" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_34" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
                     </div>
-                <button type="button" id="answer_35" class="btn  btn-danger btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
-                <button type="button" id="answer_36" class="btn btn-warning btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
+                <button type="button" id="answer_35" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_36" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
             </div>
             </div>
         </form>
@@ -204,25 +200,19 @@
         </div>
         <div class="mySlides">
             <div class="card-header">
-                <h3 class="card-title">9.</h3>
+                <h3 class="card-title">10.</h3>
             </div>
             <div class="card-body">
-                <form name="quiz9">
-                <p class="q">Simplify the following expression</p>
-                <p class="q" id="q9"></p>
+                <form name="quiz10">
+                <p class="q">Well done for finishing!</p>
+                <p class="q" id="q10"></p>
                 <div class="container">
                 <div class="row" style="margin: 0 auto">
                     <div class ="col">
-                <button type="button" id="answer_33" class="btn  btn-success btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
-                <button type="button" id="answer_34" class="btn  btn-primary btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
-                    </div>
-                <button type="button" id="answer_35" class="btn  btn-danger btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
-                <button type="button" id="answer_36" class="btn btn-warning btn-raised" onclick="totalScore()" data-toggle="modal"
-                    data-target="#myModal4"></button>
-            </div>
+                <button type="button"  id="button" class="btn  btn-success btn-raised" data-toggle="modal"
+                    data-target="#myModal4" onclick="totalScore()">Total Score</button>
+                </div>
+                </div>
             </div>
         </form>
             </div>
@@ -240,8 +230,7 @@
             <span class="dot" id="dot7"></span>
             <span class="dot" id="dot8"></span>
             <span class="dot" id="dot9"></span>
-            
-
+            <span class="dot" id="dot10"></span>
         </div>
         <!-- last 2 divs from top of card-->
     </div>
@@ -272,6 +261,9 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
+            <a href="/13/basics/index" class="list-group-item list-group-item-action withripple">
+               Return to Build the Basics
+              </a>
         </div>
     </div>
 </div>
@@ -581,116 +573,30 @@ $("#answer_32").click(function (){
 })
 //slide 9
 $("#answer_33").click(function (){
-    correct ++;
     checkAnswer10();
     questionCounter();
     numberCounterUp();
-    document.getElementById("dot33").style.backgroundColor = "green";
-    console.log("correct = " + correct)
+    correct++;
+    document.getElementById("dot9").style.backgroundColor = "green";
+    
 })
 
 $("#answer_34").click(function (){ 
     questionCounter();
     numberError();
-    document.getElementById("dot34").style.backgroundColor = "red";
+    document.getElementById("dot9").style.backgroundColor = "red";
 })
 $("#answer_35").click(function (){ 
     questionCounter();
     numberError();
-    document.getElementById("dot35").style.backgroundColor = "red";
+    document.getElementById("dot9").style.backgroundColor = "red";
 })
 $("#answer_36").click(function (){ 
     questionCounter();
     numberError();
-    document.getElementById("dot36").style.backgroundColor = "red";
+    document.getElementById("dot9").style.backgroundColor = "red";
 })
-$("#button1").click(function () {
-    document.getElementById ("button1").style.visibility = "hidden";
-    var answer1 = document.getElementById("answer_1").innerHTML 
-    var answer2 = document.getElementById("answer_2").innerHTML 
-    var answer3 = document.getElementById("answer_3").innerHTML
-    var answer4 = document.getElementById("answer_4").innerHTML
-    var answer5 = document.getElementById("answer_5").innerHTML
-    var answer6 = document.getElementById("answer_6").innerHTML
-    var answer7 = document.getElementById("answer_7").innerHTML
-    var answer8 = document.getElementById("answer_8").innerHTML
-    var answer9 = document.getElementById("answer_9").innerHTML
 
-    //2nd question
-    if (slideIndex == 2 && question2 == answer2) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-        //third question
-    } else if (slideIndex == 3 && question3 == answer3) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    //first question
-    else if (slideIndex == 1 && question1 == answer1) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    //4th question 
-    else if (slideIndex == 4 && question4 == answer4) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    //5th question 
-    else if (slideIndex == 5 && question5 == answer5) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    //6th question
-    else if (slideIndex == 6 && question6 == answer6) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    else if (slideIndex == 7 && question7 == answer7) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    } 
-    else if (slideIndex == 8 && question8 == answer8) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    else if (slideIndex == 9 && question9 == answer9) {
-        checkAnswer10();
-        document.getElementById("msg").textContent = " Well done! 10 points";
-    correct ++;
-        questionCounter();
-        algebraCounterUp();
-    }
-    else {
-        document.getElementById("wrong").style.visibility = "visible";
-        document.getElementById("msg").style.visibility = "visible";
-        document.getElementById("msg").textContent = " One or more may be incorrect. Please try again.";
-        numberError();
-    }
-});
 function totalScore(){
     document.getElementById("badge").textContent = `${correct} out of 9`; 
     if(correct > 3 && correct < 6){
