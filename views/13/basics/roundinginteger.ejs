@@ -3,14 +3,15 @@
 <p id = "input"></p>
 <div id="video" style="text-align: center">
     <div class="col-md-6" style="display:inline-block">
-        <h3 class="text-center" id="heading">Rounding Integers</h3>  
+        <h3 class="text-center" id="heading">Round to the nearest 10,100,1000
+</h3>  
     </div>
 </div>
 <div class="col-lg-11 ms-paper-content-container" style="text-align: center">
     <div class="ms-paper-content" style="display:inline-block">
         <div class="alert alert-light alert-info">
             <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
-                worth 30 points. 
+                worth 10 points. 
                 <strong>Good Luck! </strong> </p>
         </div>
     </div>
@@ -219,7 +220,6 @@
         </div>
         <!--        buttons-->
 
-        <div id="msg"></div>
         <div class="dot-container">
             <span class="dot" id="dot1"></span>
             <span class="dot" id="dot2"></span>
@@ -381,7 +381,6 @@ var correct = 0;
 //slide1
 $("#answer_1").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
     correct ++;
     questionCounter();
     numberCounterUp();
@@ -403,9 +402,8 @@ $("#answer_4").click(function (){
     document.getElementById("dot1").style.backgroundColor = "red";
 })
 //slide 2
-$("#answer_5").click(function (){
+$("#answer_8").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
     correct ++;
     questionCounter();
     numberCounterUp();
@@ -422,21 +420,20 @@ $("#answer_7").click(function (){
     numberError();
     document.getElementById("dot2").style.backgroundColor = "red";
 })
-$("#answer_8").click(function (){ 
+$("#answer_5").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot2").style.backgroundColor = "red";
 })
 //slide 3
-$("#answer_9").click(function (){
+$("#answer_10").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
     correct ++;
     questionCounter();
     numberCounterUp();
     document.getElementById("dot3").style.backgroundColor = "green";
 })
-$("#answer_10").click(function (){ 
+$("#answer_9").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot3").style.backgroundColor = "red";
@@ -452,9 +449,9 @@ $("#answer_12").click(function (){
     document.getElementById("dot3").style.backgroundColor = "red";
 })
 //slide 4
-$("#answer_13").click(function (){
+$("#answer_15").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
+     
     correct ++;
     questionCounter();
     numberCounterUp();
@@ -465,7 +462,7 @@ $("#answer_14").click(function (){
     numberError();
     document.getElementById("dot4").style.backgroundColor = "red";
 })
-$("#answer_15").click(function (){ 
+$("#answer_13").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot4").style.backgroundColor = "red";
@@ -478,7 +475,7 @@ $("#answer_16").click(function (){
 //slide 5
 $("#answer_17").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
+     
     correct ++;
     questionCounter();
     numberCounterUp();
@@ -500,9 +497,9 @@ $("#answer_20").click(function (){
     document.getElementById("dot5").style.backgroundColor = "red";
 })
 //slide 6
-$("#answer_21").click(function (){
+$("#answer_23").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
+     
     correct ++;
     questionCounter();
     numberCounterUp();
@@ -513,7 +510,7 @@ $("#answer_22").click(function (){
     numberError();
     document.getElementById("dot6").style.backgroundColor = "red";
 })
-$("#answer_23").click(function (){ 
+$("#answer_21").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot6").style.backgroundColor = "red";
@@ -524,9 +521,9 @@ $("#answer_24").click(function (){
     document.getElementById("dot6").style.backgroundColor = "red";
 })
 //slide 7
-$("#answer_25").click(function (){
+$("#answer_28").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
+     
     correct ++;
     questionCounter();
     numberCounterUp();
@@ -542,21 +539,21 @@ $("#answer_27").click(function (){
     numberError();
     document.getElementById("dot7").style.backgroundColor = "red";
 })
-$("#answer_28").click(function (){ 
+$("#answer_25").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot7").style.backgroundColor = "red";
 })
 //slide 8
-$("#answer_29").click(function (){
+$("#answer_30").click(function (){
     checkAnswer10();
-    document.getElementById("msg").textContent = " Well done! 10 points";
+     
     correct ++;
     questionCounter();
     numberCounterUp();
     document.getElementById("dot8").style.backgroundColor = "green";
 })
-$("#answer_30").click(function (){ 
+$("#answer_29").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot8").style.backgroundColor = "red";
@@ -572,7 +569,7 @@ $("#answer_32").click(function (){
     document.getElementById("dot8").style.backgroundColor = "red";
 })
 //slide 9
-$("#answer_33").click(function (){
+$("#answer_34").click(function (){
     checkAnswer10();
     questionCounter();
     numberCounterUp();
@@ -581,7 +578,7 @@ $("#answer_33").click(function (){
     
 })
 
-$("#answer_34").click(function (){ 
+$("#answer_33").click(function (){ 
     questionCounter();
     numberError();
     document.getElementById("dot9").style.backgroundColor = "red";
