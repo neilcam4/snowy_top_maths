@@ -1,0 +1,76 @@
+[
+    {
+       "question_number": "1",
+       "title":"Forming expressions and equations",
+       "template pattern":"ADB CAC DBB",
+       "question_text": "Andrew is 4 years older than Brian, who is n years old. How old is Andrew, in terms of n? Choose from the options below.",
+       "answer_1":" n + 4",
+       "answer_2":"4n",
+       "answer_3":"n - 4 ",
+       "answer_4":"4n + 4"
+    },
+    {
+      "question_number": "2",
+      "question_text": "Andrew is 4 years older than Brian, who is n years old. 5 years ago, Andrew was 3 times as old as Brian was. Form an equation and solve it to find the value of n. Choose from the options below.",
+      "answer_5":"5",
+      "answer_6":"1",
+      "answer_7":"3",
+      "answer_8":"2"
+   },
+   {
+      "question_number": "3",
+      "question_text": "How old will Andrew be in 3 years time? Choose from the options below.",
+      "answer_9":"15",
+      "answer_10":"14",
+      "answer_11":"13",
+      "answer_12":"12"
+      
+   },
+   {
+      "question_number": "4",
+      "question_text": "Apples cost a pence each and bananas cost b pence each. 2 apples and 3 bananas cost 90 pence. Choose the correct equation in terms of a and b below.",
+      "answer_13":"6ab = 90",
+      "answer_14":"5ab = 90",
+      "answer_15":"2a + 3b = 90",
+      "answer_16":"3a + 2b = 90"
+   },
+   {  "question_number": "5",
+        "question_text": "8 apples cost the same as 6 bananas. Choose the correct equation in terms of a and b below.",
+        "answer_17":"8a = 6b",
+        "answer_18":"6a = 8b",
+        "answer_19":"8a + 6b",
+        "answer_20":"8a x 6b"
+   },
+   {
+      "question_number": "6",
+      "question_text": "Therefore, if 2 apples and 3 bananas cost 90 pence and 8 apples cost the same as 6 bananas. Find the price of the apple.",
+        "answer_21":"12p",
+        "answer_22":"14p",
+        "answer_23":"15p",
+        "answer_24":"16p"
+   },
+   {
+    "question_number": "7",
+    "question_text": "A farmer keeps h hens and p pigs. He has a total of 68 hens and pigs. Which is the correct equation in terms of hens and pigs?. (Write down this equation for the question 9)",
+        "answer_25":"hp = 68", 
+        "answer_26":"20h + 48p = 68",
+        "answer_27":"68h = 68p",
+        "answer_28":"h + p = 68"
+ },
+ {
+    "question_number": "8",
+    "question_text": "If the hens and pigs have 152 legs between them, which is the correct equation below to show this. (Write down this equation for question 9).",
+    "answer_29":"h + p = 152",
+    "answer_30":"2h + 4p = 152",
+    "answer_31":"hp = 152",
+    "answer_32":"4h + 2p = 152"
+ },
+ {
+    "question_number": "9",
+    "question_text": "Use the equations from questions 7 and 8 to solve for p and h, and hence, find the number of pigs in the field.",
+    "answer_33":"50 pigs",
+    "answer_34":"8 pigs",
+    "answer_35":"9 pigs",
+    "answer_36":"40 pigs"
+ }
+   ]

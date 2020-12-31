@@ -1,0 +1,622 @@
+
+<% include ../../partials/header %>
+<p id = "input"></p>
+<div id="video" style="text-align: center">
+    <div class="col-md-6" style="display:inline-block">
+        <h3 class="text-center" id="heading">Forming expressions and equations
+</h3>  
+    </div>
+</div>
+<div class="col-lg-11 ms-paper-content-container" style="text-align: center">
+    <div class="ms-paper-content" style="display:inline-block">
+        <div class="alert alert-light alert-info">
+            <p>Score: <span class="ml-auto badge-pill badge-pill-info"> <%=currentUser.score %></span> Each question is
+                worth 10 points. 
+                <strong>Good Luck! </strong> </p>
+        </div>
+    </div>
+</div>
+<!--   Video        -->
+
+<div class="container">
+    <p id="userId"><%=currentUser.id %> </p>
+</div>
+
+<div style="text-align: center">
+    <div class="card card-royal col-md-6" style="display:inline-block">
+
+        <!--        First question-->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">1.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz1">  
+                    <p class="q" id="q1"></p>
+                    <div class="container">
+            <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_1" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_2" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_3" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_4" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div>
+        </div>                  
+                </form>
+            </div>
+        </div>
+        <!--     2nd question                -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">2.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz2">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q2"></p>
+                <div class = "container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_5" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_6" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_7" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_8" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+                </div>
+            </div>
+                
+                </form>
+            </div>
+        </div>
+        <!--   3rd question       -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">3.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz3">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q3"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_9" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_10" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_11" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_12" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div></div>
+                </form>
+            </div>
+        </div>
+        <!--4th question        -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">4.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz4">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q4"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_13" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_14" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_15" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_16" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div></div>
+                
+                </form>
+            </div>
+        </div>
+        <!--    5th question    -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">5.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz5">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q5"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_17" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_18" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_19" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_20" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div></div>
+                </form>
+            </div>
+        </div>
+        <!--   6th question     -->
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">6.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz6">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q6"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_21" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_22" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_23" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_24" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div></div>
+                </form>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">7.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz7">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q7"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_25" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_26" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_27" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_28" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div></div>
+                </form>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">8.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz8">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q8"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                <button type="button" id="answer_29" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_30" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_31" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_32" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div></div>
+                </form>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">9.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz9">
+                <p class="q">Simplify the following expression</p>
+                <p class="q" id="q9"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                    <div class ="col">
+                <button type="button" id="answer_33" class="btn  btn-success btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_34" class="btn  btn-primary btn-raised" onclick="plusSlides(1)"></button>
+                    </div>
+                <button type="button" id="answer_35" class="btn  btn-danger btn-raised" onclick="plusSlides(1)"></button>
+                <button type="button" id="answer_36" class="btn btn-warning btn-raised" onclick="plusSlides(1)"></button>
+            </div>
+            </div>
+        </form>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="card-header">
+                <h3 class="card-title">10.</h3>
+            </div>
+            <div class="card-body">
+                <form name="quiz10">
+                <p class="q">Well done for finishing!</p>
+                <p class="q" id="q10"></p>
+                <div class="container">
+                <div class="row" style="margin: 0 auto">
+                    <div class ="col">
+                <button type="button"  id="button" class="btn  btn-success btn-raised" data-toggle="modal"
+                    data-target="#myModal4" onclick="totalScore()">Total Score</button>
+                </div>
+                </div>
+            </div>
+        </form>
+            </div>
+        </div>
+        <!--        buttons-->
+
+        <div class="dot-container">
+            <span class="dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+            <span class="dot" id="dot4"></span>
+            <span class="dot" id="dot5"></span>
+            <span class="dot" id="dot6"></span>
+            <span class="dot" id="dot7"></span>
+            <span class="dot" id="dot8"></span>
+            <span class="dot" id="dot9"></span>
+            <span class="dot" id="dot10"></span>
+        </div>
+        <!-- last 2 divs from top of card-->
+    </div>
+    
+</div>
+<div id="example"></div>
+<!-- Modal -->
+<div class="modal modal-primary" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+    <div class="modal-dialog animated zoomIn animated-3x" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel4"> <%=currentUser.username %>, you have scored </h3> <button
+                    type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success alert-light " role="alert">
+                    <p id="badge"></p>
+                </div>
+                <div class="alert alert-danger alert-light " role="alert">
+                    <p id="points"></p>
+                </div>
+                <div class="alert alert-info alert-light " role="alert">
+                    <p id="medal"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            <a href="/13/problemsolving/menu" class="list-group-item list-group-item-action withripple">
+               Return to 13+ Problem Solving
+              </a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+$("#example").load("../../config");
+var correct = 0;
+    
+    function getJSON (){
+        fetch('./questions/13/problemsolving/formingalgebra.json')
+        .then(function(res){
+            return res.json()
+           
+        })
+        .then(function(data){
+            let output1 = data[0].question_text
+            let output2 = data[1].question_text
+            let output3 = data[2].question_text
+            let output4 = data[3].question_text
+            let output5 = data[4].question_text
+            let output6 = data[5].question_text
+            let output7 = data[6].question_text
+            let output8 = data[7].question_text
+            let output9 = data[8].question_text
+            var answer1 = data[0].answer_1
+            var answer2 = data[0].answer_2
+            var answer3 = data[0].answer_3
+            var answer4 = data[0].answer_4
+            var answer5 = data[1].answer_5
+            var answer6 = data[1].answer_6
+            var answer7 = data[1].answer_7
+            var answer8 = data[1].answer_8
+            var answer9 = data[2].answer_9
+            var answer10 = data[2].answer_10
+            var answer11 = data[2].answer_11
+            var answer12 = data[2].answer_12
+            var answer13 = data[3].answer_13
+            var answer14 = data[3].answer_14
+            var answer15 = data[3].answer_15
+            var answer16 = data[3].answer_16
+            var answer17 = data[4].answer_17
+            var answer18 = data[4].answer_18
+            var answer19 = data[4].answer_19
+            var answer20 = data[4].answer_20
+            var answer21 = data[5].answer_21
+            var answer22 = data[5].answer_22
+            var answer23 = data[5].answer_23
+            var answer24 = data[5].answer_24
+            var answer25 = data[6].answer_25
+            var answer26 = data[6].answer_26
+            var answer27 = data[6].answer_27
+            var answer28 = data[6].answer_28
+            var answer29 = data[7].answer_29
+            var answer30 = data[7].answer_30
+            var answer31 = data[7].answer_31
+            var answer32 = data[7].answer_32
+            var answer33 = data[8].answer_33
+            var answer34 = data[8].answer_34
+            var answer35= data[8].answer_35
+            var answer36 = data[8].answer_36
+            document.getElementById("q1").innerHTML = output1
+            document.getElementById("q2").innerHTML = output2
+            document.getElementById("q3").innerHTML = output3
+            document.getElementById("q4").innerHTML = output4
+            document.getElementById("q5").innerHTML = output5
+            document.getElementById("q6").innerHTML = output6
+            document.getElementById("q7").innerHTML = output7
+            document.getElementById("q8").innerHTML = output8
+            document.getElementById("q9").innerHTML = output9
+        
+            document.getElementById("answer_1").innerHTML = answer1
+            document.getElementById("answer_2").innerHTML = answer2
+            document.getElementById("answer_3").innerHTML = answer3
+            document.getElementById("answer_4").innerHTML = answer4
+            document.getElementById("answer_5").innerHTML = answer5
+            document.getElementById("answer_6").innerHTML = answer6
+            document.getElementById("answer_7").innerHTML = answer7
+            document.getElementById("answer_8").innerHTML = answer8
+            document.getElementById("answer_9").innerHTML = answer9
+            document.getElementById("answer_10").innerHTML = answer10
+            document.getElementById("answer_11").innerHTML = answer11
+            document.getElementById("answer_12").innerHTML = answer12
+            document.getElementById("answer_13").innerHTML = answer13
+            document.getElementById("answer_14").innerHTML = answer14
+            document.getElementById("answer_15").innerHTML = answer15
+            document.getElementById("answer_16").innerHTML = answer16
+            document.getElementById("answer_17").innerHTML = answer17
+            document.getElementById("answer_18").innerHTML = answer18
+            document.getElementById("answer_19").innerHTML = answer19
+            document.getElementById("answer_20").innerHTML = answer20
+            document.getElementById("answer_21").innerHTML = answer21
+            document.getElementById("answer_22").innerHTML = answer22
+            document.getElementById("answer_23").innerHTML = answer23
+            document.getElementById("answer_24").innerHTML = answer24
+            document.getElementById("answer_25").innerHTML = answer25
+            document.getElementById("answer_26").innerHTML = answer26
+            document.getElementById("answer_27").innerHTML = answer27
+            document.getElementById("answer_28").innerHTML = answer28
+            document.getElementById("answer_29").innerHTML = answer29
+            document.getElementById("answer_30").innerHTML = answer30
+            document.getElementById("answer_31").innerHTML = answer31
+            document.getElementById("answer_32").innerHTML = answer32
+            document.getElementById("answer_33").innerHTML = answer33
+            document.getElementById("answer_34").innerHTML = answer34
+            document.getElementById("answer_35").innerHTML = answer35
+            document.getElementById("answer_36").innerHTML = answer36
+  })
+        .catch(function(error){
+            console.log("error loading JSON")
+        })
+    }
+    getJSON()
+
+//slide1
+$("#answer_1").click(function (){
+    checkAnswer10();
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot1").style.backgroundColor = "green";
+})
+$("#answer_2").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot1").style.backgroundColor = "red";
+})
+$("#answer_3").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot1").style.backgroundColor = "red";
+})
+$("#answer_4").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot1").style.backgroundColor = "red";
+})
+//slide 2
+$("#answer_8").click(function (){
+    checkAnswer10();
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    
+    document.getElementById("dot2").style.backgroundColor = "green";
+})
+$("#answer_6").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot2").style.backgroundColor = "red";
+})
+$("#answer_7").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot2").style.backgroundColor = "red";
+})
+$("#answer_5").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot2").style.backgroundColor = "red";
+})
+//slide 3
+$("#answer_10").click(function (){
+    checkAnswer10();
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot3").style.backgroundColor = "green";
+})
+$("#answer_9").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot3").style.backgroundColor = "red";
+})
+$("#answer_11").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot3").style.backgroundColor = "red";
+})
+$("#answer_12").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot3").style.backgroundColor = "red";
+})
+//slide 4
+$("#answer_15").click(function (){
+    checkAnswer10();
+     
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot4").style.backgroundColor = "green";
+})
+$("#answer_14").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot4").style.backgroundColor = "red";
+})
+$("#answer_13").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot4").style.backgroundColor = "red";
+})
+$("#answer_16").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot4").style.backgroundColor = "red";
+})
+//slide 5
+$("#answer_17").click(function (){
+    checkAnswer10();
+     
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot5").style.backgroundColor = "green";
+})
+$("#answer_18").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot5").style.backgroundColor = "red";
+})
+$("#answer_19").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot5").style.backgroundColor = "red";
+})
+$("#answer_20").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot5").style.backgroundColor = "red";
+})
+//slide 6
+$("#answer_23").click(function (){
+    checkAnswer10();
+     
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot6").style.backgroundColor = "green";
+})
+$("#answer_22").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot6").style.backgroundColor = "red";
+})
+$("#answer_21").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot6").style.backgroundColor = "red";
+})
+$("#answer_24").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot6").style.backgroundColor = "red";
+})
+//slide 7
+$("#answer_28").click(function (){
+    checkAnswer10();
+     
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot7").style.backgroundColor = "green";
+})
+$("#answer_26").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot7").style.backgroundColor = "red";
+})
+$("#answer_27").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot7").style.backgroundColor = "red";
+})
+$("#answer_25").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot7").style.backgroundColor = "red";
+})
+//slide 8
+$("#answer_30").click(function (){
+    checkAnswer10();
+     
+    correct ++;
+    questionCounter();
+    numberCounterUp();
+    document.getElementById("dot8").style.backgroundColor = "green";
+})
+$("#answer_29").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot8").style.backgroundColor = "red";
+})
+$("#answer_31").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot8").style.backgroundColor = "red";
+})
+$("#answer_32").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot8").style.backgroundColor = "red";
+})
+//slide 9
+$("#answer_34").click(function (){
+    checkAnswer10();
+    questionCounter();
+    numberCounterUp();
+    correct++;
+    document.getElementById("dot9").style.backgroundColor = "green";
+    
+})
+
+$("#answer_33").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot9").style.backgroundColor = "red";
+})
+$("#answer_35").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot9").style.backgroundColor = "red";
+})
+$("#answer_36").click(function (){ 
+    questionCounter();
+    numberError();
+    document.getElementById("dot9").style.backgroundColor = "red";
+})
+
+function totalScore(){
+    document.getElementById("badge").textContent = `${correct} out of 9`; 
+    if(correct > 3 && correct < 6){
+        addBronze()
+        trackProgress9()
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Bronze Medal!`;
+    } else if (correct > 5 && correct < 8){
+        addSilver()
+        trackProgress9()
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Silver Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+    } else if(correct > 7){
+        addGold()
+        trackProgress9()
+        document.getElementById("medal").textContent = `Congratulations! You have earned a Gold Medal!`;
+        document.getElementById("points").textContent = `Points:  ${correct * 10}`;
+    } else if(correct < 4){
+        document.getElementById("points").textContent = `Points: ${correct * 10}!`
+        document.getElementById("medal").textContent = `Try again to earn a Medal!`;
+    }
+ }
+   
+    
+</script>
+<% include ../../partials/footer %></div>

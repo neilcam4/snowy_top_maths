@@ -1,0 +1,76 @@
+[
+    {
+       "question_number": "1",
+       "title":"Find the Gradient",
+       "template pattern":"ADB CAC DBB",
+       "question_text": "A line goes through the coordinates (4, 5) and  (7, 11) . What is the gradient of the line?",
+       "answer_1":"2",
+       "answer_2":"1",
+       "answer_3":"-2",
+       "answer_4":"3"
+    },
+    {
+      "question_number": "2",
+      "question_text": "A line goes through the coordinates (1, 5) and  (3, 11) . What is the gradient of the line?",
+      "answer_5":"5",
+      "answer_6":"1",
+      "answer_7":"2",
+      "answer_8":"3"
+   },
+   {
+      "question_number": "3",
+      "question_text": "A line goes through the coordinates (1, 6) and  (7, 12) . What is the gradient of the line?",
+      "answer_9":"2",
+      "answer_10":"1",
+      "answer_11":"3",
+      "answer_12":"4"
+      
+   },
+   {
+      "question_number": "4",
+      "question_text": "A line goes through the coordinates (3, 6) and  (5, 12) . What is the gradient of the line?",
+      "answer_13":"2",
+      "answer_14":"-2",
+      "answer_15":"3",
+      "answer_16":"-3"
+   },
+   {  "question_number": "5",
+        "question_text": "A line goes through the coordinates (1, 4) and  (3, 12) . What is the gradient of the line?",
+        "answer_17":"4",
+        "answer_18":"3",
+        "answer_19":"-3",
+        "answer_20":"-4"
+   },
+   {
+      "question_number": "6",
+      "question_text": "A line goes through the coordinates (4, 2) and  (9, 12) . What is the gradient of the line?",
+        "answer_21":"1",
+        "answer_22":"-1",
+        "answer_23":"2",
+        "answer_24":"-2"
+   },
+   {
+    "question_number": "7",
+    "question_text": "A line goes through the coordinates (3, 2) and  (1, 6) . What is the gradient of the line?",
+        "answer_25":"2", 
+        "answer_26":"3",
+        "answer_27":"-3",
+        "answer_28":"-2"
+ },
+ {
+    "question_number": "8",
+    "question_text": "A line goes through the coordinates (5, -1) and  (7, 11) . What is the gradient of the line?",
+    "answer_29":"-6",
+    "answer_30":"6",
+    "answer_31":"5",
+    "answer_32":"-5"
+ },
+ {
+    "question_number": "9",
+    "question_text": "A line goes through the coordinates (-3, 4) and  (-7, 16) . What is the gradient of the line?",
+    "answer_33":"3",
+    "answer_34":"-3",
+    "answer_35":"2",
+    "answer_36":"-2"
+ }
+   ]

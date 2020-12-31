@@ -21,7 +21,7 @@ showTicks10 = () => {
   
   function questionCounter() {
     var id = $("#userId").text();
-    var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+    var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
     var api = $("#example").text();
     var sliced = id.slice(0, -1);
     var finalApi = url + sliced + api;
@@ -46,7 +46,7 @@ showTicks10 = () => {
 
 function numberCounterUp() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/";
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -64,14 +64,14 @@ function numberCounterUp() {
           $("#jquery").text(data.score);
       },
       error: function (xhr, status, error) {
-          console.log(error);
+          console.log("Error on question counter");
       }
   });
 };
 
 function shapeCounterUp() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -96,7 +96,7 @@ function shapeCounterUp() {
 
 function dataCounterUp() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -121,7 +121,7 @@ function dataCounterUp() {
 
 function algebraCounterUp() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -146,7 +146,7 @@ function algebraCounterUp() {
 
 function numberError() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -171,7 +171,7 @@ function numberError() {
 
 function shapeError() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -196,7 +196,7 @@ function shapeError() {
 
 function dataError() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;
@@ -221,7 +221,7 @@ function dataError() {
 
 function algebraError() {
   var id = $("#userId").text();
-  var url = "https://api.mlab.com/api/1/databases/maths_app/collections/users/";
+  var url = "https://mongo-data-api-maths-app.herokuapp.com/api/1/databases/maths_app/collections/users/"
   var api = $("#example").text();
   var sliced = id.slice(0, -1);
   var finalApi = url + sliced + api;

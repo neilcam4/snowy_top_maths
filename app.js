@@ -156,7 +156,7 @@ app.use(function (req, res, next) {
     next();
 });
 app.enable('trust proxy');
-mongoose.connect("mongodb://neilcam4:Wanaka10@ds115283.mlab.com:15283/maths_app", {
+mongoose.connect("mongodb+srv://neilcam4:Wanaka10@maths-app.l9dzn.mongodb.net/maths_app?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     } || "mongodb://localhost/maths_app")
@@ -1607,6 +1607,21 @@ app.get('/13/basics/roundinginteger',isLoggedIn, function(req,res){
 app.get('/13/problemsolving/menu',isLoggedIn, function(req,res){
     User.findById(req.params.id, function(err, user){
         res.render('13/problemsolving/menu',{user:user})
+    })
+})
+app.get('/13/problemsolving/formingalgebra',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/problemsolving/formingalgebra',{user:user})
+    })
+})
+app.get('/13/problemsolving/equationofline',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/problemsolving/equationofline',{user:user})
+    })
+})
+app.get('/13/problemsolving/findthegradient',isLoggedIn, function(req,res){
+    User.findById(req.params.id, function(err, user){
+        res.render('13/problemsolving/findthegradient',{user:user})
     })
 })
 app.get('/13/pastpapers/list',isLoggedIn, function(req,res){
